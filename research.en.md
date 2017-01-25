@@ -43,6 +43,6 @@ albertoramos@ufpr.br. <br />
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. <br />
     To appear in _Optimization_, 2016.
  
- - **[A second-order sequential optimality condition associated to the convergence of optimization algorithms.](http://www.optimization-online.org/DB_HTML/2015/04/4887.html)** <br />
+ - **[A second-order sequential optimality condition associated to the convergence of optimization algorithms.](https://doi.org/10.1093/imanum/drw064)** <br />
     R. Andreani; G. Haeser; A. Ramos, P. J. S. Silva. <br /> 
     To appear in IMA Journal of Numerical Analysis.   
