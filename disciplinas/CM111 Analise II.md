@@ -21,18 +21,13 @@ tag:        2017s1
 
 # Ementa
 
-Integral de Riemann: teorema fundamental do cálculo, 
-mudança de variáveis. 
-Teoremas do valor médio para integrais. 
-Integrais impróprias. 
-Seqüências e séries de funções. 
-Funções analíticas reais. 
-Teorema da aproximação de Weierstrass. 
-Teorema de Arzelà-Ascoli
+  Integral de Riemann: teorema fundamental do cálculo, mudança de variáveis. Teoremas do valor médio para integrais. 
+  Integrais impróprias. Seqüências e séries de funções. Funções analíticas reais. Teorema da aproximação de Weierstrass. 
+  Teorema de Arzelà-Ascoli.
 
 # Programa:
  
- 1 INTEGRAÇÃO. Partições de um intervalo. Soma superior e soma inferior de uma 
+ 1. INTEGRAÇÃO. Partições de um intervalo. Soma superior e soma inferior de uma 
  função limitada com respeito a uma partição. 
  Funções Integráveis. Exemplos de funções integráveis e de funções não integráveis. 
  Caracterização de funções integráveis pela condição de Riemann. 
