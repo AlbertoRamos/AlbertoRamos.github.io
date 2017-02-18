@@ -20,28 +20,14 @@ tag:        2017s1
   | **Exame:**   | 2017
 
 # Ementa
- 
- 1. Preliminares. Operações binárias. Sistemas algébricos;
- 2. Matrizes e Equações Lineares. Matrizes e operações com matrizes. 
-    Sistemas de equações lineares. Operações com linhas. Equivalência por linhas. Matrizes reducidas por
-    linhas. Sistema de equações lineares não homogeneas. Matrizes inversíveis. Operações
-    com columas. Equivalência.
- 3. Espaços vetoriais. Espaço e subespaços vetoriais. Dependência linear. Base e dimensão.
-   Espaços das linhas e posto de uma matriz. Coordenadas de vetores.
- 4. Transformações Lineares. Transformaçaõ linear. Posto e nulidade. Transformação
-   inversível. Representação linear de uma transformação linear. Mudança de bases. Semelhança de matrizes.
- 5. Operadores e matrizes diagonalizáveis. Vetores e valores característicos. 
-   Diagonalização. Polinômio mínimo. Teorema de Cayley-Hamilton.
- 6. Espaço com produto interno Produto interno. Espaço com produto interno. Processo
-   de diagonalização de Gram-Schmidt. Bases ortonormais.
- 7. Operadores sobre espaço com produto interno. Isometrias. 
-   Congruência e conjuntividade de matrizes. Teorema espectral. Transformações afins de movimento rígidos.
-   Formas quadráticas. Polinômios quadráticos.
- 8. Cônicas. Generalidades. Classificação de cônicas. Equações canônicas. 
-   Interseção com reta dada por dois pontos. Diâmetro e centro. Eixos. Focos.
- 9. Quadrâticas. Generalidades. Classificação e equações canônicas. Interseção com reta
-   por dois pontos. Planos diametrais, diâmetro, centro e eixos. Planos cíclicos.
 
+  1. Vetores no plano e no espaço. Conceituação. Adição de vetores. Multiplicação de vetor por número real. Combinação linear de vetores. Coordenadas. Produto interno, produto vetorial, produto misto e respectivas aplicações geométricas. 	
+  2. Retas e planos no espaço com coordenadas cartesianas. Equações da reta no espaço: vetorial, paramétricas e gerais; paralelismo, perpendicularismo, coplanaridade, ângulo entre retas. Equações do plano: vetorial, geral e paramétricas; posições relativas entre plano e retas. Problemas de distâncias.   
+  3.	Translação e rotação de eixos. Translação e rotação de eixos cartesianos no plano e no espaço. Simplificação de equação do segundo grau, mediante essas mudanças de coordenadas. 
+ 4.	Curvas no plano. Equação de lugar geométrico no plano; equações reduzidas da elipse, hipérbole e parábola. Equação geral de cônica. 
+ 5.	Superfícies. Equação de superfícies: esférica, cilíndrica, cônica, quádricas.   
+ 6.	Outros sistemas de coordenadas. Sistema de coordenadas polares no plano. Sistemas de coordenadas cilíndricas e esféricas no espaço. Equações de algumas curvas e superfícies. 
+ 
 # Listas
 
   - [Lista 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
