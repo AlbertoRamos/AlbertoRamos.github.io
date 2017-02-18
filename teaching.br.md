@@ -4,6 +4,7 @@ title:      Disciplinas
 lang:       br
 key:        teaching
 years:
+  - 2017s1
   - 2016s2
 order:      1
 permalink:  /br/teaching/
