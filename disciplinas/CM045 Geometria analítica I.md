@@ -1,23 +1,23 @@
 ---
 layout:     post
-title:      CM005 Álgebra Linear 2016s2 (Eng. Bio.)
+title:      CM045 Geometria Analítica
 categories: teaching
-permalink:  /CM005 Algebra Linear_EB/
-tag:        2016s2
+permalink:  /CM045 Geometria Analítica/
+tag:        2017s1
 ---
 
 # Informações
 
-  | **Sigla:**   | CM005
-  | **Nome:**    | Álgebra Linear 
-  | **Turma:**   | [C]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
-  | **Local:**   | PC04
-  | **Horário:** | 7h30 Terça e quinta. Engenharia de Bioprocessos e Biotecnologia
-  | **Prova 1:** | 22/09
-  | **Prova 2:** | 27/10
-  | **Prova 3:** | 01/12
-  | **2da chamada**| 06/12
-  | **Exame:**   | 15/12
+  | **Sigla:**   | CM045
+  | **Nome:**    | Geometria Analítica I  
+  | **Turma:**   | [D]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
+  | **Local:**   | Não sei 
+  | **Horário:** | 7h30 Terça e quinta. 
+  | **Prova 1:** | 2017
+  | **Prova 2:** | 2017
+  | **Prova 3:** | 2017
+  | **2da chamada**| 2017
+  | **Exame:**   | 2017
 
 # Ementa
  
