@@ -10,7 +10,7 @@ tag:        2017s1
 
   | **Sigla:**   | CM111
   | **Nome:**    | Analise II  
-  | **Turma:**   | [A]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
+  | **Turma:**   | [A]
   | **Local:**   | Sala 06, PA
   | **Horário:** | 15h30 Terça e quinta. 
   | **Prova 1:** | 06/04
