@@ -1,4 +1,4 @@
-% working paper for AGP for MOP 
+% lista 1 (analise II)
 \documentclass{article}
 \usepackage{amssymb,latexsym,amsthm,amsmath}
 \usepackage{tikz}
@@ -214,7 +214,7 @@ A. Ramos \thanks{Department of Mathematics,
    $x \in [0,1]$. 
    Mostre que $x$ sempre pode ser escrito como 
    $$ x= \sum_{n=1}^{\infty} \frac{a_{nx}}{3^{n}}, \ \ a_{nx} \in {0,1,2}.$$
-   Mostre que essa representação é única para $x \in seila$.
+   Mostre que essa representação é única para $x \notin \mathcal{C}$.
    
    Lembre que o conjunto de Cantor é definido como 
    $$\mathcal{C}:=\{ x \in [0,1]: x=\sum_{n=1}^{\infty} \frac{a_{nx}}{3^{n}}, \text{com} \ a_{nx} \in \{0,2\}\}.$$ 
@@ -224,7 +224,7 @@ A. Ramos \thanks{Department of Mathematics,
    se não existir $n \in \mathbb{N}$ tal que $a_{nx}=1$.
 
    Define a função de Cantor, $G:[0,1]\rightarrow \R$ como 
-   $$ G(x):= \frac{1}{2^{N_x}}+ \frac{1}{2} \sum_{n=1}^{N_x-1}\frac{a_{nx}}{2^{n}}.$$
+   $$ G(x):= \frac{1}{2^{N_x}}+ \frac{1}{2} \sum_{n=1}^{N_x-1}\frac{a_{nx}}{2^{n}}, \ \ \text{ onde } x= \sum_{n=1}^{\infty} \frac{a_{nx}}{3^{n}}.$$
    \item Prove que $G(x)$ independe da expansão de $x$, se 
    $x$ tem duas representações ternarias. 
    \item Mostre que $G$ é constante em $I^{0}:=[0,1] \setminus \mathcal{C}$, 
