@@ -9,15 +9,15 @@ tag:        2017s1
 # Informações
 
   | **Sigla:**   | CM045
-  | **Nome:**    | Geometria Analítica I  
+  | **Nome:**    | Geometria Analítica 
   | **Turma:**   | [D]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
-  | **Local:**   | Não sei 
+  | **Local:**   | Sala 07, PA
   | **Horário:** | 7h30 Terça e quinta. 
-  | **Prova 1:** | 2017
-  | **Prova 2:** | 2017
-  | **Prova 3:** | 2017
-  | **2da chamada**| 2017
-  | **Exame:**   | 2017
+  | **Prova 1:** | 06/04
+  | **Prova 2:** | 18/05
+  | **Prova 3:** | 22/06
+  | **2da chamada**| 27/06 (Mais informações: Resolução N 37/97 CEPE Seção 5)
+  | **Exame:**   | 11/07
 
 # Ementa
 
