@@ -1,0 +1,582 @@
+% working paper for AGP for MOP 
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+
+\begin{document}
+
+\title{Lista 1: Análise II}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+(1) Integral inferior e superior; (2) Funções integráveis. 
+\end{abstract}
+
+
+\section{Integral inferior e superior; Funções integráveis} 
+
+\begin{enumerate}
+  \item Faça os 6 primeiros problemas do capítulo IX do livro texto. 
+  \item Encontre funções limitadas $f,g:[a,b] \rightarrow \mathbb{R}$
+  tal que
+   \begin{itemize}
+   \item $\lowint_{a}^{b} f(x)dx +\lowint_{a}^{b} g(x)dx< \lowint_{a}^{b} (f(x)+g(x))dx$
+   \item Se $f(x)<g(x), \ \  \forall x \in [a,b]$ mas 
+  $\lowint_{a}^{b} f(x)dx= \lowint_{a}^{b} g(x)dx$. 
+  Mostre que, no caso em que $f$ e $g$ são contínuas, se 
+  $f(x)<g(x), \ \  \forall x \in [a,b]$ então 
+  $\int_{a}^{b} f(x)dx < \int_{a}^{b} g(x)dx$. 
+   \end{itemize}
+ \item 
+  Sejam $f_{1}, \dots, f_{n}:[a,b]\rightarrow \R$ funções integráveis e 
+  escalares não negativos $c_{i}\geq0, \ \ i=1, \dots, m$.
+  Considere uma função $f:[a, b] \rightarrow \R$ 
+  tal que $$\omega(f;X) \leq \sum_{i=1}^{n} c_{i}\omega(f_i;X), \text { para todo } X \subset [a,b].$$ 
+  Mostre que $f$ é limitada e integrável em $[a,b]$. Com essa informação, 
+  prove que 
+  \begin{enumerate}
+   \item $1/f$ é integrável, se $f$ é integrável em $[a,b]$ e 
+   $f(x)\geq c>0$, $\forall x \in [a,b]$.
+   \item $\max\{f,g\}$ e $\min\{f,g\}$ são integráveis se $f,g$ são integráveis e limitadas. Em particular $f^{+}:=\max\{f, 0\}$ e $f^{-}:=-\min\{f, 0\}$ são integráveis se $f$ é limitada e integrável.   
+   \item $\sqrt{f}$ é integrável, se $f$ é integráve e 
+   $f\geq0$ em $[a,b]$.
+   \end{enumerate}
+ \item Seja $f:[a,b]\rightarrow \R$ limitada e considere um ponto 
+ $x^{*} \in [a,b]$. Para cada $\delta>0$, defina:
+ $$ \omega(f; \delta):= \omega(f; (x^{*}-\delta, x^{*}+\delta)\cap [a,b]).$$
+  \begin{itemize}
+  \item Mostre que existe $\lim_{\delta \rightarrow 0} \omega(f;\delta)$.
+  Denote esse número por $\omega(f;x ^*)$, qual é chamada {\it oscilação de $f$ no ponto $x^*$}. 
+  \item Prove que $f$ é contínua em $x^{*}$ se, e somente se $\omega(f;x^*)=0$.
+  \item Seja $f$ uma função que tem limites laterais em $x^*$. 
+  Então, se $f(a) \notin (f(x^*-), f(x^*+))$, 
+  $\omega(f;x^*)=|f(x^{*}+)-f(x^{*}-)|$ (i.e. a oscilação é igual ao valor 
+  absoluto de seu salto nesse ponto) 
+  \item Prove que $f$ é localmente Lipchitz em $x^{*}$. Então,  
+  $\limsup_{\delta \rightarrow 0} \omega(f;\delta)/\delta <\infty$.
+  Mostre que a reciproca é falsa. Lembre, $f$ é localmente Lipchitz em $x^{*}$, se existe $\delta>0$ tal que $\left.f\right|_X$ é Lipschitz, onde $X:=[a,b]\cap (x^{*}-\delta, x^{*}+\delta)$. 
+  \end{itemize}
+  \item (Funções convexas)
+  Seja $f: \mathbb{R} \rightarrow \bar{\R}$ uma função, onde 
+  $\bar{R}:=\R \cup \{\infty\}$ O  dominio efetivo de $f$ é o conjunto
+   $\text{dom}(f):=\{x \in \R: f(x)<\infty \}$.
+  Suponha que  $f$ é {\it convexa}, isto é  
+    $$f(\alpha x+ \beta y)\leq \alpha f(x)+\beta f(y), \ \ 
+  \forall x, y \in \text{dom}(f), \text{ com } 
+  \alpha+\beta=1, \beta, \alpha\geq0.$$  
+  \item   Sejam $f,g:[a,b] \rightarrow \mathbb{R}$ funções limitadas, com 
+  $f$, $g$ e $f \circ g$ integráveis. 
+  Dizemos que um conjunto $C \subset \R$ é convexo se 
+  $\alpha x+ \beta y \in C$, para todo $x, y \in C, \text{ com } 
+  \alpha+\beta=1, \beta, \alpha\geq0$ e que 
+  uma função $f$ é convexa se   
+    $$f(\alpha x+ \beta y)\leq \alpha f(x)+\beta f(y), \ \ 
+  \forall x, y \in \mathbb{R}, \text{ com } 
+  \alpha+\beta=1, \beta, \alpha\geq0.$$ 
+  Então mostre as seguintes propriedades: 
+   \begin{itemize}
+   \item Mostre que $\text{dom}(f)$ e que o epígrafo de $f$, 
+   $\text{epi}(f):=\{(x, t) \in \R\times \R: t \geq f(x)\}$, 
+   são conjuntos convexos. Ainda mais, prove que $f$
+   é convexa se, e somente se  $\text{epi}(f)$ é convexo.
+   \item (slope inequality) Seja $f$ uma função com
+   $dom(f)=\R$.
+   
+   Então, $f$ é convexa em $[a,b]$
+   se, e somente se para todos $x_{0}<x<x_{1}$ em $[a,b]$, temos que 
+   $$\frac{f(x)-f(x_{0})}{x-x_{0}}\leq 
+     \frac{f(x_1)-f(x_{0})}{x_1-x_{0}}\leq
+     \frac{f(x_1)-f(x)}{x_1-x}.
+   $$
+   Faça um esboço dessas desigualdades.
+   \item Mostre que $f$ é convexa se, e somente se  $f(\sum_{i=1}^{n} \alpha_{i}x_{i}) \leq \sum_{i=1}^{n}\alpha_i f(x_{i})$, para todo $x_{i} \in \text{dom}(f)$, $\alpha_{i}\geq 0$ e $\sum_{i=1}^{n}\alpha_{i}=1$.  
+   \item (Testes de convexidade usando derivadas)
+   Seja $f$ diferenciável em $(a,b)\in \R$. 
+   Então, $f$ é convexa em $(a,b)$ se, e somente se 
+   algumas das siguentes condições valem:
+     \begin{itemize}
+     \item $f^{'}$ é não decrescente em (a,b)
+     \item $f(y)\geq f(x)+f^{'}(x)(y-x)$, $\forall x, y \in (a,b)$
+     \item $f^{''}(x)\geq 0$, para todo $x \in (a,b)$.
+     (aqui assumimos que $f$ é duas vezes diferenciável)
+     \end{itemize}
+   Com essas ferramentas, facilmente podemos provar que $-\log(x)$, $\exp(x)$, (a entropia) $S(x):=-x\log(x)$, se $1\geq x\geq0$; $S(0)=0$, 
+   $f(x):=x^{-\alpha}$, $\alpha>0$, $x \in (0,\infty)$ são funções convexas. 
+   \item (Desigualdade de Jensen) Suponha que $|g(x)|\leq K$, $x \in [a,b]$ e que $[-K,K] \subset \text{dom}(f)$. Então, prove que  
+   \begin{equation}\label{eqn:jensen}
+    f\left(\frac{1}{b-a}\int_{a}^{b} g(x)dx\right)
+     \leq \frac{1}{b-a} \int_{a}^{b} (f \circ g)(x)dx.
+   \end{equation}  
+    Ainda mais, prove que a reciproca também vale, isto é, se \eqref{eqn:jensen} vale para toda função $g$, então $f$
+    deve ser convexa.
+    \item Suponha que $f$ é contínua e que para toda função $g$, a expressão \eqref{eqn:jensen}
+   vale com igualdade, então necessáriamente 
+    $f$ deve ser linear (i.e. $f(x)=ax$, $\forall x$,  para certo $a \in \R$.)    
+    \item Use a convexidade $x\rightarrow |x|^{p}$  para provar a desigualdade das médias generalizada
+    (generalized mean inequality), isto é, 
+    $$ (\sum_{i=1}^{n} \alpha_{i}x_{i}^{p})^{1/p}
+     \leq (\sum_{i=1}^{n} \alpha_{i}x_{i}^{q})^{1/q}$$ para todo $\alpha_{i}\geq 0$, com $\sum_{i=1}^{n}\alpha_{i}=1$, $x_{i}>0$, $\forall i$ e $p\leq q$, com 
+     $|p|+|q|\neq0$.
+    Como caso particular, prove a desigualdade de Young: Para todo $x,y \geq 0$, $p,q\in(1,\infty)$, tal que $1/p+1/q=1$ temos que 
+    %\frac{1}{p}+\frac{1}{q}=1
+    $$ xy \leq \frac{1}{p} x^{p}+\frac{1}{q}y^{q}. $$
+    \item Use a convexidade de $x\rightarrow |x|^{p}$  para provar:
+      \begin{itemize}
+      \item (Minkoswski desigualdade) Para $f, g$
+      integráveis em $[a,b]$ com $p>1$, temos que 
+      $$
+      \left(\int_{a}^{b} |f(x)+g(x)|^{p}dx\right)^{1/p} \leq \left(\int_{a}^{b} |f(x)|^{p}dx\right)^{1/p}
+      +\left(\int_{a}^{b} |g(x)|^{p}dx\right)^{1/p}$$
+      \item (Holder desigualdade)
+      Para $f, g$
+      integráveis em $[a,b]$ com $q, p>1$
+      e $1/p+1/q=1$, temos que 
+      $$
+      \int_{a}^{b} |f(x)g(x)|dx  \leq \left(\int_{a}^{b} |f(x)|^{p}dx\right)^{1/p}
+\left(\int_{a}^{b} |g(x)|^{q}dx\right)^{1/q}$$
+      \end{itemize}
+    \item Prove que se $f$ é integrável e convexa em $[a,b]$.
+    Então, $f(\frac{a+b}{2}) \leq \frac{1}{b-a}\int_{a}^b  f(x)dx$.
+   \end{itemize} 
+  \item Seja $f:[a,b] \rightarrow \mathbb{R}$ uma função contínua cujas somas inferiores (superiores) são todas iguais. Mostre que $f$ é constante.
+  \item Seja $f$ integrável em $[a,b]$ com 
+  $|f(x)|\leq K$, $\forall x \in [a,b]$. Se 
+  $g:[-K,K]\rightarrow \R$ é continua. Então, 
+  $g \circ f$ é integrável em $[a,b]$.
+  
+  A hipótese da continuidade de $g$ é fundamental. 
+  De fato, mostre que $g \circ f$ não é integrável, se $g:[0,1]\rightarrow \R$ é definido como  
+  $g(x)=1$, se $x \in (0,1]$ e $g(0)=0$, onde 
+  $f$ é a função de Thomae (i.e. 
+  $f:(0,1)\rightarrow \R$, com $f(x)=0$, se $x$ é irracional e $f(x)=1/q$, se 
+  $x=p/q$, onde $p$ e $q$ são primos entre si.)
+  \item (Função de Cantor) 
+  Procederemos a definir a função de Cantor $G$.
+  \begin{enumerate}
+   \item Seja 
+   $x \in [0,1]$. 
+   Mostre que $x$ sempre pode ser escrito como 
+   $$ x= \sum_{n=1}^{\infty} \frac{a_{nx}}{3^{n}}, \ \ a_{nx} \in {0,1,2}.$$
+   Mostre que essa representação é única para $x \in seila$.
+   
+   Lembre que o conjunto de Cantor é definido como 
+   $$\mathcal{C}:=\{ x \in [0,1]: x=\sum_{n=1}^{\infty} \frac{a_{nx}}{3^{n}}, \text{com} \ a_{nx} \in \{0,2\}\}.$$ 
+   \item Dado $x$ e sua expansão, denote por 
+   $N_{x}:=\inf \{n \in \mathbb{N}: a_{nx}=1\}$, onde $N_{x}$ 
+   pode ser $\infty$ 
+   se não existir $n \in \mathbb{N}$ tal que $a_{nx}=1$.
+
+   Define a função de Cantor, $G:[0,1]\rightarrow \R$ como 
+   $$ G(x):= \frac{1}{2^{N_x}}+ \frac{1}{2} \sum_{n=1}^{N_x-1}\frac{a_{nx}}{2^{n}}.$$
+   \item Prove que $G(x)$ independe da expansão de $x$, se 
+   $x$ tem duas representações ternarias. 
+   \item Mostre que $G$ é constante em $I^{0}:=[0,1] \setminus \mathcal{C}$, 
+   onde $\mathcal{C}$ é o conjunto de Cantor.
+   \item Prove que $G$ é não decrecente e contínua.
+   \item Mostre que a função de Cantor é integrável.
+   \item Mostre que $G(\mathcal{C})=[0,1]$ 
+\end{enumerate}    
+
+  \item Prove que uma função $f$ é integrável se, dado $\varepsilon>0$, existe funções escadas $\phi, \psi$ tais que $\phi \leq f \leq \psi$ e $\psi-\phi < \varepsilon$.   
+  \item Prove que se f é integrável em $[a,b]$, existe um ponto $c \in(a,b)$
+  tal que $f$ é contínua em $x=c$.
+  \item Use o item anterior para provar  que se $f$ é integrável em $[a,b]$, 
+  o conjunto de ponto onde $f$ é contínua é denso.
+  \item Seja $f$ uma função contínua em $[a,b]$.
+  Mostre que 
+    \begin{equation}\label{eqn:normap}
+    \lim_{p \rightarrow \infty} \left(\int_{a}^{b} |f(x)|^{p}dx\right)^{1/p}=
+  \sup\{|f(x)|:x \in [a,b]\}.
+    \end{equation}
+ Denote
+  $\|f\|_p:=\left(\int_{a}^{b} |f(x)|^{p}dx\right)^{1/p}$, $p \in \mathbb{R}_{+}$ e  $\|f\|_{\infty}:=\sup\{|f(x)|:x \in [a,b]\}$. Então,  
+  \eqref{eqn:normap} é equivalente a dizer que  para toda $f$ contínua, 
+  $\|f\|_{p} \rightarrow \|f\|_{\infty}$ quando $p \rightarrow \infty$.
+  \item (Lema fundamental do cálculo de variaciones) Seja $f$ uma função contínua em $[a,b]$ tal que
+  $\int_{a}^{b} f(x)g(x)dx=0$, para toda função contínua $g$ com $g(a)=g(b)=0$. Então, prove que $f(x)=0$, $\forall x \in [a,b]$.
+  \item Seja $r \in (0,1)$. Considere a função 
+  $f:[0,1]\rightarrow \R$
+  definida como $f(0)=0$ e $f(x)=r^{n-1}n(n+1)$, 
+  se $x \in (1/(n+1), 1/n]$, $n \in \mathbb{N}$. Prove que $f$ é integrável 
+  e $$\int_{0}^{1} f(x)dx= \frac{1}{1-r}.$$
+   \item Suponha que 
+  $f$ e $g$ são funções contínuas não negativas em $[a,b]$. Mostre que existe $c \in [a,b]$ tal que 
+   $$\int_{a}^{b} f(x)g(x)dx= f(c) \int_{a}^{b} g(x)dx. $$
+   {\it Dica:} Use o teorema do valor intermediário.
+\end{enumerate}
+
+\end{document}
+
+\section{Introduction}
+
+\section{Basic Notions and something}
+
+\section{M AGP condition}
+
+Consider the mathematical programming problem given by 
+\begin{equation}\label{nlp}
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)\\
+\mbox{sujeito a }&h_i(x)=0, i=1,\dots,m,\\
+                 &g_j(x)\leq0,j=1,\dots,p.
+\end{array}
+\end{equation}
+
+All the functions are continuously differentiable. 
+
+\subsection{Necessary, sufficient, equivalences and strength}
+
+\begin{definition}
+        Given $\gamma \in \left[-\infty,0\right]$. A feasible point
+        $x^{*} \in \Omega$ satisfies the M-AGP($\gamma$) if there is a sequence 
+        $(s_{k},x^{k}) \in \mathbb{R}_{+}\times \mathbb{R}$
+        with $(s_{k},x^{k}) \rightarrow (s_{*},x^{*})$, $s_{*}>0$ 
+        such that 
+	 \begin{equation}\label{def:AGP}
+	 P_{\Omega((s_{k},x^{k}),\gamma)}
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}-\nabla f(x^{k})
+           \end{pmatrix}
+	        -
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}
+           \end{pmatrix}
+	       \rightarrow 
+           \begin{pmatrix}
+             0 \\
+             0
+           \end{pmatrix},	      
+	 \end{equation}
+         %$$P_{\Omega(x^{k},\gamma)}(x^{k}-\nabla f(x^{k}))-x^{k} \rightarrow 0 $$
+	 where $P_{\Omega((s_{k},x^{k}),\gamma)}$ is the orthogonal projection onto 
+	 $\Omega((s_k,x^{k}),\gamma)$. 
+\end{definition}	 
+	 
+	 \begin{remark}
+	 There are many equivalents definitions, for instance.
+	 There is no loss of generality, if $s_{*}=1$, in fact, from the KKT conditions
+	  we see that.
+	 \end{remark}
+	 
+	 Given $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$
+	 we consider the set $\Omega((s,x),\gamma)$ given by the linear constraints  
+	 $z \in \R^{n}$ tal que 
+        \begin{equation}\label{eqn:Omegalinear}
+         \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}:                        
+            \begin{array}{lll}
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  h_i(x)\geq0\\
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\geq 0, \text{ if }  h_i(x)<0\\
+ &(r-s)g_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  g_j(x)\geq0\\
+ &rg_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if } \gamma < g_{j}(x^{k})<0
+            \end{array}
+            \right \}.
+        \end{equation}
+
+        $\Omega((s,x),\gamma)$ is non empty convex set.
+        Similarly to AGP, the parameter $\gamma$ is used to decided 
+         associada a $x^{*}$, which constraint can be eliminated when we construct 
+         the linearized set.
+        
+        It is easy to see that M AGP($\gamma$) holds for every 
+        $\gamma \in \left[-\infty,0\right)$.
+	
+	 The set $\Omega((s_{k},x^{k}),\gamma)$ can be thinking as the linear approximation 
+	    around the current point $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$ of 
+        \begin{equation}\label{eqn:aproxOmega}
+        \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}
+             :
+            \begin{array}{lll}
+            &rh_{i}(z)\leq sh_{i}(x), & \text{ if } h_i(x)\geq 0 \\
+            &rh_{i}(z)\geq sh_{i}(x), & \text{ if } h_i(x)< 0 \\
+            &rg_{j}(z) \leq sg_{j}(x), & \text{ if } 0 \leq g_{j}(x) \\
+            &rg_{j}(z) \leq 0, & \text{ if } \gamma < g_{j}(x)<0
+            \end{array}
+        \right \}.
+        \end{equation}
+  
+        In the section \ref{sec:irmo}, we will present a new algorithm that generates
+        this optimality condition.
+        
+        \begin{theorem}\label{teo:AGPoptimal}
+        Let $x^{*} \in \Omega$ be a local minimizer. Then, 
+        M AGP($\gamma$) holds at $x^{*}$.  
+        \end{theorem}
+        \begin{proof}
+       Let $x^*$ be a local minimizer of \eqref{nlp}. Clearly, the point $(s_{*},x^{*})$ with $s_{*}=1$, is a local minimizer of 
+$$
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)+\frac{1}{2}\|x-x^*\|^2+\frac{1}{2}|s-s_*|^2,\\
+\mbox{sujeito a }&sh_i(x)=0, i=1,\dots,m,\\
+                 &sg_j(x)\leq0,j=1,\dots,p,\\
+                 &\|x-x^*\|\leq\delta,\ \ |s-s_{*}|\leq \delta.
+\end{array}
+$$
+for $\delta>0$ small enough.
+Now, define 
+$\bar{\Omega}:=
+\{(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}: 
+\text{max} \{|s-s_{*}|,\|x-x^*\|\}\leq\delta\}$. 
+Clearly, $\bar{\Omega}$ is a nonempty compact set. 
+Then, using the quadratic external penalty methods for $\rho_{k}$, there is a sequence
+$(s^{k}, x^{k})$ with limit $(s_{*},x^{*})$, such that 
+ \begin{equation}\label{AGPopt}
+	  \nabla f(x^{k})+(x^{k}-x^{*})+
+	  \sum_{i=1}^{m}(\rho_{k}s^{2}_{k}h_{i}(x^{k}))\nabla h_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p}(\rho_{k}s^{2}_{k}\max\{0,g_{j}(x^{k})\})\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+      and     
+	  \begin{equation}\label{AGPcomp}
+	  (s_{k}-s_{*})
+	  +
+	  \sum_{i=1}^{m} \rho_{k}s_{k}h^{2}_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p} \rho_{k}s_{k}{\max}^{2}\{0,g_{j}(x^{k})\}=0.
+	  \end{equation}
+ Define $\lambda_{i}^{k}:=\rho_{k}s_{k}h_{i}(x^{k})$, $\forall i \in \{1,\dots,m\}$	
+ and $\mu_{j}^{k}:=\rho_{k}s_{k}\max\{0,g_{j}(x^{k})\}$, $\forall j \in \{1,\dots,p\}$.  
+ Thus, from \eqref{AGPopt}, \eqref{AGPcomp}, $s_{k}\rightarrow s_{*}>0$ and $x^{k}\rightarrow x^{*}$, we obtain that  
+  \begin{equation}\label{eqn:aproxOmega}
+        \left \|
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -             
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|=
+           \left \|
+             \begin{pmatrix}
+             s_k-s_{*} \\
+             x^{k}-x^{*}
+             \end{pmatrix} 
+        \right \| \rightarrow 0.
+  \end{equation}
+  Taking orthogonal projections onto $\Omega((s,x),\gamma)$, we obtain that 
+    \begin{equation}\label{eqn:projectionomega}
+        \left \|
+             P_{\Omega((s,x),\gamma)}
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -  
+             P_{\Omega((s,x),\gamma)}           
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|\rightarrow 0.
+  \end{equation}
+  But, since $\Omega((s_{k},x^{k}),\gamma)$ is a convex set given by affine 
+  constraints, it is not difficult to see that 
+    \begin{equation}\label{eqn:projectionomega2}
+             P_{\Omega((s_{k},x^{k}),\gamma)} 
+             \left \{          
+             \begin{pmatrix}
+             s_{k}\\
+             x^{k}
+             \end{pmatrix}+
+             \sum_{i=1}^{m}\lambda^{k}_{i}             
+             \begin{pmatrix}
+             h_{i}(x^{k}) \\
+        	 s_{k}\nabla h_{i}(x^{k})
+             \end{pmatrix}+
+             \sum_{j=1}^{p} \mu_{j}^{k}
+             \begin{pmatrix}
+             \max \{0,g_{j}(x^{k})\}\\
+             s_{k} \nabla g_{j}(x^{k})
+             \end{pmatrix}
+             \right \}=
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k} 
+             \end{pmatrix}.
+  \end{equation}
+  Here it is important that $\lambda_{i}^{k}\geq 0$ if $h_{i}(x^{k})\geq0$ and 
+                  $\lambda_{i}^{k}<0$ if $h_{i}(x^{k})<0$.   
+                  Then, from \eqref{eqn:projectionomega}, we conclude that 
+                  M AGP holds.
+\end{proof}        
+        
+    CAKKT is the stronger sequential optimality condition known 
+     in the literature. Here, we will see that M AGP is even stronger than CAKKT.
+        
+        \begin{theorem}
+        M AGP implies CAKKT.
+        \end{theorem}
+        \begin{proof}
+        Suppose that M AGP holds. Then, there is a sequence 
+        $(s_{k},x^{k})\rightarrow (s_{*},x^{*})$ with $s_{*}>0$ 
+        such that 
+        $(\ell_{k},\varepsilon^{k}):=P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))-(s_{k},x^{k})\rightarrow (0,0)$. 
+        
+        Now, the orthogonal projection 
+        $P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))$
+        is the unique solution of 
+        \begin{equation}
+	 \text{ Minimizar } 
+	 \frac{1}{2}
+	 \left \|
+	 \begin{pmatrix}
+	 r \\
+	 z
+	 \end{pmatrix}-
+	 \begin{pmatrix}
+	 s_{k} \\
+	 x^{k}-\nabla f(x^{k})
+	 \end{pmatrix}
+	 \right \|^{2} 
+	 \ \ \text{ subject to }     (r,z) \in \Omega((s_{k},x^{k}),\gamma).
+    	\end{equation}
+        Since $\Omega((s_{k},x^{k}),\gamma)$ is given by affine constraints, the KKT conditions hold. Thus, there are multipliers
+        $\lambda^{k} \in\mathbb{R}^{m}$, $\mu^{k}\in \mathbb{R}^{p}$ such that
+      \begin{equation}\label{MAGPimpCAKKT1}
+	  \nabla f(x^{k})+\varepsilon^{k}+
+	  \sum_{i=1}^{m}s_{k}\lambda_{i}^{k}\nabla h_{i}(x^{k})+
+	  \sum_{j=1}^{p}s_{k}\mu_{j}^{k}\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+and 
+        \begin{equation}\label{MAGPimpCAKKT2}
+	  \ell_{k}+\sum_{i=1}^{m}\lambda_{i}^{k} h_{i}(x^{k})
+	                 +\sum_{j=1}^{p}\mu_{j}^{k} g_{j}(x^{k})=0, 
+	  \end{equation}
+       Furthermore, the next relations are satisfied: 
+	  \begin{eqnarray*}
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& 
+	  \ \ \text{ with } h_{i}(x^{k})\geq 0 \text{ and } \lambda_{i}^{k}\geq0\label{AGPcomp1}\\
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } h_{i}(x^{k})<0 \text{ and } \lambda_{i}^{k}\leq0\label{AGPcomp1}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})\ell_{k}+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } 0 \leq g_{j}(x^{k}) \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})(\ell_{k}+s_k)+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ 
+	  \text{ with } \gamma <g_{j}(x^{k}) <0 \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}=0,& \ \ \text{ otherwise } \label{AGPcomp3}.
+	  \end{eqnarray*}
+        
+         From, those relations we see that $|\lambda^{k}_{i}h_{i}(x^{k})|=\lambda^{k}_{i}h_{i}(x^{k})$, $\forall i$. Moreover, we have that 
+         $\mu_{j}^{k}=0$, for $j \notin A(x^{*})$ and $k$ large enough. 
+         Using the above relations, \eqref{MAGPimpCAKKT1} and \eqref{MAGPimpCAKKT2} 
+         we get 
+      \begin{equation}\label{sumgneg}
+	  \sum_{\gamma<g_{j}(x^{k})< 0} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|=
+	  \sum_{\gamma<g_{j}(x^{k})< 0} -s_{k}\mu_{j}^{k}g_{j}(x^{k})=
+	  -\nabla f(x^{k})^{T}\varepsilon^{k}-\|\varepsilon^{k}\|^{2}-|\ell_{k}|^{2} \rightarrow 0. 
+	  \end{equation}
+	  From \eqref{sumgneg}, \eqref{MAGPimpCAKKT2} and $s_{k}\rightarrow s_{*}>0$ we conclude that 
+	  \begin{equation}\label{sumg}
+	  \sum_{i=1}^{m}|s_{k}\lambda_{i}^{k}h_{i}(x^{k})|
+	  +
+	  \sum_{j=1}^{p} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|\rightarrow 0
+	  \end{equation}
+      Set    
+      $\hat{\lambda}_{i}^{k}:=s_{k}\lambda_i^{k}$, $\forall i \in \{1,\dots,m\}$	
+ and $\hat{\mu}_{j}^{k}:=s_{k}\mu_j^{k}$, $\forall j \in \{1,\dots,p\}$. Thus, 
+ from \eqref{MAGPimpCAKKT1} and \eqref{sumg}, CAKKT holds. 
+  \end{proof}
+	
+	 The next example shows that MAGP is strictly stronger than CAKKT.
+	 
+	\begin{counter}(CAKKT does not imply MAGP )\end{counter} Missing
+
+    Under CCP, every MAGP point is a stationary point.
+    	
+	Since CAKKT is a sufficient optimality condition in the convex case \cite{amscakkt}
+	MAGP is also a sufficient optimality condition.
+	     
+\subsection{Relation with other conditions}
+ 
+ 
+
+\section{Algorithm for MOP with stopping criterion based on MAGP }\label{sec:irmo}
+In this section, we introduced a new algorithm based on those considerations. \\
+
+{\it Still working on this algorithm. } \\
+
+For the standard non-linear program, the idea is to do a inexact restoration method with 
+$\Omega((s,x),\gamma)$ instead of $\Omega(x,\gamma)$ 
+
+Then, the next step will be to design an algorithm for solving MOP.
+ 
+\section{Concluding Remarks}
+
+
+\end{document}
+
+
