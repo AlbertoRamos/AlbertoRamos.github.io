@@ -1,0 +1,530 @@
+% lista 1 (geometria analitica 2017 I)
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+\begin{document}
+
+\title{Lista 1: Geometria Analítica}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Vetores (no plano e no espaço);
+ \item Sistema de coordenadas; 
+ \item Ângulo entre vetores, produto escalar.
+ \end{enumerate}
+\end{abstract}
+
+
+\section{Vetores e sistemas de coordenadas} 
+  \begin{enumerate}
+    \item Considere B e C dois pontos distintos. 
+  Se M é o ponto médio do segmento BC, mostre que 
+  $\overrightarrow{AB}+\overrightarrow{AC}=2\overrightarrow{AM}$, para qualquer ponto A.
+    \item Encontre a origem (ponto inicial) e a extremidade (ponto final)
+    de um representante do vetor 
+    $\overrightarrow{FB}-\overrightarrow{GC}
+    -\overrightarrow{FA}+\overrightarrow{GH}
+    +\overrightarrow{BC}$.
+    \item Sejam $A=(-,1)$ e $B=(3,1)$ dois vértices de um triângulo equilátero. 
+    Qual a coordenada do terceiro vértice? {\it Rpta:} Há duas possivéis respostas, uma delas é $C=(1, 1-2\sqrt{3})$.
+    \item Considere dois vetores $U=(2,-1)$ e $V=(3,-3)$ no plano. Qual é 
+    o ponto inicial de um representante do vetor $W=2U-4V$ cuja
+    extremidade é $(5,5)$.
+    \item Mostre analiticamente e graficamente que existem números 
+    $\alpha$  e $\beta$ tais que $X=\alpha U +\beta V$ onde
+     \begin{itemize}
+     \item $U=(5,1)$, $V=(3,5)$, $X=(5,4)$
+     \item $U=(2,-1)$, $V=(3,2)$, $X=(5,2)$
+     \end{itemize}         
+    \item Mostre que o segmento que une os pontos médios das diagonais de um trapézio é paralelo à base do trapézio e tem a metade da sua medida.
+    \item Considere os pontos $A=(-5,0)$, $B=(0,2)$ e $C=(0,-2)$. 
+    Mostre que esses pontos são os vértices de um triângulo isósceles.
+    Qual é a area desse triângulo? ({\it Rpta:}) 10$u^2$.
+    \item 
+    Mostre que se $\alpha V=\vec{0}$, então $\alpha=0$ ou $V=0$. 
+    Agora, responda as seguinte questôes:
+        \begin{enumerate}
+        \item Se $\alpha V= \beta V$, então $\alpha=\beta$? e se $V \neq \vec{0}$?
+        \item Se $\alpha V= \alpha U$, então $U=V$? E se $\alpha\neq 0$?
+        \end{enumerate}
+    \item Quais são as coordenadas do ponto $P^{'}$, simétrico do ponto $P=(2,0,6)$ em relação ao ponto $M=(2, 4, -1)$?
+    \item Considere os ponto $A=(1,-2,-3)$, $B=(-5,2,-1)$ e 
+    $C=(4,0,1)$.
+    Encontre o ponto D tal que A, B, C e D sejam os vértices 
+    consecutivos de um paralelogramo. 
+    \item Quais dos seguintes vetores são paralelos $U=(6,-4,-2)$, 
+    $V=(3,-2,-1)$, $W=(-15,10,-5)$?
+    \item Considere um quadrado com lado igual a $2a$ cujo centro 
+    (interseção das diagonais) está na origem e seus lados são paralelos ao eixos coordenados. Encontre as coordenadas de todos os vértices. {\it Rpta}:
+    Um vértice é $(-a,a)$.
+  \end{enumerate}
+
+\section{Produto escalar e o ângulo entre vetores}
+   Em geral, considere dois vetores 
+   $U=(u_1, \dots, u_n)$ e $V=(v_1, \dots, v_n)$ em $\mathbb{R}^{n}$.
+   O {\it produto escalar} de $U$ e $V$, denotado por $U.V$ é o {\it número} definido como $$ U.V = v_1u_1+v_2u_2+ \dots + v_n u_n$$  
+Usando o produto interno podemos calcular o ângulo $\theta$ entre dos vetores, atraves da formula $$ U.V= \|U\| \|V\| \cos(\theta).$$
+Muita vezes, também é usada a notação $\langle U, V \rangle$ para
+se referir ao produto interno. 
+ 
+Temos as seguintes propriedades (algumas):
+\begin{itemize}
+  \item O comprimento (norma) de um vetor $V$ é a raiz quadrada de $V.V$, isto é, $\|V\|:=\sqrt{V.V}$. 
+  \item Desigualdade de Cauchy-Schwarz: Para qualquer par de vetores $U$ e $V$,  sempre vale que 
+  $|U.V|\leq \|U\|\|V\|$. 
+  Ainda mais, se $|U.V|=\|U\|\|V\|$, então $U$ deve ser multiplo de $V$, 
+  isto é, $U=\alpha V$ para algum $\alpha\in \R$.
+  \item Temos a seguinte igualdade:
+  $$ \|U\pm V\|^{2}=\|U\|^{2}+\|V\|^{2}\pm 2 U.V $$
+  \item $U$ e $V$ são perpendiculares se, e somente se $U.V=0$
+\end{itemize}
+  Com essas informações responda os seguintes exercícios.
+  \begin{enumerate}
+  \item Verifique que $V=(1, 0, 1)$ é perpendicular a $U=(2, 1, -2)$. 
+  Faça um esboço.
+  \item Qual o ângulo entre os vetores
+  $$ (1) U=( \cos(\theta), \sin(\theta)), V=(1,0) \ \  
+     (2) U=(\cos(\theta), \sin(\theta)), V=(0,1) \ \
+     (3) U=(\cos(\theta), \sin(\theta)), V=(-\cos(\theta), \sin(\theta)).$$
+     Faça um esboço.  
+  \item Ache o ângulo entre os vetores
+   $$(1)\ \ 2\vec{i}+ 2\vec{j}, \ \ \vec{i}+\vec{k} \ \  
+     (2)\ \ \vec{i}-\vec{j}+\vec{k}, \ \ -3\vec{j}-3\vec{k}  $$  
+  \item Determine o valor de $\alpha$ para o qual os vetores 
+  $V=(\alpha, 3, 4)$ e $U=(3, 1, 2)$ são perpendiculares  
+  \item Mostre que não existe $\alpha$ tal que os vetores 
+   $V=2\alpha \vec{i}+ 4 \vec{j}+8 \vec{k}$ e 
+   $U=-\alpha \vec{i}+2 \vec{j}-3\vec{k}$. 
+  são perpendiculares 
+  \item Em $\R^{3}$, seja $O=(0,0,0)$. 
+  Qual o lugar geométrico dos pontos $P=(x, y, z)$ tal que 
+  $\|\overrightarrow{OP}\|^{2}=4$?
+  Qual é a figura representada pela equação 
+  $x^2+y^2=4$ em $\R^{3}$? É em $\R^2$?
+  \item Considere $V=\vec{i}+ 2\vec{j}+3\vec{k}$ e 
+   $U=-2\vec{i}+ 2\vec{j}+4\vec{k}$. Determine os vetores unitários paralelos aos vetores
+   $(1) \ \ U-V;   
+     (2)\ \ 2U-3V;  
+     (3)\ \ U+V$.
+  \item Ache o vetor unitário da bissetriz do ângulo entre os vetores 
+   $V=2\vec{i}+ 2\vec{j}+\vec{k}$ e 
+   $U=6\vec{i}+2\vec{j}-3\vec{k}$. 
+   \item Mostre que os pontos $A=(3,0,2)$, $B=(4,3,0)$ e $C=(8,1,-1)$ são vértices
+   de um triângulo retângulo. Em qual dos vértices se encontra o ângulo reto? 
+    \item Responda: 
+      \begin{enumerate}
+      \item Se $V.W=U.W$ e $W \neq \vec{0}$. Então, $V=U$? 
+      Agora, suponha que os vetores $V$, $W$, $U$ estão num plano, o que podemos dizer acerca $V$ e $U$.
+      \item Se $V$ é ortogonal a $U_1$ e $U_2$. Então, $V$ 
+      é ortogonal a qualquer combinação linear de $U_1$ e $U_2$?
+      \end{enumerate}
+     \item Mostre que se as diagonais de um paralelogramo tem o mesmo 
+     comprimento então ele é um retângulo. 
+     \item Qual é a equação da reta no plano que é perpendicular ao vetor $\mathcal{N}=(2,3)$ e passa pelo ponto $A=(-3,-3)$?
+     \item Encontre o vetor $\overrightarrow{CE}$ da seguinte figura, se 
+     o segmento CD tem comprimento 4, o segmento ED tem comprimento 3,
+     $\angle (DC,DE)=90^{\circ}$ e  $\angle (AB,AO)=90^{\circ}$.
+      \begin{figure}[h]
+      \begin{center}
+      \begin{tikzpicture}
+%coordenadas
+\coordinate[label=left:O] (O) at (0,0);
+\coordinate[label=right:A] (A) at (6,0);
+\coordinate[label=left:B] (B) at (6,4.5);
+\coordinate[label=left:C] (C) at (1,0.75);
+\coordinate[label=right:D] (D) at (3,2.25);
+\coordinate[label=left:E] (E) at (1.5,4.25);
+%\coordinate[label=right:B1] (A) at (4,0);
+%figura
+\draw[-,blue,line width=1pt] (O) -- (A);
+\draw[-,blue,line width=1pt] (A) -- (B);
+\draw[-,blue,line width=1pt] (O) -- (B);
+\draw[-,blue,line width=1pt] (C) -- (E);
+\draw[-,blue,line width=1pt] (E) -- (D);
+%%%%%
+\fill[blue] (6,4.5) circle (1mm) node[above right] {$(12,5)$};
+\fill[blue] (0,0) circle (1mm) node[below left] {$(0,0)$};
+\fill[blue] (6,0) circle (1mm) node[above right] {$(12,0)$};
+\end{tikzpicture}
+      \end{center}
+      \end{figure}
+  \end{enumerate}
+\end{document}
+
+\section{Introduction}
+
+\section{Basic Notions and something}
+
+\section{M AGP condition}
+
+Consider the mathematical programming problem given by 
+\begin{equation}\label{nlp}
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)\\
+\mbox{sujeito a }&h_i(x)=0, i=1,\dots,m,\\
+                 &g_j(x)\leq0,j=1,\dots,p.
+\end{array}
+\end{equation}
+
+All the functions are continuously differentiable. 
+
+\subsection{Necessary, sufficient, equivalences and strength}
+
+\begin{definition}
+        Given $\gamma \in \left[-\infty,0\right]$. A feasible point
+        $x^{*} \in \Omega$ satisfies the M-AGP($\gamma$) if there is a sequence 
+        $(s_{k},x^{k}) \in \mathbb{R}_{+}\times \mathbb{R}$
+        with $(s_{k},x^{k}) \rightarrow (s_{*},x^{*})$, $s_{*}>0$ 
+        such that 
+	 \begin{equation}\label{def:AGP}
+	 P_{\Omega((s_{k},x^{k}),\gamma)}
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}-\nabla f(x^{k})
+           \end{pmatrix}
+	        -
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}
+           \end{pmatrix}
+	       \rightarrow 
+           \begin{pmatrix}
+             0 \\
+             0
+           \end{pmatrix},	      
+	 \end{equation}
+         %$$P_{\Omega(x^{k},\gamma)}(x^{k}-\nabla f(x^{k}))-x^{k} \rightarrow 0 $$
+	 where $P_{\Omega((s_{k},x^{k}),\gamma)}$ is the orthogonal projection onto 
+	 $\Omega((s_k,x^{k}),\gamma)$. 
+\end{definition}	 
+	 
+	 \begin{remark}
+	 There are many equivalents definitions, for instance.
+	 There is no loss of generality, if $s_{*}=1$, in fact, from the KKT conditions
+	  we see that.
+	 \end{remark}
+	 
+	 Given $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$
+	 we consider the set $\Omega((s,x),\gamma)$ given by the linear constraints  
+	 $z \in \R^{n}$ tal que 
+        \begin{equation}\label{eqn:Omegalinear}
+         \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}:                        
+            \begin{array}{lll}
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  h_i(x)\geq0\\
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\geq 0, \text{ if }  h_i(x)<0\\
+ &(r-s)g_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  g_j(x)\geq0\\
+ &rg_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if } \gamma < g_{j}(x^{k})<0
+            \end{array}
+            \right \}.
+        \end{equation}
+
+        $\Omega((s,x),\gamma)$ is non empty convex set.
+        Similarly to AGP, the parameter $\gamma$ is used to decided 
+         associada a $x^{*}$, which constraint can be eliminated when we construct 
+         the linearized set.
+        
+        It is easy to see that M AGP($\gamma$) holds for every 
+        $\gamma \in \left[-\infty,0\right)$.
+	
+	 The set $\Omega((s_{k},x^{k}),\gamma)$ can be thinking as the linear approximation 
+	    around the current point $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$ of 
+        \begin{equation}\label{eqn:aproxOmega}
+        \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}
+             :
+            \begin{array}{lll}
+            &rh_{i}(z)\leq sh_{i}(x), & \text{ if } h_i(x)\geq 0 \\
+            &rh_{i}(z)\geq sh_{i}(x), & \text{ if } h_i(x)< 0 \\
+            &rg_{j}(z) \leq sg_{j}(x), & \text{ if } 0 \leq g_{j}(x) \\
+            &rg_{j}(z) \leq 0, & \text{ if } \gamma < g_{j}(x)<0
+            \end{array}
+        \right \}.
+        \end{equation}
+  
+        In the section \ref{sec:irmo}, we will present a new algorithm that generates
+        this optimality condition.
+        
+        \begin{theorem}\label{teo:AGPoptimal}
+        Let $x^{*} \in \Omega$ be a local minimizer. Then, 
+        M AGP($\gamma$) holds at $x^{*}$.  
+        \end{theorem}
+        \begin{proof}
+       Let $x^*$ be a local minimizer of \eqref{nlp}. Clearly, the point $(s_{*},x^{*})$ with $s_{*}=1$, is a local minimizer of 
+$$
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)+\frac{1}{2}\|x-x^*\|^2+\frac{1}{2}|s-s_*|^2,\\
+\mbox{sujeito a }&sh_i(x)=0, i=1,\dots,m,\\
+                 &sg_j(x)\leq0,j=1,\dots,p,\\
+                 &\|x-x^*\|\leq\delta,\ \ |s-s_{*}|\leq \delta.
+\end{array}
+$$
+for $\delta>0$ small enough.
+Now, define 
+$\bar{\Omega}:=
+\{(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}: 
+\text{max} \{|s-s_{*}|,\|x-x^*\|\}\leq\delta\}$. 
+Clearly, $\bar{\Omega}$ is a nonempty compact set. 
+Then, using the quadratic external penalty methods for $\rho_{k}$, there is a sequence
+$(s^{k}, x^{k})$ with limit $(s_{*},x^{*})$, such that 
+ \begin{equation}\label{AGPopt}
+	  \nabla f(x^{k})+(x^{k}-x^{*})+
+	  \sum_{i=1}^{m}(\rho_{k}s^{2}_{k}h_{i}(x^{k}))\nabla h_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p}(\rho_{k}s^{2}_{k}\max\{0,g_{j}(x^{k})\})\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+      and     
+	  \begin{equation}\label{AGPcomp}
+	  (s_{k}-s_{*})
+	  +
+	  \sum_{i=1}^{m} \rho_{k}s_{k}h^{2}_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p} \rho_{k}s_{k}{\max}^{2}\{0,g_{j}(x^{k})\}=0.
+	  \end{equation}
+ Define $\lambda_{i}^{k}:=\rho_{k}s_{k}h_{i}(x^{k})$, $\forall i \in \{1,\dots,m\}$	
+ and $\mu_{j}^{k}:=\rho_{k}s_{k}\max\{0,g_{j}(x^{k})\}$, $\forall j \in \{1,\dots,p\}$.  
+ Thus, from \eqref{AGPopt}, \eqref{AGPcomp}, $s_{k}\rightarrow s_{*}>0$ and $x^{k}\rightarrow x^{*}$, we obtain that  
+  \begin{equation}\label{eqn:aproxOmega}
+        \left \|
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -             
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|=
+           \left \|
+             \begin{pmatrix}
+             s_k-s_{*} \\
+             x^{k}-x^{*}
+             \end{pmatrix} 
+        \right \| \rightarrow 0.
+  \end{equation}
+  Taking orthogonal projections onto $\Omega((s,x),\gamma)$, we obtain that 
+    \begin{equation}\label{eqn:projectionomega}
+        \left \|
+             P_{\Omega((s,x),\gamma)}
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -  
+             P_{\Omega((s,x),\gamma)}           
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|\rightarrow 0.
+  \end{equation}
+  But, since $\Omega((s_{k},x^{k}),\gamma)$ is a convex set given by affine 
+  constraints, it is not difficult to see that 
+    \begin{equation}\label{eqn:projectionomega2}
+             P_{\Omega((s_{k},x^{k}),\gamma)} 
+             \left \{          
+             \begin{pmatrix}
+             s_{k}\\
+             x^{k}
+             \end{pmatrix}+
+             \sum_{i=1}^{m}\lambda^{k}_{i}             
+             \begin{pmatrix}
+             h_{i}(x^{k}) \\
+        	 s_{k}\nabla h_{i}(x^{k})
+             \end{pmatrix}+
+             \sum_{j=1}^{p} \mu_{j}^{k}
+             \begin{pmatrix}
+             \max \{0,g_{j}(x^{k})\}\\
+             s_{k} \nabla g_{j}(x^{k})
+             \end{pmatrix}
+             \right \}=
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k} 
+             \end{pmatrix}.
+  \end{equation}
+  Here it is important that $\lambda_{i}^{k}\geq 0$ if $h_{i}(x^{k})\geq0$ and 
+                  $\lambda_{i}^{k}<0$ if $h_{i}(x^{k})<0$.   
+                  Then, from \eqref{eqn:projectionomega}, we conclude that 
+                  M AGP holds.
+\end{proof}        
+        
+    CAKKT is the stronger sequential optimality condition known 
+     in the literature. Here, we will see that M AGP is even stronger than CAKKT.
+        
+        \begin{theorem}
+        M AGP implies CAKKT.
+        \end{theorem}
+        \begin{proof}
+        Suppose that M AGP holds. Then, there is a sequence 
+        $(s_{k},x^{k})\rightarrow (s_{*},x^{*})$ with $s_{*}>0$ 
+        such that 
+        $(\ell_{k},\varepsilon^{k}):=P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))-(s_{k},x^{k})\rightarrow (0,0)$. 
+        
+        Now, the orthogonal projection 
+        $P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))$
+        is the unique solution of 
+        \begin{equation}
+	 \text{ Minimizar } 
+	 \frac{1}{2}
+	 \left \|
+	 \begin{pmatrix}
+	 r \\
+	 z
+	 \end{pmatrix}-
+	 \begin{pmatrix}
+	 s_{k} \\
+	 x^{k}-\nabla f(x^{k})
+	 \end{pmatrix}
+	 \right \|^{2} 
+	 \ \ \text{ subject to }     (r,z) \in \Omega((s_{k},x^{k}),\gamma).
+    	\end{equation}
+        Since $\Omega((s_{k},x^{k}),\gamma)$ is given by affine constraints, the KKT conditions hold. Thus, there are multipliers
+        $\lambda^{k} \in\mathbb{R}^{m}$, $\mu^{k}\in \mathbb{R}^{p}$ such that
+      \begin{equation}\label{MAGPimpCAKKT1}
+	  \nabla f(x^{k})+\varepsilon^{k}+
+	  \sum_{i=1}^{m}s_{k}\lambda_{i}^{k}\nabla h_{i}(x^{k})+
+	  \sum_{j=1}^{p}s_{k}\mu_{j}^{k}\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+and 
+        \begin{equation}\label{MAGPimpCAKKT2}
+	  \ell_{k}+\sum_{i=1}^{m}\lambda_{i}^{k} h_{i}(x^{k})
+	                 +\sum_{j=1}^{p}\mu_{j}^{k} g_{j}(x^{k})=0, 
+	  \end{equation}
+       Furthermore, the next relations are satisfied: 
+	  \begin{eqnarray*}
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& 
+	  \ \ \text{ with } h_{i}(x^{k})\geq 0 \text{ and } \lambda_{i}^{k}\geq0\label{AGPcomp1}\\
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } h_{i}(x^{k})<0 \text{ and } \lambda_{i}^{k}\leq0\label{AGPcomp1}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})\ell_{k}+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } 0 \leq g_{j}(x^{k}) \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})(\ell_{k}+s_k)+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ 
+	  \text{ with } \gamma <g_{j}(x^{k}) <0 \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}=0,& \ \ \text{ otherwise } \label{AGPcomp3}.
+	  \end{eqnarray*}
+        
+         From, those relations we see that $|\lambda^{k}_{i}h_{i}(x^{k})|=\lambda^{k}_{i}h_{i}(x^{k})$, $\forall i$. Moreover, we have that 
+         $\mu_{j}^{k}=0$, for $j \notin A(x^{*})$ and $k$ large enough. 
+         Using the above relations, \eqref{MAGPimpCAKKT1} and \eqref{MAGPimpCAKKT2} 
+         we get 
+      \begin{equation}\label{sumgneg}
+	  \sum_{\gamma<g_{j}(x^{k})< 0} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|=
+	  \sum_{\gamma<g_{j}(x^{k})< 0} -s_{k}\mu_{j}^{k}g_{j}(x^{k})=
+	  -\nabla f(x^{k})^{T}\varepsilon^{k}-\|\varepsilon^{k}\|^{2}-|\ell_{k}|^{2} \rightarrow 0. 
+	  \end{equation}
+	  From \eqref{sumgneg}, \eqref{MAGPimpCAKKT2} and $s_{k}\rightarrow s_{*}>0$ we conclude that 
+	  \begin{equation}\label{sumg}
+	  \sum_{i=1}^{m}|s_{k}\lambda_{i}^{k}h_{i}(x^{k})|
+	  +
+	  \sum_{j=1}^{p} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|\rightarrow 0
+	  \end{equation}
+      Set    
+      $\hat{\lambda}_{i}^{k}:=s_{k}\lambda_i^{k}$, $\forall i \in \{1,\dots,m\}$	
+ and $\hat{\mu}_{j}^{k}:=s_{k}\mu_j^{k}$, $\forall j \in \{1,\dots,p\}$. Thus, 
+ from \eqref{MAGPimpCAKKT1} and \eqref{sumg}, CAKKT holds. 
+  \end{proof}
+	
+	 The next example shows that MAGP is strictly stronger than CAKKT.
+	 
+	\begin{counter}(CAKKT does not imply MAGP )\end{counter} Missing
+
+    Under CCP, every MAGP point is a stationary point.
+    	
+	Since CAKKT is a sufficient optimality condition in the convex case \cite{amscakkt}
+	MAGP is also a sufficient optimality condition.
+	     
+\subsection{Relation with other conditions}
+ 
+ 
+
+\section{Algorithm for MOP with stopping criterion based on MAGP }\label{sec:irmo}
+In this section, we introduced a new algorithm based on those considerations. \\
+
+{\it Still working on this algorithm. } \\
+
+For the standard non-linear program, the idea is to do a inexact restoration method with 
+$\Omega((s,x),\gamma)$ instead of $\Omega(x,\gamma)$ 
+
+Then, the next step will be to design an algorithm for solving MOP.
+ 
+\section{Concluding Remarks}
+
+
+\end{document}
+
+
