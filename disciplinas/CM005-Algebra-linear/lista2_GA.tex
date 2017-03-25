@@ -1,0 +1,720 @@
+% lista 2 (geometria analitica 2017 I)
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math,arrows.meta}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+\begin{document}
+
+\title{Lista 2: Geometria Analítica}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Produto escalar, projeção ortogonal e combinações lineares %Vetores (no plano e no espaço);
+ \item Produto Vetorial, volume e produto misto
+ \end{enumerate}
+\end{abstract}
+
+
+\section{Produto escalar, projeção ortogonal e combinações lineares} 
+ O {\it produto escalar} de $U$ e $V$, denotado por $U.V$ é o {\it número} definido como $ U.V = v_1u_1+v_2u_2+ \dots + v_n u_n$, onde $U=(u_1, \dots, u_n)$ e $V=(v_1, \dots, v_n)$ em $\mathbb{R}^{n}$. 
+Com o produto interno podemos calcular o comprimento dum vetor usando $\|V\|^{2}=V.V$ e também o ângulo $\theta$ entre dos vetores, através da formula $$ U.V= \|U\| \|V\| \cos(\theta).$$
+
+Usamos o produto interno para "projetar" o vetor V sobre o vetor W. A {\it projeção ortogonal} de V sobre W 
+denotado por $\text{proj}_{W}(V)$ é o {\it único} vetor paralelo a W tal que $V-\text{proj}_{W}(V)$ é {\it ortogonal} a W, i.e.
+$\text{proj}_{W}(V) // W$ e $(V-\text{proj}_{W}(V)) \perp W$. 
+Existe uma formula para calcular  $\text{proj}_{W}(V)$ dada por 
+$$ \text{proj}_{W}(V)= \frac{W.V}{\|W\|^{2}} W, \text{ se } W \neq \overrightarrow{0}.$$
+Proceda a responder as seguintes questões 
+  \begin{enumerate}
+    \item Considere os vetores $U$ e $V$, com $U=\alpha V$.
+    Então, 
+      \begin{itemize}
+      \item Se $V\neq \bar{0}$, temos que $|\alpha|=\|U\|/\|V\|$.
+      \item Calcule $\text{proj}_{V}U$.
+      \end{itemize}
+    \item Determine o valor de $\alpha \in \mathbb{R}$, de forma 
+    que $A=(4,\alpha,4)$, $B=(10, \alpha,-2)$ e $C=(2,0,-4)$ seja os vértices de um triângulo equilátero. {\it Rpta} $\alpha=2, -2$.  
+    \item Calcule $\|U-V\|$, se $\|U\|=13$, $\|V\|=19$ e $\|U+V\|=24$. {\it Rpta} 22
+    \item Sabemos que se $U.V=U.W$ não necessariamente $V=W$ (Apresente algum exemplo). Mas, mostre que se $U.V=U.W$ vale {\it para todo vetor} $U$, então $V=W$.
+    \item Considere os vetores U e V. 
+    Se $\angle (U,V)=60^{\circ}$, $\|U\|=5$, $\|V\|=8$. Encontre $\|U+V\|$ e $\|U-V\|$. {\it Rpta} $\|U+V\|=\sqrt{129}$, $\|U-V\|=7$.
+    \item Se  $\angle (U,V)=45^{\circ}$ e $\|U\|=3$. Ache a norma de V tal que $U-V$ seja perpendicular a $U$. {\it Rpta} 
+    $\|V\|=3\sqrt{2}$.
+    \item * Qual a distância que percorreu uma pessoa que primeiramente 
+    percorreu 5 m na direção sudoeste, 10 m da direção norte e 
+    finalmente 8 m na direção leste $30^{\circ}$ norte. 
+    {\it Dica:} Faça o esboço do percorrido, use 
+    $\cos 15^{\circ}=(\sqrt{2}+\sqrt{6})/4$. 
+    {\it Rpta} $\sqrt{269-70\sqrt{2}-20\sqrt{6}}$.
+    \item Se os lados de um triângulo equilátero 
+    ABC têm medida 2. Calcule 
+    $\overrightarrow{AB}.\overrightarrow{BC}+
+    \overrightarrow{BC}.\overrightarrow{CA}+
+    \overrightarrow{CA}.\overrightarrow{AB}$.
+    {\it Rpta: } -6
+    \item Considere três pontos A, B e C, tais que 
+    $\angle (BA, BC)= 60^{\circ}$, o segmento AB tem tamanho $6$, 
+    e o segmento BC tem tamanho $8$. 
+    Encontre o valor de $\overrightarrow{AB}.\overrightarrow{CB}$.
+    {\it Dica} Faça o esboço. {\it Rpta} -24.
+   \item Encontre um vetor $U$ com norma $\sqrt{2}$, 
+   $\angle (U,(1,-1,0))=45^{\circ}$ e $U \perp (1,1,0)$.
+   {\it Rpta} 
+   $(\sqrt{2}/2, -\sqrt{2}/2,1)$ ou ($\sqrt{2}/2, -\sqrt{2}/2,-1)$
+   \item Se $U$ e $V$ são vetores não nulos. Então 
+   $$ \text{proj}_{V}(\text{proj}_{U}V)=\frac{(U.V)^{2}}{\|U\|\|V\|}V.$$
+   Interprete geometricamente.
+   \item Seja $U=(u_1,u_2,u_3) \in \mathbb{R}^{3}$. Mostre que 
+      $U=\text{proj}_{\overrightarrow{i}}U+
+      \text{proj}_{\overrightarrow{j}}U+
+      \text{proj}_{\overrightarrow{k}}U$. 
+      Verifique também que
+      $\text{proj}_{V}U=\text{proj}_{\alpha V}U$ 
+      para qualquer $\alpha \neq 0$.
+   \item Considere três pontos, A, B e C em $\mathbb{R}^{3}$
+   e  defina os vetores $U=\overrightarrow{BA}$ e 
+   $V=\overrightarrow{BC}$. Mostre que o vetor 
+   $W=U/\|U\|+V/\|V\|$
+   é bissetriz do ângulo $\angle (AB, BC)$.
+   \item Encontre um vetor U com norma $\sqrt{5}$, ortogonal a $(2,1,-1)$
+   tal que $\{U, (1,1,1), (0,1,-1)\}$ seja linearmente dependente.
+   {\it Rpta:} $(1,0,2)$ ou $(-1,0,-2)$.
+   \item 
+   Considere uma circunferência $\mathcal{C}$ no plano, cujo uns dos diâmetros é o segmento AB 
+   ($A=(-3,-1)$, $B=(5,3)$) e considere uma reta que passa por $(13,0)$
+   e $(0,13/2)$ que é tangente à circunferência $\mathcal{C}$. 
+   Encontre as coordenadas da interseção da circunferência com a reta.
+   {\it Rpta} $(3,5)$
+   \item Considere o triângulo com vértices $A=(1,1,0)$, 
+   $B=(5/3,1/3,2/3)$ e $C=(0,0,1)$ e H ponto médio do segmento AB.
+   Ache o ponto M dentro do triângulo tal que MH é ortogonal a AB
+   e a distância de H a M é a metade do comprimento do segmento HC. {\it Rpta} 
+   $M=(2/3,1/2,1/3)$.
+   \end{enumerate}
+   
+Considere vetores $U_1, U_2, \dots, U_m$ em $\mathbb{R}^{n}$.
+Dito {\it conjunto} de vetores é {\it linearmente independente} (l.i) se 
+ o único jeito de que
+ $$\alpha_1 U_1+ \alpha_2 U_2+\alpha_3 U_3+\dots + \alpha_m U_m=\overrightarrow{0}$$ 
+ é que $\alpha_1=0, \alpha_2=0, \dots, \alpha_n=0$.
+ Caso contrário, dizemos que os vetores são {\it linearmente dependente} (l.d).
+ 
+Assim, para determinar se certo conjunto de vetores   
+$U_1, U_2, \dots, U_m$ são linearmente dependente ou não, 
+devemos montar o sistema $$\alpha_1 U_1+ \alpha_2 U_2+\alpha_3 U_3+\dots + \alpha_m U_m=\overrightarrow{0}$$ 
+com incógnitas $\alpha_1, \alpha_2, \dots \alpha_m$ e resolver dito sistema. Se a única solução é a solução nula (i.e. todos os $\alpha$'s iguais a zero) os vetores são l.i, caso exista solução com algum $\alpha_i$ diferente de zero, os vetores são necessariamente l.d.
+ 
+\begin{enumerate}
+   \item Verifique se os vetores dados são l.i ou l.d.
+   $$\text{(a) }U=(0,1,0), V=(2,0,2) \  \ \text{(b) }U=(1,2,3), V=(0,4,1), W=(2,0,7) \ \ \text{(c) } U=(\cos\theta, \sin \theta), 
+   V=(\cos \theta, -\sin \theta) $$  
+   \item Considere vetores 
+   $U=\overrightarrow{PA}$, 
+   $V=\overrightarrow{PB}$ e  
+   $W=\overrightarrow{PC}$. Mostre que:
+      \begin{itemize}
+      \item P, A, B e C estão no mesmo plano (i.e. são coplanares) se e somente se U, V e W são l.d
+      \item P, A e B estão na mesma reta (i.e. são colineares)
+      se, e somente se U e V são l.d.
+      \end{itemize}
+    \item Mostre que 
+      \begin{itemize}
+      \item Se $\{U, V\}$ é l.d, então $\{U, V , W\}$ também é l.d
+      \item Se $\{U, V, W\}$ é l.i, então $\{U, V\}$ também é l.i. O que vc pode dizer acerca de $\{U, W\}$?
+      \end{itemize}
+      \item Se U é ortogonal a V (com U e V diferentes de $\overrightarrow{0}$). Então, U e V são linearmente independente. 
+Interprete geometricamente. 
+      
+      {\it Dica} Monte o sistema $\alpha U + \beta V=\overrightarrow{0}$
+      e faça o produto interno com U e depois com V. Note que como U é diferente de $\overrightarrow{0}$, $\|U\|^{2}=U.U \neq 0$, similarmente para V.       
+  \end{enumerate}
+
+\section{Produto vetorial, volume e produto misto}
+  No espaço $\mathbb{R}^3$, podemos definir o {\it produto vetorial}. O produto vetorial  $V \times W$ é um {\it vetor} em $\mathbb{R}^{3}$ cujo componentes são 
+$$V \times W =\left( \text{det}
+                    \begin{pmatrix}
+                    v_2 & v_3 \\
+                    w_2 & w_3
+                    \end{pmatrix}, 
+                    -
+                    \text{det}
+                    \begin{pmatrix}
+                    v_1 & v_3 \\
+                    w_1 & w_3
+                    \end{pmatrix},
+                    \text{det} 
+                    \begin{pmatrix}
+                    v_1 & v_2 \\
+                    w_1 & w_2
+                    \end{pmatrix}
+             \right), $$
+onde $V=(v_1,v_2,v_3)$ e $W=(w_1, w_2, w_3)$.
+
+O vetor $V \times W$ tem as seguintes características: 
+
+\begin{itemize}
+  \item O comprimento (norma) de $V \times W$ é 
+  $$ \|V \times W\|=\|V\|\|W\| \sin \theta,
+  \text{ onde } \theta \text{ é o ângulo entre } V \text{ e } W. $$
+  
+  Note que $\|V \times W\|$ {\it coincide} com a área do paralelogramo 
+  determinado por $V$ e $W$.
+ 
+  \item O vetor $V \times W$ é perpendicular a $V$ e $W$. 
+  Como consequência, $V \times W$ é perpendicular ao "plano" 
+  definido por $V$ e $W$.
+  \item O sentido de $V \times W$ é dada pela regra da mão direita.
+  Assim, $V \times W= - W \times V$.
+  \item O produto $(V \times W). U$ é chamado de {\it produto misto} de $U$, $V$ e $W$.  O produto misto é um número 
+  e $$|(V\times W). U| \text{ coincide com o volume do paralelepípedo determinado por } U, V \text{ e } W.$$
+   Existe uma formula rápida para calcular $(V\times W). U$
+   dada pela seguinte expressão.  
+   $$(V\times W). U = \text{det}
+                       \begin{pmatrix}
+                       v_1 & v_2 & v_3 \\
+                       w_1 & w_2 & w_3 \\
+                       u_1 & u_2 & u_3 
+                       \end{pmatrix}.$$
+    \item $V \times W =0$, se e somente se V e W são paralelos                   
+\end{itemize}
+{\bf Observação} Não existe produto vetorial para vetores no plano.
+ 
+  Com essas informações responda os seguintes exercícios.
+  
+  \begin{enumerate}
+  \item Considere os vetores 
+  $U=(2,-3,1)$, $V=(2,2,0)$ e $W=(1,-3,4)$. Calcule:
+    \begin{itemize}
+     \item  $U \times V$ e $V \times U$
+     \item $(U \times V) \times W$, $U \times (V \times W)$
+     \item $(U \times V ) \times (U \times W)$
+     \item $(U \times V).W$, $V.(V \times W)$
+     \item $(U + V )\times (U + W)$
+     % \times W, U \times (V \times W) 
+    \end{itemize}
+  {\it Dica} Calcule com cuidado e pode usar propriedades geométricas.  
+  \item Mostre que 
+  $$\|V \times U\|^{2}= \|V\|^{2}\|W\|^{2}-(V. W)^{2}.$$
+  {\it Observação} Essa formula pode ser muito útil para calcular 
+  rapidamente o norma de  $V \times U$.
+  \item Qual é a área do triângulo com vértices $A=(1,2,1)$, 
+  $B=(3,0,4)$ e $C=(5,1,3)$. {\it Rpta} $\sqrt{101}/2$.
+  \item Encontre U $\in \mathbb{R}^{3}$ tal que 
+  $U \times (\overrightarrow{i}+\overrightarrow{k})=
+  2(\overrightarrow{i}+\overrightarrow{j}-\overrightarrow{k})$
+  e $\|V\|^{2}=6$. {\it Rpta} $U=(-1,2,1)$.
+  \item Considere um vetor U ortogonal a 
+  $\overrightarrow{i}+\overrightarrow{j}$
+  e a $-\overrightarrow{i}+\overrightarrow{k}$, 
+  com norma $\sqrt{3}$
+  e cujo ângulo $\theta$ entre U e $\overrightarrow{j}$
+  satisfaz $\cos \theta>0$. Com essas informações, ache U.
+  {\it Dica} Escreva U como $u_{1}\overrightarrow{i}+u_2\overrightarrow{j}+u_3\overrightarrow{k}$. 
+  {\it Rpta} $U=-\overrightarrow{i}+\overrightarrow{j}-\overrightarrow{k}$.
+  \item Se $V \times U= W\times U$ com 
+  $U \neq \overrightarrow{0}$. Então, $W=V$.?
+  \item Prove a fórmula para o produto vetorial duplo
+  $$ U \times (V \times W)=(U.W)V-(U.V)W$$
+  \item Considere um plano $\mathcal{P}$ 
+  que contêm trés pontos $A=(1,0,0)$, $B=(0,1,-1)$ e 
+  $C=(1,1,-1)$.
+  Encontre o centro de uma esfera de radio $3\sqrt{2}$ que 
+  é tangente ao plano $\mathcal{P}$ e passa por $C$.
+  
+  {\it Rpta} $(-1,-2,2)$ ou $(-1,4,-4)$.
+  \item Considere uma pirâmide regular com base ABCD onde 
+  $A=(1,0,0)$, $B=(0,0,1)$, $C=(0,\sqrt{2},1)$ e 
+  $D=(1,\sqrt{2},0)$. 
+  Encontre o vértice P da pirâmide se a pirámide tem volume igual 
+  $\sqrt{2}$. 
+  
+  {\it Dica:} O volume da pirâmide é $1/3$ da área da base pela altura. 
+  {\it Rpta} $P=(2,\sqrt{2}/2,2)$ ou $P=(-1,\sqrt{2}/2,-1)$.
+  \item Resolva os seguintes sistemas:
+  
+   (a) $U \times (\overrightarrow{i}+\overrightarrow{j})=-\overrightarrow{i}
+   +\overrightarrow{j}$ e $U . (\overrightarrow{i}+\overrightarrow{j})=2$. {\it Rpta} $U=(1,1,1)$
+   
+    (b) $U \times (\overrightarrow{i}-\overrightarrow{k})=\overrightarrow{j}$, 
+    $U+V=\overrightarrow{i}+\overrightarrow{j}$ e $\|U\|=1$.
+    
+    {\it Rpta} $U=(0,0,1), V=(1,1,-1)$ ou $U=(1,0,0), V=(0,1,-1)$
+    
+    (c) $(U+\overrightarrow{i}-2\overrightarrow{k}) \times (\overrightarrow{i}+2\overrightarrow{j}-\overrightarrow{k})=-\overrightarrow{i}
+   +\overrightarrow{j}+\overrightarrow{k}$ e 
+   $U . (\overrightarrow{i}+2\overrightarrow{j}+\overrightarrow{k})=10$.
+   {\it Rpta} $U=(3/2,4,1/2)$
+  \item Se h é a altura de um triângulo ABC relativa a AB. 
+  Mostre que $h \|\overrightarrow{AB}\|=
+  \|\overrightarrow{AB}\times \overrightarrow{AC}\|$. 
+  \item Se $\|U\|=3$, $\|V\|=4$, $\angle (U, V)=120^{\circ}$. Calcule o volume do paralelepípedo determinado por os vetores $U \times V$, $U$ e $V$.
+  \item Considere três vetores no espaço. 
+  Mostre que $U \times V$, $U$ e $V$ são linearmente independente, se
+  $\|U \times V\|\neq 0$.
+  \item Se $U=(1,2,-1)$, $V=(0,3,-4)$, $W=(1,0,\sqrt{3})$
+  e $Z=(0,0,2)$. Calcule o volume do tetraedro ABCD, 
+  se $\overrightarrow{AB}=\text{proj}_{V}U$, 
+  $\overrightarrow{AC}$ é o vetor oposto a W 
+  e $\overrightarrow{BD}=
+  \text{proj}_{Z}(\overrightarrow{AB}\times \overrightarrow{AC})$.
+  \end{enumerate}  
+\end{document}
+
+
+
+
+
+
+
+
+
+
+  
+  \item Verifique que $V=(1, 0, 1)$ é perpendicular a $U=(2, 1, -2)$. 
+  Faça um esboço.
+  \item Qual o ângulo entre os vetores
+  $$ (1) U=( \cos(\theta), \sin(\theta)), V=(1,0) \ \  
+     (2) U=(\cos(\theta), \sin(\theta)), V=(0,1) \ \
+     (3) U=(\cos(\theta), \sin(\theta)), V=(-\cos(\theta), \sin(\theta)).$$
+     Faça um esboço.  
+  \item Ache o ângulo entre os vetores
+   $$(1)\ \ 2\vec{i}+ 2\vec{j}, \ \ \vec{i}+\vec{k} \ \  
+     (2)\ \ \vec{i}-\vec{j}+\vec{k}, \ \ -3\vec{j}-3\vec{k}  $$  
+  \item Determine o valor de $\alpha$ para o qual os vetores 
+  $V=(\alpha, 3, 4)$ e $U=(3, 1, 2)$ são perpendiculares  
+  \item Mostre que não existe $\alpha$ tal que os vetores 
+   $V=2\alpha \vec{i}+ 4 \vec{j}+8 \vec{k}$ e 
+   $U=-\alpha \vec{i}+2 \vec{j}-3\vec{k}$. 
+  são perpendiculares 
+  \item Em $\R^{3}$, seja $O=(0,0,0)$. 
+  Qual o lugar geométrico dos pontos $P=(x, y, z)$ tal que 
+  $\|\overrightarrow{OP}\|^{2}=4$?
+  Qual é a figura representada pela equação 
+  $x^2+y^2=4$ em $\R^{3}$? É em $\R^2$?
+  \item Considere $V=\vec{i}+ 2\vec{j}+3\vec{k}$ e 
+   $U=-2\vec{i}+ 2\vec{j}+4\vec{k}$. Determine os vetores unitários paralelos aos vetores
+   $(1) \ \ U-V;   
+     (2)\ \ 2U-3V;  
+     (3)\ \ U+V$.
+  \item Ache o vetor unitário da bissetriz do ângulo entre os vetores 
+   $V=2\vec{i}+ 2\vec{j}+\vec{k}$ e 
+   $U=6\vec{i}+2\vec{j}-3\vec{k}$. 
+   \item Mostre que os pontos $A=(3,0,2)$, $B=(4,3,0)$ e $C=(8,1,-1)$ são vértices
+   de um triângulo retângulo. Em qual dos vértices se encontra o ângulo reto? 
+    \item Responda: 
+      \begin{enumerate}
+      \item Se $V.W=U.W$ e $W \neq \vec{0}$. Então, $V=U$? 
+      Agora, suponha que os vetores $V$, $W$, $U$ estão num plano, o que podemos dizer acerca $V$ e $U$.
+      \item Se $V$ é ortogonal a $U_1$ e $U_2$. Então, $V$ 
+      é ortogonal a qualquer combinação linear de $U_1$ e $U_2$?
+      \end{enumerate}
+     \item Mostre que se as diagonais de um paralelogramo tem o mesmo 
+     comprimento então ele é um retângulo. 
+     \item Qual é a equação da reta no plano que é perpendicular ao vetor $\mathcal{N}=(2,3)$ e passa pelo ponto $A=(-3,-3)$?
+     \item Encontre o vetor $\overrightarrow{CE}$ da seguinte figura, se 
+     o segmento CD tem comprimento 4, o segmento ED tem comprimento 3,
+     $\angle (DC,DE)=90^{\circ}$ e  $\angle (AB,AO)=90^{\circ}$.
+      \begin{figure}[h]
+      \begin{center}
+      \begin{tikzpicture}
+%coordenadas
+\coordinate[label=left:O] (O) at (0,0);
+\coordinate[label=right:A] (A) at (6,0);
+\coordinate[label=left:B] (B) at (6,4.5);
+\coordinate[label=left:C] (C) at (1,0.75);
+\coordinate[label=right:D] (D) at (3,2.25);
+\coordinate[label=left:E] (E) at (1.5,4.25);
+%\coordinate[label=right:B1] (A) at (4,0);
+%figura
+\draw[-,blue,line width=1pt] (O) -- (A);
+\draw[-,blue,line width=1pt] (A) -- (B);
+\draw[-,blue,line width=1pt] (O) -- (B);
+\draw[-,blue,line width=1pt] (C) -- (E);
+\draw[-,blue,line width=1pt] (E) -- (D);
+%%%%%
+\fill[blue] (6,4.5) circle (1mm) node[above right] {$(12,5)$};
+\fill[blue] (0,0) circle (1mm) node[below left] {$(0,0)$};
+\fill[blue] (6,0) circle (1mm) node[above right] {$(12,0)$};
+\end{tikzpicture}
+      \end{center}
+      \end{figure}
+  \end{enumerate}
+\end{document}
+
+\section{Introduction}
+
+\section{Basic Notions and something}
+
+\section{M AGP condition}
+
+Consider the mathematical programming problem given by 
+\begin{equation}\label{nlp}
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)\\
+\mbox{sujeito a }&h_i(x)=0, i=1,\dots,m,\\
+                 &g_j(x)\leq0,j=1,\dots,p.
+\end{array}
+\end{equation}
+
+All the functions are continuously differentiable. 
+
+\subsection{Necessary, sufficient, equivalences and strength}
+
+\begin{definition}
+        Given $\gamma \in \left[-\infty,0\right]$. A feasible point
+        $x^{*} \in \Omega$ satisfies the M-AGP($\gamma$) if there is a sequence 
+        $(s_{k},x^{k}) \in \mathbb{R}_{+}\times \mathbb{R}$
+        with $(s_{k},x^{k}) \rightarrow (s_{*},x^{*})$, $s_{*}>0$ 
+        such that 
+	 \begin{equation}\label{def:AGP}
+	 P_{\Omega((s_{k},x^{k}),\gamma)}
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}-\nabla f(x^{k})
+           \end{pmatrix}
+	        -
+	       \begin{pmatrix}
+             s_k \\
+             x^{k}
+           \end{pmatrix}
+	       \rightarrow 
+           \begin{pmatrix}
+             0 \\
+             0
+           \end{pmatrix},	      
+	 \end{equation}
+         %$$P_{\Omega(x^{k},\gamma)}(x^{k}-\nabla f(x^{k}))-x^{k} \rightarrow 0 $$
+	 where $P_{\Omega((s_{k},x^{k}),\gamma)}$ is the orthogonal projection onto 
+	 $\Omega((s_k,x^{k}),\gamma)$. 
+\end{definition}	 
+	 
+	 \begin{remark}
+	 There are many equivalents definitions, for instance.
+	 There is no loss of generality, if $s_{*}=1$, in fact, from the KKT conditions
+	  we see that.
+	 \end{remark}
+	 
+	 Given $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$
+	 we consider the set $\Omega((s,x),\gamma)$ given by the linear constraints  
+	 $z \in \R^{n}$ tal que 
+        \begin{equation}\label{eqn:Omegalinear}
+         \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}:                        
+            \begin{array}{lll}
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  h_i(x)\geq0\\
+ &(r-s)h_{i}(x)+s\nabla h_{i}(x)^{\mathtt{T}}(z-x)\geq 0, \text{ if }  h_i(x)<0\\
+ &(r-s)g_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if }  g_j(x)\geq0\\
+ &rg_{j}(x)+s\nabla g_{j}(x)^{\mathtt{T}}(z-x)\leq 0, \text{ if } \gamma < g_{j}(x^{k})<0
+            \end{array}
+            \right \}.
+        \end{equation}
+
+        $\Omega((s,x),\gamma)$ is non empty convex set.
+        Similarly to AGP, the parameter $\gamma$ is used to decided 
+         associada a $x^{*}$, which constraint can be eliminated when we construct 
+         the linearized set.
+        
+        It is easy to see that M AGP($\gamma$) holds for every 
+        $\gamma \in \left[-\infty,0\right)$.
+	
+	 The set $\Omega((s_{k},x^{k}),\gamma)$ can be thinking as the linear approximation 
+	    around the current point $(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}$ of 
+        \begin{equation}\label{eqn:aproxOmega}
+        \left \{
+             \begin{pmatrix}
+             r \\
+             z
+             \end{pmatrix} \in \mathbb{R}\times \mathbb{R}^{n}
+             :
+            \begin{array}{lll}
+            &rh_{i}(z)\leq sh_{i}(x), & \text{ if } h_i(x)\geq 0 \\
+            &rh_{i}(z)\geq sh_{i}(x), & \text{ if } h_i(x)< 0 \\
+            &rg_{j}(z) \leq sg_{j}(x), & \text{ if } 0 \leq g_{j}(x) \\
+            &rg_{j}(z) \leq 0, & \text{ if } \gamma < g_{j}(x)<0
+            \end{array}
+        \right \}.
+        \end{equation}
+  
+        In the section \ref{sec:irmo}, we will present a new algorithm that generates
+        this optimality condition.
+        
+        \begin{theorem}\label{teo:AGPoptimal}
+        Let $x^{*} \in \Omega$ be a local minimizer. Then, 
+        M AGP($\gamma$) holds at $x^{*}$.  
+        \end{theorem}
+        \begin{proof}
+       Let $x^*$ be a local minimizer of \eqref{nlp}. Clearly, the point $(s_{*},x^{*})$ with $s_{*}=1$, is a local minimizer of 
+$$
+\begin{array}{ll}
+\mbox{Minimizar }&f(x)+\frac{1}{2}\|x-x^*\|^2+\frac{1}{2}|s-s_*|^2,\\
+\mbox{sujeito a }&sh_i(x)=0, i=1,\dots,m,\\
+                 &sg_j(x)\leq0,j=1,\dots,p,\\
+                 &\|x-x^*\|\leq\delta,\ \ |s-s_{*}|\leq \delta.
+\end{array}
+$$
+for $\delta>0$ small enough.
+Now, define 
+$\bar{\Omega}:=
+\{(s,x) \in \mathbb{R}_{+}\times \mathbb{R}^{n}: 
+\text{max} \{|s-s_{*}|,\|x-x^*\|\}\leq\delta\}$. 
+Clearly, $\bar{\Omega}$ is a nonempty compact set. 
+Then, using the quadratic external penalty methods for $\rho_{k}$, there is a sequence
+$(s^{k}, x^{k})$ with limit $(s_{*},x^{*})$, such that 
+ \begin{equation}\label{AGPopt}
+	  \nabla f(x^{k})+(x^{k}-x^{*})+
+	  \sum_{i=1}^{m}(\rho_{k}s^{2}_{k}h_{i}(x^{k}))\nabla h_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p}(\rho_{k}s^{2}_{k}\max\{0,g_{j}(x^{k})\})\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+      and     
+	  \begin{equation}\label{AGPcomp}
+	  (s_{k}-s_{*})
+	  +
+	  \sum_{i=1}^{m} \rho_{k}s_{k}h^{2}_{i}(x^{k})
+	  +
+	  \sum_{j=1}^{p} \rho_{k}s_{k}{\max}^{2}\{0,g_{j}(x^{k})\}=0.
+	  \end{equation}
+ Define $\lambda_{i}^{k}:=\rho_{k}s_{k}h_{i}(x^{k})$, $\forall i \in \{1,\dots,m\}$	
+ and $\mu_{j}^{k}:=\rho_{k}s_{k}\max\{0,g_{j}(x^{k})\}$, $\forall j \in \{1,\dots,p\}$.  
+ Thus, from \eqref{AGPopt}, \eqref{AGPcomp}, $s_{k}\rightarrow s_{*}>0$ and $x^{k}\rightarrow x^{*}$, we obtain that  
+  \begin{equation}\label{eqn:aproxOmega}
+        \left \|
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -             
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|=
+           \left \|
+             \begin{pmatrix}
+             s_k-s_{*} \\
+             x^{k}-x^{*}
+             \end{pmatrix} 
+        \right \| \rightarrow 0.
+  \end{equation}
+  Taking orthogonal projections onto $\Omega((s,x),\gamma)$, we obtain that 
+    \begin{equation}\label{eqn:projectionomega}
+        \left \|
+             P_{\Omega((s,x),\gamma)}
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k}-\nabla f(x^{k}) 
+             \end{pmatrix} 
+             -  
+             P_{\Omega((s,x),\gamma)}           
+             \begin{pmatrix}
+             s_{k}+ 
+             \sum_{i=1}^{m} \lambda^{k}_{i}h_{i}(x^{k})
+        	 +\sum_{j=1}^{p} \mu_j^{k}\max \{0,g_{j}(x^{k})\}\\
+             x^{k}+
+             \sum_{i=1}^{m}s_{k}\lambda^{k}_{i}\nabla h_{i}(x^{k})
+	         +\sum_{j=1}^{p}s_{k}\mu^{k}_{j}\nabla g_{j}(x^{k})
+             \end{pmatrix} 
+        \right \|\rightarrow 0.
+  \end{equation}
+  But, since $\Omega((s_{k},x^{k}),\gamma)$ is a convex set given by affine 
+  constraints, it is not difficult to see that 
+    \begin{equation}\label{eqn:projectionomega2}
+             P_{\Omega((s_{k},x^{k}),\gamma)} 
+             \left \{          
+             \begin{pmatrix}
+             s_{k}\\
+             x^{k}
+             \end{pmatrix}+
+             \sum_{i=1}^{m}\lambda^{k}_{i}             
+             \begin{pmatrix}
+             h_{i}(x^{k}) \\
+        	 s_{k}\nabla h_{i}(x^{k})
+             \end{pmatrix}+
+             \sum_{j=1}^{p} \mu_{j}^{k}
+             \begin{pmatrix}
+             \max \{0,g_{j}(x^{k})\}\\
+             s_{k} \nabla g_{j}(x^{k})
+             \end{pmatrix}
+             \right \}=
+             \begin{pmatrix}
+             s_{k} \\
+             x^{k} 
+             \end{pmatrix}.
+  \end{equation}
+  Here it is important that $\lambda_{i}^{k}\geq 0$ if $h_{i}(x^{k})\geq0$ and 
+                  $\lambda_{i}^{k}<0$ if $h_{i}(x^{k})<0$.   
+                  Then, from \eqref{eqn:projectionomega}, we conclude that 
+                  M AGP holds.
+\end{proof}        
+        
+    CAKKT is the stronger sequential optimality condition known 
+     in the literature. Here, we will see that M AGP is even stronger than CAKKT.
+        
+        \begin{theorem}
+        M AGP implies CAKKT.
+        \end{theorem}
+        \begin{proof}
+        Suppose that M AGP holds. Then, there is a sequence 
+        $(s_{k},x^{k})\rightarrow (s_{*},x^{*})$ with $s_{*}>0$ 
+        such that 
+        $(\ell_{k},\varepsilon^{k}):=P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))-(s_{k},x^{k})\rightarrow (0,0)$. 
+        
+        Now, the orthogonal projection 
+        $P_{\Omega((s_{k},x^{k}),\gamma)}(s_{k},x^{k}-\nabla f(x^{k}))$
+        is the unique solution of 
+        \begin{equation}
+	 \text{ Minimizar } 
+	 \frac{1}{2}
+	 \left \|
+	 \begin{pmatrix}
+	 r \\
+	 z
+	 \end{pmatrix}-
+	 \begin{pmatrix}
+	 s_{k} \\
+	 x^{k}-\nabla f(x^{k})
+	 \end{pmatrix}
+	 \right \|^{2} 
+	 \ \ \text{ subject to }     (r,z) \in \Omega((s_{k},x^{k}),\gamma).
+    	\end{equation}
+        Since $\Omega((s_{k},x^{k}),\gamma)$ is given by affine constraints, the KKT conditions hold. Thus, there are multipliers
+        $\lambda^{k} \in\mathbb{R}^{m}$, $\mu^{k}\in \mathbb{R}^{p}$ such that
+      \begin{equation}\label{MAGPimpCAKKT1}
+	  \nabla f(x^{k})+\varepsilon^{k}+
+	  \sum_{i=1}^{m}s_{k}\lambda_{i}^{k}\nabla h_{i}(x^{k})+
+	  \sum_{j=1}^{p}s_{k}\mu_{j}^{k}\nabla g_{j}(x^{k})=0, 
+	  \end{equation}
+and 
+        \begin{equation}\label{MAGPimpCAKKT2}
+	  \ell_{k}+\sum_{i=1}^{m}\lambda_{i}^{k} h_{i}(x^{k})
+	                 +\sum_{j=1}^{p}\mu_{j}^{k} g_{j}(x^{k})=0, 
+	  \end{equation}
+       Furthermore, the next relations are satisfied: 
+	  \begin{eqnarray*}
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& 
+	  \ \ \text{ with } h_{i}(x^{k})\geq 0 \text{ and } \lambda_{i}^{k}\geq0\label{AGPcomp1}\\
+	  \lambda_{i}^{k}[h_{i}(x^{k})\ell_{k}+s_{k}\nabla h_{i}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } h_{i}(x^{k})<0 \text{ and } \lambda_{i}^{k}\leq0\label{AGPcomp1}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})\ell_{k}+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ \text{ with } 0 \leq g_{j}(x^{k}) \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}[g_{j}(x^{k})(\ell_{k}+s_k)+s_k\nabla g_{j}(x^{k})^{T}\varepsilon^{k}]=0,& \ \ 
+	  \text{ with } \gamma <g_{j}(x^{k}) <0 \text{ and } \mu_{j}^{k}\geq0 \label{AGPcomp2}\\
+	  \mu_{j}^{k}=0,& \ \ \text{ otherwise } \label{AGPcomp3}.
+	  \end{eqnarray*}
+        
+         From, those relations we see that $|\lambda^{k}_{i}h_{i}(x^{k})|=\lambda^{k}_{i}h_{i}(x^{k})$, $\forall i$. Moreover, we have that 
+         $\mu_{j}^{k}=0$, for $j \notin A(x^{*})$ and $k$ large enough. 
+         Using the above relations, \eqref{MAGPimpCAKKT1} and \eqref{MAGPimpCAKKT2} 
+         we get 
+      \begin{equation}\label{sumgneg}
+	  \sum_{\gamma<g_{j}(x^{k})< 0} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|=
+	  \sum_{\gamma<g_{j}(x^{k})< 0} -s_{k}\mu_{j}^{k}g_{j}(x^{k})=
+	  -\nabla f(x^{k})^{T}\varepsilon^{k}-\|\varepsilon^{k}\|^{2}-|\ell_{k}|^{2} \rightarrow 0. 
+	  \end{equation}
+	  From \eqref{sumgneg}, \eqref{MAGPimpCAKKT2} and $s_{k}\rightarrow s_{*}>0$ we conclude that 
+	  \begin{equation}\label{sumg}
+	  \sum_{i=1}^{m}|s_{k}\lambda_{i}^{k}h_{i}(x^{k})|
+	  +
+	  \sum_{j=1}^{p} |s_{k}\mu_{j}^{k}g_{j}(x^{k})|\rightarrow 0
+	  \end{equation}
+      Set    
+      $\hat{\lambda}_{i}^{k}:=s_{k}\lambda_i^{k}$, $\forall i \in \{1,\dots,m\}$	
+ and $\hat{\mu}_{j}^{k}:=s_{k}\mu_j^{k}$, $\forall j \in \{1,\dots,p\}$. Thus, 
+ from \eqref{MAGPimpCAKKT1} and \eqref{sumg}, CAKKT holds. 
+  \end{proof}
+	
+	 The next example shows that MAGP is strictly stronger than CAKKT.
+	 
+	\begin{counter}(CAKKT does not imply MAGP )\end{counter} Missing
+
+    Under CCP, every MAGP point is a stationary point.
+    	
+	Since CAKKT is a sufficient optimality condition in the convex case \cite{amscakkt}
+	MAGP is also a sufficient optimality condition.
+	     
+\subsection{Relation with other conditions}
+ 
+ 
+
+\section{Algorithm for MOP with stopping criterion based on MAGP }\label{sec:irmo}
+In this section, we introduced a new algorithm based on those considerations. \\
+
+{\it Still working on this algorithm. } \\
+
+For the standard non-linear program, the idea is to do a inexact restoration method with 
+$\Omega((s,x),\gamma)$ instead of $\Omega(x,\gamma)$ 
+
+Then, the next step will be to design an algorithm for solving MOP.
+ 
+\section{Concluding Remarks}
+
+
+\end{document}
+
+
