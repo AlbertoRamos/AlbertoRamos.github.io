@@ -17,7 +17,7 @@ tag:        2017s1
   | **Prova 2:** | 18/05
   | **Prova 3:** | 22/06
   | **2da chamada**| 27/06
-  | **Exame:**   | 11/07
+  | **Exame:**   | 04/07
 
 # Ementa
 
@@ -54,6 +54,7 @@ tag:        2017s1
 # Listas
 
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_analise_II.pdf)
+  - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_analise_II.pdf)
 
 # Provas
 
