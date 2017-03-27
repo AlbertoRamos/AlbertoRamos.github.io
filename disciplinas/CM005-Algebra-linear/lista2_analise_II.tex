@@ -1,0 +1,242 @@
+% lista 2 (analise II)
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+
+\begin{document}
+
+\title{Lista 2: Análise II}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+\begin{enumerate}
+	\item Teorema Fundamental do Cálculo 
+	\item Caracterização de funções integráveis
+	\item Integrais improprias.
+\end{enumerate}
+\end{abstract}
+
+
+\section{Teorema Fundamental do Cálculo e medida nula  } 
+
+\begin{enumerate}
+  \item Faça os problemas 7-13 do capítulo IX do livro texto. 
+  \item Prove que toda função monótona é integrável.
+  \item Calcule a derivada de $F(x)=\int_{\sin x}^{x^3} e^{-t}dt$
+  \item Seja f uma função integrável em $[a,b]$
+  cuja integral não é nula. Mostre que existe um 
+  $c \in (a,b)$
+  tal que $\int_{a}^{c} f(x)dx=\int_{c}^{b} f(x)dx$.
+  \item Seja f uma função positiva, continua e estritamente crescente em $[a,b]$. Prove que 
+  $$ \int_{a}^{b} f(x)dx+\int_{f(a)}^{f(b)} f^{-1}(s)ds=bf(b)-af(a).$$
+  Com essa identidade, calcule $\int_{0}^{1} \sin^{-1}(x)dx$. 
+  \item Seja $f$ uma função periódica com período $m$ e integrável 
+  em $[0,m]$. Defina $g(x)=\int_{0}^{x} f(t)dt$. Mostre que 
+  $g$ pode não ser periódica  mas existe um $c \in \mathbb{R}$ 
+  tal que $g(x)-cx$ é periódica com período $m$
+  \item Seja $f$ uma função contínua em $[a,b]$. Assuma que existe constantes $\alpha$ e $\beta$ tal que 
+  $$ \alpha \int_{a}^{c}f(x)dx+\beta \int_{c}^{b} f(x)dx=0, \text{para todo } c \in [a,b].$$
+  Mostre que $f$ dever ser a função nula.
+  \item Se $f>0$ e $f$ contínua em $[0,\infty)$. Mostre que 
+  se $\int_{1}^{x}f(t)dt \leq f(x)^{2}$. Então, 
+  $f(x)\geq 1/2(x-1)$.  
+  \item Mostre que $$ \int_{a}^{b} xf^{''}(x)dx=(bf^{'}(b)-b)-(af^{'}(a)-a), $$ 
+ onde assumimos que $f^{''}$ é contínua em $[a,b]$.
+  \item Se $f:[0,1]\rightarrow \mathbb{R}$ é contínua. Prove que 
+  $\int_{0}^{1} f(x)dx=\lim_{n \rightarrow \infty} \frac{1}{n}\sum_{i=1}^{n}f(\frac{i}{n})$.
+  Assim, a integral pode ser interpretada como uma {\it média} de $f$ em $[a,b]$.  
+  \item Seja $f$ continuamente diferenciável. 
+  Defina $a_{n}:=\int_{a}^{b} f(t)\sin(nt)dt$. Prove que $a_{n}$ converge a $0$.
+  {\it Dica: } Integração por partes.
+  \item Seja $f$ limitada em $[a,b]$. Suponha que existe uma sequencia de partições $P_{n}$ tais que  
+  $S(f, P_{n})-s(f,P_{n})\rightarrow 0$. Mostre que $f$ é integrável. É necessário que $|P_n|\rightarrow 0$?
+  \item Use o teorema de valor médio para provar que para 
+  todo $-1<a\leq 1$, $a_{n}:=\int_{0}^{a} \frac{x^{n}}{1+x}dx$
+  converge para $0$, quando $n \rightarrow \infty$. 
+  \item Mostre que a função $f$ é integrável onde $f$ é a função $f:[0,1]\rightarrow \mathbb{R}$ definida como 
+  $f(x)=2^{-n}$, se $x=j/2^{n}$ com 
+  $j \in \mathbb{N}$, $0\leq j<2^{n}$ e $f(x)=0$ caso contrário.
+  \item Demonstre a {\it fórmula de Euler}. Seja $f:[a,b] \rightarrow \mathbb{R}$ de classe $C^{1}$. Então:
+  $$  \sum_{a \leq n \leq b} f(n)=\int_{a}^{b} f(x)dx+\int_{a}^{b} \{x\}f'(x)dx+\{x\}f(x)|_{a}^{b}, $$
+  onde $\{x\}:=x-[x]$ a parte não inteira de $x$.
+  \item Verifique que:
+   \begin{itemize}
+   	\item $\frac{1}{n} \sum_{i=1}^{n} \sin(\frac{i\pi}{n}) \rightarrow \frac{2}{\pi}$, 
+   	quando $n \rightarrow \infty$.
+   	\item $\frac{1}{n^{p+1}} \sum_{i=1}^{n} i^{p} \rightarrow \frac{1}{p+1}$, quando $n \rightarrow \infty$ para todo 
+   	$p \neq -1$.
+   	O que acontece se $p=-1$?
+   	\item $\sum_{i=1}^{n} \frac{1}{i^{s}}=\frac{1}{n^{s-1}}+s \int_{1}^{n}\frac{[x]}{x^{s+1}}dx$, 
+   	para qualquer $s\neq1$, onde $[x]$ é o maior inteiro menor ou igual a $x$.
+   \end{itemize}
+  \item Se $X \subset [a,b]$ tem medida nula então $f(X)$ tem medida nula, se 
+  $f$ é localmente Lipschitz em $[a,b]$ (em particular, se $f$ é de classe $C^{1}$).
+  Dê um exemplo que $f(X)$ não seja de medida nula mesmo que $X$ seja de medida nula.
+  \item Seja $f$ contínua em $[a,b]$ e $g$ uma função integrável em $[c,d]$ com 
+  $g([c,d])\subset [a,b]$.
+  Mostre que $f \circ g$ é integrável.
+  \item Sabemos que o conjunto de Cantor $\mathcal{C}$ tem medida nula. Podemos construir um conjunto de Cantor 
+  com medida não nula.  
+  \item Considere $f$ uma função contínua em $[a,b]$ e de classe $C^{1}$ em $(a,b)$. 
+  Assuma que $f'(x)\neq 0$, $\forall x \in (a,b)$. Mostre que 
+  $g \circ f$ é integrável, se $g:[c,d] \rightarrow \mathbb{R}$ é integrável
+  e $f[a,b] \subset [c,d]$.  
+\end{enumerate}
+{\bf Integral impróprias em intervalos ilimitados}
+ \begin{itemize}
+ 	\item {\it Integral impróprias sobre $[a, \infty)$}.
+ 	Seja $f$ contínua em $[a,\infty)$. Definimos
+ 	$$\int_{a}^{\infty} f(x)dx:=\lim_{b \rightarrow \infty} \int_{a}^{b} f(x)dx, $$
+ 	quando o limite existir. Neste caso, a integral converge, caso contrário, dizemos que a integral diverge.
+ 	Caso $\int_{a}^{\infty} |f(x)|dx$ convergir, dizemos que a {\it integral é absolutamente convergente}.
+ 	Quando $\int_{a}^{\infty} f(x)dx$ converge mas 
+ 	$\int_{a}^{\infty} |f(x)|dx$ diverge, dizemos que 
+ 	a integral imprópria é {\it condicionalmente convergente}. Similarmente para as seguinte definições.
+ 	\item  {\it Integral impróprias sobre $(-\infty, b]$}.
+ 	Seja $f$ contínua em $(-\infty,b]$. Definimos
+ 	$$\int_{-\infty}^{b} f(x)dx:=\lim_{a \rightarrow -\infty} \int_{a}^{b} f(x)dx, $$
+ 	quando o limite existir. Neste caso, a integral converge, caso contrário, dizemos que a integral diverge.
+ 	\item  {\it Integral impróprias sobre $(-\infty, \infty)$}.
+ 	Seja $f$ contínua em $\mathbb{R}$. Definimos
+ 	$$\int_{-\infty}^{\infty} f(x)dx:=\lim_{a, b \rightarrow \infty} \int_{-a}^{b} f(x)dx, $$
+ 	quando o limite existir. Neste caso, a integral converge, caso contrário, dizemos que a integral diverge.
+ 	Observe que $\int_{-\infty}^{\infty} f(x)dx$, não é necessariamente igual a 
+ 	$\lim_{c \rightarrow \infty} \int_{c}^{c} f(x)dx$, por exemplo, no caso $\int_{-\infty}^{\infty} xdx$.
+ O limite $\lim_{c \rightarrow \infty} \int_{c}^{c} f(x)dx$ (caso existir) é chamado 
+ {\it Valor médio de Cauchy} é denotado por 
+ $PV \int_{-\infty}^{\infty} f(x)dx$.
+ \end{itemize}
+ {\bf Integral impróprias em intervalos finitos}
+  \begin{itemize}
+  	\item Seja $f$ contínua em $(a,b]$ e $|\lim_{x \rightarrow a^{+}}f(x)|=\infty$.
+  	Definimos
+  	$$\int_{a}^{b} f(x)dx:=\lim_{\delta \rightarrow a^{+}} \int_{\delta}^{b} f(x)dx, $$
+  	quando o limite existir. Neste caso, a integral converge, caso contrário, dizemos que a integral diverge.
+  	Caso $\int_{a}^{\infty} |f(x)|dx$ convergir, dizemos que a {\it integral é absolutamente convergente}.
+  	\item Seja $f$ contínua em $[a,b)$ e $|\lim_{x \rightarrow b^{-}}f(x)|=\infty$.
+  	Definimos
+  	$$\int_{a}^{b} f(x)dx:=\lim_{\delta \rightarrow b^{-}} \int_{a}^{\delta} f(x)dx, $$
+  	quando o limite existir. Neste caso, a integral converge, caso contrário, dizemos que a integral diverge.
+  	Caso $\int_{a}^{\infty} |f(x)|dx$ convergir, dizemos que a {\it integral é absolutamente convergente}.
+    \item  Seja $f$ contínua em $[a,b]$ exceto num ponto $c\in(a,b)$ e se um ou ambos limites 
+    laterais são infinitos. Definimos
+    $$\int_{a}^{b} f(x)dx:=\int_{a}^{c} f(x)dx+ \int_{a}^{c} f(x)dx, $$
+    {\it desde que ambas integrais impróprias à direitas sejam convergentes}.
+ \end{itemize}
+Um teorema útil para decidir se certa integral imprópria converge, é o teste de comparação. \newline
+
+  {\bf Teorema de Comparação: } Sejam dois funções contínuas $f$ e $g$ tais que 
+  $0\leq f(x)\leq g(x)$, para todo $x \in [a,\infty)$, onde $a \in \mathbb{R}$.
+   \begin{itemize}
+   	\item Se $\int_{a}^{\infty} g(x)dx$ converge, 
+   	então  $\int_{a}^{\infty} f(x)dx$ converge.
+   	\item Se $\int_{a}^{\infty} f(x)dx$ diverge, 
+   	então  $\int_{a}^{\infty} g(x)dx$ diverge. 
+   \end{itemize}
+  Verifique que as seguinte integrais impróprias são convergentes ou não.
+  \begin{enumerate}
+  	\item $\int_{0}^{2} x^{-3}dx$ (diverge), $\int_{0}^{\infty} (1+x^2)^{-1}dx$ (converge, $\pi/2$)
+  	\item Para quais valores de $\alpha$, a integral converge $\int_{1}^{\infty} x^{-\alpha}dx$? (converge, $\alpha>1$)
+  	\item $\int_{1}^{\infty} \frac{dx}{x^{2}(1+e^{x})}$ (converge),  $\int_{1}^{\infty} \frac{(x+1)}{\sqrt{x^{3}}}dx$
+  	(diverge), $\int_{0}^{\infty} x\sin x dx$ (diverge)
+  	\item $\int_{0}^{\infty} e^{-ax}\sin(bx)dx$ (converge, valor $b/(a^2+b^2)$)
+  	\item Determine o valor de $k$, para que 
+  	$\int_{-\infty}^{\infty} e^{k|x|}dx=0.5$, ($k=-4$).
+  \end{enumerate}
+  
+ O Critério de Dirichlet é um teste para provar 
+ a convergência de séries numéricas ou integrais impróprias 
+ da forma $\sum_{n=1}^{\infty} a_{n}b_{n}$
+ ou $\int_{a}^{\infty} f(x)g(x)dx$.  \newline
+ 
+  {\bf Critério de Dirichlet para integrais}
+    Sejam $f$ e $g$ funções tais que 
+    \begin{itemize}
+    \item $f$ é contínua em $[a,\infty)$ e existe um $M>0$ tal que  
+    $|\int_{a}^{x}f(s)ds|\leq M$, para todo $x>a$
+    \item $g \in C^{1}[a,\infty)$ com $g(x)>0$, $g'(x)\leq 0$, $\forall x>a$
+    \item $\lim_{x\rightarrow \infty} g(x)=0$.
+    \end{itemize}
+   Então, a integral imprópria converge 
+   $\int_{a}^{\infty} f(x)g(x)dx=\lim_{b \rightarrow \infty} 
+   \int_{a}^{b} f(x)g(x)dx$.   
+  {\it Obs} A prova é baseada em integração por partes.
+  
+  Responda
+  \begin{enumerate}
+  \item Mostre que $\int_{1}^{\infty} x^{1/5}\sin x dx$ diverge, e como consequência prove que 
+  $\int_{0}^{\infty} x^{2}\sin{x^{5/2}}dx$ também diverge. Compare com o teste de Dirichlet. 
+  \item Prove que $\int_{0}^{\infty} \frac{\cos x}{\sqrt{x}}dx$ converge condicionalmente (Use o critério de Dirichlet).
+  \item Mostre que a integral imprópria $\int_{0}^{\infty} \frac{\sin x}{x}dx$ converge condicionalmente (Critério de Dirichlet). Ainda mais, $\int_{0}^{\infty} \frac{\sin x}{x}dx=\pi/2$.
+  \item Seja $f:[a,\infty)\rightarrow \mathbb{R}$ contínua tal que exista a integral imprópria $\int_{a}^{\infty} f(x)dx$. 
+  \begin{itemize}
+  \item Necessariamente  $\lim_{x\rightarrow \infty}f(x)=0$? Caso seja falso, mostre um contra-exemplo.
+  \item Se $f(x)>0$, para $x>a$. É verdade que 
+  $\lim_{x\rightarrow \infty} f(x)=0$?
+  Caso seja falso, encontre um contra-exemplo.
+  \item Mostre que se $f$ é não-crescente com $f(x)>0$, para $x>a$, então 
+  $\lim_{x\rightarrow}f(x)dx=0$. 
+  \end{itemize}
+  \item Prove que $\int_{-\infty}^{\infty} (\frac{\sin x}{x})^{2}dx$
+  \end{enumerate}
+\end{document}
+
+
+
