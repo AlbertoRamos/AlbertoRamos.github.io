@@ -35,7 +35,9 @@ tag:        2017s1
   
 # Provas
 
-  - [ ] [Prova 1]
+  - [Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova1_GA_A.pdf), 
+  [Nota Prova 1: EM]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_GA_EM.pdf), 
+  [Nota Prova 1: EB]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_GA_Bio.pdf)
  
 # Bibliografia
 
