@@ -1,0 +1,173 @@
+%% Prova 1 de Analise II (matematica)
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large Analise II: Prova 1 } \\
+  06 de abril de 2017
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular}
+\end{center}
+
+\begin{questions}
+ % \question[20] 
+ % \begin{parts}
+ % \part%[10]
+ % O que significa que uma matriz seja {\it equivalente por linhas} a outra matriz?
+ % \part%[10]
+ % Considere $V$ um espaço vetorial. Seja $W \neq \emptyset$ um subconjunto de $V$. 
+ % Quais propriedades deve satisfazer $W$ para que ele seja um subespaço vetorial de
+ % $V$?  
+ % \part%[10] 
+ % Dada uma matriz $A \in M_{m \times n}(\mathbb{R})$. Escreva o que é o núcleo de $A$.
+ % \end{parts}
+ \question[5] Enuncie e prove o Teorema Fundamental do Cálculo.
+ \question[5] Seja $f:[a,b]\rightarrow \mathbb{R}$ uma função limitada e integrável. 
+   \begin{parts}
+   \part Mostre que $\mathcal{A}:=\{x \in [a,b]: \text{ $f$ é contínua em } x\}$
+ é denso em $[a,b]$. 
+ \end{parts} 
+  \begin{solution} Seja $\mathcal{D}:=[a,b]\setminus \mathcal{A}$. 
+  Da caracterização da integrabilidade, $m(\mathcal{D})=0$. Note que 
+  $\mathcal{D}$ é o conjunto dos pontos de descontinuidade de $f$.
+  
+  Suponha por contradição que $\mathcal{A}$ não é denso. Assim, existe $c \in [a,b]$ e um intervalo fechado $I$ com $int(I)\neq \emptyset$ 
+  tal que $c \in I$ e $I\cap \mathcal{A}=\emptyset$. Portanto, $I\subset \mathcal{A}^{c}=\mathcal{D}$. Como $m(\mathcal{D})=0$, temos que 
+  $m(I)=0$, o que é uma contradição.
+  \end{solution}
+  \question Seja $f:[a,b]\rightarrow \mathbb{R}$ uma função limitada e integrável. 
+    \begin{parts}
+    \part[5] Mostre que 
+    $H(x):=\int_{a}^{x}f(t)dt-\int_{x}^{b}f(t)dt$, $x \in [a,b]$ é contínua.
+      \begin{solution}
+      Para provar que $H(x)$ é contínua, será suficiente provar que 
+      $H_{1}(x):=\int_{a}^{x}f(t)dt$ e $H_{2}(x):=\int_{x}^{b}f(t)dt$ são funções contínuas.
+      De fato, se $M>0$ é tal que $|f(x)|\leq M, x \in [a,b]$. Então para $x<y$ temos que 
+      $$|H_{1}(y)-H_{1}(x)|=|\int_{x}^{y}f(s)ds| \leq \int_{x}^{y}|f(s)|ds \leq M \int_{x}^{y}ds\leq M|x-y|.$$
+      Similarmente, $|H_{1}(y)-H_{1}(x)|=|\int_{x}^{y}f(s)ds| \leq M \int_{x}^{y}ds\leq M|x-y|$  para $x>y$. Assim, $H_{1}(x)$ é uma função Lipschitziana e portanto contínua. A continuidade de $H_{2}(x)$ segue os mesmos passo que $H_{1}(x)$.
+      \end{solution}    
+    \part[5] Prove que se 
+    $\int_{a}^{b}f(x)dx \neq 0$, então existe um $c \in (a,b)$ tal que 
+    $\int_{a}^{c}f(t)dt=\int_{c}^{b}f(t)dt$.
+    \end{parts}
+     \begin{solution}
+     Do item anterior, $H(x)$ é contínua em $[a,b]$.
+     Note que $H(a)=-\int_{a}^{b}f(s)ds=-H(b)$ e como $H(b)\neq0$
+     temos que $H(a)>0>H(b)$ ou $H(b)>0>H(a)$. Do teorema do valor intermédiario, existe $c \in (a, b)$ tal que $H(c)=0$. Isto é 
+     $\int_{a}^{c}f(t)dt=\int_{c}^{b}f(t)dt$.
+     \end{solution}
+   \question[20] Seja $g\geq 0$ integrável. Se 
+   $\int_{a}^{b}g(x)dx=0$, então  
+   $\int_{a}^{b}f(x)g(x)dx=0$, $\forall f$ limitada e integrável.
+     \begin{solution}
+     Seja $f$ limitada e integrável. Logo, existe $M>0$ tal que 
+     $|f(x)|\leq M$ para $x \in [a,b]$.
+     Usando as propriedades da integral, 
+     $$|\int_{a}^{b}f(x)g(x)dx|\leq \int_{a}^{b}|f(x)|g(x)dx \leq 
+     M \int_{a}^{b}g(x)dx=0, $$
+     onde a primeira desigualdade temos usado que $g(x)\geq 0$.
+     \end{solution}
+  \question
+  Seja $f:\mathbb{R} \rightarrow \mathbb{R}$ uma função Lipschitziana com constante de Lipschitz $K>0$, isto é, 
+$$ |f(x)-f(y)|\leq K|x-y|, \text{ para todo } x, y \in \mathbb{R}.$$  
+  \begin{parts}
+  \part[10] Prove que se $X$ tem medida nula, então $f(X)$ tem medida nula.
+   \begin{solution}
+   Seja $\varepsilon>0$. Já que $m(X)=0$, da definição de medida nula, temos que existem intervalos  
+   $I_{1}, I_{2}, \dots, I_{n}, \dots $ tais que $X \subset \cup_{i=1}^{\infty} I_{i}$
+   e $\sum_{i=1}^{\infty} |I_{i}|< \varepsilon/K$. Considere $J_i=f(I_i)$, 
+   para $i \in \mathbb{N}$. Certamente 
+   $f(X) \subset \cup_{i=1}^{\infty} f(I_{i})$ e
+    $\sum_{i=1}^{\infty} |f(I_{i})|\leq 
+     \sum_{i=1}^{\infty} K|I_{i}|< \varepsilon$. Como $f$ é Lipschitz, $f$ é contínua e da continuidade 
+     $f(I_i)$ é também um intervalo. Portanto, a sequência de intervalos
+        $\{J_i=f(I_i)\}_{i \in \mathbb{N}}$ satisfaz as propriedades suficientes para dizer que 
+        $f(X)$ tem medida nula.
+   \end{solution}
+  \part[10] Prove ou forneça um contraexemplo, da afirmação:
+   "$f  \circ g$ é integrável se 
+  $g$ é integrável e $f$ é Lipschitziana".
+    \begin{solution}
+    A afirmação é verdadeira. Como $f$ é Lipschitziana, ela é contínua. 
+    Usando continuidade, vemos que $D_{f\circ g} \subset D_{g}$, 
+    onde $D_{g}$ é o conjunto de descontinuidade de $g$ e
+    $D_{f\circ g}$ é o conjunto de descontinuidade de $f \circ g$.
+    Já que $m(D_{g})=0$ temos que $m(D_{f \circ g})=0$, o que implica que
+    $f \circ g$ é integrável.
+    \end{solution}
+  \end{parts} 
+ \question Prove a convergência de
+  \begin{parts}
+  \part[8] $\int_{0}^{\infty} \frac{1}{1+e^{x}}dx$
+    \begin{solution}
+    Usar o teste de comparação. Observe que 
+    $\frac{1}{1+e^{x}} \leq \frac{1}{e^{x}}.$
+    \end{solution}
+  \part[8] $\int_{0}^{1} \frac{1}{x^{s}}dx$, para $s<1$.
+    \begin{solution} Usando mudança de variável, 
+     temos que 
+        $\int_{0}^{1} \frac{1}{x^{s}}dx= \int_{0}^{\infty} e^{-v(1-s)}dv$.
+        Já que $1-s>0$, a última integral imprópria converge. 
+        \end{solution}
+  \part[4] $\int_{0}^{\infty} \cos(x^{2})dx$
+    \begin{solution}
+    Escreva $\int_{0}^{\infty} \cos(x^{2})dx=\int_{0}^{1} \cos(x^{2})dx+\int_{1}^{\infty} \cos(x^{2})dx$. Para analisar a convergência da integral, analisaremos $\int_{1}^{\infty} \cos(x^{2})dx$. Usando mudança de variável, 
+    $$\int_{1}^{\infty} \cos(x^{2})dx=\frac{1}{2}\int_{1}^{\infty} \frac{\cos(u)}{\sqrt{u}}du. $$
+    A última integral imprópria converge, devido ao critério de Dirichlet. 
+    \end{solution}
+  \end{parts} 
+% \question 
+% Seja $f:\mathbb{R}^{2}\rightarrow \mathbb{R}$ uma função contínua 
+% tal que para todo $y$, a derivada em relação a $x$, 
+% $\partial_{x} f(x,y)$ é
+% contínua. 
+% Se $$ F(x)= \int_{a}^{x} f(x,y)dy, \ \ x \in \mathbb{R}.$$
+% Prove que $F$ é derivável e $F'(x)=f(x,x)+\int_{a}^{x}  \partial_{x} %f(x,y)dy$.
+ \end{questions}
+\end{document}
+
