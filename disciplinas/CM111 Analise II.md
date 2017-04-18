@@ -58,7 +58,7 @@ tag:        2017s1
 
 # Provas
 
-  - [ ] [Prova 1]
+  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova1_analiseII.pdf)
  
 # Bibliografia
 
