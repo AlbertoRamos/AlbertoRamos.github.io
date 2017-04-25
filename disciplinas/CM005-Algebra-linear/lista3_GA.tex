@@ -1,0 +1,372 @@
+% lista 3(geometria analitica 2017 I)
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math,arrows.meta}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+\begin{document}
+
+\title{Lista 3: Geometria Analítica}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Equação da reta e do plano; %Vetores (no plano e no espaço);
+ \item Ângulo entre retas e entre planos.
+ \end{enumerate}
+\end{abstract}
+
+
+\section*{Equação da reta}
+ {\bf Equação vetorial.} 
+ Uma reta $r$ em $\mathbb{R}^{n}$, pode ser escrita como 
+ $r: P=P_{0}+tV$, $t \in \mathbb{R}$ 
+ onde $V \neq \bar{0} \in \mathbb{R}^{n}$ é chamado de {\it vetor diretor}. 
+ Note que existe infinitos vetores diretores, todos eles paralelos. 
+ Se conhecemos dois pontos sobre a reta, por exemplo $P_{0}$ e $P_1$, o vetor 
+ $\overrightarrow{P_0P_1} \in \mathbb{R}^{n}$ serve como vetor diretor. 
+  
+  {\bf Equação geral da reta em $\mathbb{R}^{2}$}
+ Quando a reta está em $\mathbb{R}^{2}$, podemos escrever a reta da forma 
+$ax+by+c=0$, para certos $a,b, c \in \mathbb{R}$, com $a^{2}+b^{2}\neq0$. Dita forma se chama de 
+ {\it equação geral da reta ou equação normal}. Perceba que o vetor 
+ $(a,b) \in \mathbb{R}^{2}$ é um vetor normal à reta. 
+ 
+ Ainda mais,  note que se $(x_0, y_{0})$ está sobre a reta 
+ $r: ax+by+c=0$, temos que 
+ $$ (a,b) \perp ((x,y)-(x_0,y_0)), \text{ para todo } (x,y) \in r. $$ 
+ Em $\mathbb{R}^{2}$, podemos também escrever a reta $r$ como o conjuntos dos pontos 
+ $(x,y)$ tal que 
+ $$ y-y_{0}= m (x-x_{0}), \text{ onde } m= \frac{y_1-y_0}{x_1-x_0}, $$ 
+ onde $(x_0,y_0)$, $(x_1, y_1)$ são pontos sobre a reta $r$. 
+ O número é chamado de {\it inclinação da reta} e $arctang(m)$ é o ângulo de inclinação da reta. {\it Desenhe!} 
+  
+  {\bf Ângulo entre retas.} Em $\mathbb{R}^{n}$, podemos definir o ângulo entre retas $r_1$ e $r_2$ 
+ como o ângulo que satisfaz a relação 
+  $$\cos (r_1,r_2)= \frac{|V_1 \circ V_2|}{\|V_1\|\|V_2\|}, $$
+  onde $V_1$ é um vetor diretor da reta $r_1$ e 
+   $V_2$ é um vetor diretor da reta $r_2$. Observe que na formula
+   usamos o {\it valor absoluto} de  $V_1 \circ V_2$ em lugar de 
+   $V_1 \circ V_2$.
+   
+ {\bf Distância de um ponto a uma reta em $\mathbb{R}^{2}$}.
+ Considere uma reta $r: ax+by+c=0$ e um ponto 
+ $P=(x_{1}, y_{1}) \in \mathbb{R}^{2}$. 
+ A distância de ponto $P$ à reta $r$ é dado pela formula
+ 
+ \begin{equation}
+ \text{dist}(P,r)= \frac{|ax_{1}+by_{1}+c|}{\|(a,b)\|}.
+ \label{eqn:distanciapr2}
+ \end{equation}
+ Alternativamente, se $P_{0}$ pertence à reta $r$, $\text{dist(P, r)}$ é a norma da projeção do vetor 
+ $\overrightarrow{P_0P}$ sobre um vetor normal à reta $r$, isto é, $\text{dist}(P,r)=\|\text{proj}_{V}\overrightarrow{P_0P}\|$
+ onde $V$ é um vetor normal à reta $r$.
+ 
+ {\bf Distância de um ponto a uma reta em $\mathbb{R}^{3}$}.
+ Em $\mathbb{R}^{3}$, se $r: P=P_0+tV$, $t \in \mathbb{R}$. 
+ A distância de ponto $P_{1}$ à reta $r$ é dado pela formula
+ 
+ \begin{equation}
+ \text{dist}(P,r)= \frac{|\overrightarrow{P_0P_1}\times V|}{\|V\|}.
+ \label{eqn:distanciapr3}
+ \end{equation}
+ {\it Observe as diferenças e semelhanças entre \eqref{eqn:distanciapr2}
+ e \eqref{eqn:distanciapr3}}
+ 
+Proceda a responder as seguintes questões 
+  
+  \begin{enumerate}
+     \item Uma partícula está animada de um movimento 
+     tal que, no instante $t$, ela se encontra no ponto
+     $$(x,y,z)=(2+3t, 1+4t, t-3).$$
+      \begin{enumerate}
+      \item Determine sua posição nos instantes
+      $t=0$, $t=1$ e $t=2$;
+      \item Determine o instante no qual a partícula 
+      atinge o ponto $(11, 13, 0)$;
+      \item A partícula passa por $(5,6,7)$;
+      \item Descreva sua trajetória;   
+      \item Determine sua velocidade no instante $t$.
+      \end{enumerate}
+    \item Faça um esboço das seguintes retas
+       \begin{enumerate}
+       \item $(x,y,z)=(3-3t, 3t, 2+t), t \in \mathbb{R}$
+       \item $(x,y,z)=(2t-1, 1+t, 0), t \in \mathbb{R}$
+       \item $(x,y,z)=(1, 1+2t, \frac{7}{4}+\frac{3}{2}t), t \in \mathbb{R}$
+       \end{enumerate}  
+    \item Se $P=(4,1,-1)$ e 
+    $r: (x,y,z)=(2+t,4-t, 1+4t)$, $t \in \mathbb{R}$.
+    O ponto $P$ pertence a $r$?          
+    \item Mostre que a reta $r: 4x+3y-40=0$
+    é tangente ao círculo de radio $5$ e centro $C=(3,1)$. Encontre as coordenadas do ponto de tangência.
+    {\it Rpta: } $T=(7,4)$.
+    \item Seja um circulo de centro $C=(-2,-4)$ que é 
+    tangente à reta $r: x+y+12=0$. Calcule a àrea do círculo. {\it Rpta: } $18\pi u^2$.
+     \item Encontre a equação da reta que passa por 
+    $P=(9,5)$ que é tangente ao círculo de centro 
+    $C=(-1,-5)$ e radio $2\sqrt{10}$.
+    {\it Dica:} Duas soluções $r_1: 3x-y-22=0$ e 
+    $r_2: x-3y+6=0$.
+    \item Um círculo passa pelo pontos $A=(-3,3)$
+    e $B=(1,4)$ cujo centro está sobre a reta
+    $r: 3x-2y-23=0$. Encontre o centro e o radio do circulo.  
+    {\it Rpta: } $Centro=(2,-17/2)$, $radio=\sqrt{629/4}$. 
+    \item Encontre o centro e o radio dum circulo que passa por 
+    $A=(5,9)$ tal que  
+    $B=(1,1)$ é o ponto de tangência com a  reta
+    $r: x+2y-3=0$.
+    {\it Rpta: } $Centro=(3,5)$, $radio=\sqrt{20}$. 
+    \item Considere duas retas $r$ e $s$ reversas que passa por 
+    $A=(0,1,0)$  e $B=(1,1,0)$ e por 
+    $C=(-3,1,-4)$ e $D=(-1,2,-7)$ respectivamente. Obtenha uma equação da reta 
+    concorrente com r e s que é paralela ao vetor $V=(1,-5,-1)$.
+    {\it Dica: } concorrentes= interseçâo num único ponto, 
+    reversa=nem concorrentes nem paralelas. Desenhe. 
+    {\it Rpta: } $r: (-\frac{23}{4}+t, 1-5t,-t)$, $t \in \mathbb{R}$.  
+    \item * Uma partícula vai do ponto $A=(2,3)$  
+    ao ponto $B=(10,9)$ passando por um ponto $P=(x,0)$, $(x>0)$. Determine o valor de $x$, para que o percorrido seja o mínimo possível. {\it Rpta: } $x=4$. {\it Dica:} Derive uma função adequada.
+    
+   \item Dada a reta $r_{1}: 3x-2y+12=0$, considere a equação da reta 
+   $r_{2}$ paralela a $r_1$ e que forma com os eixos coordenados um 
+   trapézio de área $15u^{2}$. {\it Rpta: } $r_{2}: 2y-3x=18$. 
+   \item Encontre a equação vetorial de uma reta que determina quando 
+   intercepta aos eixos coordenados um segmento cujo 
+   ponto médio é $(-4,8)$. {\it Rpta: } $r: (-4,8)+t(1,2)$.  
+   \item Considere as retas 
+   $r_1=\{(b^2+a^3-2)+t(1-a^2, a): t \in \mathbb{R}\}$  e
+   $r_2=\{(ab, 3b+5)+s(a-5,8-3a): s \in \mathbb{R}\}$. 
+   Encontre os valores de 
+   $a$ e $b$ para que as retas sejam coincidentes. {\it Rpta: }
+   $a=2, b=5$. 
+   \item Mostre as formulas para as distância de um ponto a uma reta  \eqref{eqn:distanciapr2} e \eqref{eqn:distanciapr3}. 
+   \item Se $P=(1,-1,2)$ e $r: (x,y,z)=(1-2t,t,2+3t)$, 
+   $t \in \mathbb{R}$. Calcule a  distância de $P$ à reta $r$. {\it Rpta: } $\sqrt{13/14}$.
+   \item Se uma reta passa por $(1,-2,3)$ e forma um ãngulo de 
+   $60^{\circ}$
+   com o eixo y e um ângulo de $45^{\circ}$ com o eixo $x$. Encontre uma equação para dita reta. {\it Rpta: } $r: (1,-2,3)+t(\sqrt{2}/2, \pm 1/2, \pm 1/2)$, $t \in \mathbb{R}$.
+   \item Se $r: P=(1,0,0) +t(1,1,1)$, $t \in \mathbb{R}$ e os pontos 
+   $A=(1,1,1)$ e $B=(0,0,1)$. Ache o ponto de $r$ equidistante de $A$ e $B$.
+   {\it Rpta: }
+   \item Quais são as coordenadas de um ponto $Q$, simétrico do ponto $P=(0,0,1)$ em relação à reta $r: (x,y,z)=(t,t,t)$, $t \in \mathbb{R}$?
+   \item Considere duas retas
+   $$ r: (x,y,z)=(t-1,2+3t, 4t), t \in \mathbb{R} \text{ e }
+      s: x=\frac{y-4}{2}=\frac{z-3}{3}.$$
+   Encontre uma equação da reta que intercepta as retas $r$ e $s$ é 
+   perpendicular a ambas.  
+   \end{enumerate}
+ 
+{\bf Equação da circunferência. } 
+Em $\mathbb{R}^{2}$, a equação $x^2+y^2+Dx+Ey+F=0$ representa uma circuferência de radio 
+$r\neq0$, somente se $$D^{2}+E^{2}-4F>0.$$
+As coordenadas do centro $C=(-D/2, -E/2)$ com radio 
+$r=\frac{1}{2} \sqrt{D^{2}+E^{2}-4F}$. 
+
+\begin{enumerate}
+  \item Mostre que as circuferências $C_1: x^2+y^2+2x-8y+13=0$
+  e $C_1: 4x^2+4y^2-40x+8y+79=0$ não se interceptam. 
+  \item Encontre a equação da reta que passa por $P=(11,4)$
+  e é tangente à circuferência $C: x^2+y^2-8x-6y=0$.
+  {\it Rpta: }$ r: 3x+4y-49=0$ ou $r: 4x-3y-32=0$ 
+  \item Ache a equação da circunferência que passa por $A=(1,4)$
+  e é tangente à circuferência $C: x^2+y^2+6x+2y+5=0$ 
+  no ponto $B=(-2,1)$. {\it Rpta: } $C_1: (x+1)^2+(y-3)^2=5$ 
+  \item Qual é a equação da circunferência com centro C=(-4,3)
+  e é tangente à circuferência $C: x^2+y^2-4x+3y=0$.
+  {\it Rpta:}  $C: (x+4)^2+(y-3)^2=25$ ou $C: (x+4)^2+(y-3)^2=100$.
+\end{enumerate}
+  
+\section*{Equação do plano} 
+
+{\bf Equação vetorial.} 
+ Um plano $\pi$ em $\mathbb{R}^{n}$, pode ser escrita como 
+ $\pi: P=P_{0}+tV+sW$, $t, s \in \mathbb{R}$ 
+ onde $V, W$ são linearmente independentes. 
+ Note que existe infinitos vetores $V$ e $W$ que geram o mesmo plano. 
+ Se conhecemos três pontos sobre a reta, por exemplo $P_{0}$, $P_1$
+ e $P_2$, os vetores 
+ $\overrightarrow{P_0P_1}, \overrightarrow{P_0P_2} \in \mathbb{R}^{n}$ 
+ servem como geradores do plano $\pi$, se
+ $\overrightarrow{P_0P_1}, \overrightarrow{P_0P_2}$ são linearmente independentes ({\it por que?}). 
+ Assim, qualquer vetor paralelo a $\pi$ pode ser escrito como combinação linear de $V$ e $W$.
+ 
+ {\bf Equação normal do plano em $\mathbb{R}^{3}$}
+ Quando o plano está em $\mathbb{R}^{3}$, podemos escrever o plano da 
+ forma 
+$$ax+by+cz+d=0, \text{ para certos } a,b,c, d \in \mathbb{R}, $$ 
+com $a^{2}+b^{2}+c^2\neq0$. Dita forma se chama de 
+ {\it equação geral do plano ou equação normal}. Perceba que o vetor 
+ $(a,b,c) \in \mathbb{R}^{2}$ é um vetor normal ao plano. 
+ 
+ Se $V$ e $W$ são vetores paralelos ao plano, $V \times W$ serve como 
+ vetor normal ao plano.
+ 
+ Veja que se $(x_0, y_{0}, z_0)$ está sobre o plano $\pi$ 
+ $\pi: ax+by+cz+d=0$, temos que 
+ $$ (a,b,c) \perp ((x,y,z)-(x_0,y_0,z_0)), \text{ para todo } (x,y,z) \in \pi. $$ 
+
+Em $\mathbb{R}^{3}$, considere dois plano $\pi_1$ e $\pi_2$ com $\pi_1 \cap \pi_2 \neq \emptyset$.
+  Certamente, $\pi_1 \cap \pi_2$ é uma reta ({\it por que?}). Podemos facilmente encontrar um {\it vetor diretor} calculando 
+  $N_1 \times N_2$, onde 
+  $N_1$ e $N_2$ são vetores normais ao planos $\pi_1$ e $\pi_2$ respectivamente. 
+  
+  {\bf Ângulo entre planos. } Em $\mathbb{R}^{3}$, podemos definir o ângulo entre dois planos $\pi_1$ e $\pi_2$ 
+ como o ângulo que satisfaz a relação 
+  $$\cos (\pi_1,\pi_2)= \frac{|N_1 \circ N_2|}{\|N_1\|\|N_2\|}, $$
+  onde  $N_1$ e $N_2$ são vetores normais ao planos $\pi_1$ e $\pi_2$ respectivamente. Observe que na formula
+   usamos o {\it valor absoluto} de  $N_1 \circ N_2$ em lugar de 
+   $N_1 \circ N_2$.
+   
+ {\bf Distância de um ponto a um plano em $\mathbb{R}^{3}$}.
+ Considere um plano $\pi: ax+by+cz+d=0$ e um ponto 
+ $P=(x_{1}, y_{1}, z_1) \in \mathbb{R}^{3}$. 
+ A distância de ponto $P$ ao plano $\pi$ é dado pela formula
+ 
+ \begin{equation}
+ \text{dist}(P,\pi)= \|\text{proj}_{N}\overrightarrow{P_0P}\|, 
+ \label{eqn:distanciapp2}
+ \end{equation}
+ onde $P_0$ é um ponto em $\pi$ e $N$ é um vetor normal ao plano.
+ Note que podemos usar $N=(a,b,c)$.
+ 
+ 
+\begin{enumerate}
+  \item Faça um esboço dos seguintes planos em $\mathbb{R}^{3}$.
+     \begin{enumerate}
+     \item $2x+3y+5z-1=0$
+     \item $3y+2z-1=0$
+     \item $2x+3z-1=0$
+     \item $3x+2y-4=0$
+     \end{enumerate}  
+   \item Encontre a equação geral do plano paralelo 
+   a $2x-y+5z-3=0$ e passa no ponto $P=(1,-2,1)$.
+   {\it Rpta} $\pi: 2x-y+5z-9=0$.
+   \item Ache a equação do plano que contem 
+   $P=(2,1,5)$ e é perpendicular aos planos 
+    $x+2y-3z+2=0$ e $2x-y+4z-1=0$.
+    {\it Rpta} $x-2y-z+5=0$. {\it Dica} Use o produto vetorial.
+    \item Considere as retas 
+    $$ r: \frac{x-2}{2}=\frac{y}{2}=z \text{ e }
+       s:  x-2=y=z.$$
+     Obtenha a equação geral do plano determinado por 
+     $r$ e $s$.  
+     \item Sejam dois planos 
+      $\pi_1: x+2y+z+2=0$ e $x-y+z-1=0$.
+      Encontre o plano que contém 
+      a interseção $\pi_1 \cap \pi_2$ e 
+      é ortogonal ao vetor $U=(1, 1, 1)$.
+      {\it Rpta: } $x-2y+z-2=0$.
+      \item Encontre a equação do plano 
+      que passa por $A=(1,0,-2)$ e contém 
+      $\pi_1 \cap \pi_2$, onde 
+      $\pi_1: x+y-z=0$ e $\pi_2: 2x-y+3z-1=0$.
+      \item Qual é a equação paramétrica da reta 
+      que é interseção dos planos, 
+      $\pi_1: (x,y,z)=(1+\alpha, -2, -\alpha-\beta)$ e 
+      $\pi_2: (x,y,z)=(1+\alpha-\beta, 2\alpha+\beta, 3-\beta)$?
+      \item Sejam três vetores 
+      $V=i+3j+2k$, $W=2i-j+k$ e $U=i-2j$ em $\mathbb{R}^{3}$. 
+      Se $\pi$ é um plano paralelo aos vetores 
+      $W$ e $U$, e $r$ é uma reta perpendicular ao plano $\pi$.
+      Encontre a projeção ortogonal de $V$ 
+      sobre o vetor diretor da reta $r$.  
+      \item Em $\mathbb{R}^{3}$, considere os pontos 
+      $A=(2,-2,4)$ e $B=(8,6,2)$.
+      Encontre o lugar geométrico dos pontos equidistantes de $A$ e $B$. {\it Dica :} É um plano.
+      
+      \item Seja $\pi$ um plano que forma 
+      um ângulo de $60^{\circ}$ com o plano 
+      $\pi_1: x+z=0$ e contém a reta
+      $r: x-2y+2z=0, 3x-5y+7z=0$.
+      Encontre a equação do plano $\pi$.
+      {\it Rpta} Dois soluções: 
+      $y+z=0$ ou $4x-11y+5z=0$.      
+      %$x-2y+2z=0$ ou $x+4y+8z=0$. 
+      \item  O plano $\pi: x+y-z-2=0$ intercepta os 
+      eixos cartesianos aos pontos $A$, $B$ e $C$. 
+      Qual é a área do triângulo $ABC$? {\it Rpta} $2\sqrt{3} u^2$.
+      \item Considere os planos: 
+      $$ \pi_1: x-y+z+1=0, \ \ \pi_2: x+y-z-1=0, \ \ 
+         \pi_3: x+y+2z-2=0. $$
+      Encontre a equação geral que contém $\pi_1\cap \pi_2$ e perpendicular 
+      $\pi_3$.   
+      \item Ache o ângulo entre o plano $-2x+y-z=0$ e plano que passa por
+      $P=(1,2,3)$ e é perpendicular $a i-2j+k$. {\it Rpta:} $arccos(5/6)$.
+      \item Para quais valores de $\alpha$ e $\beta$, a reta 
+      $r: (\beta, 2, 0)+t(2, \alpha, \alpha)$ está contida no plano 
+      $\pi: x-3y+z=1$. {\it Rpta: } $\alpha=1$, $\beta=7$.
+      \item Encontre o valor de $\alpha$ para que 
+      os planos $\pi_1: (1,1,0)+t(\alpha, 1, 1)+s(1,1, \alpha)$
+      e $\pi_2: 2x+3y+2z+1=0$ sejam paralelos. {\it Rpta: }
+      $\alpha=1/2$.
+      \item Encontre a equação geral do plano 
+      $\pi$ que contém a reta $r: (1,0,1)+t(1,1,-1)$ e dista 
+      $\sqrt{2}$
+      do ponto $P=(1,1,-1)$. 
+\end{enumerate}
+
+\end{document}
+
+\item (distancia entre retas) Encontre a distância entre as retas 
+      paralelas $r_1: 3x-4y+8=0$ e $r_2: 6x-8y+9=0$. {\it Rpta} $7/10$.
+      \item (distancia entre retas) Encontre a distância entre as retas 
+      paralelas $r_1: x+2y-10=0$ e $r_2: x+2y+6=0$. {\it Rpta} 
+      $16/\sqrt{5}$.
