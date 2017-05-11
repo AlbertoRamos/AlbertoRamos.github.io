@@ -1,0 +1,234 @@
+% lista 3 (analise II)
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+
+\begin{document}
+
+\title{Lista 3: Análise II}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+\begin{enumerate}
+	\item Convergência pontual e uniforme
+	\item Série de potências 
+	%\item Integrais improprias.
+\end{enumerate}
+\end{abstract}
+
+Notação: $\mathbb{N}:=\{1,2,\dots,\}$. A convergência uniforme é denotado como $f_{n} \xrightarrow{u} f$.
+\section{Convergência uniforme e séries de potências.} 
+\begin{enumerate}
+  \item Enuncie e demonstre em detalhe, com as hipoteses suficientes,  que:
+    \begin{enumerate}
+    \item Uma sequencia de funções converge uniformemente se, e somente se 
+    a sequencia é de Cauchy
+    \item O limite uniforme de funções contínua é contínua.
+    \item O limite uniforme de funções integráveis é integrável e
+    a integral do limite é o limite das integráveis
+    \item O limite uniforme de funções deriváveis é derivável 
+    e a derivada do limite é o limite das derivadas.
+    \item Mostre o Teorema de Dini.
+    \end{enumerate}
+  \item Veja se as seguintes séries de funções convergem uniformemente 
+  no conjunto $X$.
+   \begin{enumerate}
+     \item $\sum_{n \in \mathbb{N}} \frac{x}{x^2+n^2}$, $X=\mathbb{R}$;
+      $\sum_{n \in \mathbb{N}} \frac{sin(nx)}{x^2+n^{3/2}}$, $X=\mathbb{R}$;
+           $\ \ \sum_{n \in \mathbb{N}} \frac{cos(nx^3)}{n^3}$, $X=\mathbb{R}$
+     \item $\sum_{n \in \mathbb{N}} \frac{x}{(1+nx^2)n^\varepsilon}$, $X=[-a,a], a>0,\varepsilon>0$;
+      $\sum_{n \in \mathbb{N}} \frac{1}{n^{x}}$, $X=[a,\infty), a>1$
+     \item $\sum_{n \in \mathbb{N}}(-1)^{n}\frac{\cos(nx)}{(2n^5+3)^{1/7}}$, $X=[\varepsilon, 2\pi-\varepsilon], \varepsilon>0$ e 
+     $\sum_{n \in \mathbb{N}}\frac{(-1)^n}{x+n}$, $X=[0, \infty)$ 
+     \item $\sum_{n \in \mathbb{N}}x^{ 2^{n}+\sqrt{n}}$, $X=(0,1)$ e 
+     $\sum_{n \in \mathbb{N}} \sqrt{n}\sin(x/n^2)$, $X=[-a,a]$    
+   \end{enumerate}
+  \item (Regras de cálculo para convergência uniforme)
+   Sejam $f_{n}, g_n:X \rightarrow \mathbb{R}$ sequências de funções
+   com $f_{n}\xrightarrow{u} f$ e  $g_{n}\xrightarrow{u} g$. Então:
+     \begin{enumerate}
+     \item Mostre que $f_n+g_n \xrightarrow{u} f+g$.
+     \item Para qualquer sequência convergente de numeros reais 
+     $a_{n} \in \mathbb{R}$ com $a_{n} \rightarrow a$ tem-se 
+     $a_{n}f_{n} \xrightarrow{u} af$.
+     \item Mostre que $f_{n}g_{n}\rightarrow fg$ pontualmente. De um exemplo onde a convergência não é uniforme. 
+     \item Se $f_{n}$ e $g_n$ são uniformente limitadas (isto é, 
+     existe $K>0$ tal que  
+     $sup\{|f_{n}(x)|: x \in X\}\leq K$, $n \in \mathbb{N}$. Similarmente para a sequência $g_{n}$). 
+     Então  $f_{n}g_{n}\xrightarrow{u} fg$.
+     \item Se existe $K>0$ tal que $\inf \{|f_{n}(x)|: x \in X\}\geq K$, $n \in \mathbb{N}$. Então, $1/f_{n}\xrightarrow{u} 1/f$.
+     \item Prove que $\phi \circ f_{n} \xrightarrow{u} \phi \circ f$, se 
+     $\phi: \mathbb{R}\rightarrow \mathbb{R}$ é uniformente contínua.
+     \end{enumerate}
+  \item Considere $f_{n}(x):=(1+\frac{x}{n})^{n}$, 
+  $x \in \mathbb{R}$, $n \in \mathbb{N}$. 
+   \begin{enumerate}
+   \item Prove que $f_{n}\rightarrow \exp(x)$ pontualmente e a convergência uniforme em cada intervalo $[a,b] \in mathbb{R}$.
+   \item Mostre que 
+   $(\frac{n^2+(n!)^{1/n}}{n^{2}})^{n} \rightarrow \exp(1/e)$ e
+   $(\frac{n^{n+1}+(n+1)^{n}}{n^{n+1}})^{n} \rightarrow \exp(e)$, 
+   onde $e=\exp(1)$.
+   \end{enumerate}      
+  \item Sejam $f_{n}, f:X \rightarrow \mathbb{R}$ funções. 
+  Prove que $f_{n}\xrightarrow{u} f$ see 
+  $\text{sup}\{|f_{n}(x)-f(x)|:x \in X\} \rightarrow 0$ quando 
+  $n \rightarrow \infty$.
+  \item Seja $f_{n}:[a,b] \rightarrow \mathbb{R}$ uma sequencia de funções 
+  contínuas tal que $f_{n}\rightarrow f$ uniformente em $D\subset [a,b]$.
+  Se $D$ é denso, mostre que se $f$ é uniformente contínua então 
+  $f_{n}\xrightarrow{u} f$ em $[a,b]$.
+  \item Seja $f_{n}:[a,b] \rightarrow \mathbb{R}$ uma sequencia de funções
+  uniformente Lipschitziana, isto é, existe $K>0$ tal que  
+  $|f_{n}(x)-f_{n}(y)|\leq K|x-y|$, $\forall x,y \in [a,b]$, 
+  $n \in \mathbb{N}$. Mostre que se $f_{n}\rightarrow f$ então 
+  $f_{n}\xrightarrow{u} f$.
+  \item Seja $f_{n}:[a,b] \rightarrow \mathbb{R}$ uma sequencia de funções, tal que para toda sequencia $x_{n}\in [a,b]$ convergente
+  tem-se que $f_{n}(x_{n})\rightarrow 0$. 
+  Mostre que $f_{n} \xrightarrow{u} 0$. 
+  \item Verfique as seguintes igualdades: 
+    \begin{enumerate}
+    \item $\exp(x)=\sum_{n=0}^{\infty} \frac{x^n}{n!}$, $x \in \mathbb{R}$;
+    $\sin(x)=\sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}$, $x \in \mathbb{R}$;
+           $\ \ \cos(x)=\sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n}}{(2n)!}$, $x \in \mathbb{R}$;
+     \item $\text{log}(\frac{1+x}{1-x})=2\sum_{n=0}^{\infty} \frac{x^{2n+1}}{2n+1}$, $x \in (-1,1)$;
+    $\frac{1}{(1-x)^{4}}=\sum_{n=0}^{\infty} \frac{(n+1)(n+2)(n+3)}{6} x^n$, $x \in (-1,1)$     
+    \end{enumerate}
+ \item Expanda as funções em série de potências ao redor do ponto $x^*$.
+ Determine o raio de convergência da série obtida
+   \begin{enumerate}
+    \item $f(x)=\frac{x-1}{x^2-4}$, $x^{*}\neq \pm2$; 
+          $f(x)=\frac{x}{x-3}$, $x^{*}\neq 3$;
+          $f(x)=tan(x)$, $x^{*}\neq 0$.
+   \end{enumerate}       
+ \item Determine o intervalo de convergência de cada uma das séries de potências
+   \begin{enumerate}
+   \item df
+   \end{enumerate}     
+ \item ({\it Critério de Raabe}) Seja 
+ $$L:=\lim_{n \rightarrow \infty } n(1-\frac{a_{n+1}}{a_n}).$$  
+   \begin{enumerate}
+   \item Se $L>1$ ou $L=\infty$, então a série 
+   $\sum_{n=1}^{\infty}a_{n}$ converge.
+   \item Se $L \in [0,1)$, a série $\sum_{n=1}^{\infty}a_{n}$ diverge.
+   \end{enumerate}
+  \item Mostre que se $\sum_{n=1}^{\infty} |a_{n}|<\infty$, então 
+  as séries $\sum_{n=1}^{\infty} a_{n}\cos(nx)$ e  
+   $\sum_{n=1}^{\infty} a_{n}\sin(nx)$  convergem uniformemente em 
+   $\mathbb{R}$.
+   \item Prove que para todo $x \in (-1,1]$, tem-se que 
+   $$ \text{log}(1+x)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}x^n.$$
+   Em particular, $\text{log}(2)=\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$.
+  \item Seja $g:\mathbb{R}\rightarrow\mathbb{R}$ uma função periódica de periodo 2, tal que    $g(x)=x$, $x \in [0,1]$ e $g(x)=2-x$, $x \in [1,2]$. 
+  Defina a série formal 
+  $$f(x):= \sum_{n=0}^{\infty} (\frac{3}{4})^{n}g(4^{n}x).$$
+  Mostre que $f$ está bem definido que é uma função contínua em $\mathbb{R}$
+  mas não é derivável em nenhum ponto. 
+  \item Seja $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função definida como 
+  $f(x)=\exp(-1/x)$, $x>0$ e 
+  $f(x)=0$, $x\geq0$. 
+  Mostre que $f$ é de clase $C^{\infty}$
+  em $\mathbb{R}$ mas não é analítica em $x=0$.
+  \item Determine o intervalo de convergência de cada uma das séries de potências:
+    \begin{enumerate}
+    \item $\sum_{n=1}^{\infty} \frac{n}{4^{n}}x^n \ \ $; 
+          $\sum_{n=1}^{\infty} \frac{(3n)!}{(2n)!}x^n  \ \ $; 
+          $\sum_{n=1}^{\infty} \frac{n!}{n^{n}}x^n$.
+    \item $\sum_{n=1}^{\infty} \frac{(x+1)^n}{a^{n}+b^n}, b>a>0 \ \ $; 
+          $\sum_{n=1}^{\infty} (\frac{3n+2}{5n+7})^{n}x^n  \ \ $; 
+          $\sum_{n=1}^{\infty} (-1)^{n}\sin(\frac{1}{n})x^n$.   
+    \item $\sum_{n=1}^{\infty} \frac{x^n}{n^{1/n}}, \ \ $; 
+          $\sum_{n=1}^{\infty}
+          \frac{2^n\text{log}(n)}{3^{n}n n^{1/n}}x^n \ \ $; 
+          $\sum_{n=1}^{\infty} \frac{(-2)^{n}n!}{e^{n^2}}x^n$.          
+    \end{enumerate}
+  \item Assuma que $\sum_{n=0}^{\infty} a_n x^n$ converge para 
+  $x=-4$ e diverge para $x=6$. 
+  Quais das seguintes séries divergem ou convergem?
+     $$
+       (a) \sum_{n=0}^{\infty} a_n;  \ \ 
+       (b) \sum_{n=0}^{\infty} (-3)^n a_n \ \ \text{ e } \ \ 
+       (c) \sum_{n=0}^{\infty} (-1)^{n} a_n 9^{n}.  
+     $$
+  \item Usando a derivação e integração termo a termo, calcule as seguintes somas de séries de potências.
+     $$
+       (a) \sum_{n=1}^{\infty} \frac{x^n}{n};  \ \ 
+       (b) \sum_{n=0}^{\infty} (-1)^{n-1}\frac{x^{2n-1}}{2n-1}; \ \  
+       (c) \sum_{n=0}^{\infty} n x^{2n-1}; \ \ 
+       (d) \sum_{n=1}^{\infty} n^3 x^n; \ \  
+       (e) \sum_{n=0}^{\infty} \frac{x^{4n}}{4n}. \ \  
+     $$         
+  \item Desenvolva as sequiente 
+  funções em séries de potências ao redor do origem (série de Maclaurin). Indique os intervalos de convergência.
+    $$
+       (a) f(x)=x^2e^x;  \ \ 
+       (b) f(x)=\sin(x^2); \ \  
+       (c) f(x)=\sin^{2}(x); \ \ 
+       (d) f(x)=\frac{\exp(x^2)-1}{x}; \ \  
+       (e) f(x)=\int_{0}^{x} \frac{\sin t}{t}dt. \ \  
+     $$
+  \item Considere a função
+  $$ f(x):= \sum_{n=1}^{\infty} \exp(-2^{n/2})\cos(2^{n}x).$$
+  Mostre que $f$ é de clase $C^{\infty}(\mathbb{R})$ mas não é analítica em nenhum ponto.  
+  \item Faça os primeiros 42 problemas do capítulo X do livro texto.
+  \end{enumerate} 
+\end{document}
+
+
+
