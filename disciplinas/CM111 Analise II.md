@@ -55,6 +55,7 @@ tag:        2017s1
 
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_analise_II.pdf)
   - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_analise_II.pdf)
+  - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista3_analise_II.pdf)
 
 # Provas
 
