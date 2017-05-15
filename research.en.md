@@ -46,4 +46,4 @@ albertoramos@ufpr.br. <br />
  - **[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization.](http://www.optimization-online.org/DB_HTML/2015/11/5197.html)** <br />
     R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva. <br /> 
     To appear in Mathematics of Operations Research. <br />
-    On optimization online, November 2015.
+    Technical report on optimization online, November 2015.
