@@ -26,7 +26,7 @@ albertoramos@ufpr.br. <br />
     R. Behling; G. Haeser; A. Ramos; D. S. Viana. <br />
     On optimization online, June 2016.
  
-  - **[Mathematical Programms with Equilibrium Constraints: A sequential optimality condition, new constraint qualifications and algorithmic consequences.](http://www.optimization-online.org/DB_HTML/2016/04/5423.html)** <br />
+  - **[Mathematical Programs with Equilibrium Constraints: A sequential optimality condition, new constraint qualifications and algorithmic consequences.](http://www.optimization-online.org/DB_HTML/2016/04/5423.html)** <br />
    A. Ramos. <br /> On optimization online, April 2016.
 
 # Peer-Reviewed Publications
