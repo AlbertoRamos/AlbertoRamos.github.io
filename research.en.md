@@ -29,10 +29,6 @@ albertoramos@ufpr.br. <br />
   - **[Mathematical Programms with Equilibrium Constraints: A sequential optimality condition, new constraint qualifications and algorithmic consequences.](http://www.optimization-online.org/DB_HTML/2016/04/5423.html)** <br />
    A. Ramos. <br /> On optimization online, April 2016.
 
-  - **[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization.](http://www.optimization-online.org/DB_HTML/2015/11/5197.html)** <br />
-    R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva. <br /> 
-    On optimization online, November 2015.
-
 # Peer-Reviewed Publications
 
  - **[A cone-continuity constraint qualification and algorithmic consequences.](http://dx.doi.org/10.1137/15M1008488)** <br />
@@ -46,3 +42,8 @@ albertoramos@ufpr.br. <br />
  - **[A second-order sequential optimality condition associated to the convergence of optimization algorithms.](https://doi.org/10.1093/imanum/drw064)** <br />
     R. Andreani; G. Haeser; A. Ramos, P. J. S. Silva. <br /> 
     To appear in IMA Journal of Numerical Analysis.   
+ 
+ - **[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization.](http://www.optimization-online.org/DB_HTML/2015/11/5197.html)** <br />
+    R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva. <br /> 
+    To appear in Mathematics of Operations Research
+    On optimization online, November 2015.
