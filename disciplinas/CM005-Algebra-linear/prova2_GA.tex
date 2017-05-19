@@ -1,0 +1,203 @@
+%% Prova 2 de Geometria Analítica
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large Geometria Analítica : Prova 2 } \\
+ 18 de maio de 2017
+\end{center}
+
+\ifx\undefined\answers
+%\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular}
+\end{center}
+
+ \begin{questions}
+ \question[20] Ache o ângulo entre o plano 
+ $\pi_1: 2x-y+z=0$ e o plano $\pi_2$ que contem
+ uma reta com vetor diretor $U=(1,1,1)$
+ e é perpendicular ao vetor  $\hat{i}-2\hat{j}+\hat{k}$.
+   \begin{solution}
+   Como  $N_2:=\hat{i}-2\hat{j}+\hat{k}$ é normal ao plano $\pi_2$
+   temos 
+   $$
+     \cos(\pi_1,\pi_2)=
+     \frac{|N_{2}.(2,-1,1)|}{\|N_2\|\|(2,-1,1)\|}=
+     \frac{|(1,-2,1).(2,-1,1)|}{\|(1,-2,1)\|\|(2,-1,1)\|}=
+     \frac{5}{6}.
+   $$ 
+   \end{solution}
+ \question[20] Encontre a equação geral do plano
+ $\pi$ que contém a
+  reta $r: (0,0,1)+(t,-t,-t), t \in \mathbb{R}$, 
+  equidista de $P=(1,0,0)$ e $Q=(0,1,0)$, 
+  e separa $P$ e $Q$.
+   \begin{solution}
+   Queremos achar um plano $\pi: ax+by+cz+d=0$ que satisfaz as condições
+   requeridas. Claramente, $N=(a,b,c)$ é um vetor normal a $\pi$.
+     \begin{enumerate}
+     \item De $r \in \pi$, temos que :
+       \begin{enumerate}
+       \item $(0,0,1) \in r \subset \pi$ e assim $c+d=0$
+       \item Como $(1,-1,1) // \pi$ temos que 
+       $(1,-1,1)\perp N$ e assim $a-b+c=0$
+       \end{enumerate}
+     \item Sabe-se que 
+     $$
+       dist(P,\pi)=\frac{|a+d|}{\sqrt{a^{2}+b^2+c^2}} \text{ e }
+       dist(Q,\pi)=\frac{|b+d|}{\sqrt{a^{2}+b^2+c^2}}.
+     $$ 
+     Já que 
+     $dist(Q,\pi)=dist(P,\pi)$. Temos que $|a+d|=|b+d|$ qual implica que 
+     $(a+d)^{2}-(b+d)^2=0$. Logo, $(a-b)(a+b+2d)=0$.
+     \end{enumerate}
+   Dos item anteriores tem-se que $a-b=0$ ou $a+b+2d=0$.
+     \begin{enumerate}
+     \item Caso $a-b=0$. Neste, caso usando (b) 
+     temos que $c=0$ e de (a) que $d=0$. 
+     Assim $\pi: ax+ay+0z+0=0$, com $a\neq0$, ou equivalentemente 
+      $\pi: x+y=0$
+      \item Caso $a+b+2d=0$. De (a) $d=-c$, substuindo e usando (b) tem-se 
+      $c=\frac{2}{3}a$, $b=a-c=\frac{1}{3}a$ e $d=-c=-\frac{2}{3}a$.
+      Logo, $\pi: ax+\frac{1}{3}ay+\frac{2}{3}az-\frac{2}{3}a=0$, com $a\neq0$, ou equivalentemente 
+       $\pi: 3x+y+2z-2=0$
+     \end{enumerate}       
+   \end{solution}
+ \question[20] Seja $\mathcal{C}$ uma circunferência de centro 
+ $C=(-2,3)$ e raio $\sqrt{5}$. Encontre a equação da reta tangente à circunferência que passa por $P=(3,3)$. 
+   \begin{solution}
+   Seja $T=(x,y)$ ponto de tangência. 
+    \begin{enumerate}
+    \item Como $T$ é ponto de tangência. 
+    $\overrightarrow{TC} \perp \overrightarrow{TP}$ e
+    assim $(-2-x, 3-y).(3-x,3-y)=0$. Portanto, $(x+2)(x-3)+(3-y)^{2}=0$. 
+    \item Já que $T$ está na circunferência, tem-se $\|(-2-x, 3-y)\|=\sqrt{5}$. Assim, $(2+x)^{2}+(3-y)^{2}=5$.
+    \end{enumerate}
+   Restando (2)-(1), $(x+2)^{2}-(x+2)(x-3)=0$. Assim, $(x+2)(x+2-(x-3))=5$
+   e daí, $x=-1$. De (2) temos que $1+(3-y)^{2}=5$, então $y=1$ ou $y=5$.
+    
+   Assim, os pontos de tangencia são $T_1:=(-1,1)$ e $T_{2}:=(-1,5)$.
+   As retas desejadas (em forma vetorial) são 
+   $r_1:=(3,3)+t\overrightarrow{T_{1}P}=(3,3)+t(4,2)$
+   e     $r_2:=(3,3)+t\overrightarrow{T_2P}=(3,3)+t(4,-2)$. A equação geral seria 
+   $r_{1}:=-2x+4y-6=0$ e  
+   $r_{2}:=2x+4y-18=0$. 
+   \end{solution}
+ \question Considere o ponto $P=(1,0,1)$ e o plano $\pi: x-2y+4z=1$.
+    \begin{parts}
+    	\part[10] Determine as coordenadas da projeção ortogonal 
+    	do $P$ e plano $\pi$
+    	\begin{solution}
+        Calculemos a 
+    	$dist(P,\pi)=\frac{|1+4-1|}{\sqrt{1^{2}+(-2)^2+4^2}}=\frac{4}{\sqrt{21}}$.
+    	Como $P$ está acima do plano $\pi$ (considerando a direção da normal $N=(1,-2,4)$), temos que se $Q$ é a projeção ortogonal de P sobre $\pi$, então   $$ \overrightarrow{QP}= dist(P,\pi) \frac{N}{\|N\|}, $$
+calculando temos que     	
+    	$$ Q=P- \frac{4}{\sqrt{21}}\frac{N}{\|N\|}=(1,0,1)-\frac{4}{\sqrt{21}}\frac{(1,-2,4)}{\sqrt{21}}=(1,0,1)-\frac{4}{21}(1,-2,4)=
+    	(\frac{17}{21}, \frac{8}{21}, \frac{5}{21}).$$
+    	\end{solution}
+    	\part[5] Encontre as coordenadas do {\it ponto simétrico} a $P$ em relação ao plano $\pi$
+    	\begin{solution}
+    	O ponto simétrico $\widehat{P}$ satisfaz  a relação %temos que 
+         $$ \overrightarrow{\widehat{P}P}= 2dist(P,\pi) \frac{N}{\|N\|}. $$     
+    	Assim, podemos calcular $\widehat{P}$ como 
+    	$$ \widehat{P}=P- 2\frac{4}{\sqrt{21}}\frac{N}{\|N\|}=
+    	(\frac{13}{21}, \frac{16}{21}, -\frac{11}{21}). $$
+    	\end{solution}
+    \end{parts}	
+ \question Considere duas retas 
+ $r: (1,0,2)+(2t,t,3t), t \in \mathbb{R}$ e
+ $s: (0,1,-1)+(t,\alpha t, 2\alpha t), t \in \mathbb{R}$.
+   \begin{parts}
+   	\part[10] Determine o valor de $\alpha$ para que as retas sejam coplanares.
+   	 \begin{solution}
+   	 Como elas são retas reversas (não são paralelas), para que elas sejam coplanares a distância entre elas deve ser zero.  Assim, 
+   	 $$dist(r,s)=\frac{|\overrightarrow{P_sP_r}.V_{s}\times V_r|}{\|V_{s}\times V_{r}\|}=0, $$
+   	 onde $P_s=(0,1,-1)$, $P_r=(1,0,2)$, 
+   	 $V_{s}=(1,\alpha,2\alpha)$ e 
+   	 $V_{r}=(2,1,3)$.
+   	 
+   	 Calculando o produto misto (usando determinantes) temos que 
+   	 $\overrightarrow{P_sP_r}.V_{s}\times V_r=0$ implica que $\alpha=2/3$.
+   	 \end{solution}
+   	\part[3] Para o valor de $\alpha$ encontrado, determine a posição relativa entre $s$ e $r$ 
+   	  \begin{solution}
+   	  Como $V_s=(2,1,3)$ e $V_{r}=(1,2/3,4/3)$ não são paralelas elas são concorrentes 
+   	  \end{solution}
+   	\part[2] Determine a equação do plano determinado por 
+   	$r$ e $s$
+   	 \begin{solution}
+   	 O plano $\pi$ dever ser $P_{0}+tV_s+sV_r$, com $t,s \in \mathbb{R}$. 
+   	 Devemos achar o ponto $P_0$. Como as retas já são coplanares (para esse valor de $\alpha$) podemos pegar $P_0=(0,1,-1)$ (ou $P_0=(1,0,2)$).
+   	 \end{solution}
+   \end{parts}
+ \question[10] Considere um tetraedro com vértices 
+ $O=(0,0,0)$, $A=(1,0,0)$, $B=(0,2,0)$ e $C=(0,0,3)$.
+ Encontre a equação geral do plano que dista $2/7$ 
+ da face ABC e intercepta o tetraedro.
+   \begin{solution}
+   Primeiro calculemos o plano $\pi_{ABC}$ que contem a face ABC.
+   Um vetor normal a $\pi_{ABC}$ é $\overrightarrow{AB} \times \overrightarrow{AC}=(6,3,2)$.
+   Assim, como plano  $\pi_{ABC}$ é $6x+3y+2z+d=0$ para algum $d$. 
+   Já que $A=(1,0,0) \in \pi_{ABC}$, temos que $d=-6$.
+   
+   Se temos um plano $\pi$ que dista 2/7 de $\pi_{ABC}$, 
+   o plano $\pi$ deve ser $\pi:=6x+3y+2z+\widehat{d}=0$, 
+   para algum $\widehat{d}$. Calculemos $\widehat{d}$. 
+   Já que 
+   $$dist(\pi,\pi_{ABC})=
+   \frac{|\widehat{d}-(-6)|}{\sqrt{6^2+3^{2}+2^2}}=
+   \frac{|\widehat{d}+6|}{\sqrt{49}}=
+   \frac{|\widehat{d}+6|}{7}=\frac{2}{7}.$$
+   Da expressão anterior temos que $\widehat{d}=-4$ ou 
+   $\widehat{d}=-8$. Assim, existe dois planos 
+   $6x+3y+2z=4$
+   e 
+   $6x+3y+2z=8$. Já que 
+   o plano que contem a face ABC é 
+    $6x+3y+2z=6$, só o plano $6x+3y+2z=4$ intercepta o tetraedro.
+   Assim, a resposta é  $6x+3y+2z=4$.
+   \end{solution}
+ \end{questions}
+\end{document}
