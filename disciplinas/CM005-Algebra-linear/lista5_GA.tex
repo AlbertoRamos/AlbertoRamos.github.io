@@ -1,0 +1,844 @@
+% lista 5(geometria analitica 2017 I)
+\documentclass{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+% parece que são conflictantes 
+\usepackage[utf8]{inputenc}
+%\usepackage{amsfonts}
+% \usepackage{showlabels}
+\usepackage{latexsym}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math,arrows.meta}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{xcolor} %, colortbl}
+%\usepackage{tabularx,colortbl}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{tcolorbox}
+%\usepackage{verbatimbox}
+%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{framed,color}
+%\definecolor{shadecolor}{rgb}{1,0.8,0.3}
+%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fancybox}
+
+%\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem*{main}{Main~Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{algorithm}{Algorithm}[section]
+%\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{counter}{Counter-Example}[section]
+
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\headheight=21.06892pt
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{-.4cm}
+%\setlength{\evensidemargin}{-.5cm}
+\setlength{\textwidth}{17cm}
+%\addtolength{\textwidth}{3cm}
+\newcommand{\R}{{\mathbb R}}
+
+%%%%%%% definição de integral superior e inferior 
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+\begin{document}
+
+\title{Lista 5: Geometria Analítica}
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ %\item Transformação de coordenadas;
+ %\item Equação da parabóla; %Equação da reta e do plano; %Vetores (no plano e no espaço);
+ \item Equação da elipse; 
+ \item Equação da hiperbóla.
+ \item Estudo unificado das cônicas não degeneradas.
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Elipse} 
+ 
+ Dado dois pontos $F_1$ e $F_2$ no plano, e dois números positivos $a$ e $c$ ($a\geq c$)
+   com $dist(F_1,F_2)=2c$.  
+   A elipse é definida como o seguinte conjunto 
+   $$\mathcal{E}:=\{P \in \mathbb{R}^{2}: dist(P,F_1)+dist(P,F_2)=2a\}.$$
+   Os pontos $F_1$ e $F_2$ são chamados de focos.
+   Defina $b:=\sqrt{a^{2}-c^{2}}$. 
+   Observe que por definição de $b$, 
+   temos que $a^{2}=b^2+c^2$. 
+   O número $e:=\frac{c}{a}$ é chamado 
+   de {\it excentricidade} da elipse.
+    \begin{enumerate}
+      \item {\bf eixo focal (eixo transverso): } reta que contem os focos $F_1$ e $F_2$;
+      \item {\bf vértices: } Interseção do eixo focal com a elipse.   A interseção é dada por dois pontos, denotado $V_1$ e $V_2$;;
+      \item {\bf centro : } Ponto meio do segmento $F_1F_2$;
+      \item {\bf eixo normal (eixo conjugado): } reta perperndicular ao eixo focal que passa pelo centro; 
+      \item {\bf corda: } qualquer segmento de une dois pontos diferentes da elipse;
+      \item {\bf corda focal: } corda que passa por algum foco;
+      \item {\bf lado reto : } corda focal paralela à reta normal;
+      \item {\bf raio vetor: } segmento de reta que une algum 
+      foco com algum ponto da parábola;
+      \item {\bf diámetro: } corda que passsa pelo centro.
+      \item {\bf eixo maior: } segmento $V_1V_2$. 
+      Observe que o eixo maior tem comprimento $2a$;
+      \item {\bf eixo menor: } segmeto definido pela interseção da elipse 
+      com a reta normal. Note que o eixo menor tem medida $2b$ ;
+      \item {\bf retas diretrizes: }  retas paralelas à reta normal 
+      cuja distância ao centro $C$ é $a/e$.
+     \end{enumerate}
+     Observe que 
+     $$ dist(V_1,V_2)=2a \ \ (\text{ eixo maior da elipse }), \ \ 
+        dist(F_1,F_2)=2c \ \ (\text{ distância focal }).$$
+ 
+ {\it Remark 1: }Note que a elipse é simetrica em relação ao eixo focal e também ao eixo normal. 
+ 
+ {\it Remark 2: } Veja a 
+ construção geometrica da elipse na internet, 
+ por exemplo, 
+ \url{https://www.youtube.com/watch?v=RYV-uBWdb8Y}.
+  
+ Usando um sistema de coordenadas a elipse $\mathcal{E}$ pode ser escrita com uma das seguintes formas. 
+ 
+ {\bf Forma canônica }(também chamada de forma reduzida) 
+ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ ou $\frac{x^2}{b^2}+\frac{y^2}{a^2}=1$, 
+ onde o centro $C=(0,0)$ e o eixo focal é paralelo a algum dos eixos canônicos.
+ {\it Desenhe ambas elipse explicitando o segmento que tem comprimento $a$ e/ou $b$}.
+ 
+  Quando o centro $C=(h,k)$ e o eixo focal é paralelo a algum dos eixos canônicos, 
+  $\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1$ ou $\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1$, 
+  %$(y-k)^{2}=4p(x-h)$ ou $(x-h)^2=4p(y-k)$.
+
+ {\bf Forma geral sem rotação} $x^2+y^{2}+Dy+Ex+F=0$.
+ onde o eixo focal é paralelo a algum dos eixos canônicos.
+ 
+ {\bf Forma geral mesmo} $Ax^2+Bxy+Cy^{2}+Dy+Ex+F=0$ se $B^{2}-4AC<0$. \newline
+ 
+ {\it Retas tangentes para a Elipse. }
+ Em qualquer ponto sobre a elipse podemos calcular retas tangentes e retas normais.
+ 
+ {\bf Quando $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$}. 
+ A reta tangente à $\mathcal{E}$ no ponto $P=(x_0,y_0) \in \mathcal{E}$ é dada por 
+ $ r: (\frac{x_{0}}{a^2})x+(\frac{y_0}{b^{2}})y=1$. 
+ 
+ {\bf Quando $\frac{x^2}{b^2}+\frac{y^2}{a^2}=1$}. 
+ A reta tangente à $\mathcal{E}$ no ponto $P=(x_0,y_0) \in \mathcal{E}$ é dada por 
+ $ r: (\frac{x_{0}}{b^2})x+(\frac{y_0}{a^{2}})y=1$. \newline
+  
+  Com essas informações responda:
+    \begin{enumerate}
+    \item Calcule os focos, vértices, a medida do eixo maior e a do eixo menor, esboce as elipses
+       \begin{enumerate}
+       \item $x^2/9+y^2/25=1  \ \  \text{ e } \ \ 4x^2+10y^2=40$
+       \item $4x^2+169y^2=676  \ \ \text{ e } \ \ 16x^2-4+4y^2=0$ 
+       \end{enumerate}
+    \item Escreve a equação reduzida da elipse nos seguintes casos:
+     \begin{enumerate}
+     \item $Centro=(0,0)$, eixo focal paralelo ao eixo $x$, o eixo menor mede 6 e a distância focal é 8. 
+     \item Os focos são $(0,6)$ e $(0,-6)$ e o eixo maior mede 34
+     \item $Centro=(0,0)$, um foco é $(0,-\sqrt{40})$ e o ponto 
+     $(\sqrt{5}, 14/3)$ pertence à elipse.
+     \item Os focos são $F_1=(1,1)$ e $F_2=(-1,-1)$
+     e satisfaz $dist(P,F_1)+dist(P,F_2)=4$
+     \end{enumerate} 
+    \item Considere uma elipse com foco $F=(-2,0)$ que passa 
+    por $P=(2,-3)$ e tem como reta diretriz é $r:x+8=0$. Encontre a 
+    excentricidade da elipse. {\it Rpta: } $e=1/2$.     
+    \item  Encontre a equeção da elipse cujo focos e vértices
+    coincidem com os focos e vértices das parábolas 
+    $\mathcal{P}_1:y^2+4x=12$ e  
+    $\mathcal{P}_2:y^2-4x=12$. 
+    {\it Rpta: } $5x^2+9y^2=45$. 
+    \item Se uma elipse tem seu centro na origem, seus 
+    focos sobre o eixo x a distância entre as diretrizes é 12. 
+    Se $P=(3,\sqrt{5})$ pertence à elipse, encontre sua equação reduzida. 
+    {\it Rpta: } Duas elipses, 
+    $\mathcal{E}_1: 8x^2+24y^2=192$ e 
+    $\mathcal{E}_2: 35x^2+84y^2=735$. 
+    \item Seja $B_1=(3,5)$ e $B_2=(3,-3)$ 
+    os extremos do eixo menor da elipse
+    que tem uns dos vértices sobre a reta $3x-y+7=0$. 
+    %são o vértice e o foco oposto da elipse 
+    %cujo eixo menor é 10. Encontre a equação de elipse. 
+    {\it Rpta: } $\mathcal{E}: 16(x-3)^2 +25(y-1)^2 =400$.      
+    \item Considere a equação da elipse em forma reduzida. Mostre que se 
+    $(x_0,y_0)$ está na elipse, os pontos 
+    $(x_0,-y_0)$, $(-x_0,y_0)$ e $(-x_0,-y_0)$ também pertencem à elipse. 
+    \item Se a distância entre as diretrizes de uma elipse é 18, e os focos 
+    são os pontos (1,5) e (1,3). Encontre a equação da elipse. 
+    {\it Rpta: } $9(x-1)^2+8(y-4)^2=72$.
+    \item Considere a elipse $b^2x^2+a^2y^2=a^2b^2$, com 
+    foco $F_1=(c,0)$, $F_2=(-c,0)$ e um ponto 
+    $P=(x_0,y_0)$ da elipse. Mostre que 
+    o raio vetor $PF_1$ é igual $a-ex_0$ 
+    (i.e $|\overrightarrow{PF_1}|=a-ex_0$ )
+    e  raio vetor $PF_2$ é $a a+ex_0$ 
+    (i.e $|\overrightarrow{PF_2}|=a+ex_0$ )
+    \item Encontre a equação da corda focal da 
+    elipse $16x^2+25y^2=400$, cujo comprimento é 8 unidades e 
+    passa pelo foco com coordenadas positivas. {\it Rpta: }
+    $\sqrt{2}y\pm 2(x-3)=0$.
+    \item Considere a parábola $\mathcal{P}: x^2=4y$. 
+    Ache a  equação da elipse 
+    cujo centro é o vértice de $\mathcal{P}$ tal que o 
+    extremo do eixo menor é o foco da parábole 
+    e o eixo tranverso da elipse é paralelo à diretriz da parábola. 
+    {\it Rpta: } $\mathcal{E}: x^2+2y^2=32$.
+    {\it Dica: } Considere que a corda é PQ, onde P e Q estão na elipse. 
+    (1) Encontre primeiro o foco $F=(f_1,f_2)$,  
+    (2) Escreva a equação da reta que define a corda PQ,
+    tipo $y-f_1=m(x-f_2)$, onde $m$ é a incognita,  
+    (3) Note que o comprimento do segmento PQ é igual à soma dos segmentos
+    PF e FQ, (4) Use o problema anterior para calcular PF e FQ. 
+    \item Encontre a equação da elipse com centro $(1,-3)$, com um foco 
+    em $(0,-6)$ e a interseção do eixo focal com uma diretriz da elipse 
+    é $(3,3)$. {\it Rpta: } $e=1/\sqrt{2}$, $\mathcal{E}: 19x^2-6xy+11y^2-56x+72y-64=0$.
+    \item Seja $\mathcal{E}$ uma elipse e $P$ um ponto exterior à elipse 
+    ($P \notin \mathcal{E}$). Encontre as retas tangentes da elipse que passam por P, nos seguintes casos: 
+       \begin{enumerate}
+       \item $\mathcal{E}: 9y^2+4x^2=72$, $P=(0,4)$ 
+       {\it Rpta: } $2x+3y-12=0$, $2x-3y+12=0$;
+       \item $\mathcal{E}: 2x^2+3y^2+x-y=5$, $P=(3,-1)$
+       {\it Rpta: } $x+y=2$, $9x-191y=218$.
+       \item A reta $r: 2x-y-3=0$ é tangente à elipse 
+       $\mathcal{E}:9x^2+16y^2=144$? 
+       {\it Rpta: } não, $r$ é uma reta secante 
+       (i.e. corta a elipse em dois pontos)
+       \item A reta $r: 2x+y=10$ é tangente à elipse 
+       $\mathcal{E}:4x^2+9y^2=36$? 
+       {\it Rpta: } não, 
+       $r$ não intercepta a elipse.
+       \end{enumerate}
+    \item  Seja $\mathcal{E}$ uma elipse, com excentricidade 1/5 tal que
+    $r: 2x+y+128=0$ é a diretriz associada ao foco $F=(-4,0)$. 
+    Ache a equação da elipse assim como também a equação da outra diretriz.
+    {\it Rpta: } $121x^2 -4xy +124y^2 +488x-256y-14384=0$ e
+    diretriz  $2x+y-122=0$.
+    \item Seja $\mathcal{E}: x^2+3y^2 +3x-4y=3$. 
+    Encontre os valores de $\alpha \in \mathbb{R}$ 
+    para que as retas $5x+2y+\alpha$ sejam tangentes à elipse. 
+    {\it Rpta: } $\alpha=-7$ e $\alpha=58/3$.
+    \item *{\it Propriedade refletora da Elipse: } Mostre que a tangente da elipse num ponto T da elipse forma ângulos iguais com os raios focais em dito ponto. 
+    {\it Dica: } 
+    Considere a forma reduzida da elipse e 
+    a formula $\tan(\alpha+\beta)=(\tan(\alpha)+\tan(\beta))/(1-\tan(\alpha)\tan(\beta))$.  
+    \item Seja $\mathcal{E}: 4x^2+9y^2=180$. 
+    Do foco esquerdo da elipse sai um raio de luz 
+    com um ângulo de inclinação $\alpha$ com $\tan(\alpha)=-2$, 
+     que bate na elipse no ponto $P=(x_0,y_0)$ $(y_0>0)$ e 
+     é refletido. Ache a equação da reta que contem o raio refletido. 
+     {\it Rpta: } $r: 2x+11y-10=0$.  
+    \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Hipérbole} 
+ 
+ Dado dois pontos $F_1$ e $F_2$ no plano, e dois números positivos $a$ e $c$ ($c> a$)
+   com $dist(F_1,F_2)=2c$.  
+   A hipérbole é o conjunto  
+   $$\mathcal{H}:=\{P \in \mathbb{R}^{2}: |dist(P,F_1)-dist(P,F_2)|=2a\}.$$
+   Os pontos $F_1$ e $F_2$ são chamados de focos.
+   Defina $b:=\sqrt{c^{2}-a^{2}}$. 
+   Por definição de $b$, 
+   temos que $c^{2}=b^2+a^2$ ({\bf perceba as diferenças com a hipérbole}). 
+   O número $e:=\frac{c}{a}$ é chamado 
+   de {\it excentricidade} da hipérbole. 
+   Veja que para a hipérbole $e>1$.
+    \begin{enumerate}
+      \item {\bf eixo focal (eixo transverso): } reta que contem os focos $F_1$ e $F_2$;
+      \item {\bf vértices:  } Interseção do eixo focal com a 
+      hipérbole. 
+      A interseção são dois pontos denotados por $V_1$ e $V_2$;
+      \item {\bf centro : } Ponto meio do segmento $F_1F_2$;
+      \item {\bf eixo normal (eixo conjugado): } reta perperndicular ao eixo focal que passa pelo centro; 
+      \item {\bf corda: } qualquer segmento de une dois 
+      pontos diferentes da hipérbole;
+      \item {\bf corda focal: } corda que passa por algum foco;
+      \item {\bf lado reto : } corda focal paralela ao eixo normal;
+      \item {\bf raio vetor: } segmento de reta que une algum 
+      foco com algum ponto da hipérbole;
+      %\item {\bf diámetro: } corda que passsa pelo centro.
+      \item {\bf eixo maior: } segmento $V_1V_2$. 
+      Observe que o eixo maior tem comprimento $2a$;
+      \item {\bf eixo menor: } segmento definido pela interseção 
+      da hipérbole com o eixo normal. 
+      O eixo menor tem medida $2b$ ;
+      \item {\bf retas diretrizes: }  retas paralelas à reta normal 
+      cuja distância ao centro $C$ é $a/e$.
+      \item {\bf rectângulo fundamental: } rectângulo cujo centro é o centro da hipérbole, com lados de comprimento 2a e 2b e paralelos aos eixo transveso e 
+      conjugado respectivamente.
+      \item {\bf assintotas: } retas que passam por $C$, não interceptam 
+      à hipérbole mas tendem à hipérbole no infinito. 
+      %aproxima-sem com distância zero.  
+      Ditas retas são definas pelas diagonais do rectângulo fundamental. 
+      \item {\bf ramo da hipérbole: }  cada uma das curvas que definem a hipérbole.
+     \end{enumerate}
+     Observe que para a hipérbole
+     $ dist(V_1,V_2)=2a < dist(F_1,F_2)=2c $.
+     % \ \ (\text{ distância focal }).$$
+ 
+ {\it Remark 1: }Note que a hipérbole é simetrica em relação ao eixo focal e  ao eixo normal. 
+ 
+ {\it Remark 2: } Veja a 
+ construção geometrica da hipérbole na internet, 
+ por exemplo, 
+ \url{https://www.youtube.com/watch?v=ETV_bWAPOqU}. 
+  
+ Usando um sistema de coordenadas a hipérbole $\mathcal{H}$ 
+ pode ser escrita com uma das seguintes formas. 
+ 
+ {\bf Forma canônica }(também chamada de forma reduzida).
+ Nesta caso, a hipérbole é o lugar geometrico definido por 
+ %As equações são  
+ $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$ ( hipérbole horizontal) ou $\frac{y^2}{a^2}-\frac{x^2}{b^2}=1$ ( hipérbole vertical), 
+ onde o centro $C=(0,0)$ e o eixo focal é paralelo a algum dos eixos canônicos.
+ {\it Desenhe ambas hipérbole explicitando 
+ o segmento que tem comprimento $a$ e/ou $b$. Lembre $dist(V_1,V_2)=2a$}.
+ 
+ {\it Remark:} Nesse caso as assíntotas podem ser facilmente calculadas. 
+ De fato:
+   \begin{enumerate}
+   \item Quando $\mathcal{H}$ é uma hipérbole horizontal, 
+   as assíntotas são as retas $y=\pm \frac{b}{a} x$;
+   \item Quando $\mathcal{H}$ é uma hipérbole vertical, 
+   as assíntotas são as retas $y=\pm \frac{a}{b} x$.
+   \end{enumerate}
+   
+  Quando o centro $C=(h,k)$ e o eixo focal é paralelo a algum dos eixos canônicos, temos que a hipérbole pode ser descrita como 
+  $\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1$ ou 
+  $\frac{(y-k)^2}{a^2}-\frac{(x-h)^2}{b^2}=1$. 
+  %$(y-k)^{2}=4p(x-h)$ ou $(x-h)^2=4p(y-k)$.
+
+ {\bf Forma geral sem rotação} $Ax^2-Cy^{2}+Dy+Ex+F=0$.
+ onde o eixo focal é paralelo a algum dos eixos canônicos.
+ 
+ {\bf Forma geral mesmo} $Ax^2+Bxy+Cy^{2}+Dy+Ex+F=0$ se $B^{2}-4AC>0$. \newline
+ 
+ {\it Retas tangentes para a hipérbole. }
+ Em qualquer ponto sobre a hipérbole 
+ podemos calcular retas tangentes e retas normais.
+ 
+ {\bf Quando $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$}. 
+ A reta tangente à $\mathcal{H}$ no ponto $P=(x_0,y_0) \in \mathcal{H}$ é dada por 
+ $ r: (\frac{x_{0}}{a^2})x-(\frac{y_0}{b^{2}})y=1$. 
+ 
+ {\bf Quando $\frac{y^2}{a^2}-\frac{x^2}{b^2}=1$}. 
+ A reta tangente à $\mathcal{H}$ no ponto $P=(x_0,y_0) \in \mathcal{H}$ 
+ é dada por 
+ $ r: (\frac{y_0}{a^{2}})y-(\frac{x_{0}}{b^2})x=1$. \newline
+  
+ Com essas informações responda:
+ \begin{enumerate}
+     \item Calcule os focos, vértices, as equações das assíntotas. Esboce as hipérboles
+       \begin{enumerate}
+       \item $16x^2-25y^2=400  \ \  \text{ e } \ \ 9y^2-4y^2=36$
+       \item $x^2-y^2+1=0  \ \ \text{ e } \ \ x^2-4y^2=1$ 
+       \end{enumerate}
+    \item Escreve a equação reduzida da elipse nos seguintes casos:
+     \begin{enumerate}
+     \item Os focos são $F_1=(3,-1)$ e $F_2=(3,4)$
+     e satisfaz $|dist(P,F_1)-dist(P,F_2)|=3$;
+     \item Os focos são $F_1=(-1,1)$ e $F_2=(1,1)$
+     e satisfaz $|dist(P,F_1)-dist(P,F_2)|=1$;
+     \item Os vértices são 
+     $(2,0)$ e $(-2,0)$ e os focos são 
+     $(3,0)$ e $(-3,0)$;
+     \item Os vértices são 
+     $(15,0)$ e $(-15,0)$ e as assíntotas são 
+     $5y-4x=0$ e $5y+4x=0$.
+     \end{enumerate} 
+    \item Encontre a equação da hipérbole cujos focos 
+    são $(4,0)$ e $(-4,0)$, e o coeficiente ângular duma das assíntotas 
+    é 3. {\it Rpta: } $\mathcal{H}: 45x^2-5y^2=72$.
+    \item Seja uma hipérbole com centro na origem, focos sobre o eixo x cuja distância entre as diretrizes é 4 e passa por $P=(4,3)$.
+    {\it Rpta: } $\mathcal{H}: 3x^2-2y^2=30$
+    \item Considere a elipse $\mathcal{E}: 25x^2+9y^2=225$. 
+    Se os focos dessa elipse coincidem 
+    com os focos duma hipérbole de excentricidade 4/3.
+    Escreva a equação reduzida da hipérbole.
+    {\it Rpta: } $\mathcal{H}: 7y^2-9x^2=63$.
+    \item Calcule a àrea do triângulo formado por as assíntotas de 
+    hipérbole $\mathcal{H}: x^2-4y^2=16$ e  a reta 
+    $r: 3x-2y+12=0$. {\it Rpta: } $9 u^2$
+    \item Encontre a equação reduzida de uma hipérbole se os focos são 
+    os pontos $(-10,0)$ e $(10,0)$, e suas assíntotas são as retas 
+    $r: y=\pm 2x$. {\it Rpta: } $\mathcal{H}: 4x^2-y^2=80$.
+    \item Se as assíntotas duma hipérbole, 
+    que tem um foco em $(3,-2)$, são 
+    $r_1: 3x-4y-5=0$ e $r_2: 3x+4y+11=0$. 
+    Encontre a sua excentricidade. {\it Rpta: } $e=5/4$. 
+    \item É possível construir uma hipérbole com focos em 
+    $(3,4)$ e $(-1,-2)$ tal que a {\bf medida do eixo maior} é 2.
+    Caso afirmativo, escreva a equação de dita hipérbole.
+    {\it Rpta: } Sim, $\mathcal{H}: 3x^2+8y^2+12xy-18x-28y+11=0$.
+    {\it Dica: } Use a definição da hipérbole. 
+    \item Considere a hipérbole $b^2x^2-a^2y^2=a^2b^2$, com 
+    foco $F_1=(c,0)$, $F_2=(-c,0)$ e um ponto 
+    $P=(x_0,y_0)$ da hipérbole. Mostre que 
+    o raio vetor $PF_1$ é igual $|a-ex_0|$ 
+    (i.e $|\overrightarrow{PF_1}|=|a-ex_0|$ )
+    e  raio vetor $PF_2$ é $|a+ex_0|$ 
+    (i.e $|\overrightarrow{PF_2}|=|a+ex_0|$ )
+    \item Encontre as retas tangentes da hipérbole
+    $\mathcal{H}: x^2-4y^2=20$ perpendiculares à
+    reta $r: 4x+3y-7$. {\it Rpta: } 
+    $r_1: 3x-4y+10=0$ e $r_2: 3x+4y-10=0$.
+    \item Ache um ponto $P$ da hipérbole $\mathcal{H}: 9x^2-12y^2=216$
+    mais próximo à reta $r: 3x+2y+1=0$. Calcule também a distância entre 
+    $P$ e a reta $r$. {\it Rpta: } $P=(-6,3)$ e distância$=11/\sqrt{13}$.
+    \item Considere uma hipérbole $\mathcal{H}$ com focos 
+    em $(6,-1)$ e $(0,-4)$ e passa por $A=(0,-9)$. 
+    Ache as equações das diretrizes.
+    {\it Rpta: } 
+    $\mathcal{D}_1:6x+3y-23=0$
+    e 
+    $\mathcal{D}_2:6x+3y+2=0$.
+    \item *{\it Propriedade refletora da Hipérbole: } Mostre que a tangente da hipérbole num ponto T forma ângulos iguais com os raios focais em dito ponto. 
+    {\it Dica: } 
+    Considere a forma reduzida da elipse e 
+    a formula $\tan(\alpha+\beta)=(\tan(\alpha)+\tan(\beta))/(1-\tan(\alpha)\tan(\beta))$.  
+    \item Encontre a equação da hipérbole com centro na origem, 
+    que passa por $P=(0,2)$ se o eixo focal é $2x-y=0$ 
+    e uma assintota é o eixo x. {\it Dica: }
+    {\it Rpta: } $\mathcal{H}: 3y^2+4xy=12$.
+ \end{enumerate} 
+ 
+ \section*{Estudo unificado das cônicas não degeneradas}
+Usando a excentrecidade, é possível escrever todas as cônicas não degeneradas (menos a cricunferência) de forma uniforme. De fato, temos o seguinte resultado:
+
+\begin{theorem}
+     Seja uma reta fixa $\mathcal{D}$, chamada de diretriz e um ponto 
+     $F$ fixo chamado foco com $F \notin \mathcal{D}$. 
+     Defina o seguinte lugar geometrico
+     \begin{equation}\label{eqn:conica}
+  \mathcal{K}:=
+  \{P \in \mathbb{R}^2: dist(P,F)=e \ \ dist(P, \mathcal{D})\}.
+     \end{equation}      
+  % $$\mathcal{K}:=\{P \in \mathbb{R}^2: dist(P,F)=e dist(P, \mathcal{D})\}$$
+     onde $e>0$ é uma constante fixa. 
+     Esse lugar geometrico $\mathcal{K}$ é chamado de cônica. Dependendo do valor de $e$ temos as seguintes alternativas: 
+     \begin{enumerate}
+     \item Se $e=1$, então $\mathcal{K}$ é uma parábola;
+     \item Se $e \in (0,1)$, então $\mathcal{K}$ é uma elipse; 
+     \item Se $e>1$, então $\mathcal{K}$ é uma hipérbole.
+     \end{enumerate}
+     Reciprocamente, toda cônica não degenerada que não seja 
+     uma circunferência pode ser escrita como \eqref{eqn:conica}.
+\end{theorem}    
+{\it Remark: } As seções cônicas são curvas obtidas ao intercetar um plano com um cone. Veja, por exemplo:  
+\url{https://www.youtube.com/watch?v=HO2zAU3Eppo}.
+
+Responda as seguintes questões:
+
+   \begin{enumerate}
+   \item Seja $\mathcal{K}$ uma cônica que passa 
+   por $P=(-2,3)$, 
+   com foco $F=(2,3)$ e reta diretriz $\mathcal{D}:y+1=0$. 
+   Identifique a cônica e encontre a equação analítica que a descreve.
+   {\it Rpta: } $\mathcal{K}$ é uma parábola cuja equação 
+   é $x^2-4x-8y+12=0$. 
+   \item Se temos uma cônica cujo foco é $(-1,-4)$, cuja reta diretriz é 
+   $x=2$ e passa por $P=(-3,-5)$, 
+   identifique dita cônica e ache a sua equação.
+   {\it Rpta: } elipse, $\mathcal{E}: 4x^2+5y^2+14x+40y+81=0$. 
+   \item Considere uma cônica cujo foco é $(3,-1)$, cuja reta diretriz é 
+   $2x-3=0$ e passa por $P=(6,55)$.  
+   Identifique a cônica e ache a sua equação.
+   {\it Rpta: } hipérbole $\mathcal{H}: 11x^2-9y^2-6x-18y-45=0$. 
+   \end{enumerate}
+\end{document}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\section*{Transformação de coordenadas}
+ Existe dois tipos de transformações importantes: {\it traslação} e {\it rotação}, quais podem ser combinados para descrever movimentos mais complexos. É importante se sentir confortável com essas transformações.
+ 
+% \shadowbox{gdfgd}
+  
+ {\it Translação de eixos.} Em $\mathbb{R}^{2}$ (em $\mathbb{R}^{3}$ é similar), considere um sistema de coordenadas cuja origem $O=(0,0)$ é trasladada a $O'=(h,k)$.
+ Seja $P \in \mathbb{R}^{2}$ um ponto com coordenadas 
+ $(x,y)$ no sistema de coordenadas original e 
+ com coordenadas $(x',y')$ no 
+ novo sistema de coordenadas (com origem $O'$). Então, temos que :
+   $$  x=x'+h \ \ \text{ e } \ \ y=y'+k.$$
+ {\it Rotação de eixos.} Em $\mathbb{R}^{2}$, considere dois sistemas de coordenadas, uma obtida apartir da outras atraves de uma rotação (com ângulo 
+ $\theta$ e sentido antihorário). Se
+ $P \in \mathbb{R}^{2}$ um ponto com coordenadas 
+ $(x,y)$ no sistema de coordenadas original e 
+ com coordenadas $(x',y')$ no 
+ novo sistema de coordenadas. Então, 
+ $$  x=x'\cos(\theta)-y'\sin(\theta) \ \ \text{ e } \ \ 
+     y=x'\sin(\theta)+y'\cos(\theta).$$
+ Usando matrizes podemos escrever a expressão como (talvez mais fácil para decorar):
+ $$  
+     \begin{pmatrix}
+      x \\
+      y
+     \end{pmatrix}= \begin{pmatrix}
+                    \cos(\theta) & -\sin(\theta) \\
+                    \sin(\theta) &  \cos(\theta) \\
+                    \end{pmatrix}  
+                     \begin{pmatrix}
+                     x' \\
+                     y'
+                     \end{pmatrix}.
+ $$                       
+ Da expressão anterior temos que
+  $$  
+     \begin{pmatrix}
+      x'\\
+      y'
+     \end{pmatrix}= \begin{pmatrix}
+                    \cos(\theta)  &  \sin(\theta) \\
+                    -\sin(\theta) &  \cos(\theta) \\
+                    \end{pmatrix}  
+                     \begin{pmatrix}
+                     x \\
+                     y
+                     \end{pmatrix}.
+ $$  
+ %  é similar.  
+ %Em $\mathbb{R}^{3}$, a rotação de dá atraves de dois ângulos 
+ %de Euler. 
+ Responda:
+   \begin{enumerate}
+    \item Usando uma translação transforme a equação 
+    $2x^2-3xy+5x+3y-8=0$ em outra equação sem termos lineares.
+    {\it Rpta:} Nova origem $O'=(1,3)$ e equação $2x'^2-3x'y'-1=0$
+    \item Mediante uma translação transforme a equação 
+    $8x^3-x^2+24x-y+1=0$, em outra que não tem termos 
+    de segunda ordem nem termo constante.
+    {\it Rpta} Nova origem $O'=(-4,8)$ e equação $(x')^{2}y'-1=0$.
+    \item Encontre o ângulo de rotação para que a curva
+    $8x^2+3\sqrt{3}xy+11y^2=24$ não tenha o termo $xy$.
+    {\it Rpta} $\theta=60^{\circ}$.
+    \item Mostre que a curva $11x^2+24xy+4y^2=20$ depois de uma rotação 
+    $\theta=arctan(3/4)$ se escreve como $4x'^2-y'^2=4$.
+    \item Usando primeiramente uma translação com nova origem $O'=(1,1)$ e
+    logo uma rotação de $45^{\circ}$, uma equação se transforma 
+    em $(x'')^{2}-2(y'')^{2}=2$. Qual é a equação original?
+    {\it Rpta:} $x^2-6xy+y^2+4x+4y=0$.
+   \end{enumerate}
+
+ \section*{Parábola} 
+  
+% \begin{tcolorbox}
+   Dada uma reta $\mathcal{D}$ e um ponto $F \notin \mathcal{D}$.
+   A parábola é definida como 
+   $$\mathcal{P}:=\{P \in \mathbb{R}^{2}: dist(P,F)=dist(P,\mathcal{D})\}.$$
+   O ponto $F$ é chamado de foco e a reta $\mathcal{D}$ é chamada de reta diretriz.
+     \begin{enumerate}
+      \item {\bf eixo de simetria: } reta perpendicular à diretriz que passa por F;
+      \item {\bf vértice: } interseção no eixo de simetria com a parábola;
+      \item {\bf corda: } qualquer segmento de une dois pontos diferentes da parábola;
+      \item {\bf corda focal: } corda que passa por F;
+      \item {\bf lado reto (ou corda principal): } corda focal paralela à diretriz;
+      \item {\bf raio vetor: } segmento de reta que une o foco com algum ponto da parábola. 
+     \end{enumerate}
+  
+ %\end{tcolorbox}
+ 
+ Usando um sistema de coordenadas a parábola $\mathcal{P}$ pode ser escrita com uma das 
+ seguintes formas. 
+ 
+ {\bf Forma canônica }(também chamada de {\it forma reduzida}) $y^{2}=4px$ ou $x^2=4py$.
+ onde o vertice $V=(0,0)$ e o eixo de simetria é paralelo a algum dos eixos canônicos.
+ $$ \text{ Observe que } |p|=dist(V,F) \text{ e } 
+                         |p|=dist(V,\mathcal{D}). $$
+ 
+ Quando o vertice $V=(h,k)$ e o eixo de simetria é paralelo a algum dos eixos canônicos temos que $(y-k)^{2}=4p(x-h)$ ou $(x-h)^2=4p(y-k)$.
+ %onde o vertice $V=(h,k)$ e o eixo de simetria é paralelo a algum dos eixos  %canônicos.
+ 
+ {\bf Forma geral} $y^{2}+Dy+Ex+F=0$ ou $x^{2}+Dx+Ey+F=0$
+ onde o eixo de simetria é paralelo a algum dos eixos canônicos.
+ 
+ %{\bf Forma geral mesmo}. \newline
+ 
+ {\it Retas tangentes: } 
+ Em qualquer ponto sobre a parábola podemos 
+ calcular retas tangentes e retas normais.
+ Para as retas tangentes temos as seguintes formulas qual depende da 
+ equação usada da parábola.
+ 
+ {\bf Quando $y^{2}=4px$}. A reta tangente a $\mathcal{P}$ no ponto $P=(x_0,y_0) \in \mathcal{P}$ é dada por 
+ $ r: yy_0=2p(x+x_0)$. 
+ 
+ {\bf Quando $x^{2}=4py$}. A reta tangente a $\mathcal{P}$ no ponto $P=(x_0,y_0) \in \mathcal{P}$ é dada por 
+ $ r: xx_0=2p(y+y_0)$. \newline
+
+ 
+Proceda a responder as seguintes questões 
+  
+  \begin{enumerate}
+     \item Escreva as equações das seguintes parábolas.
+       \begin{enumerate}
+        \item Se $F=(0,2)$ e diretriz $\mathcal{D}: y+2=0$.
+        \item Se $F=(0,0)$ e diretriz $\mathcal{D}: y+x=2$.
+        \item Se o vértice é $V=(-3,2)$ e foco $F=(-1,2)$.
+       \end{enumerate}
+     \item Ache a equação da parabóla que tem foco
+     $(-5/3,0)$ e cuja reta diretriz é $3x-5=0$.
+     {\it Rpta} $3y^2+20x=0$.
+     \item Encontre a longitude da corda focal da parábola
+     $\mathcal{P}: x^2+8y=0$ que é paralela à reta 
+     $r: 3x+4y-7=0$. {\it Rpta: } $25/2$.
+     \item Encontre a equação da parábola com foco $F=(2,1)$, 
+     com vértice sobre a reta $r: 3x+7y+1=0$ e 
+     cuja diretriz é paralela ao eixo x. 
+     {\it Rpta: } $\mathcal{P}: (x-2)^2=8(y+1)$.
+     \item Se uma parábola tem um vértice sobre a
+      reta $r_1:3x-2y=19$, o foco sobre a 
+      reta $r_2: x+4y=0$ e 
+      diretriz $\mathcal{D}: x=2$.
+      {\it Rpta: } $(y+2)^{2}=12(x-5)$.
+     \item Encontre a equação de uma parábola cuja lado reto 
+     tem como extremo os pontos 
+     $A=(7,3)$ e $B=(1,3)$. 
+     {\it Rpta: } $\mathcal{P}_1:(x-4)^2=6(y-3/2)$
+     e  $\mathcal{P}_2:(x-4)^2=-6(y-9/2)$.
+     \item Encontre o valor de $\alpha \neq 0$, para que as 
+     coordenadas do foco da parábola 
+     $\mathcal{P}: x^2+4x-4\alpha y=8$ somem zero.
+     {\it Rpta: } $\alpha=3$ ou $\alpha=-1$.
+     \item Encontre a equação da circunferência 
+     que passa por o vértice 
+     e os extremos do lado reto da parábola 
+     $\mathcal{P}: y^2+2y-4x+9=0$. 
+     {\it Rpta: } $\mathcal{C}: (x-1/2)^2+(y+1)^2=9/4$.
+     \item Encontre a equação da reta tangente e normal 
+     da parábola $\mathcal{P}: y^2+2y-4x-7=0$ no ponto de contato 
+     $T=(7,5)$ ($T \in \mathcal{P}$). {\it Rpta: }
+     reta tangente: $x-3y+8=0$ e reta normal: $3x+y-26=0$.
+     \item Encontre as retas tangentes à parabóla 
+     $\mathcal{P}: y^2+3x-6y+9=0$ que passa por 
+     $P=(1,4)$. {\it Rpta: }
+     $3x-2y+5=0$ e $x+2y-9=0$.
+     \item Considere a reta $r: x-2y-8=0$. 
+     Ache o ponto da parabóla $x^2=4y$ tal que a 
+     distância à reta $r$ seja a mínima possível e calcule 
+     tal distância.
+     {\it Dica: } O ponto deve ser ponto de tangência. 
+     {\it Rpta: } $T=(1,1/4)$, distancia$=3\sqrt{5}/2$.
+     \item * Considere a parabóla 
+     $\mathcal{P}: x^2-2x+8y-23=0$, o ponto de tangência 
+     $T=(5,1)$ e um triângulo formado 
+     pelo eixo y, a reta tangente e a reta normal em $T$.
+     Considere um rectângulo com uns dos lados paralelos
+     ao eixo y. Escreva, a àrea do triângulo em função 
+     do comprimento $x$ da base e calcule a àrea do rectangulo 
+     com a maior àrea possível. 
+     {\it Rpta: } A àrea em função de $x$ é $Area_{\Delta}(x)=x(10-2x)$, 
+     $x \in (0,5)$.
+     O máximo acontece quando $x=5/2$ e $Area_{\Delta}(5/2)=12,5 u^2$.
+     \item ** Se o vértice de uma parabóla $\mathcal{P}$ 
+     é $V=(-3,1)$, sua reta diretriz é paralela a 
+     $r: 3x+4y-6=0$ e uns dos extremos do lado reto é $(6,3)$. 
+     Encontre a equação da parabóla. 
+     {\it Rpta: } $p=7$, $\mathcal{P}: 16x^2-24xy+9y^2-300x-650y-475=0$.
+     \item A entrada duma igreja tem a forma 
+     duma parabóla de 9 m. de altura e 12 m. de base. 
+     Toda a parte superior é uma janela de vidro cuja 
+     base é paralela à base da entrada
+     e tem um comprimento de 8 m. 
+     Qual a altura máxima da janela?
+     {\it Rpta: } altura=4m.
+   \end{enumerate}
+
+\end{document}    
+\section*{Equação do plano} 
+
+{\bf Equação vetorial.} 
+ Um plano $\pi$ em $\mathbb{R}^{n}$, pode ser escrita como 
+ $\pi: P=P_{0}+tV+sW$, $t, s \in \mathbb{R}$ 
+ onde $V, W$ são linearmente independentes. 
+ Note que existe infinitos vetores $V$ e $W$ que geram o mesmo plano. 
+ Se conhecemos três pontos sobre a reta, por exemplo $P_{0}$, $P_1$
+ e $P_2$, os vetores 
+ $\overrightarrow{P_0P_1}, \overrightarrow{P_0P_2} \in \mathbb{R}^{n}$ 
+ servem como geradores do plano $\pi$, se
+ $\overrightarrow{P_0P_1}, \overrightarrow{P_0P_2}$ são linearmente independentes ({\it por que?}). 
+ Assim, qualquer vetor paralelo a $\pi$ pode ser escrito como combinação linear de $V$ e $W$.
+ 
+ {\bf Equação normal do plano em $\mathbb{R}^{3}$}
+ Quando o plano está em $\mathbb{R}^{3}$, podemos escrever o plano da 
+ forma 
+$$ax+by+cz+d=0, \text{ para certos } a,b,c, d \in \mathbb{R}, $$ 
+com $a^{2}+b^{2}+c^2\neq0$. Dita forma se chama de 
+ {\it equação geral do plano ou equação normal}. Perceba que o vetor 
+ $(a,b,c) \in \mathbb{R}^{2}$ é um vetor normal ao plano. 
+ 
+ Se $V$ e $W$ são vetores paralelos ao plano, $V \times W$ serve como 
+ vetor normal ao plano.
+ 
+ Veja que se $(x_0, y_{0}, z_0)$ está sobre o plano $\pi$ 
+ $\pi: ax+by+cz+d=0$, temos que 
+ $$ (a,b,c) \perp ((x,y,z)-(x_0,y_0,z_0)), \text{ para todo } (x,y,z) \in \pi. $$ 
+
+Em $\mathbb{R}^{3}$, considere dois plano $\pi_1$ e $\pi_2$ com $\pi_1 \cap \pi_2 \neq \emptyset$.
+  Certamente, $\pi_1 \cap \pi_2$ é uma reta ({\it por que?}). Podemos facilmente encontrar um {\it vetor diretor} calculando 
+  $N_1 \times N_2$, onde 
+  $N_1$ e $N_2$ são vetores normais ao planos $\pi_1$ e $\pi_2$ respectivamente. 
+  
+  {\bf Ângulo entre planos. } Em $\mathbb{R}^{3}$, podemos definir o ângulo entre dois planos $\pi_1$ e $\pi_2$ 
+ como o ângulo que satisfaz a relação 
+  $$\cos (\pi_1,\pi_2)= \frac{|N_1 \circ N_2|}{\|N_1\|\|N_2\|}, $$
+  onde  $N_1$ e $N_2$ são vetores normais ao planos $\pi_1$ e $\pi_2$ respectivamente. Observe que na formula
+   usamos o {\it valor absoluto} de  $N_1 \circ N_2$ em lugar de 
+   $N_1 \circ N_2$.
+   
+ {\bf Distância de um ponto a um plano em $\mathbb{R}^{3}$}.
+ Considere um plano $\pi: ax+by+cz+d=0$ e um ponto 
+ $P=(x_{1}, y_{1}, z_1) \in \mathbb{R}^{3}$. 
+ A distância de ponto $P$ ao plano $\pi$ é dado pela formula
+ 
+ \begin{equation}
+ \text{dist}(P,\pi)= \|\text{proj}_{N}\overrightarrow{P_0P}\|, 
+ \label{eqn:distanciapp2}
+ \end{equation}
+ onde $P_0$ é um ponto em $\pi$ e $N$ é um vetor normal ao plano.
+ Note que podemos usar $N=(a,b,c)$.
+ 
+ 
+\begin{enumerate}
+  \item Faça um esboço dos seguintes planos em $\mathbb{R}^{3}$.
+     \begin{enumerate}
+     \item $2x+3y+5z-1=0$
+     \item $3y+2z-1=0$
+     \item $2x+3z-1=0$
+     \item $3x+2y-4=0$
+     \end{enumerate}  
+   \item Encontre a equação geral do plano paralelo 
+   a $2x-y+5z-3=0$ e passa no ponto $P=(1,-2,1)$.
+   {\it Rpta} $\pi: 2x-y+5z-9=0$.
+   \item Ache a equação do plano que contem 
+   $P=(2,1,5)$ e é perpendicular aos planos 
+    $x+2y-3z+2=0$ e $2x-y+4z-1=0$.
+    {\it Rpta} $x-2y-z+5=0$. {\it Dica} Use o produto vetorial.
+    \item Considere as retas 
+    $$ r: \frac{x-2}{2}=\frac{y}{2}=z \text{ e }
+       s:  x-2=y=z.$$
+     Obtenha a equação geral do plano determinado por 
+     $r$ e $s$.  
+     \item Sejam dois planos 
+      $\pi_1: x+2y+z+2=0$ e $x-y+z-1=0$.
+      Encontre o plano que contém 
+      a interseção $\pi_1 \cap \pi_2$ e 
+      é ortogonal ao vetor $U=(1, 1, 1)$.
+      {\it Rpta: } $x-2y+z-2=0$.
+      \item Encontre a equação do plano 
+      que passa por $A=(1,0,-2)$ e contém 
+      $\pi_1 \cap \pi_2$, onde 
+      $\pi_1: x+y-z=0$ e $\pi_2: 2x-y+3z-1=0$.
+      \item Qual é a equação paramétrica da reta 
+      que é interseção dos planos, 
+      $\pi_1: (x,y,z)=(1+\alpha, -2, -\alpha-\beta)$ e 
+      $\pi_2: (x,y,z)=(1+\alpha-\beta, 2\alpha+\beta, 3-\beta)$?
+      \item Sejam três vetores 
+      $V=i+3j+2k$, $W=2i-j+k$ e $U=i-2j$ em $\mathbb{R}^{3}$. 
+      Se $\pi$ é um plano paralelo aos vetores 
+      $W$ e $U$, e $r$ é uma reta perpendicular ao plano $\pi$.
+      Encontre a projeção ortogonal de $V$ 
+      sobre o vetor diretor da reta $r$.  
+      \item Em $\mathbb{R}^{3}$, considere os pontos 
+      $A=(2,-2,4)$ e $B=(8,6,2)$.
+      Encontre o lugar geométrico dos pontos equidistantes de $A$ e $B$. {\it Dica :} É um plano.
+      
+      \item Seja $\pi$ um plano que forma 
+      um ângulo de $60^{\circ}$ com o plano 
+      $\pi_1: x+z=0$ e contém a reta
+      $r: x-2y+2z=0, 3x-5y+7z=0$.
+      Encontre a equação do plano $\pi$.
+      {\it Rpta} Dois soluções: 
+      $y+z=0$ ou $4x-11y+5z=0$.      
+      %$x-2y+2z=0$ ou $x+4y+8z=0$. 
+      \item  O plano $\pi: x+y-z-2=0$ intercepta os 
+      eixos cartesianos aos pontos $A$, $B$ e $C$. 
+      Qual é a área do triângulo $ABC$? {\it Rpta} $2\sqrt{3} u^2$.
+      \item Considere os planos: 
+      $$ \pi_1: x-y+z+1=0, \ \ \pi_2: x+y-z-1=0, \ \ 
+         \pi_3: x+y+2z-2=0. $$
+      Encontre a equação geral que contém $\pi_1\cap \pi_2$ e perpendicular 
+      $\pi_3$.   
+      \item Ache o ângulo entre o plano $-2x+y-z=0$ e plano que passa por
+      $P=(1,2,3)$ e é perpendicular $a i-2j+k$. {\it Rpta:} $arccos(5/6)$.
+      \item Para quais valores de $\alpha$ e $\beta$, a reta 
+      $r: (\beta, 2, 0)+t(2, \alpha, \alpha)$ está contida no plano 
+      $\pi: x-3y+z=1$. {\it Rpta: } $\alpha=1$, $\beta=7$.
+      \item Encontre o valor de $\alpha$ para que 
+      os planos $\pi_1: (1,1,0)+t(\alpha, 1, 1)+s(1,1, \alpha)$
+      e $\pi_2: 2x+3y+2z+1=0$ sejam paralelos. {\it Rpta: }
+      $\alpha=1/2$.
+      \item Encontre a equação geral do plano 
+      $\pi$ que contém a reta $r: (1,0,1)+t(1,1,-1)$ e dista 
+      $\sqrt{2}$
+      do ponto $P=(1,1,-1)$. 
+\end{enumerate}
+
+\end{document}
+
