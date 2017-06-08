@@ -34,6 +34,7 @@ tag:        2017s1
   - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_GA.pdf)
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista3_GA.pdf)
   - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista4_GA.pdf)
+  - [Lista 5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista5_GA.pdf)
   
 # Provas
 
