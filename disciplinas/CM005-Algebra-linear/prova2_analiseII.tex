@@ -1,0 +1,188 @@
+%% Prova 2 de Analise II (matematica)
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large Analise II: Prova 2 } \\
+  25 de maio de 2017
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular}
+\end{center}
+
+\begin{questions}
+ % \question[20] 
+ % \begin{parts}
+ % \part%[10]
+ % O que significa que uma matriz seja {\it equivalente por linhas} a outra matriz?
+ % \part%[10]
+ % Considere $V$ um espaço vetorial. Seja $W \neq \emptyset$ um subconjunto de $V$. 
+ % Quais propriedades deve satisfazer $W$ para que ele seja um subespaço vetorial de
+ % $V$?  
+ % \part%[10] 
+ % Dada uma matriz $A \in M_{m \times n}(\mathbb{R})$. Escreva o que é o núcleo de $A$.
+ % \end{parts}
+ \question[20] Enuncie e prove que o limite uniforme de funções integráveis é integrável e que a integral do limite é o limite das integrais.
+%  \question Considere $f(x):=\sum_{k=1}^{\infty}(1-\cos(\frac{x}{n}))$. Mostre que $f$ é contínua e derivável. 
+  %{\it Dica} Use $\sin(x)/x\rightarrow1$ quando $x\rightarrow0$.
+  \question[20] Considere $f(x):=\sum_{n=1}^{\infty}\frac{1}{n^x}$. Mostre que $f$ é contínua em $X=[a,\infty)$ ($a>1$). $f$ é derivável?.
+  \begin{solution}
+  Já que $\frac{1}{n^x}\leq \frac{1}{n^a}$ e $\sum_{n=1}^{\infty}\frac{1}{n^a}< \infty$, do teste de Weierstrass, temos que 
+  $\sum_{n=1}^{\infty}\frac{1}{n^x}$ converge uniformemente, além disso, dita função é continua
+  já que cada somando é contínuo. Para verificar que é derivável basta 
+  ver se $\sum_{n=2}^{\infty}\frac{ln(n)}{n^x}$ converge uniformente em $X$. Para isso, use de novo o teste de Weierstrass junto com o critério do integral para $\sum_{n=2}^{\infty}\frac{ln(n)}{n^a}$ (perceba que 
+  $ln(x)/x$ é decrescente).
+  \end{solution}
+ \question Prove que
+   \begin{parts}
+   \part[12] 
+   $ \sin(x)=\sum_{n=1}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1}, \text{ para todo } x\in \mathbb{R}$.
+   \part[8] 
+ $ \log(1+x)=\sum_{n=1}^{\infty} \frac{(-1)^{n}}{n+1} x^n, \text{ para todo } x\in(-1,1]$.
+   \end{parts}
+  \begin{solution}
+  Feito em aula. Usamos os resíduos que provêm da formula de Taylor para estimar as diferenças $|\log(1+x)-\sum_{k=1}^{n} \frac{(-1)^{k}}{k+1} x^k|$
+  e $|\sin(x)-\sum_{k=1}^{n} \frac{(-1)^{k}}{(2k+1)!} x^{2k+1}|$, 
+  respectivamente e logo tomando limites quando $n$ vai para o infinito.
+  \end{solution} 
+  \question[20] Seja $f_{n}:[a,b]\rightarrow \mathbb{R}$ uma sequência de funções, tal que para toda sequência convergente $x_{n} \in [a,b]$
+ tem-se $f_n(x_n) \rightarrow 0$.
+ Mostre que $f_{n}$ converge uniformemente para a função nula. 
+   \begin{solution}
+   Por contradição, existe $\varepsilon>0$ e uma sequência 
+   $x_{n} \in [a,b]$
+   tal que $|f_{n}(x_{n})|\geq \varepsilon$ para todo $n \in \mathbb{N}$. 
+   Já que $[a,b]$ é compacto, 
+   existe uma subsequência $x_{n_k}$ convergente. Por hipótese, 
+   temos que $f_{n_k}(x_{n_k}) \rightarrow 0$, o que é uma contradição com 
+    $|f_{n}(x_{n})|\geq \varepsilon$.
+   \end{solution}
+  \question Calcule o intervalo de convergência da série 
+   \begin{parts}
+   \part[6] $\sum_{n=1}^{\infty} a_{n}x^{n}$, onde $a_{n}:=\sum_{k=1}^{n}\frac{1}{k}$.
+   \part[6] $\sum_{n=1}^{\infty} \frac{n}{4^n}x^n$
+   \part[8] $\sum_{n=1}^{\infty} \frac{n!}{n^{n}}x^n$. {\it Dica:} Lembre que $(1+x^{-1}\alpha)^{x}\rightarrow e^{\alpha}$, quando $x \rightarrow \infty$.
+   \end{parts}
+    \begin{solution}
+  Primeiro calculemos o raio de convergência para cada série de potência.
+  
+   (a) De fato, $R^{-1}=\limsup (a_{n+1}/a_n)=1$. Logo, temos o intervalo
+   $(-1,1)$. Analisemos os extremos. Se $x=1$, 
+   $a_{n}x^{n}=a_{n}=\sum_{k=1}^{n}\frac{1}{k} \rightarrow \infty$ similarmente quando $x=-1$, $a_{n}x^{n}$ não converge a zero. 
+   Portanto, o intervalo de convergência é $(-1,1)$.
+   
+   
+   (b) Como $R^{-1}=\limsup (a_{n}^{1/n})=1/4$. Logo, temos o intervalo
+   $(-4,4)$. Analisemos os extremos. Se $x=4$, $a_{n}x^{n}=a_{n}=n \rightarrow \infty$ similarmente quando $x=-1$, $a_{n}x^{n}$ não converge a zero. Assim, o intervalo de convergência é $(-4,4)$.
+   
+   (c) Como $R^{-1}=\limsup (a_{n+1}/a_n)=e^{-1}$. Logo, temos o intervalo
+   $(-e,e)$. Analisemos os extremos. Se $x=e$, 
+   $a_{n}x^{n}=a_{n}e^{n}=n!(e/n)^{n} \rightarrow \infty$. 
+   Para ver que $n!(e/n)^{n} \rightarrow \infty$, basta usar a
+   formula de Stirling 
+   $\lim_{n \rightarrow \infty } \frac{n! e^{n}}{(\sqrt{2\pi n})n^{n}}=1$.    Analogamente, quando $x=-e$, $a_{n}x^{n}$ não converge a zero. Assim, o intervalo de convergência é $(-e,e)$.
+  \end{solution}    
+ %$$ \sum_{n=1}^{\infty} a_{n}x^{n}, \ \ \text{ onde } a_{n}:=\sum_{k=1}^{n}\frac{1}{k}. $$ 
+ \question Uma função de classe $\mathcal{C}^{\infty}$ é {\it analítica} em um ponto $x=a$, se coincidir com sua série de Taylor ao redor de
+ $x=a$ num intervalo $\mathcal{I}$ de $a$. Mostre que 
+   \begin{parts}
+   \part[5] Se $f$ é analítica no ponto $x=a$ 
+   na vizinhança $\mathcal{I}$, então, 
+   $f$ é analítica para todo $x \in \mathcal{I}$.
+   \part[5] Prove que não existe função analítica 
+ $f:\mathbb{R}\rightarrow\mathbb{R}$ 
+ %de classe $\mathcal{C}^{\infty}$ 
+ %analítica 
+ tal que 
+ $\{a \in \mathbb{R}: f \text{ é analítica em } a\}=\mathbb{Q}$.
+   \end{parts}
+   \begin{solution}
+   (a) Feito em aula; (b) Suponha que existe uma função 
+    $f$ analitica tal que 
+    $\{a \in \mathbb{R}: f \text{ é analítica em } a\}=\mathbb{Q}$. 
+    Pegue $c \in \mathbb{Q}$. Do item (a), existe um $\delta>0$
+    tal que $f$ é analítica em $(c-\delta, c+\delta)$. Por hipótese, 
+    concluímos que $(c-\delta, c+\delta) \in \mathbb{Q}$, o que é uma contradição já que $\mathbb{R}\setminus \mathbb{Q}$ é denso.
+   \end{solution}
+ \end{questions}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
