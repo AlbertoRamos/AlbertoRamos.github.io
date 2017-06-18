@@ -41,7 +41,7 @@ tag:        2017s1
 
  2. CONVERGÊNCIA EM ESPAÇOS DE FUNÇÕES. Sequências de funções. Convergência pontual. 
  Convergência uniforme. Convergência pontual vs convergência uniforme: 
- Teorema de Dini. Séries de funções. Teorema de Weierstrass. 
+ Teorema de Dini. Séries de funções. Teste de Weierstrass. 
  Funções reais analíticas. Convergência uniforme e continuidade. 
  Convergência uniforme e integrabilidade. Convergência uniforme e diferenciabilidade. 
  Famílias equicontínuas. Teorema de Arzelà-Ascoli e aplicações. 
