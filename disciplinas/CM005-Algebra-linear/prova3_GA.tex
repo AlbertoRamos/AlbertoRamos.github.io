@@ -1,0 +1,196 @@
+%% Prova 3 de Geometria Analítica
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large Geometria Analítica : Prova 3 } \\
+ 22 de junho de 2017
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular}
+\end{center}
+
+ \begin{questions}
+ \question Encontre as coordenadas 
+ dos vértices e dos focos das seguintes equações:
+   \begin{parts}
+   \part[10] $4x^2+169y^2=676$. Esboce
+     \begin{solution}
+     Multiplicando adequadamente, temos a seguinte equação 
+     $x^{2}/13^{2}+y^{2}/2^{2}=1$. Isto é uma elipse com centro na origem cujo eixo focal é o eixo x. Segue da equação que $a=13$, $b=2$ e $c=\sqrt{165}$. 
+     Temos que os vértices são $V=(0,0)\pm a(1,0)=(\pm 13, 0)$ e 
+     os focos são $F=(0,0)\pm c(1,0)=(\pm \sqrt{165}, 0)$.
+     \end{solution}
+   \part[10] $x^2+2x-4y+9=0$. Esboce 
+   \begin{solution}
+     Dita equação foi analisada em aula. 
+     Completando quadrados temos a seguinte equação 
+     $(x+1)^{2}=4(y-2)$. Isto é uma parábola com vértice em 
+     $(-1,2)$ e cujo eixo focal é o eixo $y$. 
+     Segue da equação que $p=1$. Assim, o foco é  
+     os focos são $F=(-1,2)+p(0,1)=(-1, 3)$.
+     \end{solution}
+   \part[15] $x^2-2y^2-4x-4y-1=0$. Esboce.
+     \begin{solution}
+     Completando quadrados temos a seguinte equação 
+     $(x-2)^{2}/3-2(y+1)^{2}/3=1$. Isto é uma hipérbole com centro 
+     $(2,-1)$ e cujo eixo focal é o eixo x. Segue da equação que $a=\sqrt{3}$, $b=\sqrt{3/2}$ e $c=3\sqrt{2}/2$. 
+     Temos que os vértices são $V=(2,-1)\pm a(1,0)=(2\pm \sqrt{3}, -1)$ e 
+     os focos são $F=(2,-1)\pm c(1,0)=(2\pm 3\sqrt{2}/2,-1)$.
+     \end{solution}
+   \end{parts}    
+   \question[15] Seja $\mathcal{P}$ uma parábola com reta diretriz $\mathcal{D}: x-2=0$. Se o vértice está sobre a
+ reta $r_1: 3x-2y=19$ e o foco está sobre a reta
+ $r_2: x+4y=0$, encontre a equação da parábola. 
+  \begin{solution} Feito em aula. Resposta: $(y+2)^{2}=12(x-5)$.
+  \end{solution}
+ \question[15] Ache a equação reduzida da hipérbole 
+ cuja distância focal é $2\sqrt{5}$, 
+ os focos pertencem ao eixo $x$ 
+ e uma das assíntotas é a reta $r: x+3y=0$. 
+   \begin{solution}
+   Dos dados do problema, $c=\sqrt{5}$. Como $r: x+3y=0$ é uma assíntota
+   que intercepta o eixo $x$ (eixo focal) na origem, temos que o centro da hipérbole é a origem , assim a equação da hiperbole é da forma 
+    $x^{2}/a^{2}-y^{2}/b^{2}=1$. 
+    
+    Procedemos a encontrar $a$ e $b$. 
+    Como r é uma assintota (fazendo um desenho por exemplo)
+    temos que $b/a=1/3$. {\it Cuidado: $b/a=-1/3$ está errado. a, b são SEMPRE positivos, são distâncias}.
+    
+    De $a=3b$, $c=\sqrt{5}$ e de 
+    $c^{2}=a^{2}+b^{2}$. Temos que $a^{2}=9/2$ e
+     $b^{2}=1/2$. Assim, a equação da hipérbole é $2x^{2}/9-2y^{2}=1$.
+     {\it Exercício similar foi resolvido na aula}.  
+   \end{solution}
+ % {\it Rpta: } $-2x^2+(2/9)y^2=1$ 
+    \question Considere uma hipérbole $\mathcal{H}$ com
+     excentricidade é $e=2$ e cujos vértices  
+     são $(2,5)$ e $(0,-1)$. 
+      \begin{parts}
+      \part[10] Encontre os focos da hipérbole;
+       \begin{solution}
+       Claramente, $e=2$, $a=\sqrt{10}$ e $c=2\sqrt{10}$.
+       Além disso, o centro é $(1,2)$ (ponto meio do segmento que ume os vértices). Observe que como os focos ESTÂO sobre a mesma reta que contem os vértices podemos usar um vetor diretor dessa reta para calular os focos. 
+       {\it Use vetores tal como vc aprendeu na primeira parte da disciplina, né?}. 
+       
+       Um vetor diretor da reta é $(1,3)/\sqrt{10}$. Portanto, os focos são  
+       $$F=(1,2)\pm c(1,3)/\sqrt{10}=(1,2)\pm 2\sqrt{10}(1,3)/\sqrt{10}$$
+       Calculando, os focos são $(3,8)$ e $(-1,-4)$.
+       \end{solution}
+      \part[10] Ache as equações das retas diretrizes associada à hipérbole
+         \begin{solution}
+         A reta diretriz é uma reta perpendicular ao eixo focal cuja
+         distância ao centro é $a/e$. Assim, como conhecemos o eixo focal, conhecemos também um vetor diretor de dita reta. Para calcular o ponto onde a reta deve passar, de novo, vamos 
+       {\it usar vetores tal como vc aprendeu na primeira parte da disciplina}. 
+       
+       Um vetor diretor da reta diretriz é $(-3,1)$. Portanto, os pontos
+       $P$ por onde passam as diretrizes são   
+       $$P=(1,2)\pm (a/e)(1,3)/\sqrt{10}=(1,2)\pm (\sqrt{10}/2)(1,3)/\sqrt{10}=(1,2)\pm(1/2,3/2). $$
+       Calculando, os pontos são $(3/2,7/2)$ e $(1/2,1/2)$.
+       Logo, as retas diretrizes são 
+       $r_{1}; (3/2,7/2)+t(-3,1), t \in \mathbb{R}$ 
+       (cuja equação em forma geral é 
+       $r_1: x+3y-12=0$) e 
+       $r_{2}; (1/2,1/2)+t(-3,1), t \in \mathbb{R}$ 
+       (cuja equação em forma geral é 
+       $r_2: x+3y-2=0$). 
+       Você tambem poderia achar direitamente 
+       as retas na forma geral, ambas respostas são certas.  
+       \end{solution}      
+      \end{parts}
+ \question[20] Seja $\mathcal{E}$ uma elipse com focos em 
+ $F_1=(2,2)$ e $F_2=(8,2)$. A equação de uma reta tangente à elipse 
+ é $r: x+2y-21=0$. Encontre o perímetro do triângulo cujos vértices são os focos da elipse e o correspondente ponto de tangência. 
+   \begin{solution}
+   Usando a definição de elipse é fácil ver que 
+   o perimetro do triângulo é  $2a+2c$. Assim, nosso objetivo é calcular 
+   $a$ e $c$. Já que conhecemos os focos temos que $c=3$. Além disso, dos focos temos que o centro é $C=(5,2)$ e o eixo focal é paralelo ao eixo $x$.
+    
+   Com essas informações temos que a equação da elipse deve ser 
+   da forma $(x-5)^{2}/a^2+(y-2)^{2}/b^2=1$. Fazendo $x'=x-5$, $y'=y-2$. 
+   A equação se reduz a  $(x')^{2}/a^2+(y')^{2}/b^2=1$.
+   {\it Já que a equação está na forma reduzida podemos usar a formula da reta tangente}. Seja $(x'_0,y'_0)$ ponto de tangencia, assim da formula temos que 
+   \begin{equation}\label{eqn:1}
+     r: (b^2x'_{0})x'+(a^2 y'_0)y'-a^2b^2=0 
+   \end{equation}      
+   Por outro lado sabemos que a reta tangente é $x+2y-21=0$, mas {\it NÃO podemos comparar ambas tangentes porque estão em coordenadas diferentes}.
+   Re-escreva  $x+2y-21=0$ usando coordendas x' e y'. 
+   Portanto  $x+2y-21=(5+x')+2(2+y')-21=x'+2y'-12$. Assim, obtemos que 
+   \begin{equation}\label{eqn:2}
+     r: x'+2y'-12=0
+   \end{equation}
+     Como as retas \eqref{eqn:1} e \eqref{eqn:2} representam a mesma reta, elas devem ser multiplos. Assim, existe um número $k \in \mathbb{R}$
+     tal que 
+     $$  b^{2}x'_{0}=k , \ \  a^{2}y'_{0}=2k  \  \ \text{ e }  \  \ a^2b^{2}=12 k $$
+     Assim, $x'_{0}=a^2/12$ e $y'_{0}=b^2/6.$ Como $(x'_0, y'_0)$ está sobre a elipse, ele satisfaz $(x')^{2}/a^2+(y')^{2}/b^2=1$. Substituindo, obtemos que $a^2+4b^2=4.36$. Agora, usando o fato que $c=3$ e 
+     $a^{2}=c^{2}+b^{2}=9+b^2$ temos que 
+     $$ a^2+4b^2=4.36 \Rightarrow a^{2}+4(a^{2}-9)=4.36 \Rightarrow 5a^{2}=5.36 \Rightarrow a^{2}=36
+     \Rightarrow a=6.$$
+     
+     Para terminar observe que o perimetro do triângulo é 
+    $2a+2c=2(6)+2(3)=12+6=18$.
+    \end{solution}
+ \end{questions}
+ 
+ {\bf Formulas: }
+ {\it Retas tangentes }
+ 
+ {\it Quando $y^2=4px$}. 
+ A reta tangente à $\mathcal{P}$ no ponto $P=(x_0,y_0) \in \mathcal{P}$ é dada por $ r: y_{0}y=2p(x_0+x)$.
+  
+ {\it Quando $b^2 x^2+a^2y^2=a^2b^2$}.
+  
+ A reta tangente da $\mathcal{E}$ no ponto $P=(x_0,y_0) \in \mathcal{E}$ é dada por 
+ $ r: (b^2x_{0})x+(a^2 y_0)y=a^2b^2$. 
+ 
+ {\it Quando $b^2 x^2-a^2y^2=a^2b^2$}. 
+ 
+ A reta tangente da $\mathcal{H}$ no ponto $P=(x_0,y_0) \in \mathcal{H}$ é dada por $ r: (b^2 x_{0})x-(a^2 y_0)y=a^2b^2$.
+ 
+ 
+ 
+\end{document}
