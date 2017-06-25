@@ -44,6 +44,10 @@ tag:        2017s1
   - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova2_GA.pdf), 
   [Nota Prova 2: EM]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_2_GA_EM.pdf), 
   [Nota Prova 2: EB]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_2_GA_Bio.pdf)
+  - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova3_GA.pdf), 
+  [Nota Prova 3: EM]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_EM.pdf), 
+  [Nota Prova 3: EB]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_Bio.pdf)
+  
 # Bibliografia
 
 ## Principal
