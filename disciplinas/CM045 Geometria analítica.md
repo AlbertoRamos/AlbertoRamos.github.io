@@ -50,6 +50,8 @@ tag:        2017s1
   - [Prova Substitutiva]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova_susbtitutiva_GA.pdf), 
   [Nota Prova: EM]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_EM_s.pdf), 
   [Nota Prova: EB]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_Bio_s.pdf)
+  - [Nota Exame Final: EM]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_EM_f.pdf), 
+  [Nota Exame Final: EB]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_GA_Bio_f.pdf)
   
   
 # Bibliografia
