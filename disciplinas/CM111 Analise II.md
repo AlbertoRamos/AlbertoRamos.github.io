@@ -61,11 +61,10 @@ tag:        2017s1
 # Provas
 
   - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova1_analiseII.pdf), 
-    [Notas Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_Analise.pdf)
-  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova2_analiseII.pdf), 
-    [Notas Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_2_Analise.pdf)
+  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova2_analiseII.pdf)
   - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova3_analiseII.pdf), 
   - [Prova substitutiva]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova_subst_analise_II.pdf).
+  - [Nota Final]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_F_Analise_ii.pdf)
   
 # Bibliografia
 
