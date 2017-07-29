@@ -20,37 +20,29 @@ tag:        2017s2
   | **Exame:**   | 04/07
 
 # Ementa
-
-  Integral de Riemann: teorema fundamental do cálculo, mudança de variáveis. Teoremas do valor médio para integrais. 
-  Integrais impróprias. Seqüências e séries de funções. Funções analíticas reais. Teorema da aproximação de Weierstrass. 
-  Teorema de Arzelà-Ascoli.
+  
+  Métodos de Gradiente Conjugados.
+  Métodos de Penalidades.
+  Métodos de Região de Confiança.
+  O Problema de Mínimos Quadrados Linear e Não-Linear. 
+  Métodos duais.
 
 # Programa:
  
- 1. INTEGRAÇÃO. Partições de um intervalo. Soma superior e soma inferior de uma 
- função limitada com respeito a uma partição. 
- Funções Integráveis. Exemplos de funções integráveis e de funções não integráveis. 
- Caracterização de funções integráveis pela condição de Riemann. 
- Primitivas de funções contínuas. O Teorema Fundamental do Cálculo. 
- Teorema do valor médio para integrais. Fórmula de integracão por partes. 
- Fórmula de mudança de variáveis. Partições pontilhadas. Somas de Riemann. 
- A integral como limite de somas de Riemann. 
- Conjuntos de medida nula. 
- Caracterização de funções integráveis através do conjunto de descontinuidades. 
- Aplicações: construção da função logaritmo e da função exponencial.
+ 1. Revisões de direções de descida e dos Métodos de Cauchy e Newton
+ 2. Direções conjugadas; algoritmo de gradientes conjugadas para funções quadráticas, 
+ extensão para o caso não quadrático.
+ 3. Região de Confiança; algoritmo de região de confiança; garantia de convergência.
+ 4. Revisão de mínimos quadrados linear; mínimos quadrados não-linear. 
+ os métodos de Gauss-Newton e Levenberg-Marquardt.
+ 5. Penalização para problemas com restrição; 
+ penalidade barreira (interna); penalidade externa; Lagrangiano aumentado; 
+ os algoritmos de penalidade interna e externa e aspectos de convergência.
+ 6. Introdução à dualidade; dualidade Lagrangeana; pontos de sela; 
+ condições necessárias e suficientes para existência de pontos de sela; 
+ existência de ponto de sela caso convexo; conexão com as condições KKT
+ 7. Introdução aos métodos de programação sequencial SQP
 
- 2. CONVERGÊNCIA EM ESPAÇOS DE FUNÇÕES. Sequências de funções. Convergência pontual. 
- Convergência uniforme. Convergência pontual vs convergência uniforme: 
- Teorema de Dini. Séries de funções. Teste de Weierstrass. 
- Funções reais analíticas. Convergência uniforme e continuidade. 
- Convergência uniforme e integrabilidade. Convergência uniforme e diferenciabilidade. 
- Famílias equicontínuas. Teorema de Arzelà-Ascoli e aplicações. 
- Teorema de aproximação de Weierstrass.
-    
- 3. TÓPICOS ADICIONAIS. Introdução a Séries de Fourier. 
- Definição e exemplos de séries de Fourier. Convergência pontual e uniforme de séries de Fourier. 
- Diferenciação e integração de séries de Fourier. Aplicações.
- 
 # Listas
 
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_analise_II.pdf)
