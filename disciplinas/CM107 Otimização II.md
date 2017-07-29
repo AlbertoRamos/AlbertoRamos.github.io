@@ -13,11 +13,11 @@ tag:        2017s2
   | **Turma:**   | [A]
   | **Local:**   | 
   | **Horário:** | 15h30 segunda e quarta. 
-  | **Prova 1:** | 06/04
-  | **Prova 2:** | 18/05
-  | **Prova 3:** | 22/06
-  | **2da chamada**| 27/06
-  | **Exame:**   | 04/07
+  | **Prova 1:** | 11/09
+  | **Prova 2:** | 16/10
+  | **Prova 3:** | 27/11
+  | **2da chamada**| 
+  | **Exame:**   | 11/12
 
 # Ementa
   
