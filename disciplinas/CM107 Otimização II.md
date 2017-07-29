@@ -43,6 +43,10 @@ tag:        2017s2
  existência de ponto de sela caso convexo; conexão com as condições KKT
  7. Introdução aos métodos de programação sequencial SQP
 
+# Listas
+  
+  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_2.pdf)
+  
 # Bibliografia
 
 ## Principal
