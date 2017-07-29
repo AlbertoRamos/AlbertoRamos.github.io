@@ -43,25 +43,14 @@ tag:        2017s2
  existência de ponto de sela caso convexo; conexão com as condições KKT
  7. Introdução aos métodos de programação sequencial SQP
 
-# Listas
-
-  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_analise_II.pdf)
-  - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_analise_II.pdf)
-  - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista3_analise_II.pdf)
-  - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista_4_analise_II.pdf)
-
-# Provas
-
-  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova1_analiseII.pdf), 
-  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova2_analiseII.pdf)
-  - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova3_analiseII.pdf), 
-  - [Prova substitutiva]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova_subst_analise_II.pdf).
-  - [Nota Final]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/Nota_1_2_3_F_Analise_ii.pdf)
-  
 # Bibliografia
 
 ## Principal
 
-- E.L.LIMA – Curso de Análise, Vol. 1. Projeto Euclides, IMPA.
-- W.RUDIN – Principles of Mathematical Analysis. 3a. Ed. MacGraw Hill, 1976.
-- T.APOSTOL – Mathematical Analysis. Addison Wesley Pub. Co. 1974.
+- J.E. Dennis Jr e R.B. Schnabel– Numerical Methods for Uncontrained Optimization and 
+  Nonlinear equations, SIAM, 1987.
+- G. D. Luenberger e Y. YE – Linear and Nonlinear Programming, 
+3 ed. Springer, 2008.
+- J. Nocedal e S.J. Wright- Numerical Optimization, 2 ed, Springer, 2006.
+
+## Complementar
