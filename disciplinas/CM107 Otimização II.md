@@ -15,7 +15,7 @@ tag:        2017s2
   | **Horário:** | 15h30 segunda e quarta. 
   | **Prova 1:** | 11/09
   | **Prova 2:** | 16/10
-  | **Prova 3:** | 27/11
+  | **Prova 3:** | 29/11
   | **2da chamada**| 
   | **Exame:**   | 11/12
 
@@ -45,7 +45,7 @@ tag:        2017s2
 
 # Listas
   
-  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_2.pdf)
+  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_II.pdf)
   
 # Bibliografia
 
