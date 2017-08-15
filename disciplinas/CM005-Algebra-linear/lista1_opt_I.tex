@@ -1,0 +1,376 @@
+% lista 1(optimization II 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 1: Otimização I }
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Funções com valores extendidos, semicontinuidade inferior 
+ \item Existência de soluções, coercividade
+ \item Convexidade 
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+    \begin{enumerate}
+    \item Considere a função 
+    $f: \mathbb{R}^{n}\rightarrow \mathbb{R}$ definida como 
+    $f(x)=x^{T}Ax+b^{T}x+c$, com  $A$ simetrico e $b\neq 0$.
+      \begin{itemize}
+      \item  
+      Mostre que $f$ admite solução se, e 
+      somente se $A$ é definida positiva. 
+      \end{itemize}
+    \item Mostre a existencia de autovalores para matrices simetricas.
+    Para isso, faça o seguinte:
+      \begin{enumerate}
+      \item 
+      Seja $f: 
+      \mathbb{R}^{n}
+      \setminus\{0\}   
+      \rightarrow \mathbb{R}$ 
+      uma função contínua tal 
+      que $f(\alpha x)=f(x)$, para 
+      todo $\alpha>0$ e $x \neq 0$.
+      
+      Mostre que $f$ admite solução.
+      \item Seja $A$ uma matriz simetrica e defina $f(x):= \frac{x^{T}Ax}{\|x\|^{2}}, \text{ para } x \neq 0$.
+      Prove que $f$ tem solução
+      \item Calcule $\nabla f(x)$, 
+      mostre que as soluções 
+      são os autovetores de $A$.
+      Qual é a relação dos 
+      autovalores com $\inf f(x)$? 
+      \end{enumerate} 
+    \item Denote por 
+    $\text{Sym}^{m}(\mathbb{R})$
+    o conjunto das matrizes reais simetricas de ordem $m \times m$, por $\text{Sym}^{m}_{+}(\mathbb{R})$ o conjunto das reais matrizes simetricas de 
+    $m\times m$ semidefinida positiva e por 
+    $\text{Sym}_{++}(\mathbb{R})$ o conjunto de matrizes reais simetricas de 
+    $m \times m$ definidas positivas.
+    
+    \begin{itemize}
+    \item Prove que 
+    $\text{Sym}^{m}(\mathbb{R})$
+    é um espaço de Hilbert, 
+    considerando o seguinte 
+    produto interno 
+    $\langle X, Y \rangle:=\text{tr}(XY)$, 
+    onde $\text{tr}(A)$ é 
+    o traço da matriz $A$. 
+    \item Mostre que $\text{Sym}^{m}_{+}(\mathbb{R})$ is a cone fechado convexo, 
+    cujo interior é $\text{Sym}^{m}_{++}(\mathbb{R})$.
+    \end{itemize}
+    Seja $C \in \text{Sym}_{++}^{m}(\mathbb{R})$, $\eta>0$, $A_{i} \in \text{Sym}^{m}_{+}(\mathbb{R})$, e
+     $b_{i} \in \mathbb{R}$, para todo $i=1,\dots, n$.
+    Mostre que o problema de minimizar 
+    $$\text{minimizar } \langle X, C\rangle+\eta \beta(X) \text{ sujeito a } 
+    X \in \text{Sym}_{++}^{m}(\mathbb{R}), \text{ e } 
+    \langle X, A_{i} \rangle=b_i, \forall i $$
+    admite solução, onde 
+    $$ \beta(X)=-\ln \det(X) \text{ para  } X \in \text{Sym}_{++}^{m}(\mathbb{R}) \  \ (\ \ 
+    \beta(X) \text{ é chamado de {\it  barreira funcional}} \ \ )$$ 
+    Para isso
+%     \begin{enumerate}
+%     \item, 
+     prove que os conjunto de niveis de 
+     $\langle X, C\rangle+\eta\beta(X)$ são compactos, e concluia.
+     Um roteiro é o seguinte:
+       \begin{enumerate}
+       \item Seja $c\in \mathbb{R}_{+}$. Mostre que $\beta(t):=ct-\text{ln}(t), t>0$ tem conjuntos de niveis compacto.
+       \item Verifique que $\|X\|^{2}=\text{tr}(X^2)=\sum_{i=1}^{m} \lambda^2_{i}(X)$, 
+       onde $\lambda_{1}(X)\leq \lambda_{2}(X)\leq \dots \leq \lambda_{m}(X)$ são os autovalores (com multiplicidade) da matriz $X$.
+       \item Seja $X \in \text{Sym}^{m}(\mathbb{R})$ e denote por $\lambda(X)$ o vetor em $\mathbb{R}^{m}$
+       cujas componentes são $\lambda_{i}(X)$, $i=1, \dots, m$.
+       Use a {\it desigualdade de Fan} 
+       \footnote{Sempre temos que 
+       $\text{tr}(XY)
+       \leq \lambda(X)^{T}\lambda(Y)$ 
+       para todo 
+    $X,Y \in \text{Sym}^{m}(\mathbb{R})$.
+       A igualdade vale se, e somente se 
+       existe uma matriz ortogonal $U$ 
+       tal que
+       $UXU^{T}=Diag \lambda(X)$ 
+       e
+       $UYU^{T}=Diag \lambda(Y)$.
+       A desigualdade de Fan pode ser interpretada como um refinamento da  desigualdade de Cauchy-Schwarz.}, 
+       para encontrar um limitante inferior para $\langle X, C\rangle=\text{tr}(XC)$ em função dos autovalores de $X$ e $C$.
+       \item Use os itens anteriores para mostrar que 
+        conjunto de niveis de 
+     $\langle X, C\rangle+\eta\beta(X)$ são compactos.
+       \end{enumerate}
+%     \end{enumerate}              
+ 
+    Esse tipo de problema aparece naturalmente quando estudamos 
+    o método de ponto interiores para programação semidefinida positiva (SDP programming).
+        
+   % DERIVADAS DE LOG DET X. Borwein. 
+    \item Seja $f:\mathbb{R}^{n}\rightarrow\mathbb{R}$ uma função derivável 
+    tal que $$\lim_{\|x\|\rightarrow \infty} \frac{f(x)}{\|x\|}=\infty.$$
+    Mostre que para todo $y \in \mathbb{R}^{n}$, existe um 
+    $x \in \mathbb{R}^{n}$ tal que $\nabla f(x)=y$. Em outras palavras,
+    $\nabla f: \mathbb{R}^{n}\rightarrow \mathbb{R}^{n}$ é surjetiva. 
+    %\item {\it Teorema Fundamental da Álgebra}
+    \item Sejam 
+    $f,g:(X,\tau)\rightarrow \mathbb{R}\cap\{+\infty\}$ funções com valores extendidos e 
+    $x^{*} \in X$. Mostre que
+    $$ 
+    \liminf_{x\rightarrow x^*}(f(x)+g(x))
+    \geq 
+    \liminf_{x\rightarrow x^*}f(x)
+    +
+    \liminf_{x\rightarrow x^*}g(x), 
+    \text{ se a soma da direita não é } 
+    \infty-\infty.$$     
+     \item Seja $(X,\tau)$ um espaço topológico. 
+      \begin{enumerate}
+      \item  
+      Mostre que $\delta_{C}$ é 
+       $\tau$-lsc se, e somente se $C$ é $\tau$-fechado.
+      \item Mostre que $\text{epi}(f)$
+      é fechado na topologia produto $X \times \mathbb{R}$ se, e somente se 
+      $f: X \rightarrow \mathbb{R}\cup\{+\infty\}$ é $\tau$-lsc.
+      \item Mostre que 
+      $\sup \{f_{i}:i \in I\}$
+      é $\tau$-lsc se 
+      $f_i: X \rightarrow \mathbb{R}\cup\{+\infty\}$ é $\tau$-lsc, 
+      $\forall i \in I$.
+      
+      Em particular, mostre que o supremo de funções $\tau$-contínuas 
+      é no máximo $\tau$-lsc, fornecendo um exemplo onde o 
+      supremo de funções contínuas não é continua.      
+      \item 
+    Prove que $\sum_{i=1}^{m} \alpha_{i}f_{i}$
+    é $\tau$-lsc se $f_{i}$ é $\tau$-lsc  
+    e $\alpha_{i} \in \mathbb{R}_{+}$, $\forall i$ . Isto é, a combinação positiva de funções $\tau$-lsc é $\tau$-lsc.
+      \end{enumerate}
+    \item Seja $(X,d)$ um espaço métrico e $f:(X,d) \rightarrow 
+    \mathbb{R}\cup \{+\infty\}$. Mostre que $f$ é lsc se para todo $(x,\lambda) \in X \times \mathbb{R}$
+     temos que $f(x)\leq \lambda$ sempre que 
+     $(x^{k},f(x^k))\rightarrow (x,\lambda)$.
+    \item {\it Principio Variational de Ekeland}. 
+    O seguinte teorema é uma pequena variação de 
+    teorema apresentado em aula.
+    
+    Seja $(X,d)$ um espaço metrico completo,
+    $f: X \rightarrow \mathbb{R}\cap \{+\infty\}$ uma 
+    função lsc e limitada inferiormente. 
+    
+    Suponha que existe $\varepsilon>0$ 
+    e $z \in X$ tal que 
+    $$   f(z) \leq \inf f +  \varepsilon.$$
+    Então, para todo $\lambda>0$, {\it existe} um elemento $z_{\lambda} \in X$
+    com as seguintes propriedades:
+       \begin{enumerate}
+       \item 
+       $$d(z_{\lambda}, z)\leq \lambda, \  \ \ \  \ \
+       f(z_{\lambda})+
+       \frac{\varepsilon}{\lambda}d(z_{\lambda}, z)\leq f(z)
+       $$
+       \item Para todo $y \neq z_{\lambda}$, 
+       temos que 
+        $$f(z_{\lambda})<
+       f(y)+\frac{\varepsilon}{\lambda}d(z_{\lambda},y)$$
+       \end{enumerate}
+    Para provar o teorema use os seguinte passos.
+    A ideia é construir indutivamente uma sequência $\{z^{n}\}$ 
+    ( com $z^0=z$ )
+    de Cauchy, cujo limite seja o ponto $z_{\lambda}$ desejado. 
+    Seja $z^n$ conhecido. Então, defina 
+       $$S_{n+1}:=\{x \in X: x \neq z^n \text{ e } f(x)+
+       \frac{\varepsilon}{\lambda}d(x, z^n)\leq f(z^n)\}.$$
+       Se $S_{n+1}=\emptyset$, faça $z^{n+1}:=z^n$. 
+       Caso contrário, escolha 
+       $z^{n+1} \in S_{n+1}$ tal que 
+              $$
+              f(z^{n+1})< \inf_{x \in S_{n+1}}f(x)+
+              \frac{1}{2}(f(z^n)-\inf_{x \in S_{n+1}}f(x)).$$
+       \begin{enumerate}
+       \item Mostre que é possível, encontrar $z^{n+1}$ em ambos casos.        
+       \item Mostre que existe 
+       $\sum_{n=0}^{\infty} d(z^{n+1}, z^n)$ e como consequência que
+       $\{z^n\}$ é uma sequência de Cauchy.
+       \item Prove que se $S_{n}=\emptyset$ para algum 
+       $n \in \mathbb{R}$, então $S_{m}=\emptyset$ para todo $m \geq n$, e assim $z_{\lambda}:=z^{n}$ satisfaz as condições requeridas.
+       \end{enumerate}   
+        Suponha, a partir de agora que $S_{n}\neq \emptyset$, para todo
+        $n \in \mathbb{N}$ e denote por $z_{\lambda}$ o limite de 
+        $\{z^{n}\}$
+          \begin{enumerate}
+          \item Mostre que $S_{n+1}\subset S_{n}$ para todo 
+          $n \in \mathbb{N}$ e que $z_{\lambda} \in 
+           \cap_{n \in \mathbb{N}} S_{n}$ 
+           ( aqui usamos que $f$ é lsc ).
+          \item Verifique a desigualdade 
+          $f(z^{n+1})-\inf \{f(x):x \in S_{n+1}\}
+          \leq f(z^{n})-f(z^{n+1})$, prove que 
+          $f(z^n)-f(z^{n+1}) \rightarrow 0$, e use ditas
+          propriedades para provar que $\cap_{n \in \mathbb{N}} S_{n}:=z_{\lambda}$. 
+          \item Use que $\cap_{n \in \mathbb{N}} S_{n}:=z_{\lambda}$, para mostrar que se $y \neq z_{\lambda}$ (i.e.
+           $y \notin \cap_{n \in \mathbb{N}} S_{n}$ ), 
+           temos que 
+          $f(z_{\lambda})<
+       f(y)+\frac{\varepsilon}{\lambda}d(z_{\lambda},y)$.
+       Complete a prova.
+          \end{enumerate}              
+    \item {\it Existência de pontos aproximadamente estacionários}.
+    Seja $f:\mathbb{R}^m \rightarrow \mathbb{R}$ uma função derivável.
+    Suponha que existe $x \in \mathbb{R}$
+    tal que $f(x)<\inf f +\varepsilon$
+    para certo $\varepsilon>0$.
+    Mostre que para todo $\lambda>0$, existe um $x^*$ com $\|x^*-x\|\leq \lambda$
+    e $\|\nabla f(x^*)\|\leq \varepsilon/\lambda$. O ponto $x^*$ 
+    é chamado de ponto aproximadamente estacionário. 
+    
+    Ainda mais, use o resultado anterior para provar que se $\inf f>-\infty$ e $f$ derivável, existe uma sequência 
+    $\{x^n\}$ tal que 
+    $f(x^{n})\rightarrow \inf f$
+    e 
+    $\|\nabla f(x^n)\| \rightarrow 0$.      
+    \item {\it Teorema de Ponto Fixo de Caristi}.
+    Seja $(X,d)$ um e. m. completo e 
+    $\Phi:(X,d)\rightarrow \mathbb{R}\cup \{+\infty\}$
+    uma função lsc com limitada inferiormente.
+    Se $T: X \rightrightarrows X$ é uma multifunção 
+    (i.e. $T(x)$ é um subconjunto de $X$) tal que 
+    $$  \Phi(y)\leq \Phi(x)-d(x,y)\ \ \forall x \in X, y \in T(x).$$
+    Então, existe um $x^{*} \in X$ tal que $x^* \in T(x^*)$. {\it Dica: Use o principio variacional de Ekeland}.
+    \item {\it Teorema do ponto fixo de Banach}.
+    Seja $(X,d)$ e. m. completo e $T:X \rightarrow X$
+    uma contração, isto é, existe $\eta \in [0,1)$
+    tal que $d(T(x),T(y))\leq \eta d(x,y)$ para todo 
+    $x, y \in X$. 
+    Então, $x^{*} \in X$ tal que $x^*=T(x^*)$.
+    {\it Dica:} Use o teorema de ponto fixo de Caristi com 
+    $\Phi(x):=(1-\eta)^{-1}d(x,T(x))$.
+    \item {\it Condição de Palais-Smale }
+    Seja  $f:\mathbb{R}^{n} \rightarrow 
+    \mathbb{R}$ de classe $C^{1}$.
+    Dizemos que $f$ satisfaz a condição de Palais-Smale  se para toda sequência $\{x^{k}\}$ tal que 
+    $$  
+        f(x^k) \text{ converge para algum número } \alpha 
+        \ \ \text{ e } \ \  
+        \nabla f(x^k)\rightarrow 0, $$
+    a sequência $\{x^{k}\}$ tem uma subsequência convergente.
+    
+    Prove que se $f$ é limitada inferiormente e satisfaz a condição de Palais-Smale. Então, $f$ deve ser coerciva.
+    \item Seja $X$ um espaço 
+    vetorial real. 
+      \begin{enumerate}
+      \item  
+      Mostre que $\delta_{C}$ é 
+      convexo se, e 
+      somente se $C$ é convexo.
+      \item Mostre que $\text{epi}(f)$
+      é convexo se, e somente se 
+      $f: X \rightarrow \mathbb{R}\cup\{+\infty\}$ é convexo.
+      \item Mostre que 
+      $\sup \{f_{i}:i \in I\}$
+      é convexo se 
+      $f_i: X \rightarrow \mathbb{R}\cup\{+\infty\}$, $\forall i \in I$.
+      Dê um exemplo de que 
+      $\inf \{f_{i}:i \in I\}$
+      não é necessáriamente convexo, mesmo se $I$ fosse finito.      
+      \item Se 
+      $f: X \rightarrow \mathbb{R}\cup\{+\infty\}$ é convexo. Prove que 
+      $\text{lev}_{\gamma}(f)$ é convexo 
+      para todo $\gamma \in \mathbb{R}$.
+      Dê um exemplo onde a implicação reversa não vale. 
+      \item Mostre que $f$ é convexa se, e somente se  $f(\sum_{i=1}^{n} \alpha_{i}x_{i}) \leq \sum_{i=1}^{n}\alpha_i f(x_{i})$, para todo $x_{i} \in \text{dom}(f)$, $\alpha_{i}\geq 0$ e $\sum_{i=1}^{n}\alpha_{i}=1$. 
+      \end{enumerate}
+   \item (slope inequality) Seja $f$ uma função com
+   $dom(f)=\mathbb{R}$.
+   Então, $f$ é convexa em $[a,b]$
+   se, e somente se para todos $x_{0}<x<x_{1}$ em $[a,b]$, temos que 
+   $$\frac{f(x)-f(x_{0})}{x-x_{0}}\leq 
+     \frac{f(x_1)-f(x_{0})}{x_1-x_{0}}\leq
+     \frac{f(x_1)-f(x)}{x_1-x}.
+   $$
+   Faça um esboço dessas desigualdades.
+    
+   \item {\it (Testes de convexidade usando derivadas)}.
+   Seja $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ 
+   diferenciável. 
+   Então, $f$ é convexa se, e somente se 
+   algumas das siguentes condições valem:
+     \begin{itemize}
+     \item $f(y)\geq f(x)+\langle \nabla f(x), y-x \rangle$, 
+     $\forall x, y$
+     \item $\nabla f (x)$ é mononota. i.e. 
+     $\langle \nabla f(x)-\nabla f(y), x-y \rangle \geq 0$,  
+      $\forall x, y$
+     \item $\nabla^{2} f(x)\geq 0$, para todo $x$.
+     (aqui assumimos que $f$ é duas vezes diferenciável)
+     \end{itemize}
+   Com essas ferramentas, facilmente podemos provar que $-\log(x)$, $\exp(x)$, (a entropia) $S(x):=-x\log(x)$, se $1\geq x\geq0$; $S(0)=0$, 
+   $f(x):=x^{-\alpha}$, $\alpha>0$, $x \in (0,\infty)$ são funções convexas.   
+    \item Use a convexidade $x\rightarrow |x|^{p}$  para provar a desigualdade das médias generalizada
+    (generalized mean inequality), isto é, 
+    $$ (\sum_{i=1}^{n} \alpha_{i}x_{i}^{p})^{1/p}
+     \leq (\sum_{i=1}^{n} \alpha_{i}x_{i}^{q})^{1/q}$$ para todo $\alpha_{i}\geq 0$, com $\sum_{i=1}^{n}\alpha_{i}=1$, $x_{i}>0$, $\forall i$ e $p\leq q$, com 
+     $|p|+|q|\neq0$.
+    Como caso particular, prove a desigualdade de Young: Para todo $x,y \geq 0$, $p,q\in(1,\infty)$, tal que $1/p+1/q=1$ temos que 
+    %\frac{1}{p}+\frac{1}{q}=1
+    $$ xy \leq \frac{1}{p} x^{p}+\frac{1}{q}y^{q}. $$
+    \item
+    Seja $f$ uma  função convexa com valores reais extendidos. 
+        \begin{enumerate}
+        \item Mostre que o conjunto das soluções é convexa. 
+        \item Mostre que todo minimizador local é, de fato, 
+        um minimizador global 
+        \end{enumerate} 
+    \item Seja $A$ um subconjunto de $(X,d)$. Mostre que 
+    $d_{A}(x):=\inf \{d(x,a): a \in A\}$ é 
+    uma função Lipschitziana com constante de Lipschiz igual a 1. 
+   \item 
+   Seja $X$ um espaço finito dimensional com produto interno $\langle \cdot, \cdot \rangle$. 
+   Considere $C\neq \emptyset$ um conjunto
+   fechado e convexo. 
+     \begin{enumerate}
+     \item Seja $x \in X$. Mostre que o problema 
+     $$\text{min} \{\|x-c\|: c \in C\}$$
+     admite uma {\it única} solução, qual é denotada por $\text{proj}_{C}(x)$, a projeção de $x$ sobre o conjunto $C$. 
+     O valor otimo é denotado por $d_{C}(x)$.
+     Se escolhemos $x=0$, 
+     $\text{proj}_{C}(0)$
+     representa o elemento de $C$ com norma minima. %minima norma.
+     \item A projeção está caracterizada por uma desigualdade variacional. Isto é, mostre que 
+     $$ 
+     x^{*}:= \text{proj}_{C}(x)
+     \text{ se, e somente se } 
+     \langle x-x^*, c-x^*\rangle \leq 0,
+     \text{ para todo } 
+     c \in C
+     .$$
+     Se $C$ é um subespaço vetorial, a desigualdade anterior se reduz a dizer que $x-x^* \perp C$. 
+     \item Em general, pode não existir elemento de norma minima. 
+     Seja $X=C[0,1]$ o conjunto das função continua com a norma do supremo. 
+     Seja $C$ o conjunto das funções 
+     $f \in X$
+     tal que 
+     $$ \int_{0}^{1/2} f(t)dt-\int_{1/2}^{1} f(t)dt=1.$$
+     Mostre que $C$ é um conjunto não vazio, fechado e convexo, mas que não admite elemento de norma minima.
+     (o problema aqui é que $X$ não é reflexivo)
+     \end{enumerate}   
+   \end{enumerate}    
+\end{document}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
