@@ -13,7 +13,7 @@ tag:        2017s2
   | **Turma:**   | [A]
   | **Local:**   | 
   | **Horário:** | 13h30 segunda e quarta. 
-  | **Prova 1:** | 
+  | **Prova 1:** | 18 de setembro
   | **Prova 2:** | 
   | **Prova 3:** | 
  
@@ -32,6 +32,7 @@ tag:        2017s2
 # Listas
   
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_I.pdf).
+  - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_opt_I.pdf).
   
 # Bibliografia
 
