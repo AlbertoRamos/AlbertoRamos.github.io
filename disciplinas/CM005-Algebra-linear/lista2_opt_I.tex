@@ -1,0 +1,321 @@
+% lista 2(optimization I 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 2: Otimização I }
+
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Convexidade (continuação)
+ \item Condições de otimalidade 
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+    \begin{enumerate}
+    \item Usando a noção de projeção {\it prove} as seguinte versões 
+    do teorema de separação de Hahn-Banach (Caso finito dimensional).
+     
+    Sejam $K_1$ e $K_{2}$ {\it conjuntos convexos não vazios} 
+    de $\mathbb{R}^{n}$ {\it com 
+    interseção vazia}, i.e.
+    $K_{1}\cap K_2=\emptyset$. 
+        \begin{enumerate}
+        \item Se $z \notin \text{cl}(K_1)$. Mostre que 
+        existe $a \in \mathbb{R}^{n}$, 
+        $\gamma \in \mathbb{R}$
+        tal que $\langle a, z \rangle < 
+        \gamma \leq \langle a, x \rangle$, 
+        para todo $x \in K_1$.
+        \item {\it Existência de um hiperplano suporte}. 
+        Se $z \in \text{cl}(K_1)\setminus \text{int}(K_1)$. Mostre que 
+        existe $a\neq 0 \in \mathbb{R}^{n}$, 
+        $\gamma \in \mathbb{R}$
+        tal que $\langle a, z \rangle \leq \gamma \leq \langle a, x \rangle$, 
+        para todo $x \in K_1$.
+        {\it Dica: } Use o item anterior e a continuidade da projeção.
+        \item Se $K_1$ é compacto e $K_2$ é fechado. 
+        Prove que 
+        existe $a \in \mathbb{R}^{n}$, 
+        $\gamma_1, \gamma_2 \in \mathbb{R}$
+        tal que $\langle a, x \rangle < 
+        \gamma_1<\gamma_2 <\langle a, y \rangle$, 
+        para todo $x \in K_1$ e $y \in K_2$. 
+        \end{enumerate}
+    \item (Lema de Farkas)
+    Seja $A$ uma matriz 
+    $m \times n$ e 
+    $c \in \mathbb{R}^{n}$. 
+    Então, exatamente uma das seguintes sistemas tem solução.
+      \begin{enumerate}
+      \item 
+      Existe $x$ tal que 
+      $Ax\leq 0$, $c^{T}x>0$.
+      \item       
+      Existe $y$ tal que 
+      $A^{T}y=c$, $y \geq 0$.
+      \end{enumerate}
+    {\it Dica:} Use os teoremas de separação de Hahn-Banach.  
+    \item 
+       \begin{enumerate}
+       	\item Seja $C\neq \emptyset$ um conjunto convexo fechado de 
+       	$\mathbb{R}^{n}$ e 
+       	$x^* \notin C$. 
+       	Mostre que existe  
+       	$p \neq 0$ tal que 
+       	$p^{T}(x-x^{*})\leq 0$, $\forall x \in C$.
+       	\item Seja $C\neq \emptyset$ um conjunto convexo de 
+       	$\mathbb{R}^{n}$ e $z \in \partial C$. Então, 
+       	existe $n \neq 0$ 
+       	tal que $\langle n, c-\bar{c} \rangle \leq 0$, $\forall c \in C$. 
+       	Isto é, no caso finito-dimensional, o 
+       	cone normal de $C$ em um ponto da fronteira admite sempre 
+       	um elemento não nulo.     
+       \end{enumerate}
+    \item  
+      \begin{enumerate}
+      \item Seja $K$ é um cone.
+      Mostre que o cone $K$ convexo se, e somente se  
+      $K+K \subset K$.
+      \item Seja $K\subset \mathbb{R}^{n}$ um cone convexo. Prove que $M:=K \cap -K$
+      é o maior subespaço linear contido em $K$, e que 
+      $K-K$ é o menor subespaço linear que contem $K$.  
+      \end{enumerate}
+    \item Seja $C\neq \emptyset \subset \mathbb{R}^{n}$. 
+    Mostre que $conv(C)$ é compacto se $C$ é compacto. 
+    Forneça um exemplo em que $conv(C)$ não é fechado mesmo que $C$ for fechado.  
+    \item 
+      \begin{enumerate}
+      \item Se $C_{1} \subset C_2$. Mostre que 
+      $C_{2}^{\circ} \subset C_{1}^{\circ}$. 
+      Forneça um exemplo 
+      onde $C_{2}^{\circ}=C_{1}^{\circ}$ mas
+      $C_{2}^{\circ} \neq C_{1}^{\circ}$. 
+      \item Sejam $C_{1}$ e $C_2$ dois cones. 
+      Prove que $(C_1+C_2)^{\circ}=C_{1}^{\circ}\cap C_{2}^{\circ}$
+      \item Se        
+      $C_{1}$ e $C_2$ são dois cones convexos fechados.
+    $(C_1 \cap C_{2})^{\circ}=cl(C_{1}^{\circ}+
+    C_2^{\circ})$   
+      \item Seja $A$ uma 
+      matriz real $m \times n$. 
+      Defina 
+      $C:=\{x \in \mathbb{R}^{n}:
+      Ax \leq 0\}$.
+      Mostre que 
+      $C^{\circ}
+      =\{A^{T}\lambda: 
+      \lambda \in \mathbb{R}^{m}, 
+      \lambda \geq 0\}$.
+      \item Prove que $[\text{Sym}_{+}^{m}(\mathbb{R})]^{\circ}=
+      -\text{Sym}_{+}^{m}(\mathbb{R})$.
+      \end{enumerate}           
+    \item Seja $K \neq \emptyset$ um cone convexo. 
+     Prove que se 
+     $x \in \text{int}(K)$, 
+     então 
+     $\langle x, y \rangle<0$
+     para todo 
+     $y\neq 0 \in K^{\circ}$.    
+    \item Seja $\mathcal{V}:=\{v_1,\dots, v_{m}\}$
+    um conjunto de vetores em $\mathbb{R}^{n}$.
+    Mostre que $\mathcal{V}$
+    é um conjunto afim independente 
+    \footnote{
+    O conjunto $\mathcal{V}:=\{v_1,\dots, v_{m}\}$ 
+    é afim independente, se a única solução do sistema 
+    $\sum_{i=1}^{m}\alpha_{i}v_i=0$,       
+    $\sum_{i=1}^{m}\alpha_{i}$ 
+    é a solução nula.}
+    se, e somente se
+    para todo $j=1,\dots,m$
+    os vetores 
+    $\{v_1-v_j,\dots, v_{m}-v_{j}\}
+    \setminus \{0\}$ são 
+    linearmente independentes.
+    \item Prove o teorema de dualidade forte de Programação Linear, usando os teoremas de separação de Hahn-Banach. % {\bf CHECK}
+   % \item {\it Consequências do Lema de Caratheodory}.     
+    \item Seja 
+    $C$
+    um conjunto não vazio de $\mathbb{R}^{n}$. %convexo. 
+    Defina 
+    $$ C^{\infty}:=\{d \in \mathbb{R}^{n}: 
+    \exists \ \ x \in C,
+    \text{ tal que } 
+    x+td \in C, \ \ \forall t \geq 0\}.$$
+    O conjunto $C^{\infty}$
+    é chamado de 
+    {\it cone de recessão}. Desenhe. Verifique o seguinte:
+       \begin{enumerate}
+       \item  Mostre que 
+    $C^{\infty}$ é um cone não vazio. 
+    Se $C$ é convexo, então temos que $C^{\infty}$ é um cone convexo. 
+       \item Se $C$ é convexo fechado. Verifique que 
+       $C^{\infty}=\{d \in \mathbb{R}^{n}: C+d \subset C\}$.   
+       \item Suponha que $C$
+       é um conjunto 
+       convexo fechado. 
+       Prove que 
+       $C$ é limitado se, 
+       e somente 
+       se $C^{\infty}=\{0\}$.
+       \end{enumerate}      
+    \item {\it Homogenização}.
+    Seja $C \neq \emptyset$ um conjunto 
+    convexo em 
+    $\mathbb{R}^{n}$.
+    Defina 
+    $\hat{C}:=\{(x,1) \in \mathbb{R} ^{n}\times \mathbb{R},
+    \ \ x \in C\}$
+    e 
+    $
+    K(\hat{C}):=\{t(x,1), t>0, x \in C\}
+    $. 
+    O conjunto $K(\hat{C})$ é chamado de {\it homogenização} de $C$. 
+    Prove que $K(\hat{C})$
+    é um cone convexo
+    e que 
+    $\text{cl}\{K(\hat{C})\}=
+    K(\hat{C})\cup \{(d,0): d \in C^{\infty}\}$.
+     % \begin{enumerate}
+     %   \item Prove que $K(C)$
+     %   é um cone convexo.
+     %   e que 
+     %   $\text{cl}\{K(C)\}=
+     %   K(C)\cup \{(d,0): d \in C^{\infty}\}$.
+     % \end{enumerate}
+    \item Seja $f: U \rightarrow \mathbb{R}$ uma função convexa derivável no aberto convexo $U \subset \mathbb{R}^n$ e $x^* \in U$. Prove que $$\text{conv} \{y \in \mathbb{R}^n: y=\lim_{n \rightarrow \infty} \nabla f(x^n), 
+    \ \ x^n \rightarrow x^* \}$$ é um convexo compacto.        
+    \item {\it (Testes de convexidade usando derivadas)}.
+   Seja $f: E \rightarrow \mathbb{R}$ 
+   diferenciável, onde $E$ é um espaço finito-dimensional
+   ( por exemplo, 
+   $E=\mathbb{R}^{m}$, $E=\text{Sym}^{m}(\mathbb{R})$, .., etc). 
+   Então, $f$ é (estritamente) convexa se, e somente se 
+   algumas das siguentes condições valem:
+     \begin{enumerate}
+     \item $f(y)\geq (>) f(x)+\langle \nabla f(x), y-x \rangle$, 
+     $\forall x, y$ ( com $x\neq y$ )
+     \item $\nabla f (x)$ é (estritamente) mononota. i.e. 
+     $\langle \nabla f(x)-\nabla f(y), x-y \rangle \geq (>)0$,  
+      $\forall x, y$ ( com $x\neq y$ )
+     \item $\nabla^{2} f(x)\geq (\succ)0$, para todo $x$.
+     (aqui assumimos que $f$ é duas vezes diferenciável)
+     \item Dê um exemplo de uma função 
+     $f:(-1,1) \rightarrow \mathbb{R}$
+     estritamente convexa tal que $f''(0)=0$.
+     \item Seja $f(X):=-\text{ln det}(X)$, 
+    $X \in \text{Sym}^{m}_{++}(\mathbb{R})$.
+    Use o item (b), que $\nabla f(X)=-X^{-1}$ 
+    ( $X \in \text{Sym}^{m}_{++}(\mathbb{R}))$ e que $\text{tr}Z+\text{tr}Z^{-1} \geq 2m$, 
+    $\forall Z \in \text{Sym}^{m}_{++}(\mathbb{R})$ (com igualdade se, e somente se $Z=I$) para provar que $f(X):=-\text{ln det}(X)$
+    é estritamente convexa. 
+     \end{enumerate}
+   \item Determine a convexidade 
+    \begin{enumerate}
+    \item $f(x,y):=xe^{-(x+y)}$, \ \ $f(x,y,z)=x^2+3y^{2}
+    +9z^2-2xy+6yz+2zx$
+    \item Mostre que 
+    $f(x):=g(Ax+a)$ é convexa, 
+    se $g$ é convexa, $A$ é uma matriz $m \times n$ e
+    $a \in \mathbb{R}^{m}$
+    \item Prove que 
+    $f(x)=\theta(g(x))$
+    é (estritamente) convexa se 
+    $g$ é (estritamente) convexa e $\theta$ é 
+    (estritamente)
+    não decrescente.
+    \end{enumerate}
+    \item Considere que $f:U \rightarrow \mathbb{R}$ é uma função de classe $C^{2}$, onde $U$ é um aberto de $\mathbb{R}^{n}$.
+    Suponha que $f$ é uma função harmonica em $U$, isto é, 
+    $\Delta f(x):= \sum_{i=1}^{n} \frac{\partial^2}{\partial x_i^{2}} f(x)=0$, para todo $x \in U$.
+    Prove que se $x^*$ é um ponto critico de $f$ e a 
+    Hessiana de $f$ em $x^*$ não 
+    é identicamente nulo. Então, $x^*$ deve ser um ponto de sela.  
+    \item 
+       \begin{enumerate}
+       	\item Seja $f:\mathbb{R} \rightarrow \mathbb{R}$ uma função de classe $C^{1}$. Prove que se $f$ tem um mínimo local que não é 
+       	minimo global. Então, $f$ deve ter um outro ponto critico.
+       	\item Considere $f(x,y):=(xy-x-1)^2+(x^2-1)^2$. Prove que
+       $f$ tem dois mínimos locais. 
+       \item Prove que $f(x,y):=x^3-3xe^y+e^{3y}$ tem um único critico ponto que é minimo local mas não é mínimo global. Compare com a item (a).
+       \end{enumerate}
+    \item ({\it Condição suficiente para otimalidade}).
+    Seja $f: U \rightarrow \mathbb{R}$ uma função de classe $C^{2}$, onde $U$ é um aberto de $\mathbb{R}^{n}$. 
+    Se $x^* \in U$ é um ponto crítico e $\nabla^2 f(x^*)$
+    é definida positiva. Então, $x^*$ 
+    é um minimo local {\it estrito} de $f$ em $U$.
+    \item Considere o problema de minimização de uma função diferenciável sobre um espaço afim.
+    $$\text{min } \ \  f(x) \ \ \text{  sujeito a  } \ \ Ax=b, $$ 
+    onde $f:\mathbb{R}^m\rightarrow \mathbb{R}$,
+     $A$ é matriz $m \times n$
+    e $b \in \mathbb{R}^m$. Se $x^*$ é um minimizador local então 
+    $\text{proj}_{N(A)}\nabla f(x^*)=0$. 
+    \item Seja $A$ uma matriz quadrática $n \times n$,  
+    $b \in \mathbb{R}^{n}$ e considere o problema de quadrático 
+    $$\text{min } f(x):=\frac{1}{2} \langle x, Ax \rangle + \langle b, x\rangle \ \ \text{sujeito a } \ \ x \geq 0 $$ 
+    Se $x^*$ minimizador local deste problema quadrático, mostre que 
+    $Ax^*+b \geq 0$, $x^* \geq 0$ e $\langle Ax^*+b, x^*\rangle=0$. 
+    Ainda mais, prove que essas condições são suficiente para a otimalidade se $A$ é definida positiva.
+    \item Seja $f:\mathbb{R}^{n}\rightarrow \mathbb{R}$ uma função convexa derivável, $C \in \mathbb{R}^n$ um conjunto convexo fechado, e $t\geq 0$. Prove que $x^* \in C$ é solução do problema 
+    $\text{min} f(x) \text{ sujeito a } x \in C$ 
+    se, e somente se
+    $x^*=\text{proj}_{C}(x^*-t\nabla f(x^*))$. 
+    \item Seja $\{e^1,\dots,e^n\}$ a base canonica de 
+    $\mathbb{R}^n$ e considere o problema 
+    do elipsoide de volume minimo 
+    $$ \text{ min } -\text{ln det}(X) \ \ 
+       \text{ s.a  } \ \ 
+       \|Xe^i\|\leq 1, \forall i=1,\dots, n \ \ 
+       \text{ e } \ \ 
+       X \in \text{Sym}_{++}^{n}(\mathbb{R}).$$
+      \begin{enumerate}
+      	\item Prove que o problema admite solução.
+      	\item Use as condições de otimalidade de primeira ordem para mostrar que $X=I$ é a única solução 
+      	de dito problema. {\it Dica: } Veja exercício 11 (e).
+      	\item Deduza a {\it desigualdade de Hadamard}, 
+      	i.e.  $\text{det} (x^1 x^2 \dots x^n)\leq 
+      	\|x^1\|\|x^2\|\dots\|x^n\|$ para qualquer matriz
+      	$(x^1 x^2 \dots x^n) 
+      	\in \text{Sym}_{++}^{n}(\mathbb{R})$.
+      \end{enumerate} 
+   \end{enumerate}    
+\end{document}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
