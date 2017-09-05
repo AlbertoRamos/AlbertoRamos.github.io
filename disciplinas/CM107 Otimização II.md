@@ -13,7 +13,7 @@ tag:        2017s2
   | **Turma:**   | [A]
   | **Local:**   | 
   | **Horário:** | 15h30 segunda e quarta. 
-  | **Prova 1:** | 11/09
+  | **Prova 1:** | 18/09
   | **Prova 2:** | 16/10
   | **Prova 3:** | 29/11
   | **2da chamada**| 
@@ -46,6 +46,7 @@ tag:        2017s2
 # Listas
   
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_II.pdf). Entregar os exercícios 3 (a2), 4, 6, 9(i), 11, 14 e 19.
+  - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_opt_II.pdf). Entregar.
   
 # Bibliografia
 
