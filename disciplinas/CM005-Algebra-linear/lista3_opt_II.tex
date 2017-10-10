@@ -1,0 +1,184 @@
+% lista 1(optimization II 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 3: Otimização II }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Mínimos quadrados
+ \item Penalidade
+ \item Para os exercícios que forem convenientes pode ser usado alguma linguagem  de programação.  
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+       
+    \begin{enumerate}
+    \item Considere a função 
+    $f(x)=\frac{1}{2} r(x)^{T}r(x)$
+    onde $r(x)=(x_{1}^{2}x_2, 2x_1x_2, e^{x1})^{T}$.
+       \begin{enumerate}
+       	\item O sistema $r(x)=0$
+       	tem solução?
+       	\item Calcule 
+       	$f(x)$, $\nabla f(x)$, $\nabla^{2}f(x)$, 
+       	$J(x)$, $J(x)^{T}J(x)$ e $S(x)$. O termo $S(x)$ é pequeno? 
+       \end{enumerate}	
+    \item Considere 
+     $r(x)=(x_{1}^{2}+x_{2}^{2}, 2x_1x_2, 4x_2)^{T}$
+       \begin{enumerate}
+       	\item O sistema $r(x)=0$ tem solução?
+       	É única? Caso afirmativo, encontre-a e caso negativo justifique
+       	\item Aplique duas iterações do método de Gauss-Newton com passo completo a partir do ponto 
+       	$x^0:=(1,-1)^{T}$ para minimizar 
+       	$f(x)=\frac{1}{2}r(x)^{T}r(x)$.
+       \end{enumerate}
+    \item Seja 
+    $A \in M_{m \times n}(\mathbb{R})$, 
+    $L \in M_{p \times n}(\mathbb{R})$, 
+    $b \in \mathbb{R}^{n}$
+    e $\lambda \in \mathbb{R}_{++}$. Considere o problema de mínimos quadrados regularizado 
+    $$ \text{ minimizar } 
+    \|Ax-b\|^{2}+\lambda \|Lx\|^{2}. $$
+    Mostre que o problema tem solução única se, e somente se 
+    $\text{Ker}(A)
+     \cap 
+     \text{Ker}(L)=\{0\}$.
+    \item Seja $r(x):=(r_1(x), \dots, r_{m})^{T}$ uma função vetorial onde 
+    cada função resíduo $r_{i}$ junto com sua derivada são Lipschitziana com constante de Lipschitz $L$ num compacto $K \subset \mathbb{R}^{n}$.
+    
+    Encontre as constante de Lipschitz para o Jacobiano $J(x)$ e para $\nabla f(x)$, com $f(x):=\frac{1}{2}r(x)^{T}r(x)$. 
+     \item Considere um conjunto geral de dados $\{(t_i,y_{i})\}_{i=1,\dots,m}$ e suponha que queremos explicar essas observações usando o modelo
+     $y=\phi(x,t):=x_1e^{x_2t}+x_3+x_4t$, onde $x=(x_1,x_2,x_3,x_4)^{T}$ são parámetros desconhecidos os quais queremos estimar.  
+     Escreva o problema de estimar os parametros $x$ como um problema de minimos quadrados. Determine $r(x)$, $f(x)$, 
+     $\nabla r(x)$, $\nabla f(x)$ e $\nabla^{2} f(x)$. 
+    \item Use o método de Gauss-Newton e Levenberg-Marquardt para resolver o problema de mínimos quadrados 
+    $$ \text{ minimizar }
+    f(x):=
+    \frac{1}{2}
+    [(x_2-x_{1}^2)^{2}+(1-x_1)^2], \text{ com ponto inicial }
+    x^{0}=(0,0)^{T}. $$  
+     \item Considere o problema de minimizar 
+    $f(x):=\frac{1}{2}\|Ax+b\|^{2}$, com $A \in M_{m \times n}(\mathbb{R})$ de posto completo e $m>n$.
+    Usando a decomposição SVD para matriz $A$,  $A=U\Sigma V^{T}$, prove que o minimo é  
+    $$  x^*= \sum_{i=1}^{n} \frac{u_{i}^{T}b}{\sigma_i} v_i, $$
+    onde $u_{i}$ e $v_{i}$ são as colunas de $U$ e $V$ respectivamente, 
+    e os $\sigma_i$ são os valores singulares de $A$.
+    {\it Observe} que se $\sigma_i$ é pequeno, a solução do problema $x^*$ é bem sensível a pertubações do vetor $b$. 
+    \item  Considere a região 
+    $\Omega:=
+    \{x \in \mathbb{R}^{n}:
+    g(x)\leq 0\}$, onde 
+    $g:\mathbb{R}^{n}\rightarrow \mathbb{R}^{p}$.    
+    Se $A \in M_{p \times p}(\mathbb{R})$
+    é uma matriz simétrica definida positiva, 
+    $P(x):=\max\{0,g(x)\}^{T}A \max\{0,g(x)\}$
+    pode ser usada como função penalidade.
+    \item Use a função de penalidade inversa para resolver o problema 
+     $$ \text{ minimizar }
+    -x_1^2-x_2^2 
+        \  \ \text{ sujeito a }  \ \
+    x_1\leq 8, x_2 \leq 8, x_1+x_2 \geq 1,  $$
+    com ponto inicial 
+    $x^{0}:=(2,2)^{T}$. 
+    
+    {\it Observação:} Se 
+    $\Omega:=\{x: c_{i}\geq 0, i=1,\dots, m\}$, a função de penalidade inversa é 
+    $\sum_{i=1}^{m} \frac{1}{c_i(x)}$.
+    \item Seja $g:\mathbb{R}^{n}\rightarrow \mathbb{R}$ uma função 
+    de classe $C^1$. Mostre que $\max^2\{0,g(x)\}$ é derivável 
+    e que o gradiente é 
+    $\max\{0,g(x)\}\nabla g(x)$.
+      \item Considere o método de barreira 
+    e $\mathcal{B}(x,\rho):=f(x)+\rho B(x)$. Mostre que:
+      \begin{enumerate}
+      	\item $\mathcal{B}(x^{k+1}, \rho_{k+1}) \leq 
+      	\mathcal{B}(x^{k}, \rho_{k})$
+      	\item $B(x^{k}) \leq B(x^{k+1})$ 
+      	\item $f(x^{k+1}) \leq f(x^k)$
+      \end{enumerate}
+    \item Considere o algoritmo de penalidade externa com penalidade
+    quadrática 
+    $P(x)=\frac{1}{2}(\|h(x)\|^2+
+    \|\max\{0,g(x)\}\|^2)$ para os seguintes problemas de minimização.
+      \begin{enumerate}
+      	\item 
+      	Minimizar $x_1^{2}+x_2^2$ s.a
+      	$2x_1-x_2=2$
+      	\item Minimizar $x_1^{2}+x_2^2$ s.a
+      	$x_1+x_2^2\geq 2$
+      \end{enumerate}
+     Para cada problema mencionado 
+       \begin{enumerate}
+       	\item Represente graficamente a região factível
+       	\item Encontre a solução global 
+       	$x^{*}$ e 
+       	encontre os multiplicadores de Lagrange associados $\lambda^*$ e 
+       	$\mu^*$.
+       	\item Para cada $\rho_{k}$ descreve o subproblema a resolver. Ache 
+       	a solução global desse subproblema
+       	\item Verifique se $\rho_{k}\rightarrow \infty$. 
+       	Então, $x^{k}\rightarrow x^{*}$, 
+       	$\rho_{k}h(x^k)\rightarrow \lambda^*$
+       	e $\rho_{k}\max\{0,g(x)\}\rightarrow
+       	\mu^*$. 
+       	Qual condição de qualificação cumpre $x^*$? 
+       \end{enumerate}
+    \item Mostre que a atualização 
+    $\lambda^{k+1}=\lambda^{k}+\rho_{k}h(x^k)$
+    corresponde ao método de máxima subida (gradiente) aplicado ao problema 
+    $$ \text{maximizar} f(x)+h(x)^{T}\lambda+\frac{\rho_k}{2}\|h(x)\|^2$$
+    que é o dual do problema $min f(x)$ s.a $h(x)=0$.
+    \item Em $\mathbb{R}$ considere o problema de minimização 
+    $$ \text{ minimizar }
+     \text{ln}(x+1) 
+     \text{ s. a. }
+      x \geq 0 $$
+      \begin{enumerate}
+      \item Use o método de barreira logaritmica para provar que se o parametro de penalidade $\mu$ 
+      é maior ou igual a 1, o subproblema não tem solução e quando 
+      $\mu$ é menor que 1, a solução é 
+      $x(\mu)=\mu/(1-\mu)$. 
+      Mostre também que quando $\mu \rightarrow 0$, temos que 
+      $x(\mu)\rightarrow x^*=0$
+      onde $x^*$ é a solução ótima.
+      \end{enumerate}
+    \item Considere o problema de otimização  
+    $$\text{ minimizar} 
+    x_1x_2 \text{ sujeito a }
+    2x_2-x_1+3=0.$$
+    \begin{enumerate}
+    \item  Para quais valores do parametro de penalidade, o método de penalidade com penalidade quadrática tem mínimo ?
+    \item Calcule o mínimo
+    de cada subproblema como função do parâmetro de penalidade. Encontre o ponto limite dessa sequência
+ quando o parâmetro de penalidade vai para o infinito. 
+    \end{enumerate}         
+ \end{enumerate}
+\end{document}
+
+  
