@@ -1,0 +1,312 @@
+% lista 3 (optimization I 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 3: Otimização I }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Métodos de descida, Newton, quase-Newton e gradiente conjugados	
+ \item Para os exercícios que forem convenientes pode ser usado alguma linguagem  de programação.  
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+       
+    \begin{enumerate}
+    
+    \item lista de exercício
+    	
+    {\bf MÉTODO DE DESCIDA }
+    	
+    \item Seja $d$ uma direção de descida para uma função derivável $f$
+    no ponto $x \in \mathbb{R}^{n}$. 
+    Mostre que se $f$ tem derivada contínua, o ponto $x^{+}:=x+\alpha d$ está bem definido, onde $\alpha$ é escolhido 
+    segundo as seguintes condições 
+    \begin{enumerate}
+    	\item A condição de Armijo, 
+    	\item A condição de Goldstein
+    	\item A condição de Wolfe e a condição de Wolfe forte.
+    \end{enumerate}	
+     \item Seja $f:\mathbb{R}^{n}\rightarrow \mathbb{R}$ uma função derivável cuja derivada é uma função lipschitziana com constante de Lipschitz $L$ 
+    (i.e. $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, para todo $x,y \in \mathbb{R}^{n}$).
+    Mostre que
+    $$ f(y)\leq f(x)+\nabla f(x)^{T}(y-x)+\frac{L}{2}\|x-y\|^{2}, \text{ para todo }x, y \in \mathbb{R}^{n}.$$    
+    Isto é, a função quadrática 
+    $Q(y):=f(x)+\nabla f(x)^{T}(y-x)+\frac{L}{2}\|x-y\|^{2}$
+    sobre estima a função $f$ em todo $\mathbb{R}^{n}$
+    
+    Se ainda supomos que $f$ é convexo, mostre que  
+    $$ \frac{1}{2L}
+    \|\nabla f(x)-\nabla f(y)\|^{2}\leq
+    f(y)-f(x)-\nabla f(x)^{T}(y-x)
+    \leq 
+    \frac{L}{2}
+    \|y-x\|^2 $$     
+    \item 
+    Seja $f$ uma função duas vezes derivável em $\mathbb{R}^{n}$.
+    As seguintes proposições são equivalentes:
+    \begin{enumerate}
+    	\item  A derivada 
+    	de $f$ Lipschitziana 
+    	com constante de Lipschitz $L$
+    	\item $\|\nabla^{2} f(x)\|\leq L$,    para todo $x \in \mathbb{R}^{n}$.
+    \end{enumerate} 
+    \item 
+    Seja $f \in C^{1,1}_{L}(\mathbb{R}^{n})$ e $\{x^{k}\}$ uma sequência gerada pelo método do gradiente com passo constante $t_{k}=1/L$.
+    Suponha que $x^{k}\rightarrow x^{*}$.
+    Prove que se $\nabla f(x^{k})\neq 0$, para $k \in \mathbb{N}$. Então, $x^*$ não é um
+    máximo local.  
+    \item Seja $x^{0} \in \mathbb{R}^{n}$ um ponto inicial e considere uma função $f \in C^{1,1}_{L}(\mathcal{O})$, onde 
+    $\mathcal{O}$ é um aberto que contem o conjunto de nível 
+    $ \{x \in \mathbb{R}^{n}: f(x)\leq f(x^0)\}$. Adicionalmente suponha que $f$ é limitada inferiormente.
+    Seja $\{x^{k+1}:=x^{k}+\alpha_{k}d^{k}\}$
+    uma sequência de iterados, onde 
+    $d^{k}$ é uma direção de descida e $\alpha_{k}>0$.
+    
+    Mostre que se  
+    $t_{k}$ satisfaz (i) a condição de Wolfe, ou (ii) a condição de Goldstein ou (iii) a condição de Wolfe-forte. Então, a condição de Zoutendijk
+    é satisfeita i.e. 
+    $\sum_{k=1} \cos^{2}(\theta_{k})\|f(x^{k})\|^{2}< \infty$, 
+    onde 
+    $\cos(\theta_{k}):=-\langle d^{k}, \nabla f(x^k)\rangle /\|d^k\|\|\nabla f(x^k)\|$.
+    \item Considere uma matriz simétrica definida positiva $A \in M(n,\mathbb{R})$. (i) Mostre que 
+    $\langle x, y \rangle_{A} :=\sqrt{x^{T}Ay}$ é um produto interno em $\mathbb{R}^{n}$.
+    (ii) Ainda mais, prove que 
+    $\sqrt{\lambda_{min}(A)}\|x\|_{2}\leq \|x\|_{A} \leq \sqrt{\lambda_{max}(A)}\|x\|_{2}$ para todo $x \in \mathbb{R}^{n}$, 
+    onde $\|\cdot\|_{2}$ é a norma euclideana.
+    (iii) Use o resultado anterior para provar que a sequência $x^{k}$ gerada pelo método de máxima descida (com busca exata)  
+    aplicado ao problema 
+    $\min f(x):=(1/2)x^{T}Ax$ converge à solução $x^*$ de dito problema e 
+    $$ \frac{\|x^{k+1}-x^*\|}{\|x^k-x^*\|}\leq \sqrt{\mathcal{K}} \left(\frac{\mathcal{K}-1}{\mathcal{K}+1}\right), \text{ onde } \mathcal{K}=\frac{\lambda_{max}(A)}{\lambda_{min}(A)}. $$ 
+    
+    {\bf MÉTODOS QUASE-NEWTON}
+    
+    \item Verificar a formula de Sherman-Morrison-Woodbury para a inversa dada em aula.
+    \item Seja $F:\mathbb{R}^{n}\rightarrow \mathbb{R}^{n}$
+    uma função derivável tal que 
+    $\|DF(x)-DF(x^*)\|\leq 
+    \|x-x^*\|^{p}$ para todo 
+    $x \in B(x^*, r)$ com $r>0, p>0$.
+    Prove que para todo $x, y \in B(x^*, r)$ 
+    temos que 
+    $$
+    \|F(x)-F(y)-DF(x^*)(x-y)\|\leq L
+    \|x-y\|\max \{\|x-x^*\|^p, 
+      \|y-x^*\|^p\}.$$
+    \item  Prove que se $x^*$ é tal que
+    $F(x^*)=0$ e 
+    $DF(x^*)$ é invertível. 
+    Existe, uma vizinhança de $x^*$, tal que 
+    para todo $x$ nessa vizinhança
+    temos que $c_1\|x-x^*\|
+    \leq \|F(x)\|
+    \leq
+    c_2\|x-x^*\|$, 
+    para certos $c_1, c_2$ positivos.
+    \item Mostre que todas atualização dadas em aula dos $B_{k+1} (H_{k+1})$
+    (SR1, PSP, BFGS, DFP, etc)
+    satisfazem os problemas de otimização dados.
+    \item  Demonstre o Teorema 5.4.4 do livro de Sun et al.
+        
+    {\bf MÉTODO DE GRADIENTES CONJUGADOS LINEAR E NÃO LINEAR}
+    
+     \item Seja $Q$ uma matriz simétrica definida positiva. Verifique 
+    que no método de Gradiente Conjugados linear temos que para $k \geq 1$
+    $$\text{span}\{r^{0}, r^{1}, r^2,  \dots, r^{k}\}=
+    \text{span}\{d^{0}, d^{1}, d^2, \dots, d^{k}\}=
+    \text{span}\{r^{0},  Qr^{0}, Q^{2} r^{0}, \dots, Q^{k} r^{0}\}.$$ 
+    \item Encontre os mínimos das quadráticas usando método dos gradientes conjugados
+    \begin{enumerate}
+    	\item $q(x,y)=-xy+1-y+x^2+(1/2)y^2$, com $x^{0}=(0,0)^{T}$ 
+    	\item $q(x,y)=-3x-4y-0.5+2xy+x^2+y^2$, com $x^0=(2,1)^{T}$
+    \end{enumerate}
+    \item  
+    Suponha que o método de gradientes conjugados não linear é implementada de forma que o parâmetro do passo $\alpha_{k}$ satisfaz a condição forte de Wolfe, com $c_{2}\in (0,1/2)$, e que $|\beta_{k}|\leq \beta_{k}^{FR}$, $\forall k \in \mathbb{N}$. Então, mostre que 
+    $$ -\frac{1}{1-c_2} \leq \frac{\nabla f(x^k)^{T}d^{k}}{\|\nabla f(x^k)\|^{2}} \leq \frac{2c_2-1}{1-c_2}, \text{ para } k=0,1,2, \dots,  $$
+    Conclua que as direções $d^{k}$ são direções de descida. 
+    \item Seja $Q$ uma matriz simétrica definida positiva e considere 
+    $\{v^1,\dots,v^n\}$ uma família de vetores linearmente independentes. 
+    Defina 
+    $$d^{1}:=v^{1} \  \ \text{ e } \ \ 
+    d^{k+1}:=v^{k+1}-\sum_{i=1}^{k} \theta^{k+1}_{i} d^{i},
+    \ \ \text{ para } \ \ k=1,2,\dots, n-1, $$ 
+    onde $\theta^{k+1}_{i}=(v^{k+1})^{T}Qd^i/(d^{i})^{T}Qd^{i}$. 
+    Mostre que $\{d^1,\dots,d^n\}$ são $Q$-conjugados.
+    \item Prove que para o método de Gradiente conjugados linear, 
+    sempre temos que 
+    $\langle d^{k}, A d^{k} \rangle=-\langle d^{k}, A g^{k} \rangle$, 
+    onde $g^{k}:=\nabla q(x^k)$. %, $\forall k \in \mathbb{N}$.
+    \item Mostre as seguintes relações para o método de gradientes conjugados linear
+    \begin{enumerate}
+    	\item 
+    	$$\alpha_{k}=
+    	\frac{\|r^{k}\|^{2}}{\langle d^{k},Qd^{k}\rangle}=
+    	-\frac{\langle r^{k},d^{k}\rangle}{\langle d^{k}, Qd^{k}\rangle}=
+    	-\frac{\langle r^{0},d^{k}\rangle}{\langle d^{k}, Qd^{k}\rangle}$$
+    	\item  
+    	$$\beta_{k+1}=
+    	\frac{\|r^{k+1}\|^{2}}{\|r\|^{k}}=
+    	\frac{\langle r^{k+1},Qd^{k}\rangle}{\langle d^{k}, Qd^{k}\rangle}=
+    	-\frac{\langle r^{k+1},Qr^{k}\rangle}{\langle d^{k}, Qd^{k}\rangle}$$
+    \end{enumerate}  
+       \item Seja $\{x^{k}\}$ uma sequência gerada pelo método de gradiente conjugados linear. Mostre que em cada nova iteração, o 
+    iterado $x^{k}$ se aproxima (positivamente) à solução otima $x^{*}$, isto é, 
+    $\|x^*-x^{k}\|$ é uma sequência {\it estritamente} decrescente.
+    Para isso faça o seguinte:
+    \begin{enumerate}
+    	\item Mostre que $\langle d^{i}, d^{j}\rangle>0$, para 
+    	$i \neq j$. 
+    	\item Compare $\|x^*-x^{k}\|^{2}$ com $\|x^*-x^{k-1}\|^{2}$, 
+    	escreva $x^{k}-x^{k-1}$ como combinação linear das direções $\{d^{i}\}$ e use o item anterior.  Conclua.   	
+    \end{enumerate}	  
+    \item Considere os matrizes e vetores 
+    
+    $$
+    Q=\begin{pmatrix}
+    2 & 1 & -1 \\
+    1 & 3 &  2 \\
+    -1 & 2 & 4
+    \end{pmatrix},  
+    b=\begin{pmatrix}
+    1 \\
+    2 \\
+    1
+    \end{pmatrix}, 
+    v=\begin{pmatrix}
+    1 \\
+    0 \\
+    0
+    \end{pmatrix}, 
+    w=\begin{pmatrix}
+    0 \\
+    2 \\
+    2
+    \end{pmatrix}.$$
+    \begin{enumerate}
+    	\item Verifique de $v$ e $w$ são $Q$-conjugados
+    	\item Minimize a função quadrática 
+    	$q(x):=\frac{1}{2} x^{T}Qx-b^{T}x$ sobre o plano gerado pelos vetores $\{v,w\}$.
+    	
+    	{\it Dica: } Use como guia e informação o item anterior
+    \end{enumerate}
+    
+    {\bf MÉTODO DE REGIÃO DE CONFIANÇA}
+  
+    \item Mostre que $d^{*}$ é a solução do problema 
+    $$
+    \text{ min } m(d):=f+g^{T}d+\frac{1}{2} d^{T}Bd 
+    \ \ \text{ sujeito a } \ \ 
+    \|d\|_2 \leq \Delta, $$
+    {\bf se, e somente} se existe $\lambda\geq 0$ tal que 
+    (i) $(B+\lambda I)d^{*}=-g$, (ii) $\|d^{*}\|\leq \Delta$, 
+    (iii) $\lambda(\|d^*\|-\Delta)=0$ e (iv) $B+\lambda I$ é 
+    uma matriz semi-definida positiva. 
+    
+    Conclua que se a solução ótima $d^{*}$ está no interior da bola $\{d:\|d\|\leq \Delta\}$ temos que $\nabla m(d^*)=0$ e $B \succeq 0$.
+     \item ({\it Generalização do passo de Cauchy}.) Considere 
+    $D$ uma matriz $n \times n$ defina positiva.
+    \begin{enumerate}
+    	\item Seja $d_{G}^{k}$ solução otima de 
+    	$$ \text{ min } f(x^k)+ d^{T}g^{k} 
+    	\text{ sujeito a } \|Dd\|\leq \Delta. $$
+    	Prove que $d_{G}^{k}= -\frac{\Delta_k}{\|Dg^{k}\|} D^{-2}g^{k}$.
+    	\item O passo de Cauchy Generalizado é definida como
+    	$$ m_{k}(d_{CG}^{k})= \min \{ m_{k}(d): 
+    	d=\tau d_{G}^{k}, \|D d\|\leq \Delta  
+    	\}. $$
+    	Assim, o passo de Cauchy Generalizado é
+    	$$  d_{CG}^{k}=\tau_{k}d_{G}^{k}=-\tau_k \frac{\Delta_k}{\|Dg^{k}\|} D^{-2}g^{k},  $$                        
+    	onde $\tau_{k}:=\text{ argmin } 
+    	m_{k}(\tau d_{G}^{k}) \text{ s.a } \|\tau Dd_{G}^{k}\|\leq \Delta$.
+    	Mostre a seguinte expressão para $\tau_{k}$
+    	$$
+    	\tau_{k}=
+    	\left\{
+    	\begin{matrix}
+    	1 & \text{ se } (g^{k})^{T}D^{-2}B_{k}D^{-2}g^{k}\leq 0 \\
+    	\min  \{ \frac{\|D^{-1}g^{k}\|^{3}}{\Delta_{k}(g^{k})^{T}D^{-2}B_{k}D^{-2}g^{k}}, 1\} & \text{ caso contrário }
+    	\end{matrix}
+    	\right.	  
+    	$$ 
+    \end{enumerate}
+    {\it Observação: } Se $D=I$, recuperamos o passo de Cauchy.	   
+    \item \begin{enumerate}
+    	\item Descreva o método de região de confiança
+    \end{enumerate}
+    Considere as seguintes hipóteses
+    
+    {\bf (H1)}. A solução aproximada do modelo $d^{k}$
+    satisfaz 
+    $ 
+    \text{ pred}_{k}=m_{k}(0)-m_{k}(d^{k}) \geq 
+    c_1 \|g_k\|
+    \min \{ \Delta_k, \frac{\|g_{k}\|}{\|B_k\|} \}
+    $ para certo $c_1 \in (0,1)$.
+    
+    {\bf (H2)}. O passo $d^{k}$ satisfaz $\|d^k\|\leq \gamma \Delta_k$ para certo 
+    $\gamma\geq 1$.
+    
+    {\bf (H3)}. As hessianas $\{B_k\}$ são uniformemente limitadas por alguma constante $\beta$, i.e., $\|B_k\|\leq \beta$, $\forall k$. 
+    
+    \begin{enumerate}
+    	\item Verifique que o passo de Cauchy 
+    	$d_{C}^{k}$ satisfaz a desigualdade
+    	descrita em (H1) 
+    	com $c_{1}=1/2$. 
+    	\item Seja 
+    	$\{x^k\}$ uma sequência gerada pelo método de região de confiança.
+    	Mostre que se $f \in C^{1}$ e as hipóteses 
+    	(H1), (H2)
+    	e (H3) são satisfeitas. Então:
+    	$$
+    	|\rho_k-1|
+    	\leq 
+    	\frac{\gamma\Delta_{k}\left(\frac{\beta}{2}\gamma \Delta_k+\text{sup}_{\theta \in [0,1]}
+    		\|\nabla f(x^k+\theta_kd^k)
+    		-\nabla f(x^k)\|\right)}
+    	{c_1 \|g_k\| \min \{ \Delta_k, \frac{\|g_{k}\|}{\|B_k\|}\}}$$
+    	\item Usando  as mesma hipóteses do item anterior, conclua que 
+    	depois de um número finito de passo mal sucedidos, temos um passo bem sucedido. 
+    	\item   Seja 
+    	$\{x^k\}$ uma sequência gerada pelo método de região de confiança.
+    	Mostre que se $f \in C^{1}$ com $\nabla f$ uniformemente contínua e as hipóteses 
+    	(H1), (H2)
+    	e (H3) são satisfeitas. Então, $\liminf \nabla f(x^k)=0$.
+    	\item Seja 
+    	$\{x^k\}$ uma sequência gerada pelo método de região de confiança.
+    	Mostre que se $f \in C^{2}$ e as hipóteses 
+    	(H1), (H2)
+    	e (H3) são satisfeitas, com $B_{k}:=\nabla^2 f(x^k)$, $\forall k$.
+    	Então,  $\liminf \nabla f(x^k)=0$ e 
+    	$\liminf \lambda_{min}\nabla^{2} f(x^k)\geq 0$.
+    \end{enumerate}  
+ \end{enumerate}
+
+\end{document}
+
+  
