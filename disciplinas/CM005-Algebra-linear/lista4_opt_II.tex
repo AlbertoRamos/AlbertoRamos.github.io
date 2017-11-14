@@ -1,0 +1,176 @@
+% lista 4(optimization II 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 4: Otimização II }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Lagrangiano aumentado, dualidade e SQP
+ \item Para os exercícios que forem convenientes pode ser usado alguma linguagem  de programação.  
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+       
+    \begin{enumerate}
+    \item Prove que a função dual é concava e o domínio dela é convexo.	
+    \item Seja $B$ uma matriz simétrica definida positiva. Encontre
+    o problema dual do problema de minimização:
+       $$ \text{ minimizar } \ \ \frac{1}{2} x^{T}Bx \ \ \text{ sujeito a } \ \ Ax=b, x \geq 0. $$ 
+    \item Seja  um vetor $b \neq 0$ e um escalar $\alpha >0$. Seja $B$ uma matriz simétrica não singular e definida positiva
+    sobre o subespaço $\{x \in \mathbb{R}^{n}:b^{T}x=0 \}$. 
+    Considere o problema de minimização quadrática:
+    $$ \text{ minimizar } \ \ \frac{1}{2} x^{T}Bx+ \alpha b^{T}x  \ \ \text{ sujeito a } \ \ b^{T}x=0. $$    
+        \begin{enumerate}
+        	\item Encontre a solução ótima desse problema.
+        	Essa solução é um ponto KKT? Em caso afirmativo, encontre
+        	o multiplicador de Lagrange associado.
+        	\item Escreve a função Lagrangeano aumentado associado ao problema com penalidade quadrática.
+        	\item Mostre que as sequências gerada pelo método de Lagrangeano aumentado com penalidade quadrática satisfaz 
+        	$$
+        x^{k+1}=\frac{(\lambda^k-\alpha)B^{-1}b}{1+\rho_kb{T}B^{-1}b}
+            \  \ \text{ e } \ \ 
+        \lambda^{k+1}=\lambda^k-\frac{\rho_k (\lambda^k-\alpha)B^{-1}b}{1+\rho_kb{T}B^{-1}b}. $$ 
+        \end{enumerate}
+    \item Verifique no caso de programação linear que o dual do problema dual é o problema original.
+    \item Seja (P) o problema de programação linear e (D) o problema dual associado. Mostre que (i) se (P) é ilimitado inferiormente, então (D) é inviável; (ii) se (P) é viável e limitada inferiormente, então (D) tem uma solução ótima e o gap de dualidade é zero; (iii) se (P) é inviável dê exemplos onde (D) é ilimitado ou inviável.
+    \item Considere o problema de minimização:  
+    $ \text{ minimizar } \ \ \frac{1}{2}x^2+\frac{1}{2}(y-3)^2 \ \ \text{ sujeito a  } x^2-y \leq 0, \ \ -x+y \leq 2 $. 
+    \begin{enumerate}
+    	\item O problema anterior é um problema de otimização convexa?
+    	\item Solucione o problema geometricamente 
+    	\item Dê um motivo teórico que justifique a existência de pontos KKT. Dê também um motivo para a unicidade de ponto KKT.
+    	\item Escreva as condições KKT e determine o ponto KKT.
+    	\item Determine explicitamente o problema dual
+    	\item Encontre uma solução ótima do problema dual. 
+    \end{enumerate} 
+    \item Considere o problema de minimização:  
+    $ \text{ minimizar } \ \ x-4y+z \ \ \text{ sujeito a  } x+2y+2z+2=0, \ \ x^2+y^2+z^2 \leq 1 $. 
+       \begin{enumerate}
+       	\item Dado um ponto KKT, esse ponto deve ser ótimo?
+       	\item Encontre a solução ótima do problema usando as condições KKT. 
+       \end{enumerate} 
+    \item {\it Problema de otimização minimax}. Seja $\{a_{1}, a_{2}, \dots, a_{m}\} \in \mathbb{R}^{n}$
+    um conjunto de vetores e dado $k \in \mathbb{N}$, defina o conjunto 
+    $\Delta(k):=\{x \in\mathbb{R}^k: \sum_{i=1}^{k} x_i=1, 
+    x_i \geq 0, i=1,\dots,k \}$. 
+    Considere o problema de otimização: 
+    $$
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \text{max}\{ \langle a_{i}, x\rangle : i=1, \dots, m \}. $$
+    Mostre que o problema dual é 
+    $$
+    \underset{y \in \Delta(m)}{\text{maximizar}} \ \
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \langle y, Ax \rangle ,$$
+    onde $A$ é uma matriz onde as linhas são os vetores $a_{1}, \dots, a_{m}$.
+    
+    {\it Dica: } Re-escreva o problema 
+    $
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \text{max}\{ \langle a_{i}, x\rangle : i=1, \dots, m \} 
+    $
+    como 
+    $
+    \underset{x \in \Delta(n), v }{\text{minimizar}} \ \ 
+    v \ \ \text{ s.a. } \langle a_{i}, x\rangle \leq v, \ \ 
+    \forall i
+    $, e aplique dualidade neste último problema. 
+    \item Seja $b \in \mathbb{R}^{n}$. Solucione o seguinte 
+    problema de otimização 
+      \begin{equation*}
+       \begin{aligned}
+        & \underset{x}{\text{ minimizar }}
+        & & \sum_{j=1}^{n} x^2_j \\
+        & \text{sujeito a }
+        & & \sum_{j=1}^n x_j=1, 
+        & & 0 \leq x_{j} \leq b_{j}, \ \ j=1,\dots, n.
+       \end{aligned}
+      \end{equation*}
+    \item Considere o problema de otimização  
+     $ 
+     \text{ minimizar } \ \  x^4-2y^2-y \ \ 
+     \text{ sujeito a } \ \ x^2+y^2+y \leq 0 
+     $.
+     Responda
+         \begin{enumerate}
+         	\item O problema é convexo?
+         	\item Mostre que existe solução ótima.
+         	\item Encontre todos os pontos KKT. Para cada ponto,  quais satisfazem a condição necessária de segunda ordem?
+         	\item Encontre a solução global.  
+         \end{enumerate} 
+
+    \item Seja $\alpha \in (0,1)$.     Define $x^{0}:=1$, $\lambda^{0}:=1$.
+    Para $k \in \mathbb{N}$, 
+    $x^{k}:= x^{k-1}$ (se $k$ é par ) 
+    ou $\alpha^{2^{k}}$ 
+    ( se $k$ é impar ) e 
+    $\lambda^{k}:= \alpha^{2^{k-1}}$.
+    
+    Mostre que a sequência 
+    $(x^k, \lambda^{k})$ converge 
+    quadraticamente a $(0,0)$, 
+    mas a convergência de $x^k$ ao 
+    $0$ nem sequer é linear.   
+    \item Considere o problema de minimização 
+    $ \text{maximizar } \ \  f(\lambda):=x^{T}Bx
+    \text{ sujeiro a } \|x\|^{2}\leq 1$, onde $B$ é uma matriz diagonal $2 \times 2$, com $B_{11}:=2$ e $B_{22}:=1$.
+    Suponha que $x^{0}:=(1, 1)^{T}$ e seja 
+    $\lambda^{0}$ (não especificado). Encontre $x^1$ e $\lambda^1$ usando o método de programação sequencial quadrática. Sobre quais condições  $\lambda^1=\lambda^0$? 
+    \item {\it Efeito Maratos para SQP}.
+    Considere o problema de minimização
+     $$ \text{maximizar } \ \  f(\lambda):=2(x^2+y^2-1)-x
+    \text{ sujeiro a } x^2+y^2=1. $$
+      \begin{enumerate}
+      \item Mostre que 
+      $x^{*}:=(1,0)^{T}$
+      é minimizador global e um ponto KKT com multiplicador $\lambda^*:=3/2$.
+      \item Considere o ponto 
+      $x^{k}:=(\cos \theta_k, \sin \theta_k)$ com $\theta_k \approx 0$.
+      Verifique que $x^k$ é viável e próximo de $x^*$
+      \item Considere 
+      $\lambda^k:=\lambda^*$. Resolve o subproblema do método de programação quadrática sequêncial e mostre que a 
+      solução é $d^k:=(\sin^2 \theta_k, 
+      -\sin \theta_k \cos \theta_k)^{T}$.
+      Qual é o multiplicador associado?
+      \item Prove que se 
+      $x^{k+1}:=x^k+d^{k}$, então 
+      $f(x^{k+1})>f(x^k)$ e 
+      $x^{k+1}$ é inviável
+      \end{enumerate}
+    %\item {\bf Lagrangiano aumentado}
+    %\item {\bf CHECK} Mostre que a atualização 
+    %$\lambda^{k+1}=\lambda^{k}+\rho_{k}h(x^k)$
+    %corresponde ao método de máxima subida (gradiente) aplicado ao problema 
+    %$$ \text{maximizar } \ \  q(\lambda):=f(x)+h(x)^{T}\lambda+\frac{1}{2}\|h(x)\|^2$$
+    %que é o dual do problema $\text{ min } f(x)$ s.a $h(x)=0$.
+ \end{enumerate}
+
+\end{document}
+
+  
