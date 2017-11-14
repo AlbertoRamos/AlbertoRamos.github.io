@@ -48,6 +48,7 @@ tag:        2017s2
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_II.pdf). Entregar os exercícios 3 (a2), 4, 6, 9(i), 11, 14 e 19.
   - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_opt_II.pdf).
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista3_opt_II.pdf). 
+  - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista4_opt_II.pdf). 
   
 # Bibliografia
 
