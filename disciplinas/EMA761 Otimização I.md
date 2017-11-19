@@ -34,6 +34,7 @@ tag:        2017s2
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_opt_I.pdf).
   - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista2_opt_I.pdf).
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista3_opt_I.pdf).
+  - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista4_opt_I.pdf).
   
 # Bibliografia
 
