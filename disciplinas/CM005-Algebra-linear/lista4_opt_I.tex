@@ -1,0 +1,344 @@
+% lista 4(optimization I 2017 II)
+\documentclass[a4paper,latin]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Lista 4: Otimização I }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Dualidade, condições de otimalidade, condições KKT. 
+ \item Para os exercícios que forem convenientes pode ser usado alguma linguagem  de programação.  
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+       
+    \begin{enumerate}
+    \item Prove que a função dual é concava e o domínio dela é convexo.	
+    \item Seja $B$ uma matriz simétrica definida positiva. Encontre
+    o problema dual do problema de minimização:
+       $$ \text{ minimizar } \ \ \frac{1}{2} x^{T}Bx \ \ \text{ sujeito a } \ \ Ax=b, x \geq 0. $$ 
+    \item Verifique no caso de programação linear que o dual do problema dual é o problema original. Se (P) denota um problema de programação linear e (D) o problema dual associado. Mostre que (i) se (P) é ilimitado inferiormente, então (D) é inviável; (ii) se (P) é viável e limitada inferiormente, então (D) tem uma solução ótima e o gap de dualidade é zero; (iii) se (P) é inviável dê exemplos onde (D) é ilimitado ou inviável.
+    \item Considere o problema de minimização:  
+    $ \text{ minimizar } \ \ \frac{1}{2}x^2+\frac{1}{2}(y-3)^2 \ \ \text{ sujeito a  } x^2-y \leq 0, \ \ -x+y \leq 2 $. 
+    \begin{enumerate}
+    	\item O problema anterior é um problema de otimização convexa?
+    	\item Solucione o problema geometricamente 
+    	\item Dê um motivo teórico que justifique a existência de pontos KKT. Dê também um motivo para a unicidade de ponto KKT.
+    	\item Escreva as condições KKT e determine o ponto KKT.
+    	\item Determine explicitamente o problema dual
+    	\item Encontre uma solução ótima do problema dual. 
+    \end{enumerate} 
+    \item Considere o problema de minimização:  
+    $ \text{ minimizar } \ \ x-4y+z \ \ \text{ sujeito a  } x+2y+2z+2=0, \ \ x^2+y^2+z^2 \leq 1 $. 
+       \begin{enumerate}
+       	\item Dado um ponto KKT, esse ponto deve ser ótimo?
+       	\item Encontre a solução ótima do problema usando as condições KKT. 
+       \end{enumerate} 
+    \item {\it Problema de otimização minimax}. Seja $\{a_{1}, a_{2}, \dots, a_{m}\} \in \mathbb{R}^{n}$
+    um conjunto de vetores e dado $k \in \mathbb{N}$, defina o conjunto 
+    $\Delta(k):=\{x \in\mathbb{R}^k: \sum_{i=1}^{k} x_i=1, 
+    x_i \geq 0, i=1,\dots,k \}$. 
+    Considere o problema de otimização: 
+    $$
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \text{max}\{ \langle a_{i}, x\rangle : i=1, \dots, m \}. $$
+    Mostre que o problema dual é 
+    $$
+    \underset{y \in \Delta(m)}{\text{maximizar}} \ \
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \langle y, Ax \rangle ,$$
+    onde $A$ é uma matriz onde as linhas são os vetores $a_{1}, \dots, a_{m}$.
+    
+    {\it Dica: } Re-escreva o problema 
+    $
+    \underset{x \in \Delta(n)}{\text{minimizar}} \ \ 
+    \text{max}\{ \langle a_{i}, x\rangle : i=1, \dots, m \} 
+    $
+    como 
+    $
+    \underset{x \in \Delta(n), v }{\text{minimizar}} \ \ 
+    v \ \ \text{ s.a. } \langle a_{i}, x\rangle \leq v, \ \ 
+    \forall i
+    $, e aplique dualidade neste último problema. 
+    \item Considere o problema de otimização  
+     $ 
+     \text{ minimizar } \ \  x^4-2y^2-y \ \ 
+     \text{ sujeito a } \ \ x^2+y^2+y \leq 0 
+     $.
+     Responda
+         \begin{enumerate}
+         	\item O problema é convexo?
+         	\item Mostre que existe solução ótima.
+         	\item Encontre todos os pontos KKT. Para cada ponto,  quais satisfazem a condição necessária de segunda ordem?
+         	\item Encontre a solução global.  
+         \end{enumerate} 
+    \item Calcule o cone tangente 
+    $T_{\Omega}(z)$ e o cone linearizado 
+    $L_{\Omega}(z)$ em $z=0$, onde $z \in \Omega$ e $\Omega$ é cada um dos seguintes conjuntos
+    \begin{enumerate}
+    \item 
+    $\{(x,y) \in \mathbb{R}^2:
+    y \leq x^3\}$
+    \item 
+    $\{(x,y) \in \mathbb{R}^2:
+    y=0 \text{ ou } x=0 \}$
+    \item 
+    $\{r(\cos \theta , \sin \theta) \in \mathbb{R}^2:
+    r \in [0,1], \theta \in [\pi/4, 7 \pi/4]\}$
+    \end{enumerate}
+   Vale alguma condição de qualificação?
+    \item Considere
+ $\Omega:=\{x \in \mathbb{R}^n: 
+ F(x) \in C \}$, onde   
+ $C$ é um cone fechado em $\mathbb{R}^m$ e
+ $F:\mathbb{R}^n \rightarrow \mathbb{R}^m$ é uma função continuamente derivável. 
+  \begin{enumerate}
+  	\item Prove que 
+  	$T_{\Omega}(x)
+  	\subset
+  	\{ d \in \mathbb{R}^n:
+    DF(x)d \in 
+    T_{C}(F(x))\}$ 
+    para todo
+    $x \in \Omega$.
+  \end{enumerate}
+  \item Prove que se $x^* \in U \subset V$, então $T_{U}(x^*) \subset T_{V}(x^*)$. Pode existir igualdade entre os cones tangente mesmo que os conjuntos $U$ e $V$ sejam diferentes?
+  \item Prove que 
+  $\widehat{N}_{\Omega}(x)
+  \subset 
+  N_{\Omega}(x)$, 
+  $\forall x \in \Omega$. Dê um exemplo onde a inclusão é estrita.
+   \item 
+   \begin{enumerate}
+   	\item Seja $C:=\{d \in \mathbb{R}^n: Ad \leq 0, Bd=0\}$. 
+  Mostre que $C$ é um cone fechado e calcule 
+  $C^{\circ}$. Qual é $C^{\circ\circ}$?
+    \item Seja $\Omega=\{x \in \mathbb{R}^{n}: g_j(x)\leq 0 \ \ 
+    \forall j=1, \dots, p;
+    \ \ h_i(x)=0, \ \ 
+    \forall i=1,\dots, m \}, $
+    onde $g_j$ e $h_i$ são funções afins $\forall i, j$ . Dado $x \in \Omega$, calcule o cone tangente $T_{\Omega}(x)$, o cone normal regular $N_{\Omega}(x)$ e mostre que a condição de Guignard vale.  
+   \end{enumerate}
+    \item 
+    Seja $A \in \text{Sym}_{+}(\mathbb{R})$.
+    Prove que 
+    $T_{\text{Sym}_{+}(\mathbb{R})}(A)=\text{Sym}_{+}(\mathbb{R})}-\mathbb{R}_{+}(A)$ e 
+    $\widehat{N}_{\text{Sym}_{+}(\mathbb{R})}(A)
+    =\text{Sym}_{-}(\mathbb{R})
+    \cap \{H \in \text{Sym}(\mathbb{R}): \text{tr}(AH)=0\}$. 
+    \item  
+    Seja $v \in \mathbb{R}^{n}$. 
+    Mostre que 
+    (i) $\|v\|_1=
+        \text{Sup}
+        \{\langle v, w \rangle : 
+        \|w\|_{\infty}\leq 1 \}$, 
+    (ii) $\|v\|_\infty=
+    \text{Sup}
+    \{\langle v, w \rangle : 
+    \|w\|_{1}\leq 1 \}$ e que (iii)
+    $\|v\|_2=
+    \text{Sup}
+    \{\langle v, w \rangle : 
+    \|w\|_{2}\leq 1 \}$.
+    \item {\it Desigualdade de Holder}. Prove a desigualdade de Holder
+    \footnote{Para todo 
+    	$x, y \in \mathbb{R}^n$, temos que
+    	$|\langle x, y \rangle|
+    	\leq \|x\|_{p} \|y\|_{q}$ com igualdade se, e somente se $x$ e $y$ são paralelos. A $p-$norma $\|z\|_p$
+    	é definida como 
+    	$\|z\|_{p}^{p}:=\sum_{i=1}^n
+    	|z_i|^{p}$.
+    } usando o problema de maximização
+  $$
+  \underset{x}
+  {
+  \text{ maximizar }
+  }
+  \{
+  \langle x, y \rangle: \ \ 
+  \sum_{i=1}^{n} |x_i|^p=1
+  \}, 
+  $$
+    onde $y$ é um vetor fixo com 
+    $\|y\|_{q}=1$ e 
+    $1/p+1/q=1$ ($p, q>1$).
+    \item {\it Ausência de pontos KKT. } Seja o problema de otimização 
+    \begin{equation*}
+   \begin{aligned}
+   & 
+   \text{minimizar } 
+   & & x^{2}+y^2 \\
+   & \text{sujeito a }
+   & & x^2=(y-1)^3
+   \end{aligned}
+   \end{equation*} 
+    \begin{enumerate}
+     \item Resolva o problema geometricamente
+     \item Mostre que não existe pontos satisfazendo as condições KKT
+     \item Encontre todos os pontos que satisfazem as condições FJ
+     \item Para tentar resolver o problema de minimização podemos substituir 
+     $x^{2}=(y-1)^3$ na função objetivo para obter o problema sem restrições 
+     $\text{ min }
+     (y-1)^2+y^2$.
+     O que tem de errado essa abordagem? 
+     como podemos corrigir?
+    \end{enumerate}
+    \item Seja $y \in \mathbb{R}^{n}$. Considere o problema de minimização
+       \begin{equation*}
+      \begin{aligned}
+      & \underset{x}{\text{ minimizar }}
+      & & \frac{1}{2}\|x-y\|^2 \\
+      & \text{sujeito a }
+      & & Ax+b=0
+      \end{aligned}
+      \end{equation*}
+      \begin{enumerate}
+      	\item Mostre que o problema admite solução. 
+      	\item Quando $A$ tem posto linha completo, mostre que a solução é única, que as condições KKT valem  e a solução tem a expressão $y-A^{T}(AA^{T})^{-1}(Ay+b)$.
+      \end{enumerate}
+    \item {\it Atualização simétrica de Powell-Broyden (PSB).} Seja $A$ uma matriz simétrica $n \times n$, e vetores $s$ e $y$
+    em $\mathbb{n}$.
+    Considere o seguinte problema de minimização
+    $$ \text{ minimizar } \|B-A\|^{2}_{F} \ \ 
+    \text{ sujeito a } \ \ Bs=y , \ \ B^{T}=B,  $$
+    onde $\|\cdot\|_{F}$ é a norma de Frobenius 
+      \begin{enumerate}
+      	\item Mostre que o conjunto viável é um conjunto fechado convexo não vazio.
+    	\item Mostre que o problema de minimização tem uma única solução.
+    	\item Encontre a expressão para dita solução. 
+      \end{enumerate}
+    \item {\it Atualização BFGS.}  Seja $A$ uma matriz simétrica $n \times n$, e vetores $s$ e $y$
+    em $\mathbb{n}$ com 
+    $s^{y}>0$.
+    Considere o seguinte problema de minimização
+     \begin{equation*}
+    \begin{aligned}
+    & \text{ minimizar }
+    & & \text{tr}(BA)- \text{ln det}(B) \\
+    & \text{ sujeito a }
+    & & Bs=y \\
+    &
+    & & B \in \text{Sym}_{++}(\mathbb{R}).
+    \end{aligned}
+    \end{equation*}
+    %$$ \text{ minimizar } 
+    %\text{tr}(BA)-
+    %\text{ln det}(B) \ \ 
+    %\text{ sujeito a } \ \ Bs=y , \ \ B \in 
+    %\text{Sym}_{++}(\mathbb{R}).  $$
+      \begin{enumerate}
+    	\item Mostre que existe ao menos um ponto viável, verificando que 
+    	$\langle s, y-ts\rangle^{-1}(y-ts)(y-ts)^{T}+tI$ é viável para $t>0$ suficientemente pequeno.
+    	\item Mostre que o problema de minimização tem solução.
+    	{\it Dica:}
+    	Analise o conjunto de nível da função objetivo.
+    	Observe que neste problema o conjunto viável não é fechado. 
+    	Compare com o problema anterior (atualização PSB).
+    	\item Mostre que existe uma única solução. 
+    	\item
+    	Use as condições KKT para encontrar a expressão para dita solução. 
+    	Por que as condições KKT valem? Justifique.
+     \end{enumerate}	
+    \item Responda 
+      \begin{enumerate}
+      	\item Prove que LICQ implica MFCQ 
+      	\item Mostre que a condições de Mangasarian-Fromovitz (MFCQ) vale se, e somente se 
+    o conjunto de multiplicadores é não vazio e compacto.
+       \item Seja $C=\{x \in \mathbb{R}^n: g_j(x)\leq 0, j=1,\dots,p; 
+       h_{i}(x)=0, i=1,\dots, m\}$ onde todas as funções $g_j$ são convexas
+       e $h_{i}$ são funções afins. (i) Prove que 
+   a condição de Slater implica a MFCQ. (ii) Se 
+   $\{\nabla h_{i}(x): i=1,\dots, m\}$
+   é um conjunto linearmente independente, mostre que MFCQ implica a condição de Slater.
+    \end{enumerate}
+     \item Seja $A$ uma matriz simétrica $n \times n$ (não necessariamente definida positiva), $b$ e $c$ vetores em $\mathbb{R}^{n}$ e $\Delta$ um escalar positivo.
+    Considere o problema de minimização.  
+    \begin{equation*}
+    \begin{aligned}
+    & \underset{x}{\text{ minimizar }}
+    & & \frac{1}{2}\langle x, Ax \rangle+\langle b, x \rangle +c \\
+    & \text{sujeito a }
+    & & \|x\|\leq \Delta
+    \end{aligned}
+    \end{equation*}
+    Mostre que é o problema admite um minimizador global que está na fronteira. As condições KKT valem nesse ponto? Vale alguma CQ?
+    \item Prove que 
+    $B$ é definida positiva no subespaço 
+    $\text{ker}(A)$
+    se, e somente se 
+    existe um $\rho^{*}>0$ tal que 
+    $B+\rho AA^{T}$ é definida positiva para todo 
+    $\rho \geq \rho^*$ 
+    \item Seja $B$ uma matriz simétrica $n \times n$ (não necessariamente definida positiva) e $c$ um vetor em $\mathbb{R}^{n}$.
+    Considere o problema quadrático de minimização com restrições de igualdade:  
+    \begin{equation*}
+    \begin{aligned}
+    & \underset{x}{\text{ minimizar }}
+    & & \frac{1}{2}\langle x, Bx \rangle+\langle c, x \rangle \\
+    & \text{sujeito a }
+    & & Ax=b
+    \end{aligned}
+    \end{equation*}
+     Responda
+    \begin{enumerate}
+      \item
+      Se $x^*$ é minimizador local, então 
+      $x^*$ deve satisfazer as condições KKT: 
+      $Bx^*+c \in 
+      \text{Im}(A^T)$
+      e 
+      $Ax^*=b$.
+      \item Mostre que $x^*$ deve satisfazer a {\it condição necessária de segunda-ordem } que 
+      $B$ é semi-definida positiva sobre o subespaço 
+     $\text{ker}(A)$. \item Prove que se um ponto KKT satisfaz a condição necessária de segunda ordem 
+     do item anterior, é de fato, um {\it minimizador global } do problema quadrático.
+    \end{enumerate}
+    \item Seja $B$ uma matriz simétrica $n \times n$, 
+    $A$ uma matriz $m \times n$, $b \in \mathbb{R}^n$ e 
+    $c \in \mathbb{R}^m$.
+    Considere o problema de minimização.  
+    \begin{equation*}
+    \begin{aligned}
+    & \underset{x}{\text{ minimizar }}
+    & & \frac{1}{2}\langle x, Bx \rangle+\langle b, x \rangle +c \\
+    & \text{sujeito a }
+    & & Ax+c=0
+    \end{aligned}
+    \end{equation*}
+    Se $A$ tem posto linha completo e $B$ é definida positiva no núcleo de $A$, 
+    isto é, 
+    $\langle d, Bd \rangle >0$ 
+    $\forall d \in \text{Ker}(A)$, 
+    $d \neq 0$.
+    Mostre que o problema tem um único ponto estacionário que é minimizador global.
+ \end{enumerate}
+
+\end{document}
+
+  
