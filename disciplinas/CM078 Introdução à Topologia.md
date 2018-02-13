@@ -36,8 +36,9 @@ tag:        2018s1
 
 ## Principal
 
-- E.L.LIMA – Curso de Análise, Vol. 1. Projeto Euclides, IMPA.
-- W.RUDIN – Principles of Mathematical Analysis. 3a. Ed. MacGraw Hill, 1976.
-- T.APOSTOL – Mathematical Analysis. Addison Wesley Pub. Co. 1974.
+- J.MUNKRES - Topology. Prentice Hall, 1975.
+- E.L.LIMA – Espaços Métricos, IMPA, 1993.
+- E.L.LIMA – Elementos de Topologia Geral, IMPA, 1970.
+- G.F.SIMMONS - Introduction to Topology and Modern Analysis. 
 
 ## Complementar
