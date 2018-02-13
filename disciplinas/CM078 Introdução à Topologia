@@ -21,12 +21,13 @@ tag:        2018s1
 
 # Ementa
 
-  Integral de Riemann: teorema fundamental do cálculo, mudança de variáveis. Teoremas do valor médio para integrais. 
-  Integrais impróprias. Seqüências e séries de funções. Funções analíticas reais. Teorema da aproximação de Weierstrass. 
-  Teorema de Arzelà-Ascoli.
+  Espaços métricos. Convergência. Completitude. Compacidade. Conexidade. Continuidade. 
+  Espaços Topológicos. 
 
 # Programa:
- 
+  
+  [Programação].(http://www.mat.ufpr.br/documentos/programas/CM078.pdf).
+
 # Listas
 
 # Provas
