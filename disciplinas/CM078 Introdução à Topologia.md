@@ -26,7 +26,7 @@ tag:        2018s1
 
 # Programa:
   
-  [Programação].(http://www.mat.ufpr.br/documentos/programas/CM078.pdf).
+  **[Programação].(http://www.mat.ufpr.br/documentos/programas/CM078.pdf)**
 
 # Listas
 
