@@ -35,9 +35,9 @@ tag:        2018s1
 
 ## Principal
 
-- H.L.GUIDORIZZI – Um curso de Cálculo, vol 1 e 2, LTC, Rio de Janeiro.
 - J.STEWART – Cálculo, vol 1, Cengage Learning, São Paulo. 
 - L.LEITHOLD - O Cálculo com Geometria Analítica, vol 1, Harbra, Rio de Janeiro.
+- H.L.GUIDORIZZI – Um curso de Cálculo, vol 1 e 2, LTC, Rio de Janeiro.
 
 ## Complementar
 
