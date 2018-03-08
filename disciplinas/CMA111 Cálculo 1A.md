@@ -29,6 +29,8 @@ tag:        2018s1
 
 # Listas
 
+- [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo.pdf)
+
 # Provas
 
 # Bibliografia
