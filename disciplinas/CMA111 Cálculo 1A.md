@@ -11,13 +11,13 @@ tag:        2018s1
   | **Sigla:**   | CMA111
   | **Nome:**    | Cálculo 1a  
   | **Turma:**   | [A]
-  | **Local:**   | 
+  | **Local:**   | PG 07
   | **Horário:** | 7h30 Segunda, Quarta e Sexta. 
-  | **Prova 1:** | 
-  | **Prova 2:** | 
-  | **Prova 3:** | 
-  | **2da chamada**| 
-  | **Exame:**   | 
+  | **Prova 1:** | 02/04
+  | **Prova 2:** | 11/05
+  | **Prova 3:** | 18/06
+  | **2da chamada**| 22/06
+  | **Exame:**   | 02/07
 
 # Ementa
 
