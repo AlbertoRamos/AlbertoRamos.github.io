@@ -1,0 +1,218 @@
+% lista 1(calculo 1)
+\documentclass[latin,20pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 1: Cálculo I }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Funções 
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+ 
+  \section{Exercícios}   
+ 
+ Faça do livro texto, os exercícios correspondentes aos temas desenvolvidos em aula. 
+  
+  \section{Exercícios adicionais}  
+  \subsection{Domínio, imagem e gráfico de funções}   
+  
+    \begin{enumerate}
+    \item Seja $f:[-2,4) \rightarrow \mathbb{R}$ definida como 
+    $f(x)=\frac{|x+1|-3}{1+|x-3|}$. Encontre a imagem de $f$.{\it Rpta}
+    $im(f)=[-3/5,1]$.     
+    \item Considere $f(x)=\frac{2\sqrt{x}}{|1-x|}$. 
+    Ache o domínio, imagem e gráfico de $f$.
+    \item Seja $f(x)=(x-\lbrack\!\lbrack x \rbrack\!\rbrack)^2$. Encontre o dominio e a imagem de $f$. Faça o gráfico de $f$. 
+    {\it Rpta:} $dom(f)=\mathbb{R}$, $im(f)=[0,1)$.
+    %\item  $\lbrack\!\lbrack  ...   \rbrack\!\rbrack$ %\llbracket f \rrbracket$
+    \item Encontre o dominio, a imagem e o gráfico de 
+    $$f(x)=\frac{x^3+x^2+x+1}{|x+1|}.$$
+    {\it Rpta: } $dom(f)=\mathbb{R}\setminus\{-1\}$, 
+    $im(f)=(-\infty, -2)\cup [1,\infty)$
+    \item Seja $f(x)$ uma função lineal tal que $f(-1)=2$ e $f(2)=-3$. 
+    {\it Rpta: } $f(x)=(-5x+1)/3$.
+    \end{enumerate}
+ \subsection{Operações básicas para funções}
+     \begin{enumerate}
+    \item Encontre o produto de $f$ e $g$ se 
+    $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+            &2x+1  &\text{, se } x\geq 1\\
+            &x^2-2 &\text{, se } x<0
+            \end{array}
+            \right.
+     \text{ e }
+    g(x)= \left\{  
+            \begin{array}{lll}
+            &3x+1  &\text{, se } x\leq 8\\
+            &x^3   &\text{, se } x>10
+            \end{array}
+            \right. 
+    $$
+    {\it Rpta:} 
+     $$
+    (f.g)(x)= \left\{  
+            \begin{array}{lll}
+            &3x^3+x^2-6x-2  &\text{, se } x<0\\
+            &6x^2+5x+1      &\text{, se } 1\leq x \leq 8 \\
+            &4x^4+2x^3      &\text{, se } 10< x \\
+            \end{array}
+            \right. 
+    $$
+    \item Encontre a divisão de $f$ e $g$ se 
+    $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+            &\sqrt{1-x}  &\text{, se } x\geq 1\\
+            &\sqrt{x} &\text{, se } x\geq 4
+            \end{array}
+            \right.
+     \text{ e }
+    g(x)= \left\{  
+            \begin{array}{lll}
+            &x^2-1  &\text{, se } x<0\\
+            &x   &\text{, se } 0\leq x \leq 2 \\
+            &x+5 &\text{, se } x>2
+            \end{array}
+            \right. 
+    $$
+    {\it Rpta:} 
+     $$
+    (\frac{f}{g})(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{\sqrt{1-x}}{x^2-1} &\text{, se } x \in (-\infty, -1)\cup (-1,0)\\
+    &\frac{\sqrt{1-x}}{x}     &\text{, se } x \in (0,1] \\
+            & \frac{\sqrt{x}}{x+5}     &\text{, se } x \in [4,\infty] \\
+            \end{array}
+            \right. 
+    $$
+    \item Encontre a composição de $f\circ g$
+     se 
+    $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+            &x+2  &\text{, se } x\geq 1\\
+            &x-1 &\text{, se } x> 1
+            \end{array}
+            \right.
+     \text{ e }
+    g(x)= \left\{  
+            \begin{array}{lll}
+            &x^2  &\text{, se } x<0\\
+            &1-x   &\text{, se } 0\leq x \geq 0 
+            \end{array}
+            \right. 
+    $$
+    {\it Rpta:} 
+     $$
+    (f\circ g)(x)= \left\{  
+            \begin{array}{lll}
+    &x^2-1 &\text{, se } x \in (-\infty, -1) \\
+    &x^2+2 &\text{, se } x \in [-1,0) \\
+    & 3-x  &\text{, se } x \in [0,\infty] \\
+            \end{array}
+            \right. 
+    $$
+    \item 
+       \begin{enumerate}
+       \item Se $f(x-1)=x-2$ e $(g\circ f)(x+2)=2x^2-x$. Encontre $g(x)$. 
+    {\it Rpta: } $g(x)=2x^2-5x+3$.
+       \item Se $F(x)=\cos(2x)$ e $f(x)=\sin(x)$.  Encontre $g(x)$ tal que 
+       $F(x)=(g \circ f)(x)$. {\it Rpta: } $g(x)=1-2x^2$.  
+      \end{enumerate}
+    \item Considere as funções $f$ e $g$ definidas como  
+    $$f(x)=\frac{\sqrt{2x-1}}{|1-x|} \ \ \text{ e } \ \ g(x)=2\cos(\frac{2\pi}{3}(\frac{|x|}{x^2+1})).$$ Analise a existência da composição de $f \circ g$.  
+    \end{enumerate}
+ \subsection{Funções injetoras, sobrejetoras e inversas} 
+ 
+ {\it Lembre: } Uma função $f$ é injetora se para todo $a, b \in dom(f)$ tal que $f(a)=f(b)$ então temos que $a=b$. \newline 
+ {\it Observação: } Sejam $f$ e $g$ duas funções injetoras tal que
+ $f \circ g$ existe. Então  $f \circ g$ é injetora e a inversa satisfaz 
+  $$(f \circ g)^{-1}= g^{-1} \circ f^{-1}.$$ 
+  {\it Mostre essa observação}.        
+    \begin{enumerate}
+    \item Mostre que toda função crescente (ou decrescente) é injetora. 
+    \item Considere $f: X\rightarrow (-4,1]$ com $f(x)=\frac{10+3x}{10-2x}$. 
+      \begin{enumerate}
+      \item Determine $X$ para que f seja sobrejetora. {\it Rpta: } 
+      $X=(-\infty,0]\cup (10,\infty)$.
+      \item Mostre que f é injetora. 
+      \end{enumerate} 
+    \item Considere a função    
+    $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &2x-1 &\text{, se } x \in (-\infty, -1) \\
+    &4x^2 &\text{, se } x \in [-1,0] \\
+    &x+4  &\text{, se } x \in (0,\infty] \\
+            \end{array}
+            \right. 
+    $$
+    Calcule a inversa de $f$ e faça o gráfico de $f^{-1}$. {\it Rpta: }
+     $$
+    f^{-1}(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{x+1}{2} &\text{, se } x \in (-\infty, -3) \\
+    &-\frac{\sqrt{2x}}{2} &\text{, se } x \in [0,4] \\
+    & x-4  &\text{, se } x \in (4,\infty] \\
+            \end{array}
+            \right. 
+    $$
+    \item Considere as funções    
+    $$
+    g(x)= \frac{x}{x+2}, \text{se } x<-2    
+    \text{ e }
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &2x^2-12x+2 &\text{, se } x \in (-2, 3] \\
+    &\frac{\sqrt{x+2}}{\sqrt{x-3}} &\text{, se } x \in (3,\infty) \\
+            \end{array}
+            \right.
+    $$
+    Calcule $g^{-1}\circ f$. {\it Rpta: }
+     $$
+    (g^{-1}\circ f)(x)= \left\{  
+            \begin{array}{lll}
+    &-\frac{4(x^2-6x+1)}{2x^2-12x+1} &\text{, se } x \in (-2, 3-\sqrt{17}) \\
+    &\frac{2\sqrt{x+2}}{\sqrt{x-3-\sqrt{x+2}}} &\text{, se } x >3
+            \end{array}
+            \right. 
+    $$
+    \item Considere 
+    $$f(x)=\frac{4x+|x-5|+\sqrt{x-5}+5-x\lbrack\!\lbrack x \rbrack\!\rbrack}{\sqrt{6-x}}.$$
+    Ache a inversa, se ela existe. {\it Rpta:}  Se existe e 
+    $f^{-1}(x)=\frac{6x^2+5}{x^2+1}$.
+    \end{enumerate}         
+
+\end{document}
+
+  
