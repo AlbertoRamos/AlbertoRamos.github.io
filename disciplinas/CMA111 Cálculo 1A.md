@@ -31,6 +31,7 @@ tag:        2018s1
 
 - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo.pdf)
 - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 calculo.pdf)
+- [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 calculo.pdf)
 
 # Provas
 
