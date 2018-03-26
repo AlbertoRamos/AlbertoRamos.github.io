@@ -32,7 +32,7 @@ tag:        2018s1
 # Listas
 
 - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo.pdf)
-- [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 calculo.pdf), 
+- [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 calculo.pdf). Solução:  
   [Lista 2 2.1.3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.3.jpg),
   [Lista 2 2.1.5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.5.jpg),
   [Lista 2 2.3.6]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.3.6.jpg),
