@@ -33,13 +33,13 @@ tag:        2018s1
 
 - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo.pdf)
 - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 calculo.pdf). Solução:  
-  [Lista 2 2.1.3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.3.jpg),
-  [Lista 2 2.1.5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.5.jpg),
-  [Lista 2 2.3.6]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.3.6.jpg),
-  [Lista 2 2.4.1 a]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 a.jpg),
-  [Lista 2 2.4.1 b]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 b.jpg),
-  [Lista 2 2.4.1 c]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 c.jpg),
-  [Lista 2 2.4.2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.2.jpg),
+  [L2 2.1.3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.3.jpg),
+  [L2 2.1.5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.1.5.jpg),
+  [L2 2.3.6]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.3.6.jpg),
+  [L2 2.4.1 a]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 a.jpg),
+  [L2 2.4.1 b]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 b.jpg),
+  [L2 2.4.1 c]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 c.jpg),
+  [L2 2.4.2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.2.jpg),
 - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 calculo.pdf)
 
 # Provas
