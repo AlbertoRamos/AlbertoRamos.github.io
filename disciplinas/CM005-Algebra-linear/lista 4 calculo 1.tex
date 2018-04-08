@@ -1,0 +1,215 @@
+% lista 4(calculo 1)
+\documentclass[latin,20pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 4: Cálculo I }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Derivadas, regras de cálculo, regra da cadeia, derivada implícita. 
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+ 
+  \section{Exercícios}   
+ 
+ Faça do livro texto, os exercícios correspondentes aos temas desenvolvidos em aula. 
+  
+  \section{Exercícios adicionais} 
+    \subsection{Cálculo de derivadas}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item Calcule $\lim_{x \rightarrow 1} \frac{x^{1000000}-1}{x-1}$.	
+    \item Mostre que se $f(x)=a^{x}$, $a>0$, $a \neq 1$. 
+    Então, $f'(x)=a^{x}\ln(a)$.
+    \item Se $$f(x)=\frac{\sin(x)-\cos(x)}{\sin(x)+\cos(x)}.$$ 
+    Calcule a função derivada. {\it Rpta: }
+    $f'(x)=\frac{2}{\left(\sin(x)+\cos(x)\right)^{2}}$. 
+    \item  Se $$
+    f(x)= \left\{  
+    \begin{array}{lll}
+    &2x^2-3 &\text{, se } x \leq 2 \\
+    &8x-11     &\text{, se } x > 2 \\
+    \end{array}
+    \right. $$
+    Mostre que a existe a derivada $f'(x)$ em $x=2$ e calcule dita derivada. 
+    {\it Rpta:} 8.
+    \item Se $$f(x)=\frac{\sqrt{x+1}-\sqrt{x-1}}{\sqrt{x+1}+\sqrt{x-1}}.$$ 
+    Calcule a função derivada. {\it Rpta: }
+    $f'(x)=1-\frac{x}{\sqrt{x^{2}-1}}$. 
+    \item Considere $a \in \mathbb{R}$ e defina  $$f(x):=\frac{x}{2}\sqrt{x^{2}+a^{2}}+
+            \frac{a^2}{2}\ln \left( x+ \sqrt{x^{2}+a^{2}}\right).$$ 
+    Calcule a função derivada. {\it Rpta: }
+    $f'(x)=\sqrt{x^2+a^{2}}$. 
+    \item Se $f(x^{2}+1)=\sqrt{x^{2}+1}+\sqrt[6]{16(x^{2}+1)}$
+    e $f(x^{2}-1)=g(x^{2}+1)$. Calcule $g'(5)$. {\it Rpta:}
+     $g'(5)=4/3$. {\it Dica:} Antes de calcular a derivada, escreva 
+     explicitamente a função $g$ usando mudança de variável. 
+    \item  Se $$
+    f(x)= \left\{  
+    \begin{array}{lll}
+    &x^{\frac{5}{2}}\sin(\frac{1}{x})+3e^{x} &\text{, se } x \neq 0 \\
+    &3     &\text{, se } x=0 \\
+    \end{array}
+    \right. $$
+    Calcule $f'(0)$. {\it Rpta: } $f'(0)=3$.
+     \item Sejam $a$ e $b$ números reais. Considere a função 
+    $$
+    f(x)= \left\{  
+    \begin{array}{lll}
+    &ax^2+b &\text{, se } x \leq 1 \\
+    &x^{-1}    &\text{, se } x > 1 \\
+    \end{array}
+    \right. 
+    $$
+    Para quais valores de $a$ e $b$, a função $f$ é derivável em $x=1$. 
+    {\it Rpta: } $a=-1/3$, $b=4/3$. {\it Dica: } Para $f$ ser derivável em $x=$1, a derivada deve existir e $f$ deve ser continua em $x=1$. 
+    \item Para quais valores de $a$ e $b$, a função $f$ 
+    é derivável em $x=2$, onde  
+    $$
+    f(x)= \left\{  
+    \begin{array}{lll}
+    &ax+b &\text{, se } x < 2 \\
+    &2x^{2}-1    &\text{, se } x \geq 2 \\
+    \end{array}
+    \right. $$
+    {\it Rpta: } $a=8$ e $b=-9$.
+    \item Seja 
+    $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $|f(x)|\leq x^{2}+x^{4}$, 
+    para todo $x \in \mathbb{R}$. 
+    Mostre que $f$ é derivável em $x_{0}=0$ e 
+    calcule a derivada. 
+    {\it Rpta: } $f'(0)=0$.
+    \item Seja $f(x)=x|x|+x$. 
+    Mostre que $f$ é diferenciável em $x=0$ 
+    e $f'(0)=1$. {\it Dica: } Considere $g(x)=f(x)-x$.
+    \item Encontre o domínio de $f$, onde $f(x)=|x+1|+|x+2|-|x-3|$.
+    {\it Rpta:} $\text{dom}(f')=\mathbb{R}\setminus \{-2,-1,3\}$.   
+    \item Sejam $f$ e $g$ duas funções deriváveis 
+    em um intervalo aberto 
+    $I$, e seja $a \in I$. Defina:
+    $$
+    F(x)= \left\{  
+    \begin{array}{lll}
+    &f(x) &\text{, se } x < a \\
+    &g(x)    &\text{, se } x \geq  a \\
+    \end{array}
+    \right. 
+    $$
+    Mostre que $F(x)$ é derivável em $x=a$ se, e somente se, 
+    $f(a)=g(a)$ e $f'(a)=g'(a)$. 
+    \item Encontre a função derivada $f'(x)$ (explicitando seu domínio), se $f(x)=\lbrack\!\lbrack x+1 \rbrack\!\rbrack
+    +\lbrack\!\lbrack 1-x\rbrack\!\rbrack$. 
+    {\it Rpta:} $f'(x)=0$ e $\text{dom}(f')=\mathbb{Z}$.
+   \end{enumerate}
+   \subsection{Derivadas de funções trigonométricas}
+     \begin{enumerate}
+     	\item Calcule $f'(x)$ se $f(x)=\cot (e^{x}+\ln x)$. 
+     	{\it Rpta:} $f'(x)=-(e^{x}+\frac{1}{x})\text{cossec}^{2}(e^{x}+\ln x)$.
+     	\item Verifique que a derivada de $f(x)=\arctan(\sqrt{4x^{2}-1})$
+     	é $\frac{1}{x\sqrt{4x^{2}-1}}$.
+     	\item Se $f(x)=\left(\sin(\frac{x}{2})-\cos(\frac{x}{2})\right)^{2}$.
+     	Mostre que $f'(x)=-\cos (x)$.
+     	\item Se $f(x)=\arctan(\frac{\sin x+\cos x}{\sin x-\cos x})$. Então
+     	$f'(x)=-1$.
+     \end{enumerate}
+    \subsection{Derivação Implícita}   
+   Calcule $\frac{dy}{dx}$, se  
+    \begin{enumerate}
+    \item $e^{y}=x+y$, {\it Rpta:} $\frac{dy}{dx}=\frac{1}{e^{y}-1}$.
+    \item $ay=y\ln y+x$, onde $a \in \mathbb{R}$. 
+    {\it Rpta:} $\frac{dy}{dx}=\frac{y}{x-y}$. 
+    \item $y\sin x=\cos(x-y)$. {\it Rpta:} $\frac{dy}{dx}=\frac{y\cos x+\sin(x-y)}{\sin(x-y)-\sin x}$. 
+    \item $\arctan y=y-x$. 
+    {\it Rpta:} $\frac{dy}{dx}=\frac{y^2+1}{y^2}$. 
+    \end{enumerate}
+   \subsection{Equação da reta tangente usando derivadas}   
+    \begin{enumerate}
+    \item Encontre a equação da reta tangente à curva $x-x^{2}y=1$ cujp ângulo de inclinação é $\pi/4$. {\it Rpta: } $r: y=x+1$.
+    \item Encontre as equações das retas tangentes à curva 
+    $ x^{3}-3x^2+6x+4-3y=0$ que são paralelas a $y=2x+3$.
+    
+    {\it Rpta: } $r_{1}:6x-3y=-4$ e $r_{2}: y=2x$.
+    \item 12 area constante 
+    \item Ache as retas tangentes à hipérbole 
+    $\mathcal{H}: \frac{x^2}{2}-\frac{y^2}{7}=1$ que são perpendiculares à reta $4y=3-2x$.
+    
+    {\it Rpta: } $r_{1}: y=2x+1$ e $r_{2}: y=2x-1$.
+    \item Mostre que qualquer par de retas 
+    tangentes à parábola $y=ax^{2}$, com 
+    $a \neq 0$,  tem como interseção um ponto
+    que está numa reta vertical que passa pelo ponto 
+    médio do segmento que une os pontos de tangência
+    destas retas 
+    \item Encontre as retas tangentes e normal da curva 
+    $2y^{3}-9xy+2x^{3}=0$ no ponto $P=(2,1)$. {\it Rpta: } 
+    reta tangente: $4y=sx-6$, reta normal: $5y=13-4x$
+    \item Qual a reta normal da curva $y=x \ln x$ que é paralela à reta 
+    $2y=2x+3$? {\it Rpta:} reta normal: $y=x-3e^{-2}$. 
+    \end{enumerate}    
+    \subsection{Taxas de variação}   
+    \begin{enumerate}
+    \item 
+     ({\it Expansão Adiabática}) 
+     Quando certo gás composto sofre uma 
+     expansão adiabática, a sua pressão 
+     $p$ e seu volume $V$ 
+     satisfazem à equação 
+     $pV^{1.3}=k$, onde $k$ é uma constante. 
+     Mostre que
+     $-V\frac{dp}{dt}=1.3 p \frac{dV}{dt}$
+     \item Uma lâmpada está no solo a 15 m de um prédio. 
+     Um homem de 1.8 m de altura anda a partir da luz em
+     direção ao prédio a 1.2 $m/s$. 
+        \begin{enumerate}
+        \item Determine a velocidade com que o comprimento de sua 
+        sombra sobre o prédio diminui quando ele está a 12m do prédio. 
+        {\it Rpta: } 3.6 $m/s$
+        \end{enumerate}
+     \item ({\it Escada deslizante}) 
+     Uma escada de 25 cm está encostada na parede de uma casa e sua base está sendo
+     empurrada no sentido contrário ao da parede. 
+     Num certo instante, a base da escada se encontra a 7
+     cm da parede e está sendo empurrada a uma taxa de 2 cm por segundo.
+       \begin{enumerate}
+       	\item Qual a velocidade com a qual o topo da escada se move para baixo nesse instante? {\it Rpta: } (7/12) $cm/s$;
+       	\item Considere o triângulo formado pela parede da casa, a escada e o chão. Calcule a taxa de variação
+       	da área deste triângulo no instante em que a base da escada se encontra a 7 cm da parede. {\it Rpta: } (527/24) $cm^{2}/s$;
+       	\item Calcule a taxa de variação do ângulo formado 
+       	pela parede da casa e a escada, quando a base da
+       	escada estiver a 7 cm da parede. {\it Rpta: } 1/12 $rad/s$.
+       \end{enumerate}
+     \item Uma tina de água tem 10 metros de comprimento e uma seção transversal com a forma de um trapézio
+     isósceles com 30 cm de comprimento na base, 80 cm de extensão no topo e 50 cm de altura. Suponha que a
+     tina for preenchida com água a uma taxa de 0.2 $m^{3}/min$.
+     Quão rápido estará subindo o nível da água
+     quando ela estiver a 30 cm de profundidade? {\it Rpta:} 
+     (10/3) $cm/min$
+    \end{enumerate} 
+\end{document}      
