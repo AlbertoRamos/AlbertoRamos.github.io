@@ -41,6 +41,7 @@ tag:        2018s1
   [L2 2.4.1 c]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.1 c.jpg),
   [L2 2.4.2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 2.4.2.jpg),
 - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 calculo.pdf)
+- [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 4 calculo 1.pdf)
 
 # Provas
 
