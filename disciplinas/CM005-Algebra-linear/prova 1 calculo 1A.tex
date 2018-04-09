@@ -1,0 +1,240 @@
+%% prova de calculo I
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+\usepackage{enumitem} %enumerate with letters
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large CMA111:  Cálculo 1A } \\
+  {\bf Prof.} Alberto Ramos \\
+ Abril de 2018
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100} %% uncomment to set the total points in 100
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. 
+    \hspace{2.5mm} \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular}
+\end{center}
+  
+ % $$\textbf{Proibido usar o L'hospital para o cálculo de limites. }$$
+  
+ \begin{questions}
+  \question Calcule os seguintes limites (\textbf{Proibido usar o L'hospital para o cálculo de limites. })
+   \begin{parts}
+   \part [10] $\lim_{x \rightarrow -1} \frac{4x^{5}+x^{2}+6}{x^{4}+2}$
+     \begin{solution} Como o denominador é diferente de zero quando $x=-1$ temos que 
+     $$\lim_{x \rightarrow -1} \frac{4x^{5}+x^{2}+6}{x^{4}+2}=
+       \frac{4(-1)^{5}+(-1)^{2}+6}{(-1)^{4}+2}=
+        \frac{-4+1+6}{1+2}=\frac{3}{3}=1. $$
+     \end{solution}
+   \part [10] $\lim_{x \rightarrow 3} \frac{\sqrt{x+6}-3}{\sqrt{x+1}-2}$
+   \begin{solution} Indeterminação $0/0$. Assim, vamos multiplicar adequadamente para eliminar dita determinação. Multiplicando adequadamente temos que  
+       $$ 
+       \frac{\sqrt{x+6}-3}{\sqrt{x+1}-2}=
+       \left( \frac{\sqrt{x+6}-3}{\sqrt{x+1}-2} \right)
+       \left( \frac{\sqrt{x+6}+3}{\sqrt{x+6}+3} \right)
+       \left( \frac{\sqrt{x+1}+2}{\sqrt{x+1}+2} \right)=
+       %\frac{\sqrt{x+6}^{2}-3^{2}}{\sqrt{x+1}^{2}-2^{2}}
+       %\frac{\sqrt{x+1}+2}%{\sqrt{x+6}+3}=
+       \frac{\sqrt{x+1}+2}{\sqrt{x+6}+3}. 
+       $$
+       Assim,
+       $$
+       \lim_{x \rightarrow 3} \frac{\sqrt{x+6}-3}{\sqrt{x+1}-2}=
+       \lim_{x \rightarrow 3} \frac{\sqrt{x+1}+2}{\sqrt{x+6}+3}=
+       \frac{4}{6}
+       .$$ 
+     \end{solution}
+   \part [10]
+   $\lim_{x \rightarrow 0^{+}} (e^{x}+4x)^{\frac{1}{x}}$
+     \begin{solution} Temos indeterminação $1^{\frac{1}{\infty}}$. 
+     A ideia é usar $\lim_{u \rightarrow 0 }\frac{\ln (1+u)}{u}=1$. Para isso vamos re-escrever $(e^{x}+4x)^{\frac{1}{x}}=e^{\frac{1}{x}\ln(e^{x}+4x)}$. 
+     Assim, basta calcular $\lim_{x \rightarrow 0^{+}}\frac{1}{x}\ln(e^{x}+4x)$. Portanto, 
+     $$\frac{1}{x}\ln(e^{x}+4x)=\frac{1}{x}\frac{\ln (1+e^{x}+4x-1)}{
+     e^{x}+4x-1}(e^{x}+4x-1)=
+     \frac{\ln (1+e^{x}+4x-1)}{
+     e^{x}+4x-1}\frac{e^{x}-1+4x}{x}.$$ Agora, procederemos a calcular cada limite por separado 
+       \begin{enumerate}[label=\Alph*]
+       \item  $\lim_{x \rightarrow 0^{+}}\frac{\ln (1+e^{x}+4x-1)}{
+     e^{x}+4x-1}=1$. Bastar notar que quando $x \rightarrow 0^{+}$, $u:=e^{x}+4x-1 \rightarrow 0$ e logo fazendo mudança de variável $\lim_{x \rightarrow 0^{+}}\frac{\ln (1+e^{x}+4x-1)}{
+     e^{x}+4x-1}=\lim_{u \rightarrow 0} \frac{\ln (1+u)}{u}=1$.
+      \item $\lim_{x \rightarrow 0^{+}}\frac{e^{x}-1+4x}{x}=\lim_{x \rightarrow 0^{+}}\frac{e^{x}-1}{x}+4=1+4=5$.
+       \end{enumerate}
+     Usando as regras de cálculo para limites 
+     $$
+     \lim_{x \rightarrow 0^{+}}\frac{1}{x}\ln(e^{x}+4x)=
+     \lim_{x \rightarrow 0^{+}}\frac{\ln (1+e^{x}+4x-1)}{
+     e^{x}+4x-1}.
+     \lim_{x \rightarrow 0^{+}}\frac{e^{x}-1+4x}{x}=1.5=5
+     $$
+     Finalmente, $\lim_{x \rightarrow 0^{+}} (e^{x}+4x)^{\frac{1}{x}}=
+     e^{\lim_{x \rightarrow 0^{+}}\frac{1}{x}\ln(e^{x}+4x)}=e^{5}$.
+     \end{solution}
+   \part [10] $\lim_{x \rightarrow \frac{\pi}{2}} (\frac{\pi}{2}-x)\tan(x)$.
+    \footnote{ Lembre que $\sin(\frac{\pi}{2}+y)=\cos(y)$ e 
+    $\cos(\frac{\pi}{2}+y)=-\sin(y)$ para todo $y \in \mathbb{R}$.}
+     \begin{solution}
+     Indeterminação $0 \infty$. 
+     Vamos re-escrever a expressão para eliminar a indeterminação. 
+     Faça a mudança de variável $-y=\frac{\pi}{2}-x$. Observe que se 
+     $x \rightarrow \pi/2$, temos que $y \rightarrow 0$. Calculando,  
+     $$(\frac{\pi}{2}-x)\tan(x)=-y\frac{\sin(\pi/2+y)}{\cos(\pi/2+y)}=
+     -y\frac{\cos(y)}{-\sin(y)}=\frac{\cos(y)}{\frac{\sin(y)}{y}}.
+     $$
+     Assim, 
+     $$ \lim_{x \rightarrow \frac{\pi}{2}}(\frac{\pi}{2}-x)\tan(x)=
+     \lim_{y \rightarrow 0}\frac{\cos(y)}{\left(\frac{\sin(y)}{y}\right)}=
+     \frac{\cos(0)}{1}=1.
+     $$
+     \end{solution}    
+  
+   \part [10] $\lim_{x \rightarrow \infty} \sqrt{x(x+4)}-x$
+     \begin{solution}Indeterminação $\infty-\infty$. Assim, 
+     $$
+     \sqrt{x(x+4)}-x
+     =\frac{\sqrt{x(x+4)}+x}{\sqrt{x(x+4)}+x}\left(\sqrt{x(x+4)}-x\right)=
+     \frac{4x}{x\left(\sqrt{1+\frac{4}{x^{2}}}+1\right)}
+     =
+      \frac{4}{\left(\sqrt{1+\frac{4}{x^{2}}}+1\right)}
+     $$
+     Portanto, 
+     $$\lim_{x \rightarrow \infty} \sqrt{x(x+4)}-x=\lim_{x \rightarrow \infty} 
+     \frac{4}{\left(\sqrt{1+\frac{4}{x^{2}}}+1\right)}=\frac{4}{\sqrt{1}+1}=2.$$
+     \end{solution}
+   \end{parts}
+  \question[20] Determine os valores de $a$  e $b$ para que a seguinte função seja contínua
+  em $x=8$.            
+    $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{1}{8} \lbrack\!\lbrack x-6 \rbrack\!\rbrack  
+    &\text{, se } x < 8 \\
+    &ab    &\text{, se } x=8\\
+    &\frac{2}{b|2x-7|}    &\text{, se } x>8\\
+            \end{array}
+            \right. 
+    $$
+      \begin{solution}
+      Primeiro, calculemos os limites laterais quando $x$ tende a $8$.
+        \begin{enumerate}
+        \item {\it Limite a direita}. Observe que  
+        $$ 
+        \lim_{x \rightarrow 8^{+}} f(x)=
+        \lim_{x \rightarrow 8^{+}}\frac{2}{b|2x-7|} =\frac{2}{b|2.8-7|}
+       =\frac{2}{9b} $$
+        \item {\it Limite a esquerda}. Como 
+        $\lbrack\!\lbrack x \rbrack\!\rbrack$ é uma função definida por partes, vamos analisar o que acontece com $f(x)$ quando $x \in (7, 8)$.
+        Se $7<x<8$, então $1<x-6<2$ e assim $\lbrack\!\lbrack x-6 \rbrack\!\rbrack=1$. Desta observação, temos que $f(x)=\frac{1}{8}\lbrack\!\lbrack x-6 \rbrack\!\rbrack=\frac{1}{8}$ para todo $x$ tal que  $7<x<8$. 
+        Logo
+          $$ 
+        \lim_{x \rightarrow 8^{-}} f(x)=
+        \lim_{x \rightarrow 8^{-}} \frac{1}{8}\lbrack\!\lbrack x-6 \rbrack\!\rbrack=
+        \lim_{x \rightarrow 8^{-}} \frac{1}{8}=\frac{1}{8} $$
+        \item {\it O limite $\lim_{x \rightarrow 8} f(x)$ deve existir}.  Assim, o limite a direita e o limite a esquerda são iguais o que implica que 
+        $\frac{1}{8}=\frac{2}{9b}$ e portanto 
+        $b=\frac{16}{9}$ e $\lim_{x \rightarrow 8} f(x)=\frac{1}{8}$.
+        \item {\it  O limite $\lim_{x \rightarrow 8} f(x)$ coincide com $f(8)$ }. Assim, $f(8)=ab=\frac{1}{8}$. Assim, $a=\frac{1}{8b}=\frac{9}{8.16}=\frac{9}{128}$. 
+        \end{enumerate}
+      \end{solution}
+    \question[15] Sejam  
+    $f,g:\mathbb{R}\rightarrow \mathbb{R}$ duas funções 
+    tais que $|\sin(x)|\leq g(x)\leq 4|x|$ e 
+    $0 \leq f(x)\leq 1+|\sin(1/x)|$,  $\forall x \neq 0$. 
+    Calcule $\lim_{x \rightarrow 0} f(x)g(x)$.
+       \begin{solution}
+       Como ambas funções são não-negativas, quando multiplicamos 
+       $f(x)$ com $g(x)$, a ordem das desigualdades se mantem. Portanto, 
+       $$0 \leq f(x)g(x) \leq (1+|\sin(\frac{1}{x})|)(4|x|)\leq 2. 4|x|=8 |x|, $$
+       onde na terceira desigualdades temos usado que $|\sin(y)|\leq 1$, 
+       para todo $y \in \mathbb{R}$.
+       Como $\lim_{x \rightarrow 0} 8|x|=0$, podemos usar o Teorema do Confronto, para afirmar que  $\lim_{x \rightarrow 0} f(x)g(x)=0$. Observe que não sabemos se o limite $\lim_{x \rightarrow 0} f(x)$ existe ou não.       
+       \end{solution}
+    \question [15] Seja 
+     $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &x^{2}-1& \text{, se } x \leq 0 \\
+    &x+2    &\text{, se } x>0\\
+            \end{array}
+            \right. 
+    $$
+    Calcule os limites laterais 
+    $\lim_{x \rightarrow -1^{+}} (f \circ f)(x)$
+    e $\lim_{x \rightarrow -1^{-}} (f \circ f)(x)$. Existe o limite $\lim_{x \rightarrow -1} (f \circ f)(x)$?
+       \begin{solution}
+       Observe que $f$ não é contínua em $x=0$. Assim, devemos analisar por partes. Primeiro, calculemos os limites laterais. 
+         \begin{enumerate}
+         \item {\it Limite a direita: 
+         $\lim_{x \rightarrow -1^{+}} (f \circ f)(x)$}. Considere 
+         $x \in (-1, 0)$, assim pela regra de correspondência 
+         $f(x)=x^{2}-1$, mas como $x^{2}<1$ para todo $x \in (-1, 0)$
+         temos que 
+         $f(x)=x^{2}-1$ é negativo ($f(x)<0$) e como consequência 
+         $(f \circ f)(x)=f(f(x))=f^{2}(x)-1=(x^{2}-1)^{2}-1$.
+         Calculando limite 
+         $$ \lim_{x \rightarrow -1^{+}} (f \circ f)(x)=
+         \lim_{x \rightarrow -1^{+}} (x^{2}-1)^{2}-1=((-1)^{2}-1)^{2}-1=-1. 
+         $$
+         \item {\it Limite a esquerda: 
+         $\lim_{x \rightarrow -1^{-}} (f \circ f)(x)$}. Considere 
+         $x \in (-2, -1)$. Como $x<0$ temos que   
+         $f(x)=x^{2}-1$. Quando $x$ pertence a $(-2,-1)$ 
+         temos que $f(x)=x^{2}-1$
+         é positivo $(f(x)>0)$ e como consequência da regra 
+         de correspondência 
+          $(f \circ f)(x)=f(f(x))=f(x)+2=(x^{2}-1)+2=x^{2}+1$.
+          Calculando limite 
+         $$ \lim_{x \rightarrow -1^{-}} (f \circ f)(x)=
+         \lim_{x \rightarrow -1^{-}} x^{2}+1=(-1)^{2}+1=2. 
+         $$
+         \end{enumerate}
+       O limite não existe pois ambos limites laterais são diferentes.   
+       \end{solution}
+    \question [10] Seja $f:[0,1] \rightarrow \mathbb{R}$ uma função contínua tal que $f(x) \in [0,1]$ para todo $x$.
+      Então, mostre que existe um $c \in [0,1]$ tal que $f(c)=c$.
+        \begin{solution}
+        Defina $g(x):=f(x)-x$. Como $g$ é a diferença de duas funções contínuas, temos que g é contínua. Como $f(x)\in [0,1]$. Temos que 
+        $g(0)=f(0)\geq 0$ e que $g(1)=f(1)-1\leq 0$. Logo, do Teorema do Valor Intermediario, temos que existe um $c \in [0,1]$ tal que $g(c)=0$. Isto é,
+        $ g(c)=f(c)-c=0$ ou $f(c)=c$.
+    \end{solution}
+ \end{questions}
+\end{document}
