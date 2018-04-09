@@ -45,8 +45,7 @@ tag:        2018s1
 
 # Provas
 
-- [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 calculo 1A.pdf), 
-[Prova 1 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 1 CMA111.pdf)
+- [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 calculo 1A.pdf), [Prova 1 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 1 CMA111.pdf)
 
 # Bibliografia
 
