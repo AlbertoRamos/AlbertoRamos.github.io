@@ -1,0 +1,254 @@
+% lista 5(calculo 1)
+\documentclass[latin,20pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 5: Cálculo I }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Derivação implicita;
+ \item Derivadas da funções inversas e derivadas de funções hiperbólicas; 
+ \item Aplicações da derivada.  
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+ 
+  \section{Exercícios}   
+ 
+ Faça do livro texto, os exercícios correspondentes aos temas desenvolvidos em aula. 
+  
+  \section{Exercícios adicionais}
+    \subsection{Derivada paramétricas}
+     \begin{enumerate}
+     \item Encontre a equação da reta tangente da curva $x=t^{2}+1$, e 
+     $y=2t+t^{3}$ no ponto $t=-2$. {\it Rpta:} reta tangente: $7y+84=2x-10$.
+     \item Considere o movimento de uma partícula sobre a curva 
+     $y^{2}=x^{3}$, com $y>0$. Se a abscissa da partícula aumenta em $5$ cm por segundo quando $x=4$. Qual a taxa de variação da ordenada da partícula nesse instante? {\it Rpta: } $\frac{dy}{dt}=15$ unidades por segundo.
+     \item Verifique que a função dada por 
+     $x(t)=\frac{1+t}{t^{3}}$, 
+     e $y(t)=\frac{2}{t}+\frac{3}{2t^2}$ satisfaz a relação 
+     $x (\frac{dy}{dx})^{3}=1+\frac{dy}{dx}$.
+     \end{enumerate}
+    \subsection{Funções Hiperbólicas}
+     \begin{enumerate}
+     \item Mostre que $\sinh x$ tem inversa e a inversa é 
+     $\text{arcsinh} x=\ln(x+\sqrt{x^{2}+1})$, $x \in \mathbb{R}$.
+     Faça o mesmo para as outras funções hiperbólicas. 
+     \item Verifique que para todo $x,y \in \mathbb{R}$ que 
+     (a) 
+     $cosh(x \pm y)=cosh(x)cosh(y)\pm senh(x)senh(y)$ e
+      (b) 
+     $senh(x \pm y)=senh(x)cosh(y)\pm cosh(x)senh(y)$. 
+     \item Mostre que 
+     $$\text{tanh}(x \pm y)=\frac{\text{tanh}(x) \pm \text{tanh}(y)}
+     {1\pm \text{tanh}(x) \text{tanh}(y)}.$$     
+     \item Mostre que 
+     (a) $\lim_{x \rightarrow 0} \frac{\text{sinh} x}{x}=1$; 
+     (b) $\lim_{x \rightarrow 0} \frac{1-\text{sinh} x}{x}=0$ e 
+     (c) $\lim_{x \rightarrow 0} \frac{\text{tanh} x}{x}=1$.         
+     \end{enumerate}
+    \subsection{Derivada de função inversa}
+      \begin{enumerate}
+      \item Considere $f(x)=e^{x}+2x$. Mostre que a inversa $f^{-1}$
+      é derivável e se $g$ é a inversa de $f$, temos que 
+      $g'(x)=\frac{1}{2+\exp(g(x))}$.
+      \item Se $f(x)=x^{3}+x$. Mostre que (a) $f$ tem admite 
+      função inversa e (b) calcule $(f^{-1})'(0)$.
+      \end{enumerate}
+    \subsection{Máximos, mínimos e pontos críticos}
+      \begin{enumerate}
+      \item Qual é o ponto da curva $yx=2$, $x>0$, que está mais próximo ao origem. 
+      \item Considere duas partículas $A$ e $B$ que se movem sobre os eixos $x$ e eixo $y$ respetivamente. Se a posição de $A$ é $(\sqrt{t}, 0)$ e 
+      a posição de $B$ é $(0,t^{2}-\frac{1}{4})$, para $t \geq 0$. Encontre o instante onde a distância entre $A$ e $B$ seja o menor possível.
+       \item Considere a curva $y=1-x^{2}$, $x \in [0,1]$. 
+       Qual a reta tangente à curva tal que a área do triângulo que ela forma com os eixos coordenados seja mínima? 
+       \item Seja $L(x)=-x^{3}+12x^{2}+60x-4$ o lucro de uma empresa ao vender certo determinado produto, onde $x$ representa a quantidade do produto produzida. Determine o lucro máximo e a produção que máximiza o lucro.
+       {\it Rpta: } $x=10$, Lucro máximo $L(10)$   
+      \end{enumerate}
+    \subsection{Teorema de Rolle e Teorema de Valor Médio}
+      \begin{enumerate}
+      \item Mostre que a equação $f(x)=x^{7}+5x^{3}+x-7$ tem uma única solução.      
+      \item Considere a função $f(x)=e^{x}-\frac{1}{x}-\frac{x}{2}$, com $x>0$. 
+      Então: 
+        \begin{enumerate}
+        \item Dado $y \in \mathbb{R}$. Mostre que existe uma única solução 
+        de $e^{x}-x^{-1}-x/2=y$. Conclua que $f$ tem inversa.
+        \item Verifique que $|f^{-1}(x)-f^{-1}(y)| \leq 2 |x-y|$, para todo 
+        $x, y \in \mathbb{R}$.
+        \end{enumerate}
+      \item Seja $f(x)=3x+\cos x$. Mostre que (a) 
+      $f$ é bijetora e (b) calcule $f^{-1}(1)$.
+      \item Use o teorema de valor médio para 
+      mostrar as seguintes desigualdades:
+           \begin{enumerate}
+           \item $\ln(1+x)<x$, para todo $x \neq -1$.
+           \item $|\ln \frac{x}{y}|\leq |x-y|$, para todo 
+           $a, b \in \mathbb{R}$, 
+           com a $\geq 1$, $b \geq 1$.
+           \item $x-y \leq e^{x}-e^{y}$, para todo $y, x$ 
+           com $x \geq y \geq 0$.
+           \item $a^{a}(b-a)<b^{b}-a^{a}$, para $a, b$ com $1 \leq a<b$.
+           \end{enumerate}
+      \item Podemos usar o teorema do valor médio na função 
+      $f(x)=\frac{2x-1}{3x-4}$ no intervalo $[1,2]$? 
+      Caso afirmativo, encontre os valores que 
+      verifiquem. {\it Rpta:} Não se cumple as condições 
+      do teorema do valor médio.  
+      \item Mostre as identidades
+        \begin{enumerate}
+        \item $\arcsin (1-2y^{2})=2 \arcsin (y)$, para $y \in (-1,1)$.
+        \item $\arcsin \frac{x-1}{x+1}+\frac{\pi}{2}=2 \arctan \sqrt{x}$,
+        para todo $x \in \mathbb{R}$.
+        \end{enumerate}            
+      \end{enumerate}      
+      
+      
+      
+      
+      
+      
+      
+\end{document}
+
+
+
+
+
+
+
+
+
+
+    \subsection{Regras de cálculos para limites}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $\lim_{u \rightarrow 1} 
+    \frac{\sqrt{3+u^2}-2}{1-u}=-\frac{1}{2}$.
+    \item $\lim_{t \rightarrow 4} 
+    \frac{3-\sqrt{5+t}}{1-\sqrt{5-t}}=-\frac{1}{3}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{\sqrt{3x-2}+\sqrt{x}-\sqrt{5x-1}}
+    {\sqrt{x}-\sqrt{2x-1}}=-\frac{3}{2}$.
+    \item Se $f(x)=\sqrt{1+3x}$. Calcule 
+    $\lim_{h \rightarrow 0} 
+    \frac{f(x+h)-f(x)}
+    {h}=\frac{3}{2\sqrt{3x+1}}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{x^{100}-2x+1}
+    {x^{50}-2x+1}=\frac{49}{24}$.
+    \item $\lim_{x \rightarrow 2} 
+    \frac{\sqrt{1+\sqrt{2+x}}-\sqrt{3}}
+    {x-2}=\frac{1}{8\sqrt{3}}$.
+     \item Se 
+    $\lim_{x \rightarrow 0} 
+    \frac{f(x)-1}
+    {x}=1$. Prove $\lim_{x \rightarrow 0} 
+    \frac{f(ax)-f(bx)}
+    {x}=a-b$. {\it Dica:} Considere se $a$ e $b$ são iguais a zero ou não.
+    \item Dado $a \in \mathbb{R}$. Mostre que $\lim_{x \rightarrow a} 
+    \frac{x\sqrt{x}-a\sqrt{a}}
+    {\sqrt{x}-\sqrt{a}}=3a$.
+    \end{enumerate}
+    \subsection{Limites laterais}   
+   Calcule, se existe, os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \frac{5}{2}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Sim, e o limite é $\sqrt{19/2}$.
+     \item $$\lim_{x \rightarrow \frac{7}{3}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Não.
+    \item $$\lim_{x \rightarrow -3} 
+    \frac{\lbrack\!\lbrack x-1 \rbrack\!\rbrack -x}
+    {
+    \sqrt{|x|^2-\lbrack\!\lbrack x \rbrack\!\rbrack}
+    }.$$ Não.
+     \item $$\lim_{x \rightarrow 1} 
+    \frac{\lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x^{2}}
+    {
+    \lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x
+    }.$$ Não.
+    \item Considere a função 
+     $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{x^3+3x^2-9x-27}{x+3} &\text{, se } x \in (-\infty, -3) \\
+    &ax^2-2bx+1     &\text{, se } x \in [-3,3] \\
+            & \frac{x^2-22x+57}{x-3}     &\text{, se } x \in (3,\infty) \\
+            \end{array}
+            \right. 
+    $$
+    Para quais valores de $a$ e $b$, existe os limites de $f$ em $x=-3$ e $x=3$? {\it Rpta: } $a=-1, b=4/3$.
+    \end{enumerate}
+    \subsection{Limites Trigonométricos}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \pi} \frac{1-\sin(\frac{x}{2})}{x-\pi}=0$$
+    \item $$\lim_{x \rightarrow 0} \frac{x-\sin(x)}{x^2}=0. $$
+    \item $$\lim_{x \rightarrow 0} \frac{1-\sqrt{\cos(x)}}{x^2}=\frac{1}{4}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\cos(\frac{\pi x}{2})}{1-\sqrt{x}}=\pi$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos^7(x)}{x^2}=\frac{7}{2}$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos(1-\cos(x))}{x^4}=\frac{1}{8}$$
+    \item $$\lim_{x \rightarrow \frac{\pi}{4}} 
+    \frac{\sin(2x)-\cos(2x)-1}{\sin(x)-\cos(x)}=\sqrt{2}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\sin(\pi x)+\cos(\frac{\pi x}{2})}
+    {\tan(\frac{\pi x}{4})-1}=-\frac{3 \pi}{4}$$
+    \end{enumerate}
+    \subsection{Definição de limite}   
+   Usando a definição de limite. Prove que 
+    \begin{enumerate}
+    \item $\lim_{x \rightarrow 2} \frac{x^2+1}{x-1}=5$.
+    \item $\lim_{x \rightarrow 3} 
+    \frac{1}{x^2+16}=\frac{1}{25}$. 
+    \item $\lim_{x \rightarrow \frac{1}{2}} x^{2}\lbrack\!\lbrack x+2 \rbrack\!\rbrack=\frac{1}{2}$. 
+    \item  $\lim_{x \rightarrow 4} 
+    \frac{x^3-15x-4}{x-3}=0$.
+    \item $\lim_{x \rightarrow a}\cos(x)=\cos(a)$, para qualquer $a \in \mathbb{R}$.  
+    \end{enumerate}
+     \subsection{Teorema de confronto e variantes}   
+    \begin{enumerate}
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $|f(x)|\leq 3|x|$, $\forall x \in \mathbb{R}$.
+    Calcule $\lim_{x \rightarrow 0} \frac{f(x^3)}{x}$.
+    \item Considere duas funções 
+    $f,g:\mathbb{R}\rightarrow \mathbb{R}$ com a propriedade que $|\sin(x)|\leq g(x)\leq 4|x|$ e 
+    $0 \leq f(x)\leq 1+|\sin(1/x)|$ para todo $x \neq 0$. 
+    Calcule $\lim_{x \rightarrow 0} (f(x)g(x)+\cos(x))$.
+    {\it Rpta: } 1.
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $1+x^2+\frac{x^6}{3}\leq f(x)+ 1 \leq 
+    \sec{x^2}+\frac{x^6}{3}$, para todo $x \in \mathbb{R}$. Calcule
+    $$
+    \lim_{x\rightarrow 0}f(x) \text{ e } 
+    \lim_{x\rightarrow 0}f(x)\cos\left(\frac{1}{x^2+1}\right).
+    $$ {\it Rpta: } Ambos são zeros. 
+    \end{enumerate}
+\end{document}
+
+  
