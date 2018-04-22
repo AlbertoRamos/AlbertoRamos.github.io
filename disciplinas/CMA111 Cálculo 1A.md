@@ -18,7 +18,7 @@ tag:        2018s1
   | **Prova 3:** | 18/06
   | **2da chamada**| 22/06
   | **Exame:**   | 02/07
-  | **Monitórias:**   | Segunda a sexta:  12:00-13:30 (sala de monitoria no bloco PC)
+  | **Monitórias:**   | Segunda a sexta:  12:00-13:30 (sala PA 09)
   |                   |  Segunda-quarta-sexta:  17:30-19:00 (sala PA 09)
 
 # Ementa
