@@ -45,6 +45,7 @@ tag:        2018s1
 - [Lista 5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 5 calculo.pdf)
 - [Lista 6]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 6 calculo.pdf)
 - [Lista 7]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 7 calculo.pdf)
+- [Lista 8]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 8 calculo.pdf)
 
 # Provas
 
