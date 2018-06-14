@@ -32,6 +32,7 @@ tag:        2018s1
 
 - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 topologia.pdf)
 - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 topologia.pdf)
+- [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 topologia.pdf)
 
 # Provas
 
