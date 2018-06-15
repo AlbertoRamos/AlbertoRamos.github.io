@@ -16,8 +16,8 @@ tag:        2018s1
   | **Prova 1:** | 02/04
   | **Prova 2:** | 11/05
   | **Prova 3:** | 18/06
-  | **2da chamada**| 22/06
-  | **Exame:**   | 02/07
+  | **2da chamada**| 20/06 (novo)
+  | **Exame:**   | 02/07 (pode mudar para 04/07)
   | **Monitórias:**   | Segunda a sexta:  12:00-13:30 (sala PA 09)
   |                   |  Segunda-quarta-sexta:  17:30-19:00 (sala PA 09)
 
