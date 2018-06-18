@@ -55,7 +55,7 @@ tag:        2018s1
 
 # Bibliografia
 
-## Principal
+## Principal 
 
 - J.STEWART – Cálculo, vol 1, Cengage Learning, São Paulo. 
 - L.LEITHOLD - O Cálculo com Geometria Analítica, vol 1, Harbra, Rio de Janeiro.
