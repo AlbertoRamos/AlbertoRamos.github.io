@@ -38,7 +38,8 @@ tag:        2018s1
 
 - [Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 topologia.pdf)
 - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 2 topologia.pdf)
-- [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas CM078 Topologia 2018 1.pdf)
+- [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 3 topologia.pdf)
+- [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas total CM078 Topologia 2018 1.pdf)
 
 # Bibliografia
 
