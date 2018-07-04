@@ -53,6 +53,7 @@ tag:        2018s1
 - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 2 calculo 1A 1.pdf), [Prova 2 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 1 2 CMA111 a.pdf)
 - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 3 calculo 1A 1.pdf), [Prova 3 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 1 2 3 CMA111 a.pdf)
 - [Prova Substitutiva]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova substitutiva calculo 1A.pdf), [Prova Subs Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas provas CMA111 a.pdf)
+- [Nota Final]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas final CMA111 a.pdf)
 
 # Bibliografia
 
