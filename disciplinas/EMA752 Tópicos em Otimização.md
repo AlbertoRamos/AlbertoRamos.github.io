@@ -37,8 +37,8 @@ tag:        2018s2
   - James, G., Witten, D., Hastie, T. e Tibshirani, An Introduction to Statistical Learning, 2013 (livro-texto);
   - Bishop, Pattern Recognition and Machine Learning, 2006;
   - A. Bandeira, Ten Lectures and Forty-Two Open Problems in the Mathematics of Data Science;
+
+## Complementar
   - F. E. Curtis and K. Scheinberg. Optimization Methods for Supervised Machine Learning: From Linear Models to Deep Learning. In INFORMS Tutorials in Operations Research, chapter 5, page 89–114. 
   Institute for Operations Research and the Management Sciences (INFORMS), 2017;
   - L. Bottou, F. E. Curtis, and J. Nocedal. Optimization Methods for Large-Scale Machine Learning. SIAM Review, 60(2):223–311, 2018.
-  
-## Complementar
