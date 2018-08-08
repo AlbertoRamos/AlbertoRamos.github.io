@@ -20,7 +20,7 @@ tag:        2018s2
 
 # Ementa
   
-  Abordagens de problemas de ciências dos dados usando algumas metodologias. 
+  Abordagens de problemas de ciências dos dados usando algumas metodologias modernas. 
   
 # Programa:
   
