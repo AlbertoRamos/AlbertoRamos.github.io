@@ -30,6 +30,8 @@ tag:        2018s2
 
 # Listas
 
+  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo 2.pdf)
+
 # Provas
 
 # Bibliografia
