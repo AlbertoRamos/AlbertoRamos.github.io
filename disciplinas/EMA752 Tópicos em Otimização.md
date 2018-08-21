@@ -12,7 +12,7 @@ tag:        2018s2
   | **Nome:**    | Tópicos em Otimização 
   | **Turma:**   | [A]
   | **Local:**   | 
-  | **Horário:** | 17h30 terça e quinta. 
+  | **Horário:** | 15h30 terça e quinta. 
   | **Prova 1:** | 
   | **Prova 2:** | 
   | **Prova 3:** |  
