@@ -24,8 +24,9 @@ tag:        2018s2
   
 # Programa:
   
-  Os tópicos tratados incluiram: Clustering, árvores de classificação e floresta, máquina de vetor de suporte, redes neurais, 
-  redução de dimensionalidade, aproximação de algoritmos, matrices aleatórias, analise de componente principais, 
+  Os tópicos tratados incluiram: regressão, classificação, árvores de classificação e floresta, 
+  máquina de vetor de suporte, redes neurais, redução de dimensionalidade, aproximação de algoritmos, 
+  matrices aleatórias, analise de componente principais, 
   métodos de gradiente, regularização, dualidade para optimização convexa e outros. 
   
     
@@ -34,7 +35,10 @@ tag:        2018s2
 # Bibliografia
 
 ## Principal
-  - James, G., Witten, D., Hastie, T. e Tibshirani, An Introduction to Statistical Learning, 2013 (livro-texto);
+ 
+  - T. Hastie, R. Tibshirani, J. Friedman, The Elements of Statistical Learning: Data Mining, Inference, and Prediction
+  , 2009 (livro-texto);
+  - James, G., Witten, D., Hastie, T. e Tibshirani, An Introduction to Statistical Learning, 2013;
   - Bishop, Pattern Recognition and Machine Learning, 2006;
   - A. Bandeira, Ten Lectures and Forty-Two Open Problems in the Mathematics of Data Science;
 
