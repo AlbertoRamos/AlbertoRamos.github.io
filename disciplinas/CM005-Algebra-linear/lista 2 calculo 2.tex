@@ -1,0 +1,500 @@
+% lista 2(calculo 2)
+\documentclass[11pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 2: Cálculo II }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+{\bf Lista em constante atualização}.
+ \begin{enumerate}
+ \item Funções reias de várias variáveis;
+ \item Limites, continuidade, derivadas parcias, derivadas. Regras de cálculo. 
+ \end{enumerate}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%\section*{Elipse} 
+%Seja $\mathcal{O}$ um aberto em $\mathbb{R}^{n}$. 
+%Denote por 
+%$C^{1,1}_{L}(\mathcal{O})$ o conjunto das funções deriváveis 
+%em $\mathcal{O}$ cuja derivada é Lipschitziana com constante de 
+%     Lipschitz $L$ em $\mathcal{O}$, isto é, 
+%     $\|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\|$, 
+%     para todo $x,y \in \mathcal{O}$.
+ 
+  \section{Exercícios}   
+ 
+ Faça do livro texto \footnote{Livro texto: Cálculo. Volume II. {\it J. Stewart}, 5 edição.}, os exercícios correspondentes aos temas desenvolvidos em aula. 
+  
+  \section{Exercícios adicionais}
+    \subsection{Funções reais de várias variaveis}
+     
+     \begin{enumerate}
+     \item Escreva  o volume de um cone circular reto como função da altura  e a generatriz. 
+     
+     {\it Rpta:} $Volume(x,y)=\frac{\pi}{3}(x^2y-y^{3})$, onde
+     $x=generatriz$ e
+     $y =altura$. Descreva o dominio. 
+     \item Encontre o dominio, imagem e as curvas de nível da função 
+     $f(x,y)=\sin(y-x)$ {\it Rpta:} Domínio $\mathbb{R}^{2}$, 
+     imagem $\mathbb{R}$ curva de nível {\it: retas paralelas}.
+     \item Descreva o dominio das seguintes funções 
+       \begin{enumerate}
+       \item $f(x,y)=\sqrt{\sin\pi(x^{2}+y^{2})}$ 
+       {\it Rpta} 
+       União de $\{(x,y): 2n\leq x^{2}+y^{2}\leq 2n+1\}$
+        para $n \in \mathbb{N}$.
+        \item $f(x,y)=\sqrt{x-\sqrt{y})}$ 
+       {\it Rpta} 
+       $\{(x,y): x\geq 0, y \geq 0, x^{2}\geq y\}$.
+        \item $f(x,y,z)=\arcsin x+ \arcsin y+ \arctan z$. {\it Rpta} 
+       $\{(x,y,z): |x|\leq 1, |y|\leq 1\}$.
+        \item $f(x,y,z)=\arcsin\frac{z}{\sqrt{x^{2}+y^{2}}}$ 
+       {\it Rpta} $B(0,1)\setminus \{(0,0,0)\}$.
+       \end{enumerate}
+      \item Construia as curvas de nivel de 
+      $z=\arctan \frac{2ay}{x^{2}+y^{2}-a^{2}}$, com $a>0$ fixo. 
+      {\it Rpta:} Familia de circunferências.  
+     \end{enumerate}
+     
+    \subsection{Limites e continuidade}
+     \begin{enumerate}
+    \item Considere a função 
+     $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &\frac{xy}{|x|+|y|} &\text{, se } (x,y)\neq (0,0) \\
+    & 0 &\text{, se } (x,y)=(0,0)  \\
+            \end{array}
+            \right. 
+    $$      
+    Mostre que $f$ é contínua em $(0,0)$.
+    \item Prove, usando a definição de limite, que 
+    $\lim_{(x,y)\rightarrow (3,-1)} x^{2}+y^{2}-4x+2y=-4$.
+  
+    \item Considere a função 
+     $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &x^{2}+\frac{yx^{3}}{x^{4}+y^2} &\text{, se } (x,y)\neq (0,0) \\
+    & 0 &\text{, se } (x,y)=(0,0)  \\
+            \end{array}
+            \right. 
+    $$      
+    A função $f$ é contínua em $(0,0)$? {\it Rpta: } Sim.
+    Use $2|a||b|\leq a^{2}+b^{2}$.
+    \item Considere a função 
+     $$
+    f(x,y,u,v)= \left\{  
+            \begin{array}{lll}
+    &\frac{yx}{x^{2}+y^2+w^{2}+z^2} &\text{, se } (x,y,w,z)\neq (0,0,0,0) \\
+    & 0 &\text{, se } (x,y,w,z)=(0,0,0,0)  \\
+            \end{array}
+            \right. 
+    $$      
+    A função $f$ é contínua em $(0,0,0,0)$?
+
+     \item Calcule, se existe, os seguintes limites 
+       \begin{enumerate}
+       \item $\lim_{(x,y)\rightarrow (0,0)} \frac{x^{2}+y^{2}}{\sqrt{x^{2}+y^{2}+1}-1}$.  {\it Rpta:} 2.
+        \item $\lim_{(x,y)\rightarrow (0,0)} (1+x^{2}y^{2})
+        e^{-1/(x^{2}+y^{2})}$.  {\it Rpta:} 1.
+       \item  $\lim_{(x,y)\rightarrow (0,0)} \frac{xy}{x^{3}+y^{3}}$.  
+       {\it Rpta:} Não existe.
+        \item  $\lim_{(x,y)\rightarrow (0,0)} 
+        \frac{y^{2}-3xy+x^{2}}{x^{2}+y^{2}}$.  {\it Rpta:} Não existe.
+        \item  $\lim_{(x,y)\rightarrow (2,0)} 
+        \frac{x+\ln(1+xy)}{1+x+y}$.  {\it Rpta:} 2/3.
+      \item  $\lim_{(x,y)\rightarrow (2,0)} \frac{\sin xy}{y}$.  
+      {\it Rpta:} 2.
+      \item  $\lim_{(x,y)\rightarrow (0,0)} 
+      e^{-\frac{xy^2+3}{y^2+x^2}}$.  
+      {\it Rpta:} 0.
+       \end{enumerate}
+       
+         \item Considere a função 
+     $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &\frac{\tan(x^{2}+y^{2})}{x^{2}+y^2} &\text{, se } (x,y)\neq (0,0) \\
+    & 1 &\text{, se } (x,y)=(0,0)  \\
+            \end{array}
+            \right. 
+    $$      
+    Estude a continuidade de $f$ em $\mathbb{R}^{2}$.
+    \end{enumerate}
+    
+  \subsection{Derivadas parciais, derivadas direcionas e  derivadas e regras da cadeia}  
+    \begin{enumerate}
+    \item Encontre as derivadas parciais $f_{x}$ e $f_{y}$ de 
+    $f(x,y)=xe^{x^{2}y}$ no ponto $(1,\ln 2)$.
+    {\it Rpta:} $f_{x}(1,\ln 2)=2+4\ln 2$ e $f_{y}(1,\ln 2)=2$.    
+    \item Encontrar $D_{1}f(0,y)$ e $D_{2}f(x,0)$, se 
+        $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &\frac{xy(x^{2}-y^{2})}{x^{2}+y^2} &\text{, se } (x,y)\neq (0,0) \\
+    & 0 &\text{, se } (x,y)=(0,0)  \\
+            \end{array}
+            \right. 
+    $$
+    {\it Rpta: } $D_{1}f(0,y)=-y$,  $\forall y$ e 
+     $D_{2}f(x,0)=x$, $\forall x$.
+    
+    \item Quais pontos da superficie $z=xy(1-x-y)$, ao plano tangente é paralelo ao plano $xy$. {\it Rpta: } Pontos $(0,0)$, $1/3(1,1)$, $(1,0)$ e $(0,1)$.
+    \item Calcule os planos tangentes da superficies 
+       \begin{enumerate}
+       \item $z=x^{2}+y^{2}$ no ponto $(1,1,2)$; {\it Rpta: } $z=2x+2y-2$;
+       \item $z^{2}-3x^{2}-y^{2}=0$ no ponto $(1,0,1)$; {\it Rpta: } $y=z$;
+       \end{enumerate}
+     \item Encontre os valores de $a$ e $b$ para que 
+     o plano $ax+by+2z+2=0$ seja tangente ao paraboloide 
+     $z=y^{2}+3x^{2}+1$  no ponto $(1,1,5)$.
+     {\it Rpta: } $a=-12$, $b=-4$.   
+    \item Mostre que se $f$ é diferenciável no ponto $(x,y)$ e $\overrightarrow{u}$ é um vetor unitário. Então 
+     $$ |\frac{\partial}{\partial \overrightarrow{u}} f(x,y)|
+     \leq \|\nabla f(x,y)\|.$$
+    \item Verifique que a função $f(x,y)=x^{3}y-xy^{3}$ é harmônica. 
+    Isto é, $\partial^{2}_{xx} f(x,y)+\partial^{2}_{yy} f(x,y)=0$.
+     \item Calcule as derivadas parciais de $f(x,y)=\int_{x}^{y} \sin (t)dt$. {\it Rpta: } $\partial_{x} f=-e^{\sin x}$ e $\partial_{y} f=e^{\sin y}$.
+     \item Verifique que $x \partial_{x} f(x,y)+y \partial_{y} f(x,y)=2$, 
+     se $f(x,y)=\ln (x^{2}+xy+y^{2})$.
+     \item Para qual valor de $\theta$ a derivada direcional de 
+     $f(x,y)-\sqrt{25-x^{2}-y^{2}}$ no ponto $P_{0}=(1,2)$ e na direção 
+     $\overrightarrow{u}=(\cos \theta, \sin \theta)$ é a menor possível?
+     Qual é esse valor? 
+     {\it Rpta: }  $\theta=\arccos(1/5)$, 
+     $\frac{\partial}{\partial \overrightarrow{u}} f(1,2)=-1/2$. 
+     \item Suponha que a temperatura de uma placa é dada 
+     por $T(x,y)=xe^{2y}+y^{3}e^{x}$. 
+        \begin{enumerate}
+        \item Qual direção a temperatura cresce mais rapidamente no 
+        ponto $(2,0)$? Qual é dita variação?
+        {\it } Direção$=(1,4)$, variação$=\sqrt{17}$.
+        \item Qual direção a temperatura descresce mais rapidamente ?
+        {\it Rpta} Direção$= (-1,-4)$. 
+        \end{enumerate}
+      \item Um ciclista está descendo uma ladeira da forma de um paraboloide 
+      $z=f(x,y)=10-2x^{2}-4y^{2}$. Qual é a direção que deve seguir para descer com a maior rapidez possível quando ele encontra-se no ponto 
+      $(1,1,6)$? {\it Rpta:} Direção paralela a $(-1,-2)$.     
+      \item Encontre a equação do plano tangente à superficie 
+      $z=e^{y}\sin(x+z)$ no ponto em que dito plano é paralelo ao 
+      $2x+z=5$.  {\it Rpta:} $z=-2x$ e o ponto é $(0, \ln 2, 0)$    
+     \item Encontrar $D_{1}f(0,y)$ e $D_{2}f(x,0)$, se 
+        $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &\sqrt{xy} &\text{, se } xy \geq 0 \\
+    & 0 &\text{, se } xy<0  \\
+            \end{array}
+            \right. 
+    $$
+    A função é diferenciável em $(0,0)$?
+    {\it Rpta: } $D_{1}f(0,0)=0$ e  
+     $D_{2}f(x,0)=x$. A função não é diferenciável em $(0,0)$.
+     \item Seja
+        $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    &\sqrt{xy} &\text{, se } xy \geq 0 \\
+    & 0 &\text{, se } xy<0  \\
+            \end{array}
+            \right. 
+    $$
+    Mostre que não é diferenciável em $(0,0)$, mas tem derivadas parciais em $(0,0)$
+    {\it Rpta: } Para ver que $f$ não é diferenciável é suficiente verificar que $f$ não é contínua.  
+    \item Capítulo 14, 14. 6 Exercícios 10, 11, 27, 29, 30, 33,  56. 
+     \end{enumerate}  
+   
+    \subsection{Regras da cadeia e miscelaneas} 
+       \begin{enumerate}
+       \item Seja $f(u,v,w)=u^{2}+v^{2}+w^{2}$, 
+       onde $u=2x-3y+5z$, $v=x^{2}-y^{2}+z^{2}$ e $w=xyz$. 
+       Calcule as derivadas parciais 
+       $\partial_{x}f$,  
+       $\partial_{y}f$ e
+        $\partial_{z}f$ {\it Rpta: }  $\partial_{y}f=-6u-4vy+2xyz$. 
+       \item Considere $f(t)$ uma função real de classe $C^{2}$ em todo 
+       $\mathbb{R}$. Se $g(x,y)=x+y+f(x^{2}+y^{2})$. 
+       Verifique que  $\frac{\partial^{2} g}{\partial x^{2}}-
+       \frac{\partial^{2} g}{\partial y^{2}}=4(x^{2}-y^{2})
+       \frac{d^{2} f(t)}{d t^{2}}$.
+       \item Se $z=xy+xe^{y/x}$. Verifique que 
+       $x\frac{\partial z}{\partial x}+
+       y\frac{\partial z}{\partial y}=xy+z$
+       \item Se $g(r,t)=t^{n}e^{-r^{2}/4t}$.
+         Calcule
+          $\frac{\partial g}{\partial t}$ e
+           $\frac{\partial g}{\partial r}$. 
+           Para qual valor de $n$ 
+           a seguinte equação vale?
+            
+       $$\frac{\partial g}{\partial t}=\frac{1}{r^{2}}\frac{\partial }{\partial r}\{r^{2}\frac{\partial g}{\partial r}\}. $$ 
+       \item Capitulo 14, 14.5 Exercícios 35, 36, 37, 39, 40, 42, 44, 51, 56.  
+       \end{enumerate}
+       
+       
+       
+       
+       
+\end{document} 
+
+   
+      
+      
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      \begin{table}[h]
+\centering % centering table
+\begin{tabular}{c} % creating eight columns
+\hline \hline%inserting double-line
+Audio  \\ 
+\hline % inserts single-line
+Police \\ % [1ex] adds vertical space
+\hline \hline % inserts single-line
+\end{tabular}
+     \label{tab:hresult}
+     \end{table}
+
+  \begin{enumerate}
+     \item Seja $\mathcal{C}$ uma curva parametrizada por 
+       $\overrightarrow{\alpha}(t)=
+       (1-2t, t^2, 2e^{2t-2})$. Encontre a equação da reta tangente a $\mathcal{C}$ no ponto onde $\overrightarrow{\alpha}'(t)$
+       é paralelo a $\overrightarrow{\alpha}(t)$. 
+       {\it Rpta:} $r: (-1,1,2)+t(-1,1,2)$; $t \in \mathbb{R}$. 
+    \item Sejam as curvas parametrizadas por 
+       $\overrightarrow{\alpha}(t)=
+       (e^t, e^{2t}, 1-e^{-t})$
+       e   $\overrightarrow{\beta}(t)=
+       (1-t, \cos t, \sin t)$. Encontre a interseção das trajétorias das curvas e o ângulo da interseção. 
+       {\it Rpta:} Interseção $P=(1,1,0)$; Ângulo $\theta=\pi/2$.  
+     \item Suponha que $\|\overrightarrow{\alpha}(t)\|$ é constante para
+       todo $t \in \mathbb{R}$. Verifique que 
+       $\overrightarrow{\alpha}(t)\cdot\overrightarrow{\alpha}'(t)=0$ 
+     \item Encontre os pontos em que a curva     
+     $\overrightarrow{\alpha}(t)=
+       (t^2-1, t^2+1, 3t)$ corta o plano 
+       $\mathcal{P}: 3x-2y-z+7=0$. 
+       {\it Rpta: } $P=(3,5,6)$ e $Q=(0,2,3)$. 
+       \item Calcule o produto interno de $\overrightarrow{a}$
+       e $\overrightarrow{b}$ onde 
+       $\overrightarrow{a}=(2,-4,1)$
+       e $\overrightarrow{b}=\int_{0}^{1}(te^{t}, t \sinh 2t, 2te^{-2t})dt$.
+       {\it Rpta: } 0. 
+     \item Considere 
+     $\overrightarrow{\alpha}(t)=\overrightarrow{a}\cos(\omega t)+
+       \overrightarrow{b}\sin(\omega t)$, com $t \in \mathbb{R}$.
+       Verifique que 
+        
+        $$\text{(a)} \ \ \ \ \ 
+        \overrightarrow{\alpha}(t)\times\frac{d \overrightarrow{\alpha}(t)}{dt}=
+       \omega \overrightarrow{a} \times \overrightarrow{b}
+       \  \ \ \ \ \text{ e } \ \ \ \ \ 
+       \text{(b)} \ \ \ \ \
+       \frac{d^{2}\overrightarrow{\alpha}(t)}{dt^{2}}+\omega^{2}\overrightarrow{\alpha}(t)=
+       \overrightarrow{0}. $$
+     \item Em $\mathbb{R}^{3}$ considere $\overrightarrow{\alpha}(t)$ uma curva 
+     derivável com derivada contínua, não nula. Mostre que 
+        \begin{enumerate}
+        \item $\overrightarrow{\alpha}(t)$ tem norma constante se, e somente se $\overrightarrow{\alpha}(t)\cdot \overrightarrow{\alpha}'(t)=0$.
+        \item $\overrightarrow{\alpha}(t)$ tem direção constante se, e somente se $\overrightarrow{\alpha}(t)\times \overrightarrow{\alpha}'(t)=0$.
+        \end{enumerate}
+  \end{enumerate}
+
+        
+    \subsection{Máximos, mínimos e pontos críticos}
+      \begin{enumerate}
+      \item Qual é o ponto da curva $yx=2$, $x>0$, que está mais próximo ao origem. 
+      \item Considere duas partículas $A$ e $B$ que se movem sobre os eixos $x$ e eixo $y$ respetivamente. Se a posição de $A$ é $(\sqrt{t}, 0)$ e 
+      a posição de $B$ é $(0,t^{2}-\frac{1}{4})$, para $t \geq 0$. Encontre o instante onde a distância entre $A$ e $B$ seja o menor possível.
+       \item Considere a curva $y=1-x^{2}$, $x \in [0,1]$. 
+       Qual a reta tangente à curva tal que a área do triângulo que ela forma com os eixos coordenados seja mínima? 
+       \item Seja $L(x)=-x^{3}+12x^{2}+60x-4$ o lucro de uma empresa ao vender certo determinado produto, onde $x$ representa a quantidade do produto produzida. Determine o lucro máximo e a produção que máximiza o lucro.
+       {\it Rpta: } $x=10$, Lucro máximo $L(10)$   
+      \end{enumerate}
+    \subsection{Teorema de Rolle e Teorema de Valor Médio}
+      \begin{enumerate}
+      \item Mostre que a equação $f(x)=x^{7}+5x^{3}+x-7$ tem uma única solução.      
+      \item Considere a função $f(x)=e^{x}-\frac{1}{x}-\frac{x}{2}$, com $x>0$. 
+      Então: 
+        \begin{enumerate}
+        \item Dado $y \in \mathbb{R}$. Mostre que existe uma única solução 
+        de $e^{x}-x^{-1}-x/2=y$. Conclua que $f$ tem inversa.
+        \item Verifique que $|f^{-1}(x)-f^{-1}(y)| \leq 2 |x-y|$, para todo 
+        $x, y \in \mathbb{R}$.
+        \end{enumerate}
+      \item Seja $f(x)=3x+\cos x$. Mostre que (a) 
+      $f$ é bijetora e (b) calcule $f^{-1}(1)$.
+      \item Use o teorema de valor médio para 
+      mostrar as seguintes desigualdades:
+           \begin{enumerate}
+           \item $\ln(1+x)<x$, para todo $x \neq -1$.
+           \item $|\ln \frac{x}{y}|\leq |x-y|$, para todo 
+           $a, b \in \mathbb{R}$, 
+           com a $\geq 1$, $b \geq 1$.
+           \item $x-y \leq e^{x}-e^{y}$, para todo $y, x$ 
+           com $x \geq y \geq 0$.
+           \item $a^{a}(b-a)<b^{b}-a^{a}$, para $a, b$ com $1 \leq a<b$.
+           \end{enumerate}
+      \item Podemos usar o teorema do valor médio na função 
+      $f(x)=\frac{2x-1}{3x-4}$ no intervalo $[1,2]$? 
+      Caso afirmativo, encontre os valores que 
+      verifiquem. {\it Rpta:} Não se cumple as condições 
+      do teorema do valor médio.  
+      \item Mostre as identidades
+        \begin{enumerate}
+        \item $\arcsin (1-2y^{2})=2 \arcsin (y)$, para $y \in (-1,1)$.
+        \item $\arcsin \frac{x-1}{x+1}+\frac{\pi}{2}=2 \arctan \sqrt{x}$,
+        para todo $x \in \mathbb{R}$.
+        \end{enumerate}            
+      \end{enumerate}      
+      
+      
+      
+      
+      
+      
+      
+\end{document}
+
+
+
+
+
+
+
+
+
+
+    \subsection{Regras de cálculos para limites}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $\lim_{u \rightarrow 1} 
+    \frac{\sqrt{3+u^2}-2}{1-u}=-\frac{1}{2}$.
+    \item $\lim_{t \rightarrow 4} 
+    \frac{3-\sqrt{5+t}}{1-\sqrt{5-t}}=-\frac{1}{3}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{\sqrt{3x-2}+\sqrt{x}-\sqrt{5x-1}}
+    {\sqrt{x}-\sqrt{2x-1}}=-\frac{3}{2}$.
+    \item Se $f(x)=\sqrt{1+3x}$. Calcule 
+    $\lim_{h \rightarrow 0} 
+    \frac{f(x+h)-f(x)}
+    {h}=\frac{3}{2\sqrt{3x+1}}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{x^{100}-2x+1}
+    {x^{50}-2x+1}=\frac{49}{24}$.
+    \item $\lim_{x \rightarrow 2} 
+    \frac{\sqrt{1+\sqrt{2+x}}-\sqrt{3}}
+    {x-2}=\frac{1}{8\sqrt{3}}$.
+     \item Se 
+    $\lim_{x \rightarrow 0} 
+    \frac{f(x)-1}
+    {x}=1$. Prove $\lim_{x \rightarrow 0} 
+    \frac{f(ax)-f(bx)}
+    {x}=a-b$. {\it Dica:} Considere se $a$ e $b$ são iguais a zero ou não.
+    \item Dado $a \in \mathbb{R}$. Mostre que $\lim_{x \rightarrow a} 
+    \frac{x\sqrt{x}-a\sqrt{a}}
+    {\sqrt{x}-\sqrt{a}}=3a$.
+    \end{enumerate}
+    \subsection{Limites laterais}   
+   Calcule, se existe, os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \frac{5}{2}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Sim, e o limite é $\sqrt{19/2}$.
+     \item $$\lim_{x \rightarrow \frac{7}{3}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Não.
+    \item $$\lim_{x \rightarrow -3} 
+    \frac{\lbrack\!\lbrack x-1 \rbrack\!\rbrack -x}
+    {
+    \sqrt{|x|^2-\lbrack\!\lbrack x \rbrack\!\rbrack}
+    }.$$ Não.
+     \item $$\lim_{x \rightarrow 1} 
+    \frac{\lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x^{2}}
+    {
+    \lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x
+    }.$$ Não.
+    \item Considere a função 
+     $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{x^3+3x^2-9x-27}{x+3} &\text{, se } x \in (-\infty, -3) \\
+    &ax^2-2bx+1     &\text{, se } x \in [-3,3] \\
+            & \frac{x^2-22x+57}{x-3}     &\text{, se } x \in (3,\infty) \\
+            \end{array}
+            \right. 
+    $$
+    Para quais valores de $a$ e $b$, existe os limites de $f$ em $x=-3$ e $x=3$? {\it Rpta: } $a=-1, b=4/3$.
+    \end{enumerate}
+    \subsection{Limites Trigonométricos}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \pi} \frac{1-\sin(\frac{x}{2})}{x-\pi}=0$$
+    \item $$\lim_{x \rightarrow 0} \frac{x-\sin(x)}{x^2}=0. $$
+    \item $$\lim_{x \rightarrow 0} \frac{1-\sqrt{\cos(x)}}{x^2}=\frac{1}{4}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\cos(\frac{\pi x}{2})}{1-\sqrt{x}}=\pi$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos^7(x)}{x^2}=\frac{7}{2}$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos(1-\cos(x))}{x^4}=\frac{1}{8}$$
+    \item $$\lim_{x \rightarrow \frac{\pi}{4}} 
+    \frac{\sin(2x)-\cos(2x)-1}{\sin(x)-\cos(x)}=\sqrt{2}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\sin(\pi x)+\cos(\frac{\pi x}{2})}
+    {\tan(\frac{\pi x}{4})-1}=-\frac{3 \pi}{4}$$
+    \end{enumerate}
+    \subsection{Definição de limite}   
+   Usando a definição de limite. Prove que 
+    \begin{enumerate}
+    \item $\lim_{x \rightarrow 2} \frac{x^2+1}{x-1}=5$.
+    \item $\lim_{x \rightarrow 3} 
+    \frac{1}{x^2+16}=\frac{1}{25}$. 
+    \item $\lim_{x \rightarrow \frac{1}{2}} x^{2}\lbrack\!\lbrack x+2 \rbrack\!\rbrack=\frac{1}{2}$. 
+    \item  $\lim_{x \rightarrow 4} 
+    \frac{x^3-15x-4}{x-3}=0$.
+    \item $\lim_{x \rightarrow a}\cos(x)=\cos(a)$, para qualquer $a \in \mathbb{R}$.  
+    \end{enumerate}
+     \subsection{Teorema de confronto e variantes}   
+    \begin{enumerate}
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $|f(x)|\leq 3|x|$, $\forall x \in \mathbb{R}$.
+    Calcule $\lim_{x \rightarrow 0} \frac{f(x^3)}{x}$.
+    \item Considere duas funções 
+    $f,g:\mathbb{R}\rightarrow \mathbb{R}$ com a propriedade que $|\sin(x)|\leq g(x)\leq 4|x|$ e 
+    $0 \leq f(x)\leq 1+|\sin(1/x)|$ para todo $x \neq 0$. 
+    Calcule $\lim_{x \rightarrow 0} (f(x)g(x)+\cos(x))$.
+    {\it Rpta: } 1.
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $1+x^2+\frac{x^6}{3}\leq f(x)+ 1 \leq 
+    \sec{x^2}+\frac{x^6}{3}$, para todo $x \in \mathbb{R}$. Calcule
+    $$
+    \lim_{x\rightarrow 0}f(x) \text{ e } 
+    \lim_{x\rightarrow 0}f(x)\cos\left(\frac{1}{x^2+1}\right).
+    $$ {\it Rpta: } Ambos são zeros. 
+    \end{enumerate}
+\end{document}
+
+  
