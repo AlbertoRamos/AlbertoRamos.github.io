@@ -14,7 +14,7 @@ tag:        2018s2
   | **Local:**   | CT 07
   | **Horário:** | 20h30 Terça e Quarta. 
   | **Prova 1:** | 27/09
-  | **Prova 2:** | 23/10
+  | **Prova 2:** | 06/11
   | **Prova 3:** | 22/11
   | **2da chamada**| 29/11 
   | **Exame:**   | 11/12 (novo)
