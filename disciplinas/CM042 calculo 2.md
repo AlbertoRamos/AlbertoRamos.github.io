@@ -36,6 +36,7 @@ tag:        2018s2
     -- Lista 1 (2.1.7, 2.2.3, 2.2.9, 2.3.3, 2.3.7);
     -- Lista 2 (2.1.3, 2.2.5, 2.3.5, 2.3.11, 2.3.14, 2.4.2, 2.4.4).
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 calculo 2.pdf)
+  - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 4 calculo 2.pdf)
 
 # Provas
 
