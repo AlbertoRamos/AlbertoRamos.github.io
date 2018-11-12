@@ -13,10 +13,6 @@ tag:        2018s2
   | **Turma:**   | [A]
   | **Local:**   | 
   | **Horário:** | 15h30 terça e quinta. 
-  | **Prova 1:** | 
-  | **Prova 2:** | 
-  | **Prova 3:** |  
-  | **Exame:**   | 
 
 # Ementa
   
