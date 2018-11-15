@@ -38,7 +38,9 @@ tag:        2018s2
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 calculo 2.pdf)
   - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 4 calculo 2.pdf)
   
-  Veja os exemplos do livro texto: 16.2 (ex3), 16.3 (ex2, ex4), 16.4 (ex1, ex2, ex4, ex5), 16.5 (ex3), 16.6 (ex4, ex7, ex11), 
+  Veja os exemplos do livro texto: 
+  
+  16.2 (ex3), 16.3 (ex2, ex4), 16.4 (ex1, ex2, ex4, ex5), 16.5 (ex3), 16.6 (ex4, ex7, ex11), 
   16.7 (ex3, ex4), 16. 8 (ex2), 16.9 (ex1).
 
 # Provas
