@@ -52,7 +52,7 @@ tag:        2018s2
 
 - J.STEWART – Cálculo, vol 2, Cengage Learning, São Paulo, 5 edição. 
 - L.LEITHOLD - O Cálculo com Geometria Analítica, vol 1, Harbra, Rio de Janeiro.
-- H.L.GUIDORIZZI – Um curso de Cálculo, vol 1 e 2, LTC, Rio de Janeiro.
+- H.L.GUIDORIZZI – Um curso de Cálculo, vol 1 e 2, LTC, Rio de Janeiro.  
 
 ## Complementar
 
