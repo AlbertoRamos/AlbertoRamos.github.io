@@ -40,11 +40,16 @@ tag:        2018s2
   - Veja os exemplos do livro texto: 
     -- 16.2 (ex3), 16.3 (ex2, ex4), 16.4 (ex1, ex2, ex4, ex5), 16.5 (ex3); 
     -- 16.6 (ex4, ex7, ex11), 16.7 (ex3, ex4), 16. 8 (ex2), 16.9 (ex1). 
+  - Veja os exemplos do livro texto (curvas e funções reais de várias variáveis): 
+    -- 13.1  (ex 6), 13.2 (ex 1, ex4), 13.3  (ex 6, ex 7), 13.4 (ex 7); 
+    -- 14.1  (ex 3, ex 4, ex 7, ex 8), 14.4 (ex1, ex6), 14.5 (ex 5, ex 6, ex 9), 14.6 (ex 4, ex 6, ex 7, ex 8).
+    
 
 # Provas
 
    - [Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 calculo 2.pdf), [Prova 1 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 1 calculo II A.pdf)
    - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 2 calculo 2.pdf), [Prova 2 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 2  calculo II A2.pdf)
+   - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 3 calculo 2.pdf), [Prova 3 Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas prova 3 calculo II A2.pdf)
 
 # Bibliografia
 
