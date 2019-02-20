@@ -28,7 +28,7 @@ tag:        2019s1
 # Avaliação:
   
 # Introdução à programação com Matlab/Octave do prof. [S. Oliveira](https://docs.ufpr.br/~saulopo/). 
-
+  - [Apostila]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/matlab.pdf)
 # Listas
 
 # Provas
