@@ -27,7 +27,7 @@ tag:        2019s1
 
 # Avaliação:
   
-# Introdução à programação com Matlab/Octave (do prof. S. Oliveira)
+# Introdução à programação com Matlab/Octave do prof. [S. Oliveira](https://docs.ufpr.br/~saulopo/). 
 
 # Listas
 
