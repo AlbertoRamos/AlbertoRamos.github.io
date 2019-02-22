@@ -28,6 +28,11 @@ de derivadas parciais, plano tangente e vetor gradiente. Máximos e mínimos.
   
   **[Programação detalhada](http://www.mat.ufpr.br/documentos/programas/CM302.pdf)**
 
+# Avisos: 
+   
+   Devido à interdição do bloco CT, a próxima aula será 27/02/2019.
+   
+
 # Listas
 
 # Provas
