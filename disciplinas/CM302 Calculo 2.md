@@ -13,11 +13,11 @@ tag:        2019s1
   | **Turma:**   | [A]
   | **Local:**   | CT 04
   | **Horário:** | Quarta e Sexta. 
-  | **Prova 1:** | 
-  | **Prova 2:** | 
-  | **Prova 3:** | 
+  | **Prova 1:** | 27 de março
+  | **Prova 2:** | 10 de maio
+  | **Prova 3:** | 14 de junho
   | **2da chamada**|  
-  | **Exame:**   | 
+  | **Exame:**   | 28 de junho
 
 # Ementa
 
