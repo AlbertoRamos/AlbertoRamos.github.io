@@ -29,12 +29,13 @@ de derivadas parciais, plano tangente e vetor gradiente. Máximos e mínimos.
   **[Programação detalhada](http://www.mat.ufpr.br/documentos/programas/CM302.pdf)**
 
 # Avisos: 
-     
+     prova 1 calculo 2 varias
 # Listas
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo 2 varias.pdf)
 
 # Provas e Notas 
-  - [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/calculo varias variavies cm302 notas.pdf)
+  - [Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 calculo 2 varias.pdf), 
+  [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/calculo varias variavies cm302 notas.pdf)
 
 # Bibliografia
 
