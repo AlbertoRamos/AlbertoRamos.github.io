@@ -31,10 +31,10 @@ de derivadas parciais, plano tangente e vetor gradiente. Máximos e mínimos.
 # Avisos: 
      
 # Listas
-  
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 calculo 2 varias.pdf)
 
-# Provas
+# Provas e Notas 
+  - [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/calculo varias variavies cm302 notas.pdf)
 
 # Bibliografia
 
