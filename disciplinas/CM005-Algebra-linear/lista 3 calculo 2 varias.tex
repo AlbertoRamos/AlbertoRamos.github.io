@@ -1,0 +1,368 @@
+% lista 2(calculo 2 varias)
+\documentclass[11pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 3: Cálculo em várias variáveis reias }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+  \section{Lista de Exercícios}   
+ 
+ Faça do livro texto\footnote{Livro texto: Cálculo. Volume II. {\it J. Stewart}, 5 edição.}, os seguintes exercícios. 
+  
+    \subsection{Exercícios}
+     
+     \begin{enumerate}    
+     \item Capítulo 14.5: Exemplo 1, Exemplo 3, Exemplo 9, 56; 
+     \item Capítulo 14.6: Exemplo 2, Exemplo 5, Exemplo 7, 52, 53, 55, 59; 
+     \item Capítulo 14.7: Exemplo 3, Exemplo 5, 11, 17, 21, 28, 34, 39, 47, 53;
+     \item  Capítulo 14.8: Exemplo 1, Exemplo 2, Exemplo 5, 3, 7, 11, 18, 21, 44.             
+     \end{enumerate}
+ 
+   \subsection{Exercícios adicionais}
+     \begin{enumerate}
+      \item A base de um aquário com volume $V$ é feita de ardósia e os lados de vidro. Se o preço da ardósia (por unidade de área)
+      equivale a cinco vezes o preço do vidro. 
+      Determine as dimensões do aquário para minimizar o custo do material. (Ver Ex: 48, Capítulo 14.7).
+      
+       \item A densidade em qualquer ponto $(x,y)$ de uma chapa retangular é $\rho(x,y):=(x^{2}+y^{2}+3)^{-1}$. 
+       Encontre a razão de variação da densidade no ponto $(3,2)$ na direção do vetor $(\sqrt{3}, 1)$. Qual é a direção e magnitude da razão de variação máxima de $\rho$ em $(3,2)$.
+       
+       \item 
+      A equação da superfície de uma montanha é $z=1200-3x^{2}-2y^{2}$, 
+      onde a distância está medida em metros, os pontos do eixo $x$ a leste e os pontos do eixo $y$ a norte. Um alpinista encontra-se sobre a montanha no ponto $(-10, 5, 850)$. Responda: Em qual direção a inclinação é mais acentuada. Se o alpinista me mover da direção oeste, ele 
+      estará subindo ou descendo, e qual é a razão correspondente. Agora, se o alpinista se mover na direção sudeste,    ele 
+      estará subindo ou descendo, e qual é a razão correspondente.
+      Finalmente, em qual direção o alpinista estará percorrendo um caminho plano.       
+     
+     \item Um disco circular tem a forma da região limitada pela circuferência $x^{2}+y^{2}=1$. Se a temperatura do disco é 
+     $T(x,y)=y^{2}-y+x^2$. Encontre os pontos mais frios e mais quentes.
+     
+      \item 
+      Considere a função 
+     $$
+    f(x,y)= \left\{  
+            \begin{array}{lll}
+    & \frac{yx^{2}}{x^{4}+y^2} &\text{, se } (x,y)\neq (0,0) \\
+    & 0 &\text{, se } (x,y)=(0,0)  \\
+            \end{array}
+            \right. 
+    $$      
+    Mostre que $f$ não é derivável no $(0,0)$.
+    Calcule a derivada direcional na origem para qualquer direção. 
+    {\it Rpta: }Para todo  $\bar{\mu}=(\cos \theta, \sin \theta)$
+    temos que 
+    $$
+    \frac{\partial f}{\partial \bar{\mu}}(0,0)= \left\{  
+            \begin{array}{lll}
+    & \frac{\cos^{2} \theta}{\sin \theta} &\text{, se } 
+    \theta \in [0,2\pi) \setminus \{\pi/2, 3\pi/2\} \\
+    & 0 &\text{, se } \theta \in \{\pi/2, 3\pi/2\}  \\
+            \end{array}
+            \right. 
+    $$      
+      
+      \item Encontre o ângulo entre as superfícies $x^{2}/16+y^{2}/25+z^{2}/9=20$ e $z=2x+y-50$ no ponto $(8,25,-9)$.
+      
+      \item Encontre a equação dos planos tangentes à superfície 
+      $x^{2}+2y^{2}+3z^{2}=21$ que sejam paralelos ao plano 
+      $x+4y+6z=0$. 
+      {\it Rpta:} $x+4y+6z=\pm 21$.
+     \item Qual é o ponto da curva $\mathcal{C}$ mais próximo da origem, onde $\mathcal{C}$ é a interseção de  $x^{2}+4z^{2}+4y^{2}=4$ com o plano $z=x-4y$.
+       
+     \item Suponha que o produção de um artigo de luxo depende de duas compras.  Os montantes destas compras são dados por $100x$ e $100y$, cujo preço por unidade é de 4 reias e 1 real, respectivamente. O montante de produção é dado por $100z$, o preço por unidade é 9. Se a função de produção é da forma $5-x^{-1}-y^{-1}$. Determine o lucro máximo \footnote{Ver Ex 5, Capítulo 17. Livro: O cálculo com geometria analítica, vol2, L. Leithold}. 
+
+     \item Encontre os pontos da curva $5x^{2}+5y^{2}+6xy=8$ cuja distância à origem é máxima e mínima.  
+     \end{enumerate}
+\end{document}
+  
+  \section{Exercícios adicionais}
+    \subsection{Funções vetoriais de variável real}
+     \begin{enumerate}
+     \item Encontre o domínio de  
+     $\overrightarrow{\alpha}(t)=(\ln(t+1), \sqrt{t^{2}+2t-8})$. 
+     {\it Rpta:} Domínio $[2,\infty)$.
+     \item Encontre o domínio de  
+     $\overrightarrow{\alpha}(t)=(\frac{1+t}{1-t}, (t+2)^{-3/2}, \frac{1}{t-4})$. 
+     {\it Rpta:} Domínio $(-2,\infty)\setminus \{4\}$.
+     \item Mostre que a trajétoria de 
+     $\overrightarrow{\alpha}(t)=t\hat{i}+t^{2}\hat{j}$, $t \in \mathbb{R}$
+     é uma parábola. 
+     \item Descreva a trajétoria de 
+     $\overrightarrow{\alpha}(t)=(3\cos(t),3\sin(t), t)$, 
+     $t \in \mathbb{R}$. {\it Rpta:} Hélice.
+     \item Descreva a trajetória de 
+     $\overrightarrow{\alpha}(t)=(t\cos(t),t\sin(t), t)$, 
+     $t \in \mathbb{R}$. {\it Rpta:} A trajetória está contida num cone circular.  
+     \item Descreva a trajetória de 
+     $\overrightarrow{\alpha}(t)=(t, t, \sin(t))$, 
+     $t \in \mathbb{R}$. 
+     \item Uma partícula encontra-se no primeiro quadrante de $\mathbb{R}^{2}$. A partícula move-se de forma que a distância à origem é igual à inclinação $t$ da reta que une a origem e a posição da partícula. 
+     Encontre uma parametrização do movimento da partícula usando $t$
+     como parâmetro.  
+     {\it Rpta:}  $\overrightarrow{\alpha}(t)=
+     (\frac{t}{\sqrt{1+t^{2}}},\frac{t^2}{\sqrt{1+t^{2}}} )$, $t \geq 0$.
+     \item Defina uma função vetorial em $\mathbb{R}^{3}$ com 
+     domínio $[-2,2]$ cuja trajetória é o triângulo 
+     de vértices $A=(3,2,-1)$, $B=(2,0,1)$ e $C=(1,-2,1)$. 
+     \end{enumerate}
+    \subsection{Limites, continuidade, derivadas e integração}
+     \begin{enumerate}
+     \item Calcule, se existe, os seguintes limites 
+       \begin{enumerate}
+       \item $\lim_{t \rightarrow 3} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{t^{2}-2t-3}{t-3}, 
+       \frac{t^{2}-5t+6}{t-3})$.  {\it Rpta:} (4,1).
+       \item $\lim_{t \rightarrow 0} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{1-\sqrt{1+t}}{1-t}, 
+       \frac{t}{t+1}, 1)$.  {\it Rpta:} (0,0,1).
+       \item $\lim_{t \rightarrow 0} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{\sin 7t}{t}, 
+       \frac{\sin 5t}{\sin 3t}, \frac{\tan 3t}{\sin 2t})$.  {\it Rpta:} (7,5/3,3/2).
+       \item $\lim_{t \rightarrow 2} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\ln t, 
+       \sqrt{1+t^2}, \frac{3t}{4-t^2})$.  {\it Rpta:} Não existe.
+       \end{enumerate}
+    \item Seja $\mathcal{C}$ uma curva parametrizada por 
+       $\overrightarrow{\alpha}(t)=
+       (1-2t, t^2, 2e^{2t-2})$. Encontre a equação da reta tangente a $\mathcal{C}$ no ponto onde $\overrightarrow{\alpha}'(t)$
+       é paralelo a $\overrightarrow{\alpha}(t)$. 
+       {\it Rpta:} $r: (-1,1,2)+t(-1,1,2)$; $t \in \mathbb{R}$. 
+    \item Sejam as curvas parametrizadas por 
+       $\overrightarrow{\alpha}(t)=
+       (e^t, e^{2t}, 1-e^{-t})$
+       e   $\overrightarrow{\beta}(t)=
+       (1-t, \cos t, \sin t)$. Encontre a interseção das trajétorias das curvas e o ângulo da interseção. 
+       {\it Rpta:} Interseção $P=(1,1,0)$; Ângulo $\theta=\pi/2$.  
+     \item Suponha que $\|\overrightarrow{\alpha}(t)\|$ é constante para
+       todo $t \in \mathbb{R}$. Verifique que 
+       $\overrightarrow{\alpha}(t)\cdot\overrightarrow{\alpha}'(t)=0$ 
+     \item Encontre os pontos em que a curva     
+     $\overrightarrow{\alpha}(t)=
+       (t^2-1, t^2+1, 3t)$ corta o plano 
+       $\mathcal{P}: 3x-2y-z+7=0$. 
+       {\it Rpta: } $P=(3,5,6)$ e $Q=(0,2,3)$. 
+       \item Calcule o produto interno de $\overrightarrow{a}$
+       e $\overrightarrow{b}$ onde 
+       $\overrightarrow{a}=(2,-4,1)$
+       e $\overrightarrow{b}=\int_{0}^{1}(te^{t}, t \sinh 2t, 2te^{-2t})dt$.
+       {\it Rpta: } 0. 
+     \item Considere 
+     $\overrightarrow{\alpha}(t)=\overrightarrow{a}\cos(\omega t)+
+       \overrightarrow{b}\sin(\omega t)$, com $t \in \mathbb{R}$.
+       Verifique que 
+        
+        $$\text{(a)} \ \ \ \ \ 
+        \overrightarrow{\alpha}(t)\times\frac{d \overrightarrow{\alpha}(t)}{dt}=
+       \omega \overrightarrow{a} \times \overrightarrow{b}
+       \  \ \ \ \ \text{ e } \ \ \ \ \ 
+       \text{(b)} \ \ \ \ \
+       \frac{d^{2}\overrightarrow{\alpha}(t)}{dt^{2}}+\omega^{2}\overrightarrow{\alpha}(t)=
+       \overrightarrow{0}. $$
+     \item Em $\mathbb{R}^{3}$ considere $\overrightarrow{\alpha}(t)$ uma curva 
+     derivável com derivada contínua, não nula. Mostre que 
+        \begin{enumerate}
+        \item $\overrightarrow{\alpha}(t)$ tem norma constante se, e somente se $\overrightarrow{\alpha}(t)\cdot \overrightarrow{\alpha}'(t)=0$.
+        \item $\overrightarrow{\alpha}(t)$ tem direção constante se, e somente se $\overrightarrow{\alpha}(t)\times \overrightarrow{\alpha}'(t)=0$.
+        \end{enumerate}
+     \end{enumerate}  
+    
+      
+      \begin{table}[h]
+\centering % centering table
+\begin{tabular}{c} % creating eight columns
+\hline \hline%inserting double-line
+Audio  \\ 
+\hline % inserts single-line
+Police \\ % [1ex] adds vertical space
+\hline \hline % inserts single-line
+\end{tabular}
+     \label{tab:hresult}
+     \end{table}
+
+
+    \subsection{Máximos, mínimos e pontos críticos}
+      \begin{enumerate}
+      \item Qual é o ponto da curva $yx=2$, $x>0$, que está mais próximo ao origem. 
+      \item Considere duas partículas $A$ e $B$ que se movem sobre os eixos $x$ e eixo $y$ respetivamente. Se a posição de $A$ é $(\sqrt{t}, 0)$ e 
+      a posição de $B$ é $(0,t^{2}-\frac{1}{4})$, para $t \geq 0$. Encontre o instante onde a distância entre $A$ e $B$ seja o menor possível.
+       \item Considere a curva $y=1-x^{2}$, $x \in [0,1]$. 
+       Qual a reta tangente à curva tal que a área do triângulo que ela forma com os eixos coordenados seja mínima? 
+       \item Seja $L(x)=-x^{3}+12x^{2}+60x-4$ o lucro de uma empresa ao vender certo determinado produto, onde $x$ representa a quantidade do produto produzida. Determine o lucro máximo e a produção que máximiza o lucro.
+       {\it Rpta: } $x=10$, Lucro máximo $L(10)$   
+      \end{enumerate}
+    \subsection{Teorema de Rolle e Teorema de Valor Médio}
+      \begin{enumerate}
+      \item Mostre que a equação $f(x)=x^{7}+5x^{3}+x-7$ tem uma única solução.      
+      \item Considere a função $f(x)=e^{x}-\frac{1}{x}-\frac{x}{2}$, com $x>0$. 
+      Então: 
+        \begin{enumerate}
+        \item Dado $y \in \mathbb{R}$. Mostre que existe uma única solução 
+        de $e^{x}-x^{-1}-x/2=y$. Conclua que $f$ tem inversa.
+        \item Verifique que $|f^{-1}(x)-f^{-1}(y)| \leq 2 |x-y|$, para todo 
+        $x, y \in \mathbb{R}$.
+        \end{enumerate}
+      \item Seja $f(x)=3x+\cos x$. Mostre que (a) 
+      $f$ é bijetora e (b) calcule $f^{-1}(1)$.
+      \item Use o teorema de valor médio para 
+      mostrar as seguintes desigualdades:
+           \begin{enumerate}
+           \item $\ln(1+x)<x$, para todo $x \neq -1$.
+           \item $|\ln \frac{x}{y}|\leq |x-y|$, para todo 
+           $a, b \in \mathbb{R}$, 
+           com a $\geq 1$, $b \geq 1$.
+           \item $x-y \leq e^{x}-e^{y}$, para todo $y, x$ 
+           com $x \geq y \geq 0$.
+           \item $a^{a}(b-a)<b^{b}-a^{a}$, para $a, b$ com $1 \leq a<b$.
+           \end{enumerate}
+      \item Podemos usar o teorema do valor médio na função 
+      $f(x)=\frac{2x-1}{3x-4}$ no intervalo $[1,2]$? 
+      Caso afirmativo, encontre os valores que 
+      verifiquem. {\it Rpta:} Não se cumple as condições 
+      do teorema do valor médio.  
+      \item Mostre as identidades
+        \begin{enumerate}
+        \item $\arcsin (1-2y^{2})=2 \arcsin (y)$, para $y \in (-1,1)$.
+        \item $\arcsin \frac{x-1}{x+1}+\frac{\pi}{2}=2 \arctan \sqrt{x}$,
+        para todo $x \in \mathbb{R}$.
+        \end{enumerate}            
+      \end{enumerate}      
+      
+      
+      
+      
+      
+      
+      
+\end{document}
+
+
+
+
+
+
+
+
+
+
+    \subsection{Regras de cálculos para limites}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $\lim_{u \rightarrow 1} 
+    \frac{\sqrt{3+u^2}-2}{1-u}=-\frac{1}{2}$.
+    \item $\lim_{t \rightarrow 4} 
+    \frac{3-\sqrt{5+t}}{1-\sqrt{5-t}}=-\frac{1}{3}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{\sqrt{3x-2}+\sqrt{x}-\sqrt{5x-1}}
+    {\sqrt{x}-\sqrt{2x-1}}=-\frac{3}{2}$.
+    \item Se $f(x)=\sqrt{1+3x}$. Calcule 
+    $\lim_{h \rightarrow 0} 
+    \frac{f(x+h)-f(x)}
+    {h}=\frac{3}{2\sqrt{3x+1}}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{x^{100}-2x+1}
+    {x^{50}-2x+1}=\frac{49}{24}$.
+    \item $\lim_{x \rightarrow 2} 
+    \frac{\sqrt{1+\sqrt{2+x}}-\sqrt{3}}
+    {x-2}=\frac{1}{8\sqrt{3}}$.
+     \item Se 
+    $\lim_{x \rightarrow 0} 
+    \frac{f(x)-1}
+    {x}=1$. Prove $\lim_{x \rightarrow 0} 
+    \frac{f(ax)-f(bx)}
+    {x}=a-b$. {\it Dica:} Considere se $a$ e $b$ são iguais a zero ou não.
+    \item Dado $a \in \mathbb{R}$. Mostre que $\lim_{x \rightarrow a} 
+    \frac{x\sqrt{x}-a\sqrt{a}}
+    {\sqrt{x}-\sqrt{a}}=3a$.
+    \end{enumerate}
+    \subsection{Limites laterais}   
+   Calcule, se existe, os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \frac{5}{2}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Sim, e o limite é $\sqrt{19/2}$.
+     \item $$\lim_{x \rightarrow \frac{7}{3}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Não.
+    \item $$\lim_{x \rightarrow -3} 
+    \frac{\lbrack\!\lbrack x-1 \rbrack\!\rbrack -x}
+    {
+    \sqrt{|x|^2-\lbrack\!\lbrack x \rbrack\!\rbrack}
+    }.$$ Não.
+     \item $$\lim_{x \rightarrow 1} 
+    \frac{\lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x^{2}}
+    {
+    \lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x
+    }.$$ Não.
+    \item Considere a função 
+     $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{x^3+3x^2-9x-27}{x+3} &\text{, se } x \in (-\infty, -3) \\
+    &ax^2-2bx+1     &\text{, se } x \in [-3,3] \\
+            & \frac{x^2-22x+57}{x-3}     &\text{, se } x \in (3,\infty) \\
+            \end{array}
+            \right. 
+    $$
+    Para quais valores de $a$ e $b$, existe os limites de $f$ em $x=-3$ e $x=3$? {\it Rpta: } $a=-1, b=4/3$.
+    \end{enumerate}
+    \subsection{Limites Trigonométricos}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \pi} \frac{1-\sin(\frac{x}{2})}{x-\pi}=0$$
+    \item $$\lim_{x \rightarrow 0} \frac{x-\sin(x)}{x^2}=0. $$
+    \item $$\lim_{x \rightarrow 0} \frac{1-\sqrt{\cos(x)}}{x^2}=\frac{1}{4}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\cos(\frac{\pi x}{2})}{1-\sqrt{x}}=\pi$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos^7(x)}{x^2}=\frac{7}{2}$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos(1-\cos(x))}{x^4}=\frac{1}{8}$$
+    \item $$\lim_{x \rightarrow \frac{\pi}{4}} 
+    \frac{\sin(2x)-\cos(2x)-1}{\sin(x)-\cos(x)}=\sqrt{2}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\sin(\pi x)+\cos(\frac{\pi x}{2})}
+    {\tan(\frac{\pi x}{4})-1}=-\frac{3 \pi}{4}$$
+    \end{enumerate}
+    \subsection{Definição de limite}   
+   Usando a definição de limite. Prove que 
+    \begin{enumerate}
+    \item $\lim_{x \rightarrow 2} \frac{x^2+1}{x-1}=5$.
+    \item $\lim_{x \rightarrow 3} 
+    \frac{1}{x^2+16}=\frac{1}{25}$. 
+    \item $\lim_{x \rightarrow \frac{1}{2}} x^{2}\lbrack\!\lbrack x+2 \rbrack\!\rbrack=\frac{1}{2}$. 
+    \item  $\lim_{x \rightarrow 4} 
+    \frac{x^3-15x-4}{x-3}=0$.
+    \item $\lim_{x \rightarrow a}\cos(x)=\cos(a)$, para qualquer $a \in \mathbb{R}$.  
+    \end{enumerate}
+     \subsection{Teorema de confronto e variantes}   
+    \begin{enumerate}
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $|f(x)|\leq 3|x|$, $\forall x \in \mathbb{R}$.
+    Calcule $\lim_{x \rightarrow 0} \frac{f(x^3)}{x}$.
+    \item Considere duas funções 
+    $f,g:\mathbb{R}\rightarrow \mathbb{R}$ com a propriedade que $|\sin(x)|\leq g(x)\leq 4|x|$ e 
+    $0 \leq f(x)\leq 1+|\sin(1/x)|$ para todo $x \neq 0$. 
+    Calcule $\lim_{x \rightarrow 0} (f(x)g(x)+\cos(x))$.
+    {\it Rpta: } 1.
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $1+x^2+\frac{x^6}{3}\leq f(x)+ 1 \leq 
+    \sec{x^2}+\frac{x^6}{3}$, para todo $x \in \mathbb{R}$. Calcule
+    $$
+    \lim_{x\rightarrow 0}f(x) \text{ e } 
+    \lim_{x\rightarrow 0}f(x)\cos\left(\frac{1}{x^2+1}\right).
+    $$ {\it Rpta: } Ambos são zeros. 
+    \end{enumerate}
+\end{document}
+
+  
