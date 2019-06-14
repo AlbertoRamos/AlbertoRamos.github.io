@@ -13,26 +13,19 @@ tag:        2019s1
   | **Turma:**   | [A]
   | **Local:**   | PA 04-PA 09
   | **Horário:** | Terça e Quarta. 
-  | **Entrega de listas:** | 
-  | **Prova 1:** | 
-  | **Prova 2:** | 
-  | **Prova 3:** | 
-  | **2da chamada**|  
-  | **Exame:**   | 
+  | **Prova 1:** | 14 de Junho
+  | **Prova 2:** | 21 de Junho
+  | **Exame:**   | 03 de Julho
 
 # Ementa
 
   Linguagem de Programação Matemática. Aproximações de Números e Funções por Sequências e Séries. Aritmética de Ponto Flutuante. Zeros de Funções. Integração Numérica. Eliminação Gaussiana e Sistemas Triangulares. 
   Quadrados Mínimos Lineares e Ajustes de Curvas.
-
-# Avaliação:
   
 # Introdução à programação com Matlab/Octave do prof. [S. Oliveira](https://docs.ufpr.br/~saulopo/). 
   - [Apostila]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/matlab.pdf)
-# Listas
-
+  
 # Provas
-
 
 # Bibliografia
 
