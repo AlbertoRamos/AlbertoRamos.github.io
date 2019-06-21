@@ -1,0 +1,99 @@
+%% prova 3 de calculo II várias
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+\usepackage{enumitem} %enumerate with letters
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+%\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large CM302:  Cálculo em Várias Variáveis Reias} ( Prova 3 ) \\
+  {\bf Prof.} Alberto Ramos \\
+ Junho de 2019
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100} %% uncomment to set the total points in 100
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. 
+    \hspace{2.5mm} \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   \hline 
+  \end{tabular} 
+\end{center}
+  
+ % $$\textbf{Proibido usar o L'hospital para o cálculo de limites. }$$
+  
+ \begin{questions} 
+     
+     \question[20] Considere a relação $z+z^{y}=x$ e o ponto $P=(4,1,2)$.
+     Dê algum motivo teorico para afirmar, que próximo do $P$, a variável $z$ pode ser escrito como uma função de $x$ e $y$. Calcule $\partial z/\partial x$
+     no ponto $P$.
+     
+     \question[20] 
+       \begin{parts}
+       \part Encontre a equação dos planos tangentes à superfície 
+      $x^{2}+2y^{2}+3z^{2}=21$ que sejam paralelos ao plano 
+      $x+4y+6z=0$. 
+%       \part
+%     Qual é a equação do plano tangente à superfície 
+%     $(x-2)^{2}/5+(y+3)^{2}/9+z^{2}=1$, 
+%     que é perperdicular a $2x+y-z=0$, e é paralelo ao plano que passa por $(2,-2,3)$ e $(3,3,-2)$
+      \end{parts}
+      
+    \question[30] Suponha que um disco circular metálico da forma $x^{2}+y^{2}\leq 4$ está sujeita a um potencial eletrico $V(x,y)=e^{-x^{2}-y^{2}}(2x^{2}+3y^{2})$. Encontre os valores máximos e mínimos do potencial eletrico $V$ sob o disco. 
+        
+  \question Encontre os valores máximos, mínimos locais e os
+  pontos de sela de $f(x,y)=x^{4}-4xy+y^{4}+1$. 
+   \begin{parts}
+     \part [8] Ache todos os pontos críticos de $f(x,y)$; 
+     \part [12] Use o teste de segunda derivada para encontrar máximos e mínimos locais
+     \part [5] Quais são os valores máximos, mínimos locais e os
+  pontos de sela? 
+   \end{parts}
+   
+   \question Suponha que $T(x,y)=40-x^{2}-y^{2}$ represente uma distribuição de temperatura no plano $xy$ (admita que $x$, 
+   $y$ estão dados em km e a temperatura em Celsius).  
+   Um indivíduo está no ponto $(2,3)$ e quer dar um passeio. 
+   \begin{parts}
+     \part [5] Descreva o lugar geométrico dos pontos que ele deverá percorrer se ele deseja sempre ter a mesma temperatura que no ponto $(2,3)$; 
+     \part [10] Qual a direção e sentido que devera tomar se ele deseja caminhar na direção de maior crescimento da temperatura. Encontre a taxa de variação máxima. 
+     \part [10] Se ele se movimentar na direção do vetor $i+j$, a temperatura estará aumentando ou diminuindo? 
+   \end{parts}
+ \end{questions}
+\end{document}     
+     
+  
