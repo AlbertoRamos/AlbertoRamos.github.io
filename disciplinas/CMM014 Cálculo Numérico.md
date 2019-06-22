@@ -27,7 +27,7 @@ tag:        2019s1
   
 # Provas
 
- - [Notas P1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/calculo numerico 2019 notas p1.pdf)
+ - [Notas]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/calculo numerico 2019 notas p1 p2.pdf)
  
 # Bibliografia
 
