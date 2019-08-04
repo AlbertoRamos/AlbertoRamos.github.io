@@ -16,7 +16,7 @@ tag:        2019s2
   | **Prova 1:** | 
   | **Prova 2:** | 
   | **Prova 3:** | 
-  | **2da chamada**| 
+  | **2da chamada: **| 
   | **Exame:**   | 
   
 # Ementa
@@ -47,5 +47,5 @@ tag:        2019s2
 
 - BONNANS, J; LEMARECHAL, C; SAGASTIZABAL, C; GILBERT, J.C: Numerical Optimization: Theoretical and Practical Aspects, 2006. 
 - FLETCHER, R. Practical Methods of Optimization. John Wiley & Sons, 1987.
-- GILL, P.; MURRAY, W.; WRIGHT, M. Practical Optimization. Academic Press, 1981.
+- GILL, P.; MURRAY, W.; WRIGHT, M. Practical Optimization. Academic Press, 1981. 
 
