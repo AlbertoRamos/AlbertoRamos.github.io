@@ -11,14 +11,13 @@ tag:        2019s2
   | **Sigla:**   | CM300
   | **Nome:**    | Introdução ao Cálculo  
   | **Turma:**   | [A]
-  | **Local:**   | 
+  | **Local:**   | SA 231
   | **Horário:** | 6:30 10:30 Segunda. 
-  | **Prova 1:** | 
-  | **Prova 2:** | 
-  | **Prova 3:** | 
-  | **Prova 4:** | 
-  | **Prova 5:** | 
-  | **Exame:**   | 
+  | **Prova 1:** |  26/08
+  | **Prova 2:** |  14/10
+  | **Prova 3:** |  04/11
+  | **Prova 4:** |  02/12
+  | **Exame:**   |  16/12
   | **Monitórias:**   | 
   |                   |
 
@@ -40,6 +39,7 @@ tag:        2019s2
 
 ## Principal 
 
+- F.D.DEMANA, B.K. WAITS, G.D.FOLEY, D. KENNEDY: Pré-cálculo, Pearson, São Paulo, 2009. 
 - J.STEWART – Cálculo, vol 1, Cengage Learning, São Paulo. 
 
 ## Complementar
