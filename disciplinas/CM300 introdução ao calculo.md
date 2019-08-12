@@ -17,9 +17,7 @@ tag:        2019s2
   | **Prova 2:** |  14/10
   | **Prova 3:** |  04/11
   | **Prova 4:** |  02/12
-  | **Exame:**   |  16/12
-  | **Monitórias:**   | 
-  |                   |
+  | **Exame:**   |  09/12
 
 # Ementa
 
