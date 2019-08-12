@@ -32,7 +32,11 @@ tag:        2019s2
   **[Programação detalhada](http://www.mat.ufpr.br/documentos/programas/CM300.pdf)**
 
 # Listas
-
+  
+  - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 pre calculo.pdf)
+  - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 pre calculo.pdf)
+  - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 pre calculo.pdf)
+  
 # Provas
 
 # Bibliografia
