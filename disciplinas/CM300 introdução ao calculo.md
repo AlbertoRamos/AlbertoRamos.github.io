@@ -11,7 +11,7 @@ tag:        2019s2
   | **Sigla:**   | CM300
   | **Nome:**    | Introdução ao Cálculo  
   | **Turma:**   | [A]
-  | **Local:**   | SA 231
+  | **Local:**   | 
   | **Horário:** | 6:30 10:30 Segunda. 
   | **Prova 1:** |  26/08
   | **Prova 2:** |  14/10
