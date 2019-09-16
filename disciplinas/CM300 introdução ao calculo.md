@@ -34,6 +34,7 @@ tag:        2019s2
   - [Lista 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 1 pre calculo.pdf)
   - [Lista 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 2 pre calculo.pdf)
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 pre calculo.pdf)
+  - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 4 pre calculo.pdf)
   
 # Provas
 
