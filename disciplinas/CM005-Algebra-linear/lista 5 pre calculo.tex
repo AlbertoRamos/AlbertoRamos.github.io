@@ -1,0 +1,522 @@
+% lista 5(pre cálculo)
+\documentclass[11pt]{article}
+%\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage[paper=a4paper,hmargin={1cm,1cm},vmargin={1.5cm,1.5cm}]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{stmaryrd} %%para graficar maximo inteiro 
+\begin{document}
+
+\title{Lista 5: CM300 Introdução ao Cálculo }
+ 
+\author{
+A. Ramos \thanks{Department of Mathematics,
+    Federal University of Paraná, PR, Brazil.
+    Email: {\tt albertoramos@ufpr.br}.}
+}
+
+\date{\today}
+ 
+\maketitle
+
+\begin{abstract}
+   Funções polinomiais, exponenciais e logaritmos.   
+\end{abstract}
+ 
+  \section{Exercícios}   
+ 
+ Refaça os exercícios desenvolvidos em aula.
+ 
+    \subsection{Funções logarítmicas e aplicações }
+     \begin{enumerate}
+      \item Faça o esboço das seguintes funções 
+      
+        $(a) \ \ f(x)=5^{x}$, \ \ 
+        $(b) \ \ f(x)=(1/5)^{x}$, \ \ 
+        $(c) \ \ f(x)= \text{log}_{5}x$, \ \ 
+        $(d) \ \ f(x)= \text{log}_{1/5} x$. 
+      \item Sem o uso de calculadora, encontre o valor dos logaritmos. 
+     
+        $(a) \ \ \text{log}_{2} (1/4)$, \ \ 
+        $(b) \ \ \text{log}_{1/4} 2$, \ \     
+        $(c) \ \ \text{log}_{8} 32$, \ \ 
+        $(d) \ \ \text{log}_{5} (1/125)$.
+        $(e) \ \ \text{log}_{16} 2$, \ \ 
+        $(f) \ \ \text{log}_{1/9} (1/3)$. 
+        
+        {\it Rpta: }
+        $(a) -2$, \ \ 
+        $(b) -1/2$.    
+        $(c) 5/3$, \ \ 
+        $(d) -3$.
+        $(e) 1/4$, \ \ 
+        $(f) 1/2$.    
+      \item Resolva as seguintes equações 
+      
+      $(a) \ \ 2^{x}=16 \ \ $,  
+      $(b) \ \ 2^{2x+1}=16 \ \ $,      
+      $(c) \ \ 2. 3^{x+5}=5 \ \ $,  
+      $(d) \ \ 5^{2x+1}=2^{x} \ \ $,
+      $(e) \ \ 4^{3x-2}=2^{3x} \ \ $.   
+      
+      {\it Rpta: }
+      $(a) \ \ x=4  \ \ $,  
+      $(b) \ \ 3/2 \ \ $,      
+      $(c) \ \ x=\text{log}_{3}(5/2)-5 \ \ $,  
+      $(d) \ \ x=(\text{log}_{5}2-2)^{-1} \ \ $,
+      $(e) \ \ 4/3 \ \ $.  
+      \item Após uma muda ser plantada em uma horta, o peso (massa) varia segundo a função $peso(t)=100+3\cdot 4^{t}$, onde o peso está em grama e $t \in [0,3]$ é o tempo decorrido em semana. 
+           \begin{enumerate}
+           	\item no início da primeira semana
+           	      \hfill {\it Rpta: } 112. 
+           	\item no meio da segunda semana. 
+           \end{enumerate}
+      \item Encontre o número $x$ tal que 
+      $\text{log}_{x}(\frac{9}{4})=\frac{1}{2}$.
+      \hfill {\it Rpta: $x=81/16$}  
+      \item Resolva as seguintes inequações 
+      
+      $(a) \ \ 2^{x}\geq 16 \ \ $,  
+      $(b) \ \ 2^{2x+1}< 32 \ \ $,       
+      $(d) \ \ 5^{2x+1}< 2^{x} \ \ $,
+      $(e) \ \ (1/4)^{3x-2}\geq (1/2)^{3x} \ \ $.   
+      
+      {\it Rpta: } 
+      $(a) \ \ [4, \infty)  \ \ $,  
+      $(b) \ \ (-\infty, 2) \ \ $,  
+      $(d) \ \ (-\infty, \frac{1}{\text{log}_{5}2-2}) \ \ $,
+      $(e) \ \ (-\infty, 4/3] \ \ $.  
+      \item Escreva o logaritmo do produtos e quocientes
+      como soma e diferenças. 
+         \begin{enumerate}
+         	\item $\text{log}_{8}(\frac{wx^{2}}{64})$
+         	      \hfill {\it Rpta}: 
+         	      $\text{log}_{8} w+2\text{log}_{8}x-2$.    
+            \item $\text{log} 1000x^{2}y^{3}$
+          	      \hfill {\it Rpta}: $3+2\text{log}x+3\text{log}y$.
+          	\item $\text{log}_{6} \frac{1}{36 xy^{5}}$
+          	      \hfill {\it Rpta}: $-6-\text{log}_{6}x-5\text{log}_{6}y$.       
+         \end{enumerate}
+     \item Resolva as equações logarítmicas.
+         \begin{enumerate}
+         	\item $\text{ln}(8x-1)=4$
+         	      \hfill {\it Rpta:}
+         	      $x=(e^{4}+1)/8$
+         	\item  $\text{log}(3x-5)=-1$
+         	       \hfill {\it Rpta:}
+         	      $x=17/10$
+         	\item  $\text{log}_{5}(4x+3)-\text{log}_{5}(2x+5)=-2$
+         	       \hfill {\it Rpta: } 
+         	       $x=-5/7$
+         	\item  $\text{log} (x^{2}-8x)=\text{log}(4x+45)$
+         	       \hfill {\it Rpta:}
+         	       $x=-3$ e $x=15$
+         	\item  $\text{ln} (x^{2}+16x)=\text{ln}(4x-32)$
+         	       \hfill {\it Rpta:} Não existe solução.        
+         \end{enumerate}
+               
+     \item Suponha que peso de uma muda ser plantada em uma horta é modelada através da função $peso(t)=100+b\cdot a^{t}$, onde o peso está em grama, $t \in [0,3]$ é o tempo decorrido em semana e $a, b>0$.
+     Encontre os valores de $a$ e $b$ sabendo que, para $t=1$
+     o peso é de 112, e para $t=2$ o correspondente peso é 148. 
+     {\it Rpta: $a=4$, $b=3$}. 
+     
+     \item Uma casa foi é avaliada em $\$ 179.900$ no ano 2000, 
+     e no ano 2013, o avaliação é de $\$ 138.000$. 
+     Supondo que a depreciação da casa segue o modelo exponencial 
+      $y=Ce^{Kt}$, onde $y$ é o valor da casa, $C$ é a quantidade inicial, $K$ é a taxa de crescimento ou decrescimento e $t$ o tempo (em anos). Calcule o valor aproximado da casa em 2020? 
+     \hfill {\it Rpta:} $\$ 119,639$  
+         
+             
+     \item A população de certa cidade é de 6,250 habitantes em 1975, e em 2010 é de 8,125. 
+     Considerando que a taxa de crescimento é exponencial, qual sera a população em 2040? Para isso considere o modelo exponencial 
+     $y=Ce^{Kt}$, onde $y$ é a população, $t$ o tempo (em anos) e 
+     $C$, $K$ são constantes positivas. \hfill {\it Rpta:} 10,174
+     habitantes. 
+     {\it Dica: $K=0.007496$}
+         
+     \item Um empregado com um vírus contagioso vai a trabalhar numa empresa quando ele está doente. A empresa tem 
+     8500 empregados em total. 
+     O crescimento da infeção do vírus é modelado por 
+     $$ y=\frac{8.500}{1+999e^{-0.6t}}, $$
+     onde $y$ é o número de infectados e $t$ é o tempo em dias.
+     Quando o $45\%$ dos empregados fiquem doentes, a empresa deve fechar. 
+     Quantos dias 
+     devem passar para que a 
+     empresa feche.    
+     \hfill {\it Rpta:} 11.               
+     
+     \item Suponha que a renda $r(t)$ de certo produto varia no tempo $t$ de tal forma que $\text{ln } r(t)$ é uma função linear. Se o gráfico de dita função linear passa por $(1, 2)$ e 
+     $(3, 7)$, então qual é o valor da renda $r(t)$ quando $t=2$?                                            
+    \end{enumerate}            
+\end{document}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+    
+    \subsection{Limites, continuidade, derivadas e integração}
+     \begin{enumerate}
+     \item Calcule, se existe, os seguintes limites 
+       \begin{enumerate}
+       \item $\lim_{t \rightarrow 3} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{t^{2}-2t-3}{t-3}, 
+       \frac{t^{2}-5t+6}{t-3})$.  {\it Rpta:} (4,1).
+       \item $\lim_{t \rightarrow 0} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{1-\sqrt{1+t}}{1-t}, 
+       \frac{t}{t+1}, 1)$.  {\it Rpta:} (0,0,1).
+       \item $\lim_{t \rightarrow 0} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\frac{\sin 7t}{t}, 
+       \frac{\sin 5t}{\sin 3t}, \frac{\tan 3t}{\sin 2t})$.  {\it Rpta:} (7,5/3,3/2).
+       \item $\lim_{t \rightarrow 2} \overrightarrow{\alpha}(t)$
+       onde $\overrightarrow{\alpha}(t)=(\ln t, 
+       \sqrt{1+t^2}, \frac{3t}{4-t^2})$.  {\it Rpta:} Não existe.
+       \end{enumerate}
+    \item Seja $\mathcal{C}$ uma curva parametrizada por 
+       $\overrightarrow{\alpha}(t)=
+       (1-2t, t^2, 2e^{2t-2})$. Encontre a equação da reta tangente a $\mathcal{C}$ no ponto onde $\overrightarrow{\alpha}'(t)$
+       é paralelo a $\overrightarrow{\alpha}(t)$. 
+       {\it Rpta:} $r: (-1,1,2)+t(-1,1,2)$; $t \in \mathbb{R}$. 
+    \item Sejam as curvas parametrizadas por 
+       $\overrightarrow{\alpha}(t)=
+       (e^t, e^{2t}, 1-e^{-t})$
+       e   $\overrightarrow{\beta}(t)=
+       (1-t, \cos t, \sin t)$. Encontre a interseção das trajétorias das curvas e o ângulo da interseção. 
+       {\it Rpta:} Interseção $P=(1,1,0)$; Ângulo $\theta=\pi/2$.  
+     \item Suponha que $\|\overrightarrow{\alpha}(t)\|$ é constante para
+       todo $t \in \mathbb{R}$. Verifique que 
+       $\overrightarrow{\alpha}(t)\cdot\overrightarrow{\alpha}'(t)=0$ 
+     \item Encontre os pontos em que a curva     
+     $\overrightarrow{\alpha}(t)=
+       (t^2-1, t^2+1, 3t)$ corta o plano 
+       $\mathcal{P}: 3x-2y-z+7=0$. 
+       {\it Rpta: } $P=(3,5,6)$ e $Q=(0,2,3)$. 
+       \item Calcule o produto interno de $\overrightarrow{a}$
+       e $\overrightarrow{b}$ onde 
+       $\overrightarrow{a}=(2,-4,1)$
+       e $\overrightarrow{b}=\int_{0}^{1}(te^{t}, t \sinh 2t, 2te^{-2t})dt$.
+       {\it Rpta: } 0. 
+     \item Considere 
+     $\overrightarrow{\alpha}(t)=\overrightarrow{a}\cos(\omega t)+
+       \overrightarrow{b}\sin(\omega t)$, com $t \in \mathbb{R}$.
+       Verifique que 
+        
+        $$\text{(a)} \ \ \ \ \ 
+        \overrightarrow{\alpha}(t)\times\frac{d \overrightarrow{\alpha}(t)}{dt}=
+       \omega \overrightarrow{a} \times \overrightarrow{b}
+       \  \ \ \ \ \text{ e } \ \ \ \ \ 
+       \text{(b)} \ \ \ \ \
+       \frac{d^{2}\overrightarrow{\alpha}(t)}{dt^{2}}+\omega^{2}\overrightarrow{\alpha}(t)=
+       \overrightarrow{0}. $$
+     \item Em $\mathbb{R}^{3}$ considere $\overrightarrow{\alpha}(t)$ uma curva 
+     derivável com derivada contínua, não nula. Mostre que 
+        \begin{enumerate}
+        \item $\overrightarrow{\alpha}(t)$ tem norma constante se, e somente se $\overrightarrow{\alpha}(t)\cdot \overrightarrow{\alpha}'(t)=0$.
+        \item $\overrightarrow{\alpha}(t)$ tem direção constante se, e somente se $\overrightarrow{\alpha}(t)\times \overrightarrow{\alpha}'(t)=0$.
+        \end{enumerate}
+      \item Encontre uma equação paramétrica
+      da curva $\mathcal{C}$ definida por a interseção da superfície 
+       $z=\sqrt{4-x^{2}-y^{2}}$ e 
+       $x^{2}+y^{2}=2y$. 
+       Expresse o comprimento de arco dessa curva como uma integral. 
+       
+       {\it Rpta:}
+       $\overrightarrow{\alpha}(t)=
+       (\pm \sqrt{2t-t^{2}}, t, \sqrt{4-2t})0$, 
+       $t \in [0,2]$ e comprimento de arco 
+       $S=\int_{0}^{2} \sqrt{\frac{2+9t}{4t-2t^{2}}dt}$. 
+      \item Uma partícula se encontra no plano $XY$
+      seguindo as equações 
+      $x(t)=e^{-2t}\cos 3t$ e 
+      $y(t)=e^{-2t}\sin 3t$. 
+      Encontre o comprimento de arco desde o ponto 
+      $t=0$ até o ponto $t=\pi$. 
+      {\it Rpta: } $S=\sqrt{13}{2}(1-e^{-2\pi})$.
+    \item Considere a curva $\mathcal{C}$: 
+    	$\overrightarrow{\alpha}(t)
+    =(e^{t}\cos t, e^{t}\sin t, e^{t})$, $t\geq 0$.
+    Reparametrize a curva $\mathcal{C}$ 
+    por comprimento de arco. 
+    
+    {\it Rpta: }
+    $\overrightarrow{\beta}(s)=
+    \overrightarrow{\alpha}(t(s))=
+    =(\frac{\sqrt{3}+s}{s} \cos \ln
+    \frac{\sqrt{3}+s}{s}, 
+    \frac{\sqrt{3}+s}{s} \sin \ln
+    \frac{\sqrt{3}+s}{s}, 
+    \frac{\sqrt{3}+s}{s})$, $s\geq 0$  
+    \end{enumerate}  
+ 
+    
+    \subsection{Vetor tangente, normal, binormal, curvatura, torção, etc ...}
+      \begin{enumerate}
+      	\item Uma partícula realiza um movimento descrito pela curva paramétrica 
+      	$\overrightarrow{\alpha}(t)
+      	=(\cos t, \frac{\sin t}{\sqrt{2}}, \frac{\sin t}{\sqrt{2}})$.
+      	  \begin{enumerate}
+      	  	\item Encontre os vetores tangentes, normal e binormal em $t=\pi/4$.
+      	  	
+      	  	{\it Rpta: }
+      		$\overrightarrow{T}(t)
+      	=(-\sin t, \frac{\cos t}{\sqrt{2}}, \frac{\cos t}{\sqrt{2}})$;
+      	   	$\overrightarrow{N}(t)
+      	   =(-\cos t, -\frac{\sin t}{\sqrt{2}}, -\frac{\sin t}{\sqrt{2}})$ e
+      	   	$\overrightarrow{B}(t)
+      	   =(0, -\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+      	  	\item Calcule o plano osculador, retificante e normal para a curva 
+      	  	$\overrightarrow{\alpha}(t)$
+      	  	no ponto $t=\pi/4$.
+      	  \end{enumerate} 
+      	\item Seja $a>0$. Considere a interseção 
+      	da esfera $x^{2}+y^{2}+z^{2}=4a^{2}$ com o cilindro $(x-a)^{2}+y^{2}=a^{2}$.
+      	    \begin{enumerate}
+      	    	\item Verifique que 
+      	 	$\overrightarrow{\alpha}(t)
+      	 =(a(1+\cos t), a\sin t, 2a \sin (t/2))$ está contido nessa interseção.
+      	 \item Calcule o vetor tangente 
+      	 	$\overrightarrow{T}(t)$ e a curvatura 
+      	 	$\kappa(t)$.
+      	 	
+      	 {\it Rpta:} 
+      	 	$\overrightarrow{T}(t)
+      	 =\frac{(-\sqrt{2}a\sin t, \sqrt{2}a\cos t, 
+      	 	\sqrt{2}a \cos (t/2))}{a\sqrt{3+\cos t}}$
+      	 e
+      	 $\kappa(t)=\frac{\sqrt{13+3\cos t}}{a(3+\cos t)^{3/2}}$. 
+      	    \end{enumerate}
+        \item Encontre a reta tangente, o plano normal e o plano osculador da curva paramétrica
+          	$\overrightarrow{\alpha}(t)
+          =(e ^{t}\cos t, e^{t}\sin t, \sqrt{3}e^{t})$ 
+          no ponto $t=0$.
+          
+          {\it Rpta:} reta tangente: $x-1=y=\frac{z-\sqrt{3}}{\sqrt{3}}$; 
+          plano normal: $x+y+\sqrt{3}z=4$; 
+          plano osculador:
+          $\sqrt{3}x+\sqrt{3}y+\sqrt{3}=2z$.
+        \item  Encontre o vetor tangente, o plano normal, o plano osculador e o plano retificante da curva paramétrica
+        $\overrightarrow{\alpha}(t)
+        =(t^{2}+1, 8t, t^{2}-3)$ 
+        no ponto $t=1$.
+        
+        {\it Rpta:} 
+        $\overrightarrow{T}(1)=\frac{1}{3\sqrt{2}}(1,4,1)$; 
+        plano normal: $x+4y+z=32$; 
+        plano retificante: $2x-y+2z=-8$ e 
+        plano oscilador: $x-z=4$.
+        \item  Seja $\mathcal{C}$ uma curva paramétrica
+        definida como 
+        $\overrightarrow{\alpha}(t)
+        =(1-\frac{4t^{3}}{3}, 1-2t^{2}, t)$. 
+        Encontre a equação do plano osculador paralelo ao plano $x+2=0$. 
+        no ponto $t=1$.
+        
+        {\it Rpta:}  
+        Plano: $x=1$.
+        \item  Se $\overrightarrow{\alpha}(t)
+       =(t-\sin t, 1-\cos t, t)$,  
+       encontre a equação do plano osculador em 
+        $\overrightarrow{\alpha}(0)$. 
+       
+       {\it Rpta:}  
+       Plano: $x=0$. 
+        \item  Considere  $\overrightarrow{\alpha}(t)
+       =(2\sqrt{at}, 1-\cos t, 1)$ com $a>0$. Encontre o ponto onde o raio de curvatura atinge seu mínimo e forneça tal valor. 
+         
+       {\it Rpta:}  
+       Raio de curvatura $\rho(t)=\frac{2}{\sqrt{a}}t^{3/2}(\frac{a}{t}+1)^{3/2}$.
+      \item Seja $\mathcal{C}$ uma curva no plano $XY$, descrito em coordenadas polares $r=e^{\theta}$. Calcule o circulo osculador,  indicando o centro e o raio, quando o vetor normal é paralelo a $(-1,1)$.
+        
+        {\it Rpta: } Raio$=\sqrt{2}$ e centro$=(0,1)$. 
+       \item Seja $\mathcal{C}$ uma curva em $\mathbb{R}^{3}$, descrito 
+       por $\overrightarrow{\alpha}(t)$, ($t>0$). 
+       Se $\|\overrightarrow{\alpha}'(t)\|=\frac{1}{t+1}$,  
+       $\overrightarrow{B}'(t)=\frac{1}{(1+t)^{2}}(-1,-1,\frac{1-t}{\sqrt{2t}})$, ($t>0$) e a torção $\tau(t)$ é positiva. 
+       Calcule a torção.
+      
+      {\it Rpta: } $\tau(t)=\sqrt{2t}$.   
+      \item O pulo de uma rã é descrita por 
+      $\overrightarrow{\alpha}(t)=(t^{2}, |t|)$.
+      Calcule o distância percorrida pela rã no intervalo $t \in [-1,1]$.
+      Também calcule a curvatura no ponto $(1/2, \sqrt{2}{2})$.
+        
+        {\it Rpta: } Distância: $\sqrt{5}+\ln (\sqrt{5}+2)$ e
+        Curvatura: $2\sqrt{5}/15$.
+      \end{enumerate}
+        
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      
+\begin{table}[h]
+	\centering % centering table
+	\begin{tabular}{c} % creating eight columns
+		\hline \hline%inserting double-line
+		Audio  \\ 
+		\hline % inserts single-line
+		Police \\ % [1ex] adds vertical space
+		\hline \hline % inserts single-line
+	\end{tabular}
+	\label{tab:hresult}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Máximos, mínimos e pontos críticos}
+\begin{enumerate}
+	\item Qual é o ponto da curva $yx=2$, $x>0$, que está mais próximo ao origem. 
+	\item Considere duas partículas $A$ e $B$ que se movem sobre os eixos $x$ e eixo $y$ respetivamente. Se a posição de $A$ é $(\sqrt{t}, 0)$ e 
+	a posição de $B$ é $(0,t^{2}-\frac{1}{4})$, para $t \geq 0$. Encontre o instante onde a distância entre $A$ e $B$ seja o menor possível.
+	\item Considere a curva $y=1-x^{2}$, $x \in [0,1]$. 
+	Qual a reta tangente à curva tal que a área do triângulo que ela forma com os eixos coordenados seja mínima? 
+	\item Seja $L(x)=-x^{3}+12x^{2}+60x-4$ o lucro de uma empresa ao vender certo determinado produto, onde $x$ representa a quantidade do produto produzida. Determine o lucro máximo e a produção que máximiza o lucro.
+	{\it Rpta: } $x=10$, Lucro máximo $L(10)$   
+\end{enumerate}
+\subsection{Teorema de Rolle e Teorema de Valor Médio}
+\begin{enumerate}
+	\item Mostre que a equação $f(x)=x^{7}+5x^{3}+x-7$ tem uma única solução.      
+	\item Considere a função $f(x)=e^{x}-\frac{1}{x}-\frac{x}{2}$, com $x>0$. 
+	Então: 
+	\begin{enumerate}
+		\item Dado $y \in \mathbb{R}$. Mostre que existe uma única solução 
+		de $e^{x}-x^{-1}-x/2=y$. Conclua que $f$ tem inversa.
+		\item Verifique que $|f^{-1}(x)-f^{-1}(y)| \leq 2 |x-y|$, para todo 
+		$x, y \in \mathbb{R}$.
+	\end{enumerate}
+	\item Seja $f(x)=3x+\cos x$. Mostre que (a) 
+	$f$ é bijetora e (b) calcule $f^{-1}(1)$.
+	\item Use o teorema de valor médio para 
+	mostrar as seguintes desigualdades:
+	\begin{enumerate}
+		\item $\ln(1+x)<x$, para todo $x \neq -1$.
+		\item $|\ln \frac{x}{y}|\leq |x-y|$, para todo 
+		$a, b \in \mathbb{R}$, 
+		com a $\geq 1$, $b \geq 1$.
+		\item $x-y \leq e^{x}-e^{y}$, para todo $y, x$ 
+		com $x \geq y \geq 0$.
+		\item $a^{a}(b-a)<b^{b}-a^{a}$, para $a, b$ com $1 \leq a<b$.
+	\end{enumerate}
+	\item Podemos usar o teorema do valor médio na função 
+	$f(x)=\frac{2x-1}{3x-4}$ no intervalo $[1,2]$? 
+	Caso afirmativo, encontre os valores que 
+	verifiquem. {\it Rpta:} Não se cumple as condições 
+	do teorema do valor médio.  
+	\item Mostre as identidades
+	\begin{enumerate}
+		\item $\arcsin (1-2y^{2})=2 \arcsin (y)$, para $y \in (-1,1)$.
+		\item $\arcsin \frac{x-1}{x+1}+\frac{\pi}{2}=2 \arctan \sqrt{x}$,
+		para todo $x \in \mathbb{R}$.
+	\end{enumerate}          
+   \end{enumerate}
+
+
+
+
+
+
+    \subsection{Regras de cálculos para limites}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $\lim_{u \rightarrow 1} 
+    \frac{\sqrt{3+u^2}-2}{1-u}=-\frac{1}{2}$.
+    \item $\lim_{t \rightarrow 4} 
+    \frac{3-\sqrt{5+t}}{1-\sqrt{5-t}}=-\frac{1}{3}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{\sqrt{3x-2}+\sqrt{x}-\sqrt{5x-1}}
+    {\sqrt{x}-\sqrt{2x-1}}=-\frac{3}{2}$.
+    \item Se $f(x)=\sqrt{1+3x}$. Calcule 
+    $\lim_{h \rightarrow 0} 
+    \frac{f(x+h)-f(x)}
+    {h}=\frac{3}{2\sqrt{3x+1}}$.
+    \item $\lim_{x \rightarrow 1} 
+    \frac{x^{100}-2x+1}
+    {x^{50}-2x+1}=\frac{49}{24}$.
+    \item $\lim_{x \rightarrow 2} 
+    \frac{\sqrt{1+\sqrt{2+x}}-\sqrt{3}}
+    {x-2}=\frac{1}{8\sqrt{3}}$.
+     \item Se 
+    $\lim_{x \rightarrow 0} 
+    \frac{f(x)-1}
+    {x}=1$. Prove $\lim_{x \rightarrow 0} 
+    \frac{f(ax)-f(bx)}
+    {x}=a-b$. {\it Dica:} Considere se $a$ e $b$ são iguais a zero ou não.
+    \item Dado $a \in \mathbb{R}$. Mostre que $\lim_{x \rightarrow a} 
+    \frac{x\sqrt{x}-a\sqrt{a}}
+    {\sqrt{x}-\sqrt{a}}=3a$.
+    \end{enumerate}
+    \subsection{Limites laterais}   
+   Calcule, se existe, os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \frac{5}{2}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Sim, e o limite é $\sqrt{19/2}$.
+     \item $$\lim_{x \rightarrow \frac{7}{3}} 
+    \sqrt{|x|+\lbrack\!\lbrack 3x \rbrack\!\rbrack}. $$ Não.
+    \item $$\lim_{x \rightarrow -3} 
+    \frac{\lbrack\!\lbrack x-1 \rbrack\!\rbrack -x}
+    {
+    \sqrt{|x|^2-\lbrack\!\lbrack x \rbrack\!\rbrack}
+    }.$$ Não.
+     \item $$\lim_{x \rightarrow 1} 
+    \frac{\lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x^{2}}
+    {
+    \lbrack\!\lbrack x\rbrack\!\rbrack^{2} -x
+    }.$$ Não.
+    \item Considere a função 
+     $$
+    f(x)= \left\{  
+            \begin{array}{lll}
+    &\frac{x^3+3x^2-9x-27}{x+3} &\text{, se } x \in (-\infty, -3) \\
+    &ax^2-2bx+1     &\text{, se } x \in [-3,3] \\
+            & \frac{x^2-22x+57}{x-3}     &\text{, se } x \in (3,\infty) \\
+            \end{array}
+            \right. 
+    $$
+    Para quais valores de $a$ e $b$, existe os limites de $f$ em $x=-3$ e $x=3$? {\it Rpta: } $a=-1, b=4/3$.
+    \end{enumerate}
+    \subsection{Limites Trigonométricos}   
+   Calcule os seguintes limites.  
+    \begin{enumerate}
+    \item $$\lim_{x \rightarrow \pi} \frac{1-\sin(\frac{x}{2})}{x-\pi}=0$$
+    \item $$\lim_{x \rightarrow 0} \frac{x-\sin(x)}{x^2}=0. $$
+    \item $$\lim_{x \rightarrow 0} \frac{1-\sqrt{\cos(x)}}{x^2}=\frac{1}{4}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\cos(\frac{\pi x}{2})}{1-\sqrt{x}}=\pi$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos^7(x)}{x^2}=\frac{7}{2}$$
+    \item $$\lim_{x \rightarrow 0} 
+    \frac{1-\cos(1-\cos(x))}{x^4}=\frac{1}{8}$$
+    \item $$\lim_{x \rightarrow \frac{\pi}{4}} 
+    \frac{\sin(2x)-\cos(2x)-1}{\sin(x)-\cos(x)}=\sqrt{2}$$
+    \item $$\lim_{x \rightarrow 1} 
+    \frac{\sin(\pi x)+\cos(\frac{\pi x}{2})}
+    {\tan(\frac{\pi x}{4})-1}=-\frac{3 \pi}{4}$$
+    \end{enumerate}
+    \subsection{Definição de limite}   
+   Usando a definição de limite. Prove que 
+    \begin{enumerate}
+    \item $\lim_{x \rightarrow 2} \frac{x^2+1}{x-1}=5$.
+    \item $\lim_{x \rightarrow 3} 
+    \frac{1}{x^2+16}=\frac{1}{25}$. 
+    \item $\lim_{x \rightarrow \frac{1}{2}} x^{2}\lbrack\!\lbrack x+2 \rbrack\!\rbrack=\frac{1}{2}$. 
+    \item  $\lim_{x \rightarrow 4} 
+    \frac{x^3-15x-4}{x-3}=0$.
+    \item $\lim_{x \rightarrow a}\cos(x)=\cos(a)$, para qualquer $a \in \mathbb{R}$.  
+    \end{enumerate}
+     \subsection{Teorema de confronto e variantes}   
+    \begin{enumerate}
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $|f(x)|\leq 3|x|$, $\forall x \in \mathbb{R}$.
+    Calcule $\lim_{x \rightarrow 0} \frac{f(x^3)}{x}$.
+    \item Considere duas funções 
+    $f,g:\mathbb{R}\rightarrow \mathbb{R}$ com a propriedade que $|\sin(x)|\leq g(x)\leq 4|x|$ e 
+    $0 \leq f(x)\leq 1+|\sin(1/x)|$ para todo $x \neq 0$. 
+    Calcule $\lim_{x \rightarrow 0} (f(x)g(x)+\cos(x))$.
+    {\it Rpta: } 1.
+    \item Se $f:\mathbb{R}\rightarrow \mathbb{R}$ uma função tal que $1+x^2+\frac{x^6}{3}\leq f(x)+ 1 \leq 
+    \sec{x^2}+\frac{x^6}{3}$, para todo $x \in \mathbb{R}$. Calcule
+    $$
+    \lim_{x\rightarrow 0}f(x) \text{ e } 
+    \lim_{x\rightarrow 0}f(x)\cos\left(\frac{1}{x^2+1}\right).
+    $$ {\it Rpta: } Ambos são zeros. 
+    \end{enumerate}
+\end{document}
+
+  
