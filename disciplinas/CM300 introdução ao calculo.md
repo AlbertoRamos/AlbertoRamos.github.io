@@ -42,6 +42,7 @@ tag:        2019s2
   - [Prova 1]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 1 precalculo.pdf)
   - [Nota ]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p1.pdf)
   - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 2 precalculo.pdf)
+  - [Nota 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p2.pdf)
 
 # Bibliografia
 
