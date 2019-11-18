@@ -36,6 +36,7 @@ tag:        2019s2
   - [Lista 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 3 pre calculo.pdf)
   - [Lista 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 4 pre calculo.pdf)
   - [Lista 5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 5 pre calculo.pdf)
+  - [Lista 5]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista 6 pre calculo.pdf)
   
 # Provas
 
@@ -43,7 +44,9 @@ tag:        2019s2
   - [Nota ]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p1.pdf)
   - [Prova 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 2 precalculo.pdf)
   - [Nota 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p2.pdf)
-
+  - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 3 precalculo.pdf)
+  - [Nota 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p2.pdf)
+  
 # Bibliografia
 
 ## Principal 
