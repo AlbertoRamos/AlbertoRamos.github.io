@@ -17,13 +17,13 @@ tag:        2019s2
   | **Prova 2:** |  14/10
   | **Prova 3:** |  04/11
   | **Prova 4:** |  02/12
-  | **Exame:**   |  09/12
+  | **Exame:**   |  09/12 (na primeira aula)
 
 # Ementa
 
   Números reais e expressões algébricas. Funções de uma variável real. Gráficos. 
   Funções do primeiro e do segundo graus. Função raiz quadrada. Funções polinomiais. 
-  Funções exponenciais e logarítmicas. Funções trigonométricas. Derivadas e taxas de variação. 
+  Funções exponenciais e logarítmicas. Funções trigonométricas. 
 
 # Programa:
 
@@ -46,6 +46,8 @@ tag:        2019s2
   - [Nota 2]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p2.pdf)
   - [Prova 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 3 precalculo.pdf)
   - [Nota 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p3.pdf)
+  - [Prova 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 4 precalculo.pdf)
+  - [Nota 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 pf.pdf)
   
 # Bibliografia
 
