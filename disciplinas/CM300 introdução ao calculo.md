@@ -48,7 +48,7 @@ tag:        2019s2
   - [Nota 3]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 p3.pdf)
   - [Prova 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/prova 4 precalculo.pdf)
   - [Nota 4]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 pf.pdf)
-  - [Nota Prova Final]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas do prova final precalculo.pdf)
+  - [Nota Final]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/notas cm300 final.pdf)
   
 # Bibliografia
 
